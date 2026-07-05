@@ -1,0 +1,138 @@
+<svg viewBox="0 0 1030 840" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1030" height="840" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="515" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#0f172a">Air-Gapped Enterprise Knowledge / RAG Platform — Layered Architecture</text>
+  <text x="515" y="58" text-anchor="middle" font-size="12.5" fill="#64748b">Closed Network · No Internet at Runtime · Docker Compose · Metadata-Driven</text>
+
+  <!-- Air-gap frame -->
+  <rect x="20" y="86" width="990" height="700" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" stroke-dasharray="9 6"/>
+  <rect x="36" y="77" width="214" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="46" y="90" font-size="11" font-weight="600" fill="#475569">⛔ Closed / Air-Gapped Boundary</text>
+
+  <!-- ===== Cross-cutting band (right) ===== -->
+  <rect x="786" y="110" width="218" height="660" rx="12" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text x="895" y="140" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">Cross-Cutting (Always-On)</text>
+
+  <g>
+    <rect x="798" y="160" width="194" height="72" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="895" y="194" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Audit Log</text>
+    <text x="895" y="212" text-anchor="middle" font-size="9.5" fill="#64748b">every operation</text>
+
+    <rect x="798" y="260" width="194" height="72" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="895" y="294" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Cache</text>
+    <text x="895" y="312" text-anchor="middle" font-size="9.5" fill="#64748b">speed only · re-verify live</text>
+
+    <rect x="798" y="360" width="194" height="72" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="895" y="394" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Monitoring</text>
+    <text x="895" y="412" text-anchor="middle" font-size="9.5" fill="#64748b">Prometheus · Grafana · Loki</text>
+
+    <rect x="798" y="460" width="194" height="72" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="895" y="494" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">License</text>
+    <text x="895" y="512" text-anchor="middle" font-size="9.5" fill="#64748b">offline activation</text>
+
+    <rect x="798" y="560" width="194" height="72" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="895" y="594" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Hardware Manager</text>
+    <text x="895" y="612" text-anchor="middle" font-size="9.5" fill="#64748b">runtime · resource alerts</text>
+
+    <rect x="798" y="660" width="194" height="72" rx="9" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="895" y="694" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Security &amp; Policy</text>
+    <text x="895" y="712" text-anchor="middle" font-size="9.5" fill="#64748b">classification · SoD</text>
+  </g>
+
+  <!-- Badges helper numbers -->
+  <g font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <circle cx="42" cy="150" r="13" fill="#0284c7"/><text x="42" y="155">1</text>
+    <circle cx="42" cy="235" r="13" fill="#7c3aed"/><text x="42" y="240">2</text>
+    <circle cx="42" cy="315" r="13" fill="#d97706"/><text x="42" y="320">3</text>
+    <circle cx="42" cy="419" r="13" fill="#16a34a"/><text x="42" y="424">4</text>
+    <circle cx="42" cy="522" r="13" fill="#db2777"/><text x="42" y="527">5</text>
+    <circle cx="42" cy="629" r="13" fill="#475569"/><text x="42" y="634">6</text>
+    <circle cx="42" cy="721" r="13" fill="#ea580c"/><text x="42" y="726">7</text>
+  </g>
+
+  <!-- ===== Layer 1: Presentation ===== -->
+  <rect x="64" y="110" width="696" height="80" rx="11" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <rect x="76" y="124" width="300" height="52" rx="8" fill="#ffffff" stroke="#7dd3fc"/>
+  <text x="226" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="#0c4a6e">Open WebUI</text>
+  <text x="226" y="164" text-anchor="middle" font-size="10.5" fill="#0369a1">Chat Surface</text>
+  <rect x="392" y="124" width="356" height="52" rx="8" fill="#ffffff" stroke="#7dd3fc"/>
+  <text x="570" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="#0c4a6e">Enterprise UI</text>
+  <text x="570" y="164" text-anchor="middle" font-size="10" fill="#0369a1">Screens · Store · Workflow Builder · Notifications · Admin</text>
+
+  <!-- ===== Layer 2: Backend API ===== -->
+  <rect x="64" y="204" width="696" height="62" rx="11" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="412" y="231" text-anchor="middle" font-size="15" font-weight="700" fill="#4c1d95">Backend API (FastAPI)</text>
+  <text x="412" y="251" text-anchor="middle" font-size="10.5" fill="#6d28d9">AuthN/Z · RBAC / ABAC / ReBAC · Dynamic Screens · Records · Audit · License</text>
+
+  <!-- ===== Layer 3: Orchestrator ===== -->
+  <rect x="64" y="280" width="696" height="70" rx="11" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="412" y="309" text-anchor="middle" font-size="15" font-weight="700" fill="#92400e">Agent Orchestrator / Router</text>
+  <text x="412" y="330" text-anchor="middle" font-size="10.5" fill="#b45309">Request Classifier · Context Builder · Permission Gate · No-Guessing Guard</text>
+
+  <!-- ===== Layer 4: Agents ===== -->
+  <rect x="64" y="364" width="696" height="110" rx="11" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <g font-size="11" font-weight="600" fill="#14532d" text-anchor="middle">
+    <rect x="76"    y="380" width="126" height="40" rx="7" fill="#ffffff" stroke="#86efac"/><text x="139"   y="404">Retrieval</text>
+    <rect x="212.5" y="380" width="126" height="40" rx="7" fill="#ffffff" stroke="#86efac"/><text x="275.5" y="404">SQL (read-only)</text>
+    <rect x="349"   y="380" width="126" height="40" rx="7" fill="#ffffff" stroke="#86efac"/><text x="412"   y="404">Validation</text>
+    <rect x="485.5" y="380" width="126" height="40" rx="7" fill="#ffffff" stroke="#86efac"/><text x="548.5" y="404">Reasoning</text>
+    <rect x="622"   y="380" width="126" height="40" rx="7" fill="#ffffff" stroke="#86efac"/><text x="685"   y="404">Security/Policy</text>
+    <rect x="76"  y="426" width="156" height="40" rx="7" fill="#ffffff" stroke="#86efac"/><text x="154" y="450">OCR/Doc</text>
+    <rect x="248" y="426" width="156" height="40" rx="7" fill="#ffffff" stroke="#86efac"/><text x="326" y="450">API-Integration</text>
+    <rect x="420" y="426" width="156" height="40" rx="7" fill="#ffffff" stroke="#86efac"/><text x="498" y="450">Report</text>
+    <rect x="592" y="426" width="156" height="40" rx="7" fill="#ffffff" stroke="#86efac"/><text x="670" y="450">Admin/Metadata</text>
+  </g>
+
+  <!-- ===== Layer 5: Knowledge & Models ===== -->
+  <rect x="64" y="488" width="696" height="80" rx="11" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <rect x="76" y="500" width="260" height="56" rx="8" fill="#ffffff" stroke="#f9a8d4"/>
+  <text x="206" y="522" text-anchor="middle" font-size="13" font-weight="700" fill="#831843">OKF Layer</text>
+  <text x="206" y="540" text-anchor="middle" font-size="9.5" fill="#be185d">Catalog · Glossary · Agent Instructions</text>
+  <rect x="352" y="500" width="396" height="56" rx="8" fill="#ffffff" stroke="#f9a8d4"/>
+  <text x="550" y="522" text-anchor="middle" font-size="13" font-weight="700" fill="#831843">LLM Gateway → Ollama / vLLM</text>
+  <text x="550" y="540" text-anchor="middle" font-size="9.5" fill="#be185d">Reasoning · Coder · Vision · Embed · Rerank</text>
+
+  <!-- ===== Layer 6: Sources of Truth ===== -->
+  <rect x="64" y="582" width="696" height="94" rx="11" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+  <g font-size="11" font-weight="600" fill="#1e293b" text-anchor="middle">
+    <rect x="76"    y="590" width="126" height="38" rx="7" fill="#ffffff" stroke="#cbd5e1"/><text x="139"   y="613">platform_db</text>
+    <rect x="212.5" y="590" width="126" height="38" rx="7" fill="#ffffff" stroke="#cbd5e1"/><text x="275.5" y="607">apps_db</text><text x="275.5" y="620" font-size="8.5" font-weight="400" fill="#64748b">schema-per-app</text>
+    <rect x="349"   y="590" width="126" height="38" rx="7" fill="#ffffff" stroke="#cbd5e1"/><text x="412"   y="613">integration_db</text>
+    <rect x="485.5" y="590" width="126" height="38" rx="7" fill="#ffffff" stroke="#cbd5e1"/><text x="548.5" y="613">reporting_db</text>
+    <rect x="622"   y="590" width="126" height="38" rx="7" fill="#ffffff" stroke="#cbd5e1"/><text x="685"   y="613">Qdrant</text>
+    <rect x="76"  y="632" width="156" height="38" rx="7" fill="#ffffff" stroke="#cbd5e1"/><text x="154" y="655">OpenSearch</text>
+    <rect x="248" y="632" width="156" height="38" rx="7" fill="#ffffff" stroke="#cbd5e1"/><text x="326" y="655">MinIO</text>
+    <rect x="420" y="632" width="156" height="38" rx="7" fill="#ffffff" stroke="#cbd5e1"/><text x="498" y="655">Redis</text>
+    <rect x="592" y="632" width="156" height="38" rx="7" fill="#ffffff" stroke="#cbd5e1"/><text x="670" y="655">Neo4j (opt)</text>
+  </g>
+
+  <!-- ===== Layer 7: Connectors ===== -->
+  <rect x="64" y="690" width="696" height="80" rx="11" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5"/>
+  <rect x="76" y="698" width="340" height="64" rx="8" fill="#ffffff" stroke="#fdba74"/>
+  <text x="246" y="724" text-anchor="middle" font-size="13" font-weight="700" fill="#7c2d12">Connectors</text>
+  <text x="246" y="742" text-anchor="middle" font-size="9.5" fill="#c2410c">MCP · API · Webhook · DB Connector</text>
+  <rect x="432" y="698" width="316" height="64" rx="8" fill="#ffffff" stroke="#fdba74"/>
+  <text x="590" y="724" text-anchor="middle" font-size="13" font-weight="700" fill="#7c2d12">Internal Enterprise Systems</text>
+  <text x="590" y="742" text-anchor="middle" font-size="9.5" fill="#c2410c">Email · HR · Finance · Contracts · ...</text>
+  <line x1="416" y1="730" x2="432" y2="730" stroke="#475569" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- ===== vertical flow arrows ===== -->
+  <g stroke="#475569" stroke-width="1.8">
+    <line x1="412" y1="191" x2="412" y2="203" marker-end="url(#arr)"/>
+    <line x1="412" y1="267" x2="412" y2="279" marker-end="url(#arr)"/>
+    <line x1="412" y1="351" x2="412" y2="363" marker-end="url(#arr)"/>
+    <line x1="412" y1="475" x2="412" y2="487" marker-end="url(#arr)"/>
+    <line x1="412" y1="569" x2="412" y2="581" marker-end="url(#arr)"/>
+    <line x1="412" y1="677" x2="412" y2="689" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- footnote -->
+  <text x="20" y="810" font-size="11" font-weight="600" fill="#334155">Key principle: permissions are checked BEFORE any retrieval / SQL / API. The LLM only processes agent-fetched data. Critical ops (edit / approve / export) re-verify live.</text>
+</svg>

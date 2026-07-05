@@ -1,0 +1,105 @@
+<svg viewBox="0 0 1160 860" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#475569"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1160" height="860" fill="#ffffff"/>
+  <text x="580" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#0f172a">Deployment Architecture — Portable &amp; Configuration-Driven</text>
+  <text x="580" y="56" text-anchor="middle" font-size="12" fill="#64748b">Promotion to production = configuration only · no code change · no re-architecture · no fork</text>
+
+  <rect x="20" y="84" width="1120" height="736" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="9 6"/>
+
+  <!-- Invariant -->
+  <rect x="100" y="100" width="960" height="54" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="580" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">SAME Codebase · SAME Repository · SAME Docker Images</text>
+  <text x="580" y="143" text-anchor="middle" font-size="10.5" fill="#2563eb">built once — runs on every environment</text>
+
+  <!-- Abstraction layers -->
+  <rect x="100" y="170" width="960" height="80" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="580" y="190" text-anchor="middle" font-size="12" font-weight="700" fill="#4c1d95">Abstraction Layers — selected via configuration (swappable, no code change)</text>
+  <g font-size="10" font-weight="600" fill="#4c1d95" text-anchor="middle">
+    <rect x="112" y="204" width="222" height="40" rx="7" fill="#fff" stroke="#c4b5fd"/><text x="223" y="222">LLM Provider</text><text x="223" y="236" font-size="8.5" font-weight="400" fill="#6d28d9">Ollama / vLLM</text>
+    <rect x="350" y="204" width="222" height="40" rx="7" fill="#fff" stroke="#c4b5fd"/><text x="461" y="222">Identity Provider</text><text x="461" y="236" font-size="8.5" font-weight="400" fill="#6d28d9">Local / LDAP / AD / OIDC / SAML</text>
+    <rect x="588" y="204" width="222" height="40" rx="7" fill="#fff" stroke="#c4b5fd"/><text x="699" y="222">Object Storage</text><text x="699" y="236" font-size="8.5" font-weight="400" fill="#6d28d9">MinIO / S3</text>
+    <rect x="826" y="204" width="222" height="40" rx="7" fill="#fff" stroke="#c4b5fd"/><text x="937" y="222">Database Router</text><text x="937" y="236" font-size="8.5" font-weight="400" fill="#6d28d9">schema / physical via endpoint</text>
+  </g>
+
+  <!-- Config band -->
+  <rect x="100" y="272" width="960" height="96" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="580" y="291" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">Configuration &amp; Profiles — environment only (Twelve-Factor) · fail-fast validation at startup</text>
+  <g font-size="9" font-weight="600" fill="#92400e" text-anchor="middle">
+    <rect x="112" y="302" width="222" height="26" rx="6" fill="#fff" stroke="#fcd34d"/><text x="223" y="319">DB/Storage/Cache/Search endpoints</text>
+    <rect x="350" y="302" width="222" height="26" rx="6" fill="#fff" stroke="#fcd34d"/><text x="461" y="319">Model providers &amp; endpoints</text>
+    <rect x="588" y="302" width="222" height="26" rx="6" fill="#fff" stroke="#fcd34d"/><text x="699" y="319">GPU / resource settings</text>
+    <rect x="826" y="302" width="222" height="26" rx="6" fill="#fff" stroke="#fcd34d"/><text x="937" y="319">workers / replicas</text>
+    <rect x="112" y="334" width="300" height="26" rx="6" fill="#fff" stroke="#fcd34d"/><text x="262" y="351">secrets · TLS · paths</text>
+    <rect x="430" y="334" width="300" height="26" rx="6" fill="#fff" stroke="#fcd34d"/><text x="580" y="351">feature flags</text>
+    <rect x="748" y="334" width="300" height="26" rx="6" fill="#fff" stroke="#fcd34d"/><text x="898" y="351">physical-DB targets</text>
+  </g>
+
+  <!-- Profile columns -->
+  <!-- Col A -->
+  <rect x="100" y="400" width="300" height="42" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="250" y="419" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">Local Development</text>
+  <text x="250" y="434" text-anchor="middle" font-size="9" fill="#166534">MSI Titan — dev / test</text>
+  <rect x="100" y="452" width="300" height="292" rx="9" fill="#f0fdf4" stroke="#86efac"/>
+  <g font-size="10.5" fill="#166534">
+    <text x="116" y="480">• 1–2 concurrent users</text>
+    <text x="116" y="506">• Ollama (model swap, 1 GPU)</text>
+    <text x="116" y="532">• single backend replica</text>
+    <text x="116" y="558">• local Postgres / Qdrant / etc.</text>
+    <text x="116" y="584">• small corpus</text>
+    <text x="116" y="610">• no TLS / no HA</text>
+    <text x="116" y="636">• docker compose up</text>
+    <text x="128" y="656" font-size="9.5" fill="#15803d">.env.local</text>
+  </g>
+
+  <!-- Col B -->
+  <rect x="430" y="400" width="300" height="42" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="580" y="419" text-anchor="middle" font-size="13" font-weight="700" fill="#0c4a6e">Staging / Demo</text>
+  <text x="580" y="434" text-anchor="middle" font-size="9" fill="#0369a1">same code · larger settings</text>
+  <rect x="430" y="452" width="300" height="292" rx="9" fill="#f0f9ff" stroke="#7dd3fc"/>
+  <g font-size="10.5" fill="#0369a1">
+    <text x="446" y="480">• larger settings, same code</text>
+    <text x="446" y="506">• test workflows &amp; permissions</text>
+    <text x="446" y="532">• test RAG &amp; integrations</text>
+    <text x="446" y="558">• few replicas / workers</text>
+    <text x="446" y="584">• staging DBs &amp; storage</text>
+    <text x="446" y="610">• optional TLS</text>
+    <text x="458" y="632" font-size="9.5" fill="#0369a1">.env.staging</text>
+  </g>
+
+  <!-- Col C -->
+  <rect x="760" y="400" width="300" height="42" rx="9" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="910" y="419" text-anchor="middle" font-size="13" font-weight="700" fill="#7c2d12">Production</text>
+  <text x="910" y="434" text-anchor="middle" font-size="9" fill="#9a3412">20,000–30,000 users</text>
+  <rect x="760" y="452" width="300" height="292" rx="9" fill="#fff7ed" stroke="#fdba74"/>
+  <g font-size="10.5" fill="#9a3412">
+    <text x="776" y="478">• 20k–30k registered users</text>
+    <text x="776" y="502">• vLLM on separate GPU nodes</text>
+    <text x="776" y="526">• N backend replicas + LB</text>
+    <text x="776" y="550">• Postgres HA + PgBouncer</text>
+    <text x="776" y="574">• read replicas (reporting)</text>
+    <text x="776" y="598">• Qdrant/OpenSearch/MinIO clusters</text>
+    <text x="776" y="622">• Redis cluster · monitoring</text>
+    <text x="776" y="646">• backup / restore · TLS · HA</text>
+    <text x="788" y="666" font-size="9.5" fill="#9a3412">.env.production</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#475569" stroke-width="1.8">
+    <line x1="580" y1="155" x2="580" y2="169" marker-end="url(#a)"/>
+    <line x1="580" y1="251" x2="580" y2="271" marker-end="url(#a)"/>
+    <line x1="250" y1="369" x2="250" y2="399" marker-end="url(#a)"/>
+    <line x1="580" y1="369" x2="580" y2="399" marker-end="url(#a)"/>
+    <line x1="910" y1="369" x2="910" y2="399" marker-end="url(#a)"/>
+  </g>
+  <!-- promotion arrows -->
+  <g stroke="#0d9488" stroke-width="2">
+    <line x1="400" y1="421" x2="430" y2="421" marker-end="url(#a)"/>
+    <line x1="730" y1="421" x2="760" y2="421" marker-end="url(#a)"/>
+  </g>
+
+  <!-- banner -->
+  <rect x="100" y="764" width="960" height="44" rx="9" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="580" y="791" text-anchor="middle" font-size="12" font-weight="700" fill="#134e4a">Promotion Local → Staging → Production = CONFIGURATION change ONLY — no code change · no re-architecture · no fork</text>
+</svg>
