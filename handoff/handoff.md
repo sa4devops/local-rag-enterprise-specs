@@ -54,3 +54,111 @@
 - **next step:** تصميم **Phase 1 — Governed Core + Screen Builder** في محادثة مستقلة (Vision→Specify→Clarify→Plan→Tasks، بلا كود)؛ وبالتوازي حسم C4/C5 وC1–C3 قبل تنفيذ Phase 0
 - **do not touch:** `superseded/` وكل ما يُنقل إليه (برومبتات Phase-0/1 القديمة، المخططات القديمة، نسخ v1.0) · `decisions/adr/` دون طلب صريح · constitution.md دون قرار مالك المشروع
 - **notes for next agent:** اقرأ بالترتيب المحدد في README؛ نفّذ المكتوب فقط؛ أي dependency جديدة تبدأ بصف في license-review.md
+## H-0003 — GitHub Bootstrap Closure
+
+Date: 2026-07-05
+
+Type: Organizational handoff
+
+Status: Closed
+
+### Summary
+
+The GitHub bootstrap stage has been completed.
+
+Two repositories are now established:
+
+- `local-rag-enterprise-specs`
+- `local-rag-enterprise-platform`
+
+The specs repository is the authoritative source of truth for project documentation, architecture, methodology, decisions, phase designs, agent rules, and approved OSS references.
+
+The platform repository is reserved for implementation code and currently contains bootstrap governance files only.
+
+No implementation code has been written.
+
+No Phase 0 implementation has started.
+
+No Phase 1 design has started.
+
+### Current releases
+
+Specs repository:
+
+- Current approved release: `v0.2-specs-reference-catalog`
+- Previous baseline release: `v0.1-specs-baseline`
+
+Platform repository:
+
+- Current bootstrap release: `v0.2-platform-bootstrap`
+- Previous bootstrap release: `v0.1-platform-bootstrap`
+
+### Completed actions
+
+- Created the specs repository.
+- Uploaded the approved documentation package.
+- Created specs release `v0.1-specs-baseline`.
+- Added `references/OSS_REFERENCE_CATALOG.md`.
+- Updated `PACKAGE_CHECKLIST.md`.
+- Updated `github-docs-structure.md`.
+- Created specs release `v0.2-specs-reference-catalog`.
+- Created the platform repository.
+- Added `README.md`.
+- Added `AGENTS.md`.
+- Added `docs/SPEC_SOURCE.md`.
+- Added `.gitignore`.
+- Added `LICENSE_NOTICE.md`.
+- Updated platform references from `v0.1-specs-baseline` to `v0.2-specs-reference-catalog`.
+- Created platform release `v0.2-platform-bootstrap`.
+
+### Governance state
+
+The current authoritative specs release is:
+
+`v0.2-specs-reference-catalog`
+
+The current platform bootstrap release is:
+
+`v0.2-platform-bootstrap`
+
+Future agents must read `docs/SPEC_SOURCE.md` in the platform repository to determine the current approved specs release.
+
+Platform `README.md` and `AGENTS.md` should avoid duplicating release numbers where possible and should defer to `docs/SPEC_SOURCE.md` as the release pointer.
+
+### OSS reference policy
+
+The approved OSS reference catalog is located at:
+
+`references/OSS_REFERENCE_CATALOG.md`
+
+Only projects listed in that catalog may be studied by AI agents.
+
+Projects not listed in the catalog require explicit approval before study.
+
+OSS references are references only, not dependencies.
+
+Direct code copying is prohibited unless explicitly approved through license review.
+
+### Open housekeeping items
+
+The following items are not blockers for Phase 1 design, but should be addressed in a future specs update:
+
+- Add `LICENSE_NOTICE.md` to the specs repository.
+- Expand `OSS_REFERENCE_CATALOG.md` with actual license names, risk levels, study depth, direct-dependency allowance, and copy-in allowance.
+- Make `docs/SPEC_SOURCE.md` the single release pointer for future approved specs release numbers.
+- Document the release cycle rule:
+  approved phase design → commit to specs → create new specs release → update platform SPEC_SOURCE if needed.
+
+### Next recommended step
+
+Open a separate conversation for Phase 1 design only.
+
+Recommended Phase 1 scope:
+
+Governed Core + Screen Builder
+
+The next conversation must remain design-only and should follow:
+
+Vision → Specify → Clarify → Plan → Tasks
+
+No implementation code should be written during Phase 1 design.
