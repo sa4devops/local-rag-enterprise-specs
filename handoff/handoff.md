@@ -162,3 +162,40 @@ The next conversation must remain design-only and should follow:
 Vision → Specify → Clarify → Plan → Tasks
 
 No implementation code should be written during Phase 1 design.
+
+## H-0004 — UI/UX Planning Package v0.4 Accepted
+
+Date: 2026-07-07
+
+Status: Accepted for Design / Planning
+
+Summary:
+
+The UI/UX Planning Package v0.4 has been accepted and prepared for release.
+
+Included in this handoff:
+
+- `ui/UI_UX_ASSUMPTIONS.md`
+- `ui/UI_SITEMAP.md`
+- `ui/UI_SCREEN_INVENTORY.md`
+- `ui/UI_AI_WORKSPACE_MODEL.md`
+- `ui/UI_ACTION_BUTTON_MODEL.md`
+- `ui/UI_ADMIN_CONSOLE_MODEL.md`
+- `ui/UI_FIELD_NAMING.md`
+- `ui/UI_DESIGN_SYSTEM.md`
+- `ui/UI_SCREEN_CARDS_BY_PHASE.md`
+- `ui/UI_STITCH_PROMPTS_BY_PHASE.md`
+- `ui/UI_REFERENCE_USAGE_POLICY.md`
+- `ui/UI_GATE_REVIEW_CHECKLIST.md`
+
+Release:
+
+`v0.4-ui-ux-planning-package`
+
+Important rules:
+
+- No implementation code is included in this release.
+- Google Stitch outputs are prototypes/references only.
+- Final implementation must follow React + Vite + TypeScript + Tailwind + shadcn/ui-style.
+- The accepted UI model is Dual-Surface: AI Workspace + Runtime Renderer, both using one governed Action Layer.
+- The LLM suggests actions; backend validation, permission checks, approval flow, execution, and audit remain authoritative.
