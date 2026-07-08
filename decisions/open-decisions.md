@@ -71,3 +71,23 @@
 - **فئة 5 (Configurable):** OCR engine · Graph · النماذج لكل capability · IdP · sizing · بنية Postgres · SoD/مصفوفات الاعتماد · K8s لاحقاً.
 
 **ملاحظات حاكمة:** «Reference-aware clean implementation» **سياسة مُغلقة** (ADR-0021) وليست قراراً مفتوحاً · بنود الفئتين 2/3 تُحسم عبر License Review Workflow داخل نافذتها · بنود 5 تُوثَّق في configuration.md.
+
+## فهرس القرارات المفتوحة لحزم v0.5–v0.7 (Δ ما-بعد الدمج 2026-07-08)
+> هذه القرارات تُدار **نصاً داخل ملفاتها الحاضنة** (المصدر المعياري)؛ هذا الجدول فهرس تصنيفي بفئة التوقيت فقط، على نسق هذا السجل.
+| OD | الملف الحاضن | فئة التوقيت | خلاصة سطرية |
+|---|---|---|---|
+| OD-IX-1..3 | ui/UI_INTERACTION_MODEL.md | عند تفعيل P1 (Clarify) | حفظ حالة drawer/فتح تلقائي للتبويبات/زر «فتح كامل» |
+| OD-VZ-1..3 | ui/UI_VISIBILITY_RULES.md | عند تفعيل P1 (Clarify) | كتالوج أسباب disabled/عتبة مرجع التدقيق/استثناء عدّاد admin.audit |
+| OD-PD-1..3 | ui/UI_PROGRESSIVE_DISCLOSURE.md | عند تفعيل P1 (Clarify) | مؤشر الحقول المطوية/تذكّر التبويب/سقف أزرار البطاقات |
+| OD-MX-1 | ui/UI_PROVIDER_MODEL_MANAGEMENT.md | عند تفعيل P6 (Clarify) | إظهار محدد Model Profiles للمستخدم (التوصية: مخفي افتراضياً) |
+| OD-MX-3 | ui/UI_PROVIDER_MODEL_MANAGEMENT.md | Ops/config لاحقاً | تحكم يدوي warm/unload — قراءة فقط في v1 |
+| OD-MX-4 | ui/UI_PROVIDER_MODEL_MANAGEMENT.md | Ops/config (P5/P6) | مفتاح عتبة slow |
+| OD-RUN-1 | ui/UI_RUN_EXECUTION_MODEL.md | Ops/config (P6) | عتبة auto-offload لحجم المخرجات |
+| OD-RUN-2 | ui/UI_RUN_EXECUTION_MODEL.md | عند تفعيل P6 (Clarify) | إقرار typed-ack لاعتماد تقرير جزئي |
+| OD-RUN-3 | ui/UI_RUN_EXECUTION_MODEL.md | Ops/config | مدة احتفاظ/أرشفة قائمة التشغيلات |
+| OD-TPL-1 | ui/UI_RUN_EXECUTION_MODEL.md | **مؤجل بقرار المالك (غير معتمد)** | template.create — لا يدخل إلا بقرار صريح |
+| OD-AB-4 | ui/UI_ACTION_BUTTON_MODEL.md | مرآة OD-TPL-1 | نفس الحكم على مستوى كتالوج الأفعال |
+| OD-NM-1 (المعدَّل) | ui/UI_FIELD_NAMING.md | محسوم جزئياً + Clarify P3 | run/escalate/compare معتمدة (2026-07-08)؛ بقية الكتالوج تُثبَّت في P3 |
+| OD-PSC-1 | architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md | عند تفعيل P5/P6 (Clarify) | مخزن الأسرار لأول تنفيذ (التوصية: env + ملفات محلية) |
+| OD-PSC-2 | architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md | عند تفعيل P5/P6 (Clarify) | حساسية endpoint_ref (التوصية: حساس افتراضياً) |
+| OD-PSC-3 | architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md | Ops/config (P5/P6) | مدة كاش الاكتشاف |

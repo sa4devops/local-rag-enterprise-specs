@@ -199,3 +199,79 @@ Important rules:
 - Final implementation must follow React + Vite + TypeScript + Tailwind + shadcn/ui-style.
 - The accepted UI model is Dual-Surface: AI Workspace + Runtime Renderer, both using one governed Action Layer.
 - The LLM suggests actions; backend validation, permission checks, approval flow, execution, and audit remain authoritative.
+
+## H-0005 — UI Interaction & Visibility Refinement Package v0.5 Accepted
+
+Date: 2026-07-08
+
+Status: Accepted for Design / Planning
+
+Summary:
+
+The UI Interaction & Visibility Refinement Package v0.5 has been accepted and prepared for release. It builds on top of UI/UX Planning Package v0.4 without replacing or removing any of its files.
+
+Included in this handoff:
+
+- `ui/UI_INTERACTION_MODEL.md`
+- `ui/UI_VISIBILITY_RULES.md`
+- `ui/UI_PROGRESSIVE_DISCLOSURE.md`
+- `ui/UI_COMPONENT_STATES.md`
+- `ui/UI_SCREEN_BEHAVIOR_CARDS.md`
+- `ui/UI_STITCH_REFINED_PROMPTS.md`
+- `ui/UI_REFINEMENT_GATE_REVIEW.md`
+
+Release:
+
+`v0.5-ui-interaction-visibility-refinement`
+
+Important rules:
+
+- No implementation code is included in this release.
+- No architectural change; interaction, visibility, and component-state rules only.
+- Builds on v0.4 — no v0.4 file modified or removed.
+
+## H-0006 — Provider, Model & Run UX Package v0.6 Accepted
+
+Date: 2026-07-08
+
+Status: Accepted for Design / Planning
+
+Summary:
+
+The Provider, Model & Run UX Package v0.6 has been accepted and prepared for release. It adds four new specification files and applies delta amendments to twelve previously merged files (seven from v0.4, five from v0.5), replacing them with their final approved v0.6 versions. Patch P-4 (canonical event name unification: PROVIDER_CHANGE_COMPLETED → PROVIDER_CONFIG_APPLIED_BY_OPS) was applied to `ui/UI_PROVIDER_MODEL_MANAGEMENT.md` before this merge.
+
+New files in this handoff:
+
+- `ui/UI_PROVIDER_MODEL_MANAGEMENT.md`
+- `ui/UI_RUN_EXECUTION_MODEL.md`
+- `ui/UI_V06_DELTA_AMENDMENTS.md`
+- `ui/UI_V06_GATE_REVIEW.md`
+
+Files replaced with final v0.6 versions (12):
+
+- `ui/UI_ACTION_BUTTON_MODEL.md`
+- `ui/UI_ADMIN_CONSOLE_MODEL.md`
+- `ui/UI_FIELD_NAMING.md`
+- `ui/UI_REFERENCE_USAGE_POLICY.md`
+- `ui/UI_SCREEN_INVENTORY.md`
+- `ui/UI_SITEMAP.md`
+- `ui/UI_UX_ASSUMPTIONS.md`
+- `ui/UI_INTERACTION_MODEL.md`
+- `ui/UI_VISIBILITY_RULES.md`
+- `ui/UI_COMPONENT_STATES.md`
+- `ui/UI_SCREEN_BEHAVIOR_CARDS.md`
+- `ui/UI_STITCH_REFINED_PROMPTS.md`
+
+Release:
+
+`v0.6-provider-model-run-ux`
+
+Important rules:
+
+- No implementation code is included in this release.
+- No architectural change — Dual-Surface, single Action Layer, and Workspace-from-P6 unchanged.
+- D9 boundary preserved literally: no real Base URL / API Key / secrets / endpoints in any file or delta; secret_ref by name only.
+- No Terminal UI, no cybersecurity-specific UI.
+
+## H-0007 — v0.7 Pre-Implementation Consolidation (2026-07-08)
+**النطاق:** مواصفة Backend للمزوّد/السر (الخيار A، D9 ثابت) + مراجعة تجميع ودمج ما قبل التنفيذ. **المخرجات:** architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md · methodology/PRE_IMPLEMENTATION_CONSOLIDATION_REVIEW.md · Patches P-1..P-6. **قرارات:** توحيد PROVIDER_CONFIG_APPLIED_BY_OPS (P-4) · الفصل «Backend-only ≠ مؤجل». **التالي:** تنفيذ ترتيب الدمج §3 ثم SPEC_SOURCE→v0.7؛ لا Phase بلا بطاقة مهمة.

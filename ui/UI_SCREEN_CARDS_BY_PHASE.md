@@ -1,6 +1,6 @@
 # UI_SCREEN_CARDS_BY_PHASE.md — بطاقات الشاشات حسب المراحل
 
-> **Version:** 1.0 — Proposed · **Date:** 2026-07-06 · **الموضع الهدف:** `ui/UI_SCREEN_CARDS_BY_PHASE.md`
+> **Version:** 1.0 — Proposed · **Date:** 2026-07-06 · **الموضع الهدف:** `ui/UI_SCREEN_CARDS_BY_PHASE.md` · +runs (Δ ما-بعد الدمج 2026-07-08)
 > **المراجع الحاكمة:** PHASE_MASTER_PLAN + designs/phase-1..8 (الترتيب **ثابت لا يُمس**) · UI_SCREEN_INVENTORY (المعرّفات) · نماذج الدفعة الثانية.
 > **الغرض:** بطاقة موجزة لكل شاشة (جديدة New / مطوَّرة Enh) في مرحلتها، بربط الأفعال والصلاحيات وأحداث التدقيق — **مدخلات مباشرة لدفعة الـ Stitch prompts**. لا تنفيذ الآن؛ التنفيذ ببطاقات مهام عند تفعيل كل مرحلة.
 
@@ -82,6 +82,10 @@
 | reports.list + reports.review | New | تقاريري + المراجعة القسمية بالاستشهاد والاعتماد | report.generate/approve/return · section.regenerate | reports.* | REPORT_* | G4 |
 | admin.agents | New | per-agent bindings + معاملات + fallback | agent.binding_change | admin.models.manage (+approval) | AGENT_BINDING_CHANGED | G10 |
 | run.list | Enh | استقبال الفلاتر المسلسلة من بطاقات النتائج | record.search | records.{e}.read | — | G13 |
+| runs.list | — | مراقبة تشغيلات المستخدم (قائمة) | — | — | — | G14 |
+| runs.detail | — | الخط الزمني والبوابات والأدلة | — | — | — | G14 |
+
+> (Δ ما-بعد الدمج: الصفان مضافان اتساقاً مع الجرد v1.2 و`UI_RUN_EXECUTION_MODEL.md`؛ يمتدان إلى P7.)
 
 **نقطة الالتقاء:** هنا تركّب واجهة P6 عقودَ P1/P2 (schema) وP3 (actions) وP4 (سياسات) وP5 (استرجاع) — دون أي حوكمة جديدة.
 

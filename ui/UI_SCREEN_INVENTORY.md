@@ -1,6 +1,6 @@
 # UI_SCREEN_INVENTORY.md — جرد الشاشات الشامل
 
-> **Version:** 1.0 — Proposed · **Date:** 2026-07-06 · **الموضع الهدف:** `ui/UI_SCREEN_INVENTORY.md`
+> **Version:** 1.2 — Proposed (Δ v1.1: +admin.retrieval_tester من تصميم P5 · Δ v1.2: +runs.list/+runs.detail من UI_RUN_EXECUTION_MODEL v0.6) · **Date:** 2026-07-06 · **الموضع الهدف:** `ui/UI_SCREEN_INVENTORY.md`
 > **بنية الجرد:** الحقول الـ15 المطلوبة كاملة، مقسومة لجدولين مترابطين بـ `screen_id` حفاظاً على قابلية القراءة والصيانة: **A = التعريف والتموضع** (screen_id, name, route, phase, audience, type, visible_to_end_user, stitch_prompt_required, priority) · **B = الغرض والحوكمة** (screen_id, purpose, primary_data, main_actions, permissions, audit_events, notes).
 > **اصطلاحات:** type ∈ {auth, workspace, queue, renderer, business, admin-config, admin-security, admin-knowledge, admin-models, admin-integrations, admin-ops, ops-read} · stitch = رقم مجموعة G أو «قالب G13» أو «لا (حالة/تبويب)» · الأولوية = ترتيب التصميم في Stitch.
 > **قاعدة Dual-Surface في الجرد:** أي عملية سجلات تُذكر مرتين فقط: بطاقة في ws (P6+) وأزرار في الـ Renderer — **نفس action_id**؛ ولا توجد شاشة مخصصة لكل نوع سجل.
@@ -48,6 +48,8 @@
 | files.manager | إدارة الملفات | /admin/knowledge/files | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | Med |
 | admin.okf | حِزم OKF | /admin/knowledge/okf | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | Low |
 | admin.retrieval_tester | مختبر الاسترجاع (أدمن) | /admin/knowledge/tester | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | Med |
+| runs.list | تشغيلاتي | /me/runs | 6 (يمتد P7) | مستخدم (+مراقب بنطاق) | me-runs | ✖ | G14 | Med |
+| runs.detail | تفصيل تشغيل | /me/runs/{id} | 6 (يمتد P7) | مستخدم (+مراقب بنطاق) | me-runs | ✖ | G14 | High |
 | admin.capabilities | ربط القدرات بالنماذج | /admin/models/capabilities | 5 | سوبر أدمن | admin-models | ✖ | G10 | High |
 | admin.agents | نماذج الوكلاء (per-agent) | /admin/models/agents | 6 | سوبر أدمن | admin-models | ✖ | G10 | Med |
 | admin.connectors | الموصلات (تعريف/تفعيل/جمهور) | /admin/integrations/connectors | 7 | سوبر أدمن | admin-integrations | ✖ | G11 | Med |
@@ -102,6 +104,8 @@
 | files.manager | حوكمة الملفات | files+versions+classification | file.reclassify · file.delete | admin.files.manage | FILE_RECLASSIFIED/DELETED | رفع المستخدم من ws/renderer لا من هنا |
 | admin.okf | حِزم المعرفة المحلية | okf_bundles | okf.load/disable | admin.knowledge.manage | OKF_BUNDLE_LOADED | موسومة «ليست مصدر حقيقة» |
 | admin.retrieval_tester | فحص جودة الاسترجاع وقرار الكفاية (No-Guessing) قبل التشغيل وأثناءه | استعلام تجريبي + النتائج + provenance + قرار العتبة | rag.simulate_query | admin.knowledge.manage | RAG_QUERY_SIMULATED | لا يتجاوز صلاحيات المُجرِّب؛ أُضيفت استكمالاً من تصميم P5 §13 (Δ v1.1) |
+| runs.list | متابعة تشغيلات المستخدم (تقارير/خطوط/تسلسلات موصلات) وحالاتها | التعريف · الحالة · التقدم x/y · المدة · النوع | run.start (إطلاق جديد) · run.cancel (من الصف) | runs.read (ملكية + نطاق) · runs.start | RUN_STARTED · RUN_CANCELLED | RLS بالمُطلِق؛ **ليست terminal ولا سطح تنفيذ حر** (Δ v1.2) |
+| runs.detail | مراقبة تنفيذ محكوم: خط زمني · بوابات اعتماد/HITL · أدلة/مخرجات · إعادة/إلغاء | خطوات وحالاتها · عقد البوابات · لوحة المخرجات · سلسلة correlation | run.cancel · run.retry(+_step) · version.compare · فتح البند (queue) | runs.read/cancel/retry · تبويب التدقيق audit-visible | مجموعة RUN_* (المواصفة §10) | يقرأ سلسلة التدقيق القائمة (مصدر واحد)؛ القرارات على queue.approval_detail (Δ v1.2) |
 | admin.capabilities | توجيه القدرات | capability_bindings | binding.change · provider.test_connection | admin.models.manage (+approval بالإنتاج) | CAPABILITY_BINDING_CHANGED | بلا endpoints/secrets (D9)؛ خطة إعادة فهرسة عند تغيير embedding |
 | admin.agents | نماذج الوكلاء | agent_bindings+params | agent.binding_change | admin.models.manage (+approval) | AGENT_BINDING_CHANGED | fallback ظاهر لكل وكيل |
 | admin.connectors | إدارة الموصلات | connectors+tools+risk | connector.enable/disable · audience.set · hitl.policy_set | admin.integrations.manage | CONNECTOR_ENABLED/DISABLED | الأسرار Ops فقط؛ صحة الموصل ظاهرة |

@@ -30,6 +30,7 @@
 | بحث سجلات (كبير→Renderer) | ws.main → run.list | /app/{entity}?f=… | record.search | records.{entity}.read | records_query ⇦ GET /api/v1/records/{entity} | — | فلتر مُسلسل f | card.result / DataTable |
 | تعطيل مستخدم | admin.user_detail | /admin/users/{id} | user.disable | admin.users.manage | users_disable ⇦ POST /api/v1/users/{id}/disable | USER_DISABLED | user_id · reason | UserStatusActions |
 | فعل موصل كاتب | ws.main + queue.approvals (HITL) | — | connector.tool.act | صلاحية المنصة ∩ الحساب المربوط | invocations_execute ⇦ POST /api/v1/invocations | INVOCATION_APPROVED/EXECUTED | connector_id · tool_id · payload_masked · on_behalf_of | HitlPreviewDialog |
+| إطلاق تشغيل ومتابعته (Δ v0.6) | runs.list / runs.detail | /me/runs · /me/runs/{id} | run.start | runs.start | runs_start ⇦ POST /api/v1/runs | RUN_STARTED | run_id · definition_ref · correlation_id | RunTimeline / StepDrawer |
 
 ## 4) قواعد i18n وقواعد البيانات (الملاصقة للواجهة)
 - **مفاتيح i18n:** dot.notation بفضاء الشاشة: `{screen_id}.{element}` — مثل `ws.main.composer_placeholder` · `admin.migrations.approve_confirm` · قيم الرسائل للأخطاء تُفهرس بـ `errors.{error_code}`. لا نص مضمّن في المكوّنات.
@@ -40,6 +41,8 @@
 ## 5) كتالوج الأفعال المغلق (v1 — أي فعل جديد يُضاف بقرار في الـ Registry)
 create · update · delete · restore · search · open · view · export · submit · approve · reject · return · assign · revoke · grant · enable · disable · activate · rollback · generate · review · ingest · retry · cancel · link · renew · test · enter · exit · act · read · simulate · reorder · reclassify.
 **ممنوع:** أفعال مركّبة (create_and_notify — الإشعار effect مرافق) · مرادفات (add/new/insert ⇒ create) · أفعال بلا فاعل واضح.
+> **إضافة معتمدة (Δ v0.6 — 2026-07-08):** run · escalate · compare. (template ليس noun معتمداً — انظر OD-AB-4.)
+> **تثبيت منطقة:** المنطقة `runs` (شاشتا runs.list / runs.detail) **مثبَّتة بقرار المالك** — يُمنع استخدام بدائل مثل agent_runs أو execution_console.
 
 ## 6) محظورات عامة
 لا عربية/مسافات/شرطات في المعرّفات · لا camelCase في field_name · لا إعادة استخدام معرّف محذوف · لا اختصارات غامضة (`usr`, `tbl`) · لا خلط مفرد/جمع داخل الطبقة الواحدة · لا permission يبدأ بفعل UI (`click_`, `show_`).
@@ -50,5 +53,5 @@ create · update · delete · restore · search · open · view · export · sub
 ## 8) Open Decisions
 | OD | الموضوع | التوصية |
 |---|---|---|
-| OD-NM-1 | إقفال قائمة كتالوج الأفعال v1 | القائمة في §5 تُثبَّت مع Clarify تفعيل P3 (مالك الـ Registry) |
+| OD-NM-1 | كتالوج الأفعال | **وُسِّع بقرار المالك 2026-07-08 بثلاثة أفعال: run · escalate · compare**؛ بقية القائمة تُثبَّت مع Clarify تفعيل P3 (مالك الـ Registry). **دلالة run مؤسسية حصراً**: تنفيذ تعريف معلن (تقرير/خط orchestrator/تسلسل موصل) — لا تعني terminal ولا cybersecurity run ولا جلسة أوامر |
 | OD-NM-2 | بادئة إصدار الـ API | `/api/v1` ثابتة؛ كسر التوافق ⇒ v2 بقرار ADR |

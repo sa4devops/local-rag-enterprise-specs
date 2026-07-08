@@ -25,6 +25,7 @@
 | A-UX-12 | **مخرجات Stitch تصور بصري فقط:** لا يُعتمد كودها نهائياً؛ التنفيذ لاحقاً React+Vite+TS+Tailwind+shadcn-style وفق D1 وسياسة D8 | D1 · ADR-0021 |
 | A-UX-13 | **Desktop-first** (بيئة عمل مؤسسية)؛ استجابة أساسية للأحجام، وتجربة موبايل كاملة Backlog | Backlog |
 | A-UX-14 | **اللغة الافتراضية للواجهة عربية** مع تبديل فوري en، وكل النصوص i18n keys | م6 |
+| A-UX-15 | **تجربة المزوّد/النموذج/التشغيل (Δ v0.6):** (أ) إدارة المزوّدات **قراءةً** وفق D9/الخيار A — لا Base URL ولا API Key ولا أسرار ولا endpoints حقيقية في الواجهة؛ التغيير الفعلي عبر Ops/config/secret_ref وworkflow «طلب تهيئة/تعديل مزوّد» فقط. (ب) اختيار المستخدم عبر **Model Profiles** منسّقة مُدارة بدورة اعتماد — لا أسماء نماذج خام؛ وإعداد الأدمن سقفٌ دائماً. (ج) عارض التشغيل (runs.list/runs.detail) **سطح مراقبة مؤسسي يقرأ سلسلة التدقيق القائمة** — ليس terminal ولا cyber console ولا سطح تنفيذ حر؛ القرارات على سطح الاعتماد الرسمي. (ODs المرتبطة: OD-MX-1/3/4 · OD-RUN-1..3 · OD-TPL-1) | D9/ADR-0008 · UI_PROVIDER_MODEL_MANAGEMENT · UI_RUN_EXECUTION_MODEL |
 
 ## 3) ما يبقى صفحات مستقلة (استثناءات مبررة)
 Auth (دخول/أول-دخول/قفل) · **AI Workspace** (P6) · **Work Queue الثلاثية** (مهامي/اعتماداتي/الإشعارات — P3) · **Runtime Screen Renderer** (قائمة/نموذج/تفاصيل) · **Entity Profile** (P2→P4) · **Report Review/Studio** (مراجعة واعتماد رسمية — P6) · **App Store + My Connections** (P7) · **Admin Console بكامله** · **Ops/About** (P8). كل ما عداها يُفضَّل سطحاً داخل الـ Workspace أو لوحة جانبية.

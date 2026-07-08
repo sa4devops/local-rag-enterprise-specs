@@ -56,6 +56,7 @@ admin.rag_sources (النطاقات=وسوم الصلاحية للفهرسة) ·
 
 ### F) Models &amp; Providers — G10 (حدود D9 مشددة)
 admin.capabilities (capability→provider/model + fallback + **provider.test_connection** بنتيجة فقط + خطة إعادة فهرسة عند تغيير embedding) · admin.agents (per-agent + معاملات + fallback) — approval-in-prod ظاهرة · الصلاحية admin.models.manage · Audit: CAPABILITY_/AGENT_BINDING_CHANGED · Stitch G10. **ممنوع في هذه الشاشات:** endpoints · secrets · GPU/replicas — تُدار config/Ops حصراً.
+> **(Δ v0.6)** وُسِّعت `admin.capabilities` إلى أربعة تبويبات: **Providers (قراءة) · Models · Routing · Profiles** وفق `UI_PROVIDER_MODEL_MANAGEMENT.md`، مع بقاء **قائمة منع D9 نافذة حرفياً** في كل تبويب؛ أي تغيير فعلي للمزوّد يمر حصراً عبر workflow «طلب تهيئة/تعديل مزوّد» إلى Ops (config/secret_ref خارج المنصة)، والواجهة مرآة قراءة لحالته.
 
 ### G) Integrations Admin — G11-admin
 admin.connectors: القدرات/الخطورة/الجمهور/سياسة HITL/صحة الموصل — **بلا أسرار**؛ الأفعال connector.enable/disable · audience.set · hitl.policy_set · الصلاحية admin.integrations.manage · Audit: CONNECTOR_* · Stitch G11 (مع سطح المتجر الإداري).

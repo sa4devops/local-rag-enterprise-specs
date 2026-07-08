@@ -8,6 +8,7 @@
 - **/login** → Auth
 - **/workspace** → AI Workspace (P6، الرئيسية الافتراضية بعدها)
 - **/me/** → Work Queue: tasks · approvals · notifications · reports · connections (الرئيسية قبل P6)
+- **/me/runs** → تشغيلاتي (P6+، يمتد P7): قائمة وتفصيل التشغيلات المحكومة — سمة UF، مراقبة فقط، Dual ✖ (Δ v0.6)
 - **/projects** → المشاريع
 - **/app/{entity}** → Runtime Renderer (list/form/detail لأي كيان مولّد)
 - **/entity/{key}** → Entity Profile
