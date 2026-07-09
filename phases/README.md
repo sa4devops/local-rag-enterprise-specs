@@ -6,7 +6,7 @@
 ## المحتوى
 - **`phase-roadmap.md`** — المرجع المُلزم الوحيد لترتيب المراحل ونطاقها العام (Authority المرتبة 5).
 - **تصميم لكل مرحلة** بملف مستقل، يُنتج في **محادثة مستقلة** بمنهجية `Vision → Specify → Clarify → Plan → Tasks` (بلا كود)، ولا يُعتمد إلا بقرار مالك المشروع.
-- الموجود الآن: `phase-0-foundation-full-stack-skeleton.md` (**Phase 0 — v2.0 — Accepted for Design**). البقية (Phase 1 → Phase 8) تُنشأ لاحقاً تباعاً.
+- الموجود الآن: `phase-0-foundation-full-stack-skeleton.md` (**Phase 0 — v2.1 — Accepted for Design**). البقية (Phase 1 → Phase 8) تُنشأ لاحقاً تباعاً.
 
 ## قواعد التسمية
 `phase-N-short-name.md` بمعرّف ASCII (يجوز إبقاء العنوان العربي داخل الملف). المراحل تُذكر دائماً **بالرقم + الاسم** (قاعدة C8 المغلقة).
