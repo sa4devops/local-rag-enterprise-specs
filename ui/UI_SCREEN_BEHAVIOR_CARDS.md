@@ -7,6 +7,35 @@
 
 ---
 
+## Global Responsive Behavior Rule
+
+Every screen behavior card must be interpreted as responsive by default.
+
+For every screen, the implementation must define behavior for:
+
+- desktop screens
+- laptop screens
+- tablet-width screens
+- mobile-width screens
+
+Each screen must specify or preserve:
+
+- layout resizing
+- navigation behavior
+- sidebar behavior
+- table overflow or table-to-card transformation
+- form field wrapping
+- modal/drawer behavior
+- action button placement
+- action-card behavior
+- empty/loading/error state behavior
+- RTL-safe behavior
+
+No screen may rely on desktop-only layout assumptions.
+
+If a screen contains dense enterprise data, the responsive design must preserve readability, auditability, and access to governed actions.
+
+
 ## 1) `ws.main` — AI Workspace
 - **افتراضياً يظهر:** topbar · sidebar مصغّر · ws.thread (فارغة أولى: قدرات المستخدم) · ws.composer (نص + إرفاق + Scope selector chip واحد) · شارة «مُولَّد» جاهزة للتفعيل عند أول مخرَج نموذج.
 - **مطويّ:** كل تبويبات context panel (رؤوس فقط) · شريط الجلسات (يُفتح بنقر) · panel.audit (رأسه مخفي كلياً لغير المخوّل).

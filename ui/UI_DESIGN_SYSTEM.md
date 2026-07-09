@@ -31,6 +31,43 @@
 ## 3) الإطار والتنقّل
 Topbar: بحث موحّد + جرس + مبدّل ar/en + هوية المستخدم؛ فوقه **شريط بيئة** كهرماني رفيع في غير الإنتاج، ولافتة Safe Mode حمراء هادئة عند تفعيله. Sidebar منطقي-start قابل للطي، عناصره من Navigation Registry مرشّحة بالصلاحية، والمجموعات الإدارية تظهر لمن يملكها فقط. Breadcrumbs في الـ Console فقط. لا صفحة بلا عنوان h1 واحد.
 
+## Responsive Design Requirement
+
+The design system must support responsive layouts across desktop, laptop, tablet, and mobile-width screens.
+
+All design-system components must define responsive behavior where applicable, including:
+
+- page containers
+- navigation shells
+- sidebars
+- top bars
+- cards
+- tables
+- forms
+- dialogs
+- drawers
+- modals
+- action buttons
+- action cards
+- status badges
+- provider/model status indicators
+- run/execution status surfaces
+
+Responsive rules must preserve:
+
+- enterprise readability
+- accessibility
+- RTL support
+- Arabic/English layout stability
+- clear action hierarchy
+- safe overflow handling
+- no hidden critical actions
+- no UI exposure of API keys, Base URLs, provider endpoints, or real secrets
+
+Tables may either become horizontally scrollable or transform into card/list layouts where appropriate.
+
+Sidebars and dense navigation areas must collapse safely on smaller screens without losing access to governed actions.
+
 ## 4) المكوّنات الأساسية (التشريح + الحالات + RTL)
 **الأزرار:** primary/secondary/tertiary/danger + حجم 36/40؛ ربط بصري بمستوى التأكيد: simple (نافذة عادية) · **typed** (حقل كتابة تأكيد) · **dual** (زر ثانٍ يتفعل بعد عدّاد قصير) — من عقد الفعل §risk.
 **الجداول:** رأس ثابت، مبدّل كثافة (OD-UX-2)، فرز/فلترة معلنة، أفعال الصف في end-المنطقي، skeleton صفوف عند التحميل، حالة فارغة إرشادية، والأرقام/المعرّفات بخط mono معزولة LTR.

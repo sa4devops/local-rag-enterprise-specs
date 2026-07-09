@@ -74,6 +74,34 @@
 >
 > **قاعدة حياد أسماء الأدوات:** أي اسم أداة مذكور في هذه البرومبتات أو الوثائق، مثل Google Stitch أو Figma أو Claude أو Google AI Studio أو Design Agent أو Coding Agent، يُقصد به أداة عمل محتملة يستخدمها فريق المشروع، وليس جزءاً من المنتج أو الواجهة أو الهوية أو المتطلبات التقنية. إذا استُخدم البرومبت داخل أداة تصميم أخرى، فافهم كلمة Stitch على أنها "أداة توليد التصميم الحالية".
 
+
+## Global Responsive Prompt Requirement
+
+All UI generation prompts must explicitly request responsive design.
+
+Every generated screen or prototype must include responsive behavior for:
+
+- desktop
+- laptop
+- tablet
+- mobile-width screens
+
+Prompts must ask the design tool to show or describe:
+
+- breakpoint behavior
+- sidebar collapse behavior
+- navigation behavior
+- table overflow or table-to-card behavior
+- form wrapping
+- modal/drawer behavior on smaller screens
+- action area placement
+- RTL-safe resizing
+- Arabic/English layout behavior
+
+The generated output must not be desktop-only.
+
+Responsive design is a product requirement, not a tool-specific preference.
+
 ---
 
 ## §2 المجموعات المُعاد صياغتها

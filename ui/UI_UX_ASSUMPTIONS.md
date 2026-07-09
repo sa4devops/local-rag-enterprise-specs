@@ -27,6 +27,30 @@
 | A-UX-14 | **اللغة الافتراضية للواجهة عربية** مع تبديل فوري en، وكل النصوص i18n keys | م6 |
 | A-UX-15 | **تجربة المزوّد/النموذج/التشغيل (Δ v0.6):** (أ) إدارة المزوّدات **قراءةً** وفق D9/الخيار A — لا Base URL ولا API Key ولا أسرار ولا endpoints حقيقية في الواجهة؛ التغيير الفعلي عبر Ops/config/secret_ref وworkflow «طلب تهيئة/تعديل مزوّد» فقط. (ب) اختيار المستخدم عبر **Model Profiles** منسّقة مُدارة بدورة اعتماد — لا أسماء نماذج خام؛ وإعداد الأدمن سقفٌ دائماً. (ج) عارض التشغيل (runs.list/runs.detail) **سطح مراقبة مؤسسي يقرأ سلسلة التدقيق القائمة** — ليس terminal ولا cyber console ولا سطح تنفيذ حر؛ القرارات على سطح الاعتماد الرسمي. (ODs المرتبطة: OD-MX-1/3/4 · OD-RUN-1..3 · OD-TPL-1) | D9/ADR-0008 · UI_PROVIDER_MODEL_MANAGEMENT · UI_RUN_EXECUTION_MODEL |
 
+### A-UX-16 — Responsive and RTL-safe UI
+
+The UI must be fully responsive across desktop, laptop, tablet, and mobile-width screens.
+
+All layouts, navigation areas, sidebars, tables, forms, cards, modals, drawers, dialogs, action areas, empty states, loading states, error states, and runtime-rendered screens must define responsive behavior.
+
+Responsive behavior must include:
+
+- breakpoint behavior
+- resizing behavior
+- overflow behavior
+- sidebar collapse behavior
+- table-to-card or horizontal-scroll behavior where appropriate
+- modal and drawer behavior on smaller screens
+- touch-friendly spacing where applicable
+- RTL-safe resizing and mirroring
+
+This requirement applies to both:
+
+1. Enterprise AI Workspace
+2. Runtime Renderer / deterministic generated screens
+
+Status: Accepted.
+
 ## 3) ما يبقى صفحات مستقلة (استثناءات مبررة)
 Auth (دخول/أول-دخول/قفل) · **AI Workspace** (P6) · **Work Queue الثلاثية** (مهامي/اعتماداتي/الإشعارات — P3) · **Runtime Screen Renderer** (قائمة/نموذج/تفاصيل) · **Entity Profile** (P2→P4) · **Report Review/Studio** (مراجعة واعتماد رسمية — P6) · **App Store + My Connections** (P7) · **Admin Console بكامله** · **Ops/About** (P8). كل ما عداها يُفضَّل سطحاً داخل الـ Workspace أو لوحة جانبية.
 
