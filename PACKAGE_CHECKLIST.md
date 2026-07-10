@@ -1,34 +1,34 @@
 # PACKAGE_CHECKLIST.md — Final GitHub Package Checklist
 
-> **Version:** 1.7 (D1–D9 + Phase Design Package v0.3 + UI/UX Planning Package v0.4 + UI Interaction & Visibility Refinement Package v0.5 + Provider, Model & Run UX Package v0.6 + Pre-Implementation Consolidation Package v0.7 + Responsive UI v0.7.1 + Conversational & Workflow Batch v0.8) · **Status:** Current · **Date:** 2026-07-10
+> **Version:** 1.8 (… + Conversational & Workflow Batch v0.8 + **Architecture Baseline Closure v1.0**) · **Status:** Current · **Date:** 2026-07-10
 >  **Purpose:** خريطة الحزمة النهائية: كل ملف، مساره، حالته، جاهزيته للرفع، وما يلزم قبل **التنفيذ** (لا قبل الرفع).
 
 | الملف | المسار داخل GitHub | الحالة | جاهز للرفع؟ | يحتاج قراراً قبل التنفيذ؟ |
 |---|---|---|---|---|
-| README.md | `/README.md` | v1.1 — الستاك D1–D3 + سياسة D8 | ✅ | لا |
-| vision.md | `/vision.md` | v1.0 (غير متأثرة) | ✅ | لا |
-| constitution.md | `/constitution.md` | v1.0 — **لم يتغيّر عمداً** (لا يذكر ستاكات؛ D8 امتداد م7) | ✅ | لا |
-| PACKAGE_CHECKLIST.md | `/PACKAGE_CHECKLIST.md` | **v1.7** — مضاف إليه v0.7.1 + دفعة v0.8 | ✅ | لا |
-| github-docs-structure.md | `/github-docs-structure.md` | **v1.6** — FIX-9: إدراج ملفات ui لحزم v0.5/v0.6 + تصحيح جذر الشجرة + ملفات v0.8 (كان صف v1.0 هنا منحرفاً عن الملف الفعلي v1.5) | ✅ | لا |
+| README.md | `/README.md` | **v1.2** — سطر الهوية + حالة المشروع عند خط الأساس v1.0 | ✅ | لا |
+| vision.md | `/vision.md` | v1.0 + سطر الهوية المعتمدة (v1.0-baseline) | ✅ | لا |
+| constitution.md | `/constitution.md` | **v1.1** — +م21 (خط الأساس المعماري) +م22 (القدرات المستقبلية التزامات) — v1.0-baseline | ✅ | لا |
+| PACKAGE_CHECKLIST.md | `/PACKAGE_CHECKLIST.md` | **v1.8** — مضاف إليه v0.7.1 + دفعة v0.8 + إغلاق خط الأساس v1.0 | ✅ | لا |
+| github-docs-structure.md | `/github-docs-structure.md` | **v1.7** — FIX-9 (v0.8) + ملفات ADR الفردية المزروعة (v1.0-baseline) | ✅ | لا |
 | Feature_Technical_Architecture_Catalog.md | `/catalogs/…` | **v2.1** — D1–D9 مدمجة (§2 + §3.1/3.3/3.8 + §5 + §15) | ✅ | لا |
 | Spec_Driven_Modular_Monolith_Methodology.md | `/methodology/…` | **v2.1** — عقود shared + §16/§17 + D8 | ✅ | لا |
-| coding-standards.md | `/methodology/coding-standards.md` | **v1.1** — C5 محسوم + §9 Reference-aware + §10 Observability | ✅ | تثبيت إصدارات Python/Node عند بدء التنفيذ |
+| coding-standards.md | `/methodology/coding-standards.md` | **v1.2** — §9 وفق D12 (معايير الحكم + سجل المراجع) | ✅ | تثبيت إصدارات Python/Node عند بدء التنفيذ |
 | testing-strategy.md | `/methodology/testing-strategy.md` | **v1.1** — +Provider-Equivalence +Logging/Error-Contract | ✅ | لا |
-| open-decisions.md | `/decisions/open-decisions.md` | **v2.2** — C1–C5 مُغلقة؛ إعادة تصنيف كاملة + فهرس قرارات v0.8 المقفلة (OD-WS-4 · OD-BLD-1 · OD-WF-1/2 · OD-ORG-1) | ✅ | هو ذاته سجل بوابات التنفيذ |
-| license-review.md | `/decisions/license-review.md` | **v1.1** — صفوف الستاك + uv/pnpm + OpenWebUI-كمرجع + سياسة المراجع | ✅ | **نعم:** إقرار صفوف الستاك قبل أول كود؛ الفئة 3 عند تفعيل صورة اختيارية |
-| adr/README.md | `/decisions/adr/README.md` | **v1.1** — السجل الكنسي **ADR-0001..0022** | ✅ | لا |
+| open-decisions.md | `/decisions/open-decisions.md` | **v2.3** — +قسم إغلاق خط الأساس (قرارات مُغلقة بمراجع ADR · قيم تشغيلية · OD-IDX-1) | ✅ | هو ذاته سجل بوابات التنفيذ |
+| license-review.md | `/decisions/license-review.md` | **v1.2** — SeaweedFS افتراضي الإنتاج · MinIO مشروط · Valkey افتراضي التوسع · Redis مقفل · إصدارات P0 في lockfiles · سياسة D12 | ✅ | **نعم:** إقرار صفوف الستاك قبل أول كود؛ الفئة 3 عند تفعيل صورة اختيارية |
+| adr/README.md | `/decisions/adr/README.md` | **v1.2** — سياسة D15 كاملة + السجل الكنسي **ADR-0001..0028** + روابط الملفات المزروعة | ✅ | لا |
 | phase-roadmap.md | `/phases/phase-roadmap.md` | **v1.1** — بوابات P0/P5 محدّثة + بند D1–D9 | ✅ | لا |
 | phases/README.md | `/phases/README.md` | v1.0 (قواعد المجلد — غير متأثرة) | ✅ | لا |
 | phase-0-foundation-full-stack-skeleton.md | `/phases/…` | **v2.1 — Accepted for Design** (C1–C5 مُغلقة؛ FR-0.4/0.9/0.11/0.13 + FR-0.19) | ✅ | **قبل تنفيذها:** صفوف ترخيص الستاك فقط (لا بوابة فئة 3 على P0.4) |
-| handoff.md | `/handoff/handoff.md` | H-0001..**H-0009** (آخرها: H-0008 توثيق v0.7.1 بأثر رجعي · H-0009 دفعة v0.8) | ✅ | لا |
-| architecture/README.md | `/architecture/README.md` | **v1.2** — فقرة تحديث D1–D9 + ملاحظة SVG الحاكمة + تصحيح مرجعَي الإصدار v2.0→v2.1 (v0.8) | ✅ | لا |
+| handoff.md | `/handoff/handoff.md` | H-0001..**H-0010** (آخرها: H-0010 إغلاق خط الأساس v1.0) | ✅ | لا |
+| architecture/README.md | `/architecture/README.md` | **v1.3** — +سطر التجميد عند الوسم + مواءمة ADR-0019/0026 (v1.0-baseline) | ✅ | لا |
 | Full_Stack_Architecture.svg (+Agent/Deployment) | `/architecture/diagrams/…` | معتمد مفهومياً؛ **التحديث البصري لاحقاً** (النص يحكم الفروق) | ✅ | لا |
 | superseded/README.md + 11 أرشيفاً | `/superseded/…` | v1.0 — تاريخية موسومة | ✅ | لا تُستخدم إطلاقاً |
 | OSS_REFERENCE_CATALOG.md | `/references/OSS_REFERENCE_CATALOG.md` | v1.0 — Approved OSS reference catalog for AI agents | ✅ | يحتاج تدقيق ترخيص قبل أي استخدام مباشر |
 | PHASE_MASTER_PLAN.md | `/phases/PHASE_MASTER_PLAN.md` | v1.0 — Accepted Phase Master Plan ضمن v0.3 — **⚠️ غير موجود في الريبو (Finding F-3 — EXECUTION_REPORT v0.8)؛ رفعه بقرار SA** | ⚠️ | لا — تصميم فقط |
 | Phase Design Documents 1–8 | `/phases/designs/phase-1…8-*.md` | v1.0 — Accepted Phase Design Package ضمن v0.3 — **⚠️ غير موجودة في الريبو (Finding F-3)؛ ولا يوجد tag v0.3** | ⚠️ | لا — كل Phase تُفعّل لاحقاً بجلسة مستقلة |
 | BACKLOG_DEFERRED_SCOPE.md | `/phases/BACKLOG_DEFERRED_SCOPE.md` | v1.0 — Deferred scope ضمن v0.3 — **⚠️ غير موجود في الريبو (Finding F-3)** | ⚠️ | لا |
-| agent-execution-model.md | `/methodology/agent-execution-model.md` | v1.0 — Agent execution model ضمن v0.3 | ✅ | لا |
+| agent-execution-model.md | `/methodology/agent-execution-model.md` | **v1.1** — +§9 مصفوفة القراءة +§10 سلّم الجاهزية +§11 قاعدتا الحراسة (v1.0-baseline) | ✅ | لا |
 | UI/UX Planning Package | `/ui/*.md` | v1.0 — Accepted UI/UX Planning Package ضمن v0.4 | ✅ | لا — تصميم/تخطيط فقط، ومخرجات Stitch لاحقاً prototypes/references |
 | ui/UI_INTERACTION_MODEL.md | `/ui/UI_INTERACTION_MODEL.md` | v1.0 — Accepted UI Interaction & Visibility Refinement Package ضمن v0.5 | ✅ | لا |
 | ui/UI_VISIBILITY_RULES.md | `/ui/UI_VISIBILITY_RULES.md` | v1.0 — Accepted UI Interaction & Visibility Refinement Package ضمن v0.5 | ✅ | لا |
@@ -48,6 +48,9 @@
 | phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md | `/phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md` | **v1.0 — v0.8**: نصوص FR-3.11/FR-3.12/FR-1.Org-Ext المعتمدة + OD-WF-1/2 وOD-ORG-1 المقفلة — تُدمج في تصميمَي Phase 1/Phase 3 عند توفرهما | ✅ | لا |
 | **Δ v0.8 Conversational & Workflow** | 10 ملفات معدَّلة (ASSUMPTIONS A-UX-17 · AI_WORKSPACE §14 · ACTION_BUTTON §2.1 · ADMIN_CONSOLE OD-BLD-1+org · REFERENCE_POLICY · SCREEN_BEHAVIOR_CARDS · SCREEN_INVENTORY v1.3 · FIELD_NAMING · STITCH_PROMPTS G6/G8 · open-decisions) | تفاصيل التغييرات في `EXECUTION_REPORT.md` | ✅ | لا |
 | EXECUTION_REPORT.md | `/EXECUTION_REPORT.md` | v1.0 — تقرير تنفيذ دفعة v0.8 (جرد/تدقيق/إصلاحات/بصمات) | ✅ | لا |
+| **Δ v1.0 Architecture Baseline Closure** | 14 ملفاً معدَّلاً (constitution م21/م22 · README v1.2 · vision · agent-execution-model v1.1 · coding-standards v1.2 · Methodology §20 · testing-strategy · roadmap · phase-0 · architecture/README v1.3 · open-decisions v2.3 · license-review v1.2 · handoff H-0010 · بوابتا v0.5/v0.6 + تصحيح م2+م16) | تفاصيل الجولة في `BASELINE_CLOSURE_REPORT.md` (خارج المستودع — بيد SA) | ✅ | لا |
+| ADR-0004 · ADR-0017 · ADR-0018 · ADR-0019 · ADR-0020 · ADR-0021 · ADR-0022 (ملفات مزروعة) | `/decisions/adr/ADR-00XX-*.md` | v1.0 — زرع الأرقام القائمة بملفات كاملة الحقول العشرة (مع تكميلات D8/D9c/D10/D11/D12/D13/D14 المعتمدة) | ✅ | لا |
+| ADR-0023 · ADR-0024 · ADR-0025 · ADR-0026 · ADR-0027 · ADR-0028 (جديدة) | `/decisions/adr/ADR-002X-*.md` | v1.0 — الهوية · ستاك الخادم · عقد REST+OpenAPI+SSE · التغليف والاستخراج · سجلات المزوّدات · سياسة التجميد — كلها Accepted بتاريخ 2026-07-10 | ✅ | لا |
 
 
 **تُنشأ لاحقاً (ليست نقصاً):** ملفات المعمارية المستخرجة · ملفات ADR الفردية · handoff/archive · runbooks · prototypes/design-notes الناتجة من Google Stitch بعد مراجعتها.
