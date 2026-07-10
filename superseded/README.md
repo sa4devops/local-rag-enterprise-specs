@@ -18,5 +18,6 @@
 | النسخ v1.0 من: الكتالوج، المنهجية، تصنيف القرارات، تصميم Phase 0 (الملفات هنا: Feature_Technical_Architecture_Catalog-v1.md · Spec_Driven_Modular_Monolith_Methodology-v1.md · open-decisions-v1.md · phase-0-design-v1.md) | حلّت محلها v2.0 المدمجة (A1–A11) | نسخ v2.0 في الحزمة |
 | ترقيم ADRs في المنهجية v1.0 | استُبدل بالسجل الكنسي | `decisions/adr/README.md` |
 | أي برومبت سابق يعامل النظام كـ chatbot أو Open WebUI كواجهة نهائية أو LLM كمصدر حقيقة | يخالف constitution | constitution.md + الكتالوج v2.0 |
+| `phase-design-package-v0.3/` (أرشيف كامل — 12 ملفاً + RESTORE_NOTE) | أرشفة أصلٍ ضمن إغلاق F-3 (2026-07-10) — الأصل مجمّد بايتاً-بايتاً ببصمته؛ نسخة agent-execution-model v0.3 وREADME الحزمة أرشيف-فقط | النسخ الحية العشرة في `phases/` بلافتة حالة + `methodology/agent-execution-model.md` v1.1 الحي |
 
 **قاعدة تشغيل:** عند تجاوز أي وثيقة مستقبلاً: (1) أضف اللافتة أعلاها، (2) انقلها إلى هذا المجلد، (3) أضف صفاً في هذا الجدول، (4) حدّث handoff.
