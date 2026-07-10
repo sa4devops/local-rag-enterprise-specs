@@ -1,6 +1,6 @@
 # UI_SCREEN_INVENTORY.md — جرد الشاشات الشامل
 
-> **Version:** 1.2 — Proposed (Δ v1.1: +admin.retrieval_tester من تصميم P5 · Δ v1.2: +runs.list/+runs.detail من UI_RUN_EXECUTION_MODEL v0.6) · **Date:** 2026-07-06 · **الموضع الهدف:** `ui/UI_SCREEN_INVENTORY.md`
+> **Version:** 1.3 — (Δ v1.1: +admin.retrieval_tester من تصميم P5 · Δ v1.2: +runs.list/+runs.detail من UI_RUN_EXECUTION_MODEL v0.6 · Δ v1.3/v0.8: الإرجاع الموجَّه في queue.tasks/queue.approval_detail وفق FR-3.11/3.12 + admin.org مرنة العمق وفق FR-1.Org-Ext + وضعا عرض ws.main وفق OD-WS-4) · **Date:** 2026-07-10 (الأصل 2026-07-06) · **الموضع الهدف:** `ui/UI_SCREEN_INVENTORY.md`
 > **بنية الجرد:** الحقول الـ15 المطلوبة كاملة، مقسومة لجدولين مترابطين بـ `screen_id` حفاظاً على قابلية القراءة والصيانة: **A = التعريف والتموضع** (screen_id, name, route, phase, audience, type, visible_to_end_user, stitch_prompt_required, priority) · **B = الغرض والحوكمة** (screen_id, purpose, primary_data, main_actions, permissions, audit_events, notes).
 > **اصطلاحات:** type ∈ {auth, workspace, queue, renderer, business, admin-config, admin-security, admin-knowledge, admin-models, admin-integrations, admin-ops, ops-read} · stitch = رقم مجموعة G أو «قالب G13» أو «لا (حالة/تبويب)» · الأولوية = ترتيب التصميم في Stitch.
 > **قاعدة Dual-Surface في الجرد:** أي عملية سجلات تُذكر مرتين فقط: بطاقة في ws (P6+) وأزرار في الـ Renderer — **نفس action_id**؛ ولا توجد شاشة مخصصة لكل نوع سجل.
@@ -67,10 +67,10 @@
 |---|---|---|---|---|---|---|
 | auth.login | دخول آمن | جلسة | auth.login | عام | AUTH_LOGIN / AUTH_FAILED | حالات القفل/الخطأ ضمن الشاشة |
 | auth.first_login | فرض تغيير الكلمة | credentials | auth.change_password | جلسة أولى | AUTH_PASSWORD_CHANGED | سياسة الكلمة من OD-P1-1 |
-| ws.main | السطح المحادثي المركزي | sessions/messages/citations/action-proposals | كل الأفعال عبر Action Cards (record.* / report.generate / workflow.submit / file.ingest / task.create / source.open …) | صلاحيات كل action_id عند التنفيذ | CHAT_ANSWER_SERVED · VALIDATION_BLOCKED · +أحداث كل action منفَّذ | حالات أولى: PERMISSION_DENIED / INSUFFICIENT_EVIDENCE / EXEC_ERROR — بطاقة نتائج &gt;10 صفوف تُحوَّل إلى run.list (OD-UX-4)؛ لوحة audit للمخوّلين |
-| queue.tasks | إنجاز المهام | tasks | task.update_status · task.open_target | tasks.view_own | TASK_COMPLETED… | تفاصيل المهمة درج داخلي |
+| ws.main | السطح المحادثي المركزي | sessions/messages/citations/action-proposals | كل الأفعال عبر Action Cards (record.* / report.generate / workflow.submit / file.ingest / task.create / source.open …) | صلاحيات كل action_id عند التنفيذ | CHAT_ANSWER_SERVED · VALIDATION_BLOCKED · +أحداث كل action منفَّذ | حالات أولى: PERMISSION_DENIED / INSUFFICIENT_EVIDENCE / EXEC_ERROR — بطاقة نتائج &gt;10 صفوف تُحوَّل إلى run.list (OD-UX-4)؛ لوحة audit للمخوّلين؛ **وضعا عرض (بطاقات/محادثة) كتفضيل مستخدم — OD-WS-4 عرضيّ صرف (Δ v0.8، نموذج الـ Workspace §14)** |
+| queue.tasks | إنجاز المهام | tasks | task.update_status · task.open_target · workflow.return (Δ v0.8 — للمكلَّف الحالي) | tasks.view_own (+workflow.return_route للتوجيه) | TASK_COMPLETED… · WORKFLOW_ITEM_RETURNED | تفاصيل المهمة درج داخلي؛ «إرجاع إلى…» بقائمة مرشّحة + سبب إلزامي (FR-3.12) |
 | queue.approvals | صندوق الاعتمادات | approval_items | approve/reject/return | approvals.decide | APPROVAL_DECIDED | البنود من workflows وHITL (P7) معاً |
-| queue.approval_detail | قرار رسمي + نقاش | البند + thread + الأثر | workflow.approve/reject/return · thread.post | approvals.decide + طرف البند | APPROVAL_DECIDED · THREAD_POSTED | الرفض بتعليق إلزامي؛ سطح ثابت للمراجعة |
+| queue.approval_detail | قرار رسمي + نقاش | البند + thread + الأثر | workflow.approve/reject/return · thread.post | approvals.decide + طرف البند (+workflow.return_route لوجهة غير الافتراضي — Δ v0.8) | APPROVAL_DECIDED · THREAD_POSTED · WORKFLOW_ITEM_RETURNED | الرفض بتعليق إلزامي (نهائي — OD-WF-1)؛ الإرجاع: الافتراضي معدّ المسودة + قائمة مرشّحة + سبب إلزامي (FR-3.11/3.12)؛ سطح ثابت للمراجعة |
 | notif.center | متابعة الإشعارات | notifications+threads | mark_read · thread.post · open_target | ذاتي | NOTIFICATION_READ(للحساس) | لوحة مصغّرة داخل ws |
 | projects.main | تجميع العمل | projects/members/links | project.create · link.add · member.manage | projects.* | PROJECT_CHANGED | ربط الملفات يظهر من P5 |
 | run.list | قائمة أي كيان (حتمي) | صفوف الكيان (RLS-مرشّحة) | record.create(زر) · record.search/filter/export† | records.{entity}.read (+export بسياسة P4†) | RECORD_EXPORTED† | †التصدير يظهر من P4؛ **المكافئ المحادثي: بطاقة بحث/إنشاء في ws (P6+) بنفس action_id** |
@@ -84,7 +84,7 @@
 | admin.dashboard | مدخل الإدارة | مؤشرات مختصرة | تنقّل | admin.access | — | بلا أرقام حساسة افتراضياً |
 | admin.users | إدارة الحسابات | users | user.create/disable/reset | admin.users.manage | USER_CREATED/DISABLED/RESET | الثوابت immutable ظاهرة كقفل |
 | admin.user_detail | حساب واحد + أدواره | user+roles+relations | role.assign/revoke · rebac.grant(P4) | admin.users.manage | ROLE_ASSIGNED/REVOKED | يعرض قرارات صلاحية أخيرة (مفسّر P4) |
-| admin.org | الشجرة التنظيمية | org_units/membership | org.unit_create/move · membership.change | admin.org.manage | ORG_CHANGED | سحب-إفلات ضمن قواعد |
+| admin.org | الشجرة التنظيمية | org_units مرنة العمق (parent_unit_id · unit_type: department/section/unit — Δ v0.8) + العضوية على أي مستوى | org.unit_create/move · membership.change | admin.org.manage | ORG_CHANGED | سحب-إفلات ضمن قواعد؛ توريث النطاق نزولاً؛ **توجيه/تكليف فقط — لا RLS في v1 (OD-ORG-1)** — بطاقة السلوك 24 |
 | admin.roles | تعريف الأدوار | roles | role.create/edit | admin.roles.manage | ROLE_CHANGED | SoD يمنع التعارض (P4) |
 | admin.permissions | المصفوفة الأساسية | permissions_matrix | permission.grant/revoke | admin.permissions.manage | PERMISSION_CHANGED | القرارات المفسَّرة تظهر هنا وفي user_detail |
 | admin.policies | سياسات مركّبة | abac/rebac/sod | policy.create/edit/simulate | admin.policies.manage | POLICY_CHANGED · PERMISSION_SIMULATED | بنية شرطية معلنة — لا تعبيرات حرة |

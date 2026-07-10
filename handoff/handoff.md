@@ -23,7 +23,7 @@
 
 ---
 
-## Handoff H-0002 (الإدخال الحالي)
+## Handoff H-0002
 - **date:** 2026-07-04
 - **phase:** ما قبل التنفيذ — دمج قرارات D1–D9
 - **task:** تحديث الحزمة إلى الإصدار 2026-07-04 (ستاك الواجهة/الخادم، التجريدات الثلاث، التخزين FS-أولاً، الخط الرقابي الأساسي، GitHub-الآن، سياسة Reference-aware)
@@ -275,3 +275,24 @@ Important rules:
 
 ## H-0007 — v0.7 Pre-Implementation Consolidation (2026-07-08)
 **النطاق:** مواصفة Backend للمزوّد/السر (الخيار A، D9 ثابت) + مراجعة تجميع ودمج ما قبل التنفيذ. **المخرجات:** architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md · methodology/PRE_IMPLEMENTATION_CONSOLIDATION_REVIEW.md · Patches P-1..P-6. **قرارات:** توحيد PROVIDER_CONFIG_APPLIED_BY_OPS (P-4) · الفصل «Backend-only ≠ مؤجل». **التالي:** تنفيذ ترتيب الدمج §3 ثم SPEC_SOURCE→v0.7؛ لا Phase بلا بطاقة مهمة.
+
+## H-0008 — v0.7.1 Responsive UI (توثيق لاحق — سُجِّل 2026-07-10)
+**الطبيعة:** إدخال توثيقي بأثر رجعي — الإصدار صدر فعلاً (release `v0.7.1-responsive-ui` على commit c6dc18f بتاريخ 2026-07-10) دون إدخال handoff وقتها؛ يُسجَّل هنا حفاظاً على استمرارية السجل.
+**النطاق:** متطلب الواجهة المتجاوبة (Responsive UI) فوق خط v0.7 المجمَّد.
+**المخرجات:** Δ على 4 ملفات ui: `UI_UX_ASSUMPTIONS.md` (A-UX-16) · `UI_DESIGN_SYSTEM.md` (قسم Responsive) · `UI_SCREEN_BEHAVIOR_CARDS.md` (Global Responsive Behavior Rule) · `UI_STITCH_REFINED_PROMPTS.md` (Global Responsive Prompt Requirement).
+**ملاحظات:** الوسم lightweight وبلا ZIP asset (انحراف عن نمط Option B المعمول به منذ v0.5 — مسجَّل Finding في EXECUTION_REPORT v0.8) · commit لاحق b03c9e3 (تصحيح v2.0→v2.1 في phases/README) بقي غير مُصدَر ويدخل ضمن v0.8.
+
+## H-0009 — v0.8 Conversational & Workflow Batch (2026-07-10)
+- **date:** 2026-07-10
+- **phase:** ما قبل التنفيذ — دفعة تعديلات معتمدة من SA (تنفيذ وكيل مفوَّض)
+- **task:** جرد 100% + تدقيق + إصلاحات FIX-9..14 + تطبيق دفعة SA (الأسطح المحادثية + سير العمل والتنظيم) + إصدار v0.8 وفق Option B
+- **goal:** حزمة متسقة الفهارس، مع اعتماد السطح المحادثي المحكوم وقرارات الإرجاع/التنظيم، دون أي مساس بالقرارات المقفلة (D9 · runs.list/runs.detail · حالات النموذج الست · PROVIDER_CONFIG_APPLIED_BY_OPS · لا DDL من LLM)
+- **completed:** FIX-9 (github-docs-structure v1.6) · PACKAGE_CHECKLIST v1.7 · architecture/README v1.2 · توثيق v0.7.1 (H-0008) · OD-WS-4 (وضعا عرض ws.main) · متغيّر «inline message action» · A-UX-17 (صياغة الهوية) · OD-BLD-1 (أوضاع الباني الثلاثة) · توضيح UI_REFERENCE_USAGE_POLICY · FR-3.11/FR-3.12/FR-1.Org-Ext (في DELTA_V08_FR_WORKFLOW_ORG) · OD-WF-1/OD-WF-2/OD-ORG-1 مقفلة · تحديث بطاقات queue.approval_detail/queue.tasks (+بطاقة 24 admin.org) · G6/G8 · فهرس OD · جرد الشاشات v1.3 · UI_FIELD_NAMING (WORKFLOW_ITEM_RETURNED · workflow.return_route) · EXECUTION_REPORT.md
+- **not completed (مقصود):** لا كود · لا تنفيذ Phase · لم تُعالَج Findings المعلَّقة بقرار SA (حزمة v0.3 الغائبة · تسوية وسوم lightweight القديمة · ملفات platform غير SPEC_SOURCE — التفصيل في EXECUTION_REPORT)
+- **files changed:** انظر جدول «الملفات المتغيرة» في `EXECUTION_REPORT.md`
+- **decisions:** OD-WS-4 (ورد في دفعة SA باسم OD-WS-2 — عُدِّل الترقيم لتفادي تصادم مع قرار مدة الاحتفاظ القائم) · OD-BLD-1 · OD-WF-1 · OD-WF-2 · OD-ORG-1 — كلها مقفلة بقرار SA 2026-07-10
+- **risks:** غياب ملفات تصميم Phase 1/Phase 3 يعني أن FR الجديدة محمولة في ملف delta حتى تأليف/استعادة الملفات الأم — يجب دمجها نصياً حينها
+- **tests:** لا كود بعد — فحوص نقاء (لا أسيجة كود/لا أوامر/لا أسرار) مطبقة على الملفات المعدلة
+- **next step:** قرار SA في Findings المعلَّقة (استعادة حزمة v0.3 أولاً) ثم تصميم Phase 1 في محادثة مستقلة
+- **do not touch:** superseded/ · decisions/adr/ · constitution.md · التصاميم المرحلية وترتيبها
+- **notes for next agent:** اقرأ `EXECUTION_REPORT.md` ثم `phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md` قبل أي عمل على Phase 1/Phase 3؛ المرجع النافذ للمواصفات: tag `v0.8-conversational-and-workflow`

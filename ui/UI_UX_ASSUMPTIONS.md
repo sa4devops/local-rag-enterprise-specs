@@ -1,12 +1,12 @@
 # UI_UX_ASSUMPTIONS.md — فلسفة الواجهة والافتراضات الحاكمة
 
-> **Version:** 1.0 — Proposed (تُعتمد مع حزمة UI/UX كاملة؛ Release مقترح لاحقاً: `v0.4-ui-ux-planning-package`) · **Date:** 2026-07-06
+> **Version:** 1.1 — (Δ v0.6: A-UX-15 · Δ v0.7.1: A-UX-16 · Δ v0.8: A-UX-17 صياغة هوية السطح المحادثي) · **Date:** 2026-07-10 (الأصل 2026-07-06)
 > **الموضع الهدف:** `ui/UI_UX_ASSUMPTIONS.md` في `local-rag-enterprise-specs` · **Authority:** تحت الكتالوج وتصاميم المراحل؛ عند التعارض تحكم وثائق v0.3.
 > **قاعدة:** وثيقة تخطيط UX — لا كود، لا CSS، لا تنفيذ. أي بند غير محسوم = Open UX Decision.
 > **اعتماد المالك (2026-07-06):** أُقرّ نموذج **Dual-Surface + Action Layer واحد + AI Workspace كواجهة مركزية من P6 + Generated Renderer كسطح حتمي user-facing + نفس action_id من الدردشة والـ Renderer + لا تجاوز صلاحية/تدقيق** — هذه الوثيقة تعكس القرار المعتمد.
 
 ## 1) الفلسفة المعتمدة
-النظام يُقدَّم للمستخدم كـ **Governed Enterprise AI Command Center**: مساحة عمل ذكية (AI Workspace) هي السطح الأساسي للإنتاجية، تجلس فوق **Action Layer واحد محكوم** (action_id → Permission → Validation → Preview → Confirm → Approval-عند-الحاجة → Execute → Audit). ليست chatbot لأن الدردشة **وسيلة تشغيل** لا مصدر حقيقة؛ وليست low-code builder للمستخدم النهائي لأن بناء الشاشات/الأفعال حِكر على الأدمن عبر الخط المحكوم.
+النظام يُقدَّم للمستخدم كـ **Governed Enterprise AI Command Center**: مساحة عمل ذكية (AI Workspace) هي السطح الأساسي للإنتاجية، تجلس فوق **Action Layer واحد محكوم** (action_id → Permission → Validation → Preview → Confirm → Approval-عند-الحاجة → Execute → Audit). ليست chatbot لأن الدردشة **وسيلة تشغيل** لا مصدر حقيقة؛ وليست low-code builder للمستخدم النهائي لأن بناء الشاشات/الأفعال حِكر على الأدمن عبر الخط المحكوم. **(ضبط الصياغة — A-UX-17):** نفي «chatbot» نفيٌ للهوية الاستهلاكية وللمحادثة غير المحكومة، **لا نفيَ للسطح المحادثي المحكوم** (وضع المحادثة OD-WS-4 مشروع ومعتمد).
 
 ## 2) الافتراضات الحاكمة (A-UX)
 | # | الافتراض | الأساس |
@@ -50,6 +50,18 @@ This requirement applies to both:
 2. Runtime Renderer / deterministic generated screens
 
 Status: Accepted.
+
+### A-UX-17 — هوية السطح المحادثي (Δ v0.8 — معتمد بقرار SA 2026-07-10)
+
+**القاعدة:** السطح المحادثي **مسموح ومحكوم** — المحادثة أسلوب عرض وتشغيل مشروع فوق **نفس Action Layer** (وضع المحادثة في `ws.main` — OD-WS-4، ومتغيّر «inline message action» — UI_ACTION_BUTTON_MODEL §2.1).
+
+**المحظور ليس «المحادثة» — بل اثنان حصراً:**
+1. **المحادثة غير المحكومة:** أي مسار محادثي ينفّذ أثراً دون عقد `action_id` وبواباته (صلاحية → تحقق → معاينة → تأكيد → اعتماد-عند-الحاجة → تدقيق)، أو يقدّم إجابة أعمال بلا مصدر أو رفض معلَّل (No-Guessing).
+2. **استنساخ هوية منتجات قائمة:** تقليد branding / layout حرفي / microcopy لأي منتج محادثي قائم — وفق `UI_REFERENCE_USAGE_POLICY` (الأنماط المحادثية العامة مشاعة؛ القيد على الكود/الهوية/العلامة).
+
+**أثر الصياغة على بقية الحزمة:** كل عبارة «ليست chatbot» / «no consumer chat» في ملفات `ui/` تُقرأ بهذا الضبط — نفيٌ للهوية الاستهلاكية والمحادثة غير المحكومة، لا منعاً لوضع المحادثة المحكوم.
+
+Status: Accepted (SA — 2026-07-10).
 
 ## 3) ما يبقى صفحات مستقلة (استثناءات مبررة)
 Auth (دخول/أول-دخول/قفل) · **AI Workspace** (P6) · **Work Queue الثلاثية** (مهامي/اعتماداتي/الإشعارات — P3) · **Runtime Screen Renderer** (قائمة/نموذج/تفاصيل) · **Entity Profile** (P2→P4) · **Report Review/Studio** (مراجعة واعتماد رسمية — P6) · **App Store + My Connections** (P7) · **Admin Console بكامله** · **Ops/About** (P8). كل ما عداها يُفضَّل سطحاً داخل الـ Workspace أو لوحة جانبية.

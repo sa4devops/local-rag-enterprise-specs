@@ -1,6 +1,6 @@
 # تصنيف القرارات المفتوحة — Open Decisions Classification
 
-> **Document Title:** Open Decisions Classification · **Version:** 2.1 — Final (D1–D9 مدمجة؛ C1–C5 مُغلقة) · **Status:** Current / Accepted · **Date:** 2026-07-04
+> **Document Title:** Open Decisions Classification · **Version:** 2.2 — Final (D1–D9 مدمجة؛ C1–C5 مُغلقة؛ +فهرس قرارات دفعة v0.8) · **Status:** Current / Accepted · **Date:** 2026-07-10
 > **Supersedes:** v2.0 + قسم Open Decisions في الكتالوج (§13) والمنهجية (§19) — هذه الوثيقة هي **المرجع المُلزم الوحيد** للقرارات المفتوحة.
 > **Authority Order:** المرتبة **4**. · **Related:** license-review.md · phase-roadmap.md · adr/README.md · coding-standards.md
 > **Purpose:** تصنيف كل قرار إلى فئة توقيت واضحة حتى لا يوقف أي قرارٍ التصميمَ بلا داعٍ، ولا يدخل أي شيء التنفيذَ بلا حسم.
@@ -91,3 +91,13 @@
 | OD-PSC-1 | architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md | عند تفعيل P5/P6 (Clarify) | مخزن الأسرار لأول تنفيذ (التوصية: env + ملفات محلية) |
 | OD-PSC-2 | architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md | عند تفعيل P5/P6 (Clarify) | حساسية endpoint_ref (التوصية: حساس افتراضياً) |
 | OD-PSC-3 | architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md | Ops/config (P5/P6) | مدة كاش الاكتشاف |
+
+## فهرس قرارات دفعة v0.8 — Conversational & Workflow (Δ 2026-07-10)
+> **كلها مقفلة بقرار SA (2026-07-10)** — المصدر المعياري نصاً داخل ملفاتها الحاضنة؛ هذا فهرس تصنيفي فقط.
+| OD | الملف الحاضن | الحالة | خلاصة سطرية |
+|---|---|---|---|
+| OD-WS-4 | ui/UI_AI_WORKSPACE_MODEL.md §14 | **مقفل** | وضعا عرض ws.main (بطاقات/محادثة) كتفضيل مستخدم — عرضيّ صرف، لا تغيير سلوكياً خادمياً (ورد في دفعة SA بمعرّف OD-WS-2؛ عُدِّل الترقيم لتفادي التصادم) |
+| OD-BLD-1 | ui/UI_ADMIN_CONSOLE_MODEL.md §4-C | **مقفل** | أوضاع الباني الثلاثة (تقليدي/محادثي/مدمج) فوق خط draft→migration→checks→approval→apply بلا تغيير؛ الـ LLM يكتب metadata فقط |
+| OD-WF-1 | phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md §4 | **مقفل** | الرفض النهائي والإرجاع للمعالجة خياران متمايزان في سطح القرار |
+| OD-WF-2 | phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md §4 | **مقفل** | الإرجاع/التوجيه للمكلَّف الحالي فقط (`workflow.return_route`) |
+| OD-ORG-1 | phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md §4 | **مقفل** | الشجرة التنظيمية للتوجيه/التكليف فقط — لا RLS مشتقاً منها في v1 |

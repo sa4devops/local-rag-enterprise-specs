@@ -1,6 +1,6 @@
 # UI_FIELD_NAMING.md — نظام التسمية الصارم (Identifiers &amp; Naming Convention)
 
-> **Version:** 1.0 — Proposed · **Date:** 2026-07-06 · **الموضع الهدف:** `ui/UI_FIELD_NAMING.md`
+> **Version:** 1.1 — (Δ v0.8: +سلسلة «الإرجاع الموجَّه» في §3 — WORKFLOW_ITEM_RETURNED · workflow.return_route — وفق FR-3.11/3.12) · **Date:** 2026-07-10 (الأصل 2026-07-06) · **الموضع الهدف:** `ui/UI_FIELD_NAMING.md`
 > **المراجع الحاكمة:** constitution م18 (ASCII) · coding-standards §6 · UI_ACTION_BUTTON_MODEL (العقد) · UI_SCREEN_INVENTORY (الاصطلاح المطبَّق فعلاً).
 > **المبدأ:** المعرّف التقني ASCII ثابت لا يُعاد تسميته بعد الإصدار (التغيير = نسخة جديدة)؛ العربية/الإنجليزية **labels** عبر i18n فقط. **معرّفٌ واحد لمعنى واحد** — ولا خلط بين طبقات التسمية الثماني أدناه.
 
@@ -31,6 +31,7 @@
 | تعطيل مستخدم | admin.user_detail | /admin/users/{id} | user.disable | admin.users.manage | users_disable ⇦ POST /api/v1/users/{id}/disable | USER_DISABLED | user_id · reason | UserStatusActions |
 | فعل موصل كاتب | ws.main + queue.approvals (HITL) | — | connector.tool.act | صلاحية المنصة ∩ الحساب المربوط | invocations_execute ⇦ POST /api/v1/invocations | INVOCATION_APPROVED/EXECUTED | connector_id · tool_id · payload_masked · on_behalf_of | HitlPreviewDialog |
 | إطلاق تشغيل ومتابعته (Δ v0.6) | runs.list / runs.detail | /me/runs · /me/runs/{id} | run.start | runs.start | runs_start ⇦ POST /api/v1/runs | RUN_STARTED | run_id · definition_ref · correlation_id | RunTimeline / StepDrawer |
+| إرجاع بند سير عمل موجَّه (Δ v0.8 — FR-3.11/3.12) | queue.approval_detail + queue.tasks | /me/approvals/{id} · /me/tasks | workflow.return (الفعل `return` قائم في الكتالوج §5) | approvals.decide (الافتراضي) · **workflow.return_route** (وجهة غير الافتراضي — للمكلَّف الحالي OD-WF-2) | workflow_items_return ⇦ POST /api/v1/workflow-items/{id}/return | **WORKFLOW_ITEM_RETURNED** (from_state · to_state · from_user · to_user · reason) | return_reason · returned_to · parent_unit_id · unit_type | ReturnRouteModal |
 
 ## 4) قواعد i18n وقواعد البيانات (الملاصقة للواجهة)
 - **مفاتيح i18n:** dot.notation بفضاء الشاشة: `{screen_id}.{element}` — مثل `ws.main.composer_placeholder` · `admin.migrations.approve_confirm` · قيم الرسائل للأخطاء تُفهرس بـ `errors.{error_code}`. لا نص مضمّن في المكوّنات.

@@ -1,6 +1,6 @@
 # UI_ACTION_BUTTON_MODEL.md — عقد الفعل المحكوم (Governed Action Contract)
 
-> **Version:** 1.0 — Proposed · **Date:** 2026-07-06 · **الموضع الهدف:** `ui/UI_ACTION_BUTTON_MODEL.md`
+> **Version:** 1.1 — (Δ v0.8: +§2.1 متغيّر العرض «inline message action» — عرضي فقط) · **Date:** 2026-07-10 (الأصل 2026-07-06) · **الموضع الهدف:** `ui/UI_ACTION_BUTTON_MODEL.md`
 > **المراجع الحاكمة:** Phase 3 FR-3.5 (Action Registry — أثر معلن فقط) · Phase 4 (تصنيف/تصدير/SoD) · Phase 6 (Validation fail-closed) · Phase 7 (HITL) · A-UX-1/2 · constitution م2/م3/م16.
 > **الثابت:** «الزر» ليس عنصر UI — هو **عرضٌ لعقد فعل** مخزَّن في `admin.actions`. السطحان (Renderer وWorkspace) يعرضان **نفس العقد بنفس `action_id`**، والخادم وحده يقيّمه وينفّذه.
 
@@ -30,6 +30,11 @@
 ## 2) دورة حياة الزر وقت التشغيل (على السطحين)
 `HIDDEN` (فشل visible_when/الصلاحية — لا يصل للمتصفح) → `VISIBLE_ENABLED` أو `VISIBLE_DISABLED(+سبب)` → عند النقر/الاقتراح: `PREVIEW` (بطاقة/نافذة من required_inputs) → `VALIDATED` خادمياً → `CONFIRMING` (حسب confirmation) → `PENDING_APPROVAL` (إن لزم — بند في queue.approvals/HITL) → `EXECUTING` → `SUCCEEDED` (+`UNDO_WINDOW` إن مدعوماً) أو `FAILED(+error_code)`.
 **في الـ Renderer:** المعاينة نافذة تأكيد فوق الشاشة. **في الـ Workspace:** المعاينة هي `card.action_preview` نفسها — نفس الحالات حرفياً (خريطة S3–S9 في نموذج الـ Workspace).
+
+### 2.1) متغيّر العرض «inline message action» — (Δ v0.8 · عرضي فقط · معتمد بقرار SA 2026-07-10)
+**التعريف:** طريقة عرض مضغوطة للزر داخل رسائل **وضع المحادثة** في `ws.main` (OD-WS-4 — نموذج الـ Workspace §14): صف أزرار مصغّرة (أيقونة دلالية + label i18n) بذيل رسالة المساعد بدل بطاقة كاملة.
+**القاعدة القطعية — لا عقد جديد ولا حقل جديد:** هذا **متغيّر عرض (presentational variant) فقط**؛ الزر يعرض **نفس عقد الفعل** بحقوله الـ13+ (§1) حرفياً، ويمر **بنفس دورة الحياة** (§2) **ونفس ترتيب التقييم الخادمي** (§3) دون أي اختصار: النقر يفتح المعاينة (`card.action_preview` أو نافذة التأكيد حسب risk/confirmation) — **لا تنفيذ مباشر من النقر إطلاقاً**.
+**أحكام العرض:** يلتزم حدود الإظهار التدريجي (≤3 أزرار ظاهرة والباقي خلف «⋯») · HIDDEN-SERVER يسري كما هو (غير المخوَّل لا يستقبل الزر) · `VISIBLE_DISABLED` يظهر بسببه المقتضب · شارات المخاطر/التصنيف تُعرض مصغّرةً عند مستوى ≥ medium · أفعال `surface=console` لا تُعرض بهذا المتغيّر (قاعدة §7 كما هي).
 
 ## 3) ترتيب التقييم (الخادم مرجع؛ الواجهة مرآة)
 visible_when → permission → disabled_when → validation(required_inputs) → **إعادة تحقق حية للسياق** (نسخة السجل/السياسة — م16) → confirmation → approval routing → execute(effect) → audit (سلسلة كاملة). أي محاولة استدعاء `backend_operation` مباشرة تخضع لنفس السلسلة — **لا مسار واجهة مميز**.
