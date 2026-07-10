@@ -171,4 +171,4 @@ unit · integration · e2e · permission (deny لكل endpoint + RLS/FLS) · aud
 
 ## 20. Final Recommendation
 
-المنهجية الرسمية: **Spec-driven (Spec Kit/Spacekit-compatible) + Modular Monolith حقيقي microservice-ready**. قبل أي تنفيذ: زرع `specs/` من حزمة الوثائق هذه، وتفعيل بوابات CI (boundaries/secrets/offline)، وحسم بنود الفئتين 2 و3 في مواعيدها. ثم: تصميم كل مرحلة في محادثة مستقلة وفق `phase-roadmap.md`، والتنفيذ لاحقاً مرحلةً مرحلة بأي Coding Agent ملتزم بهذه الوثيقة.
+المنهجية الرسمية: **Spec-driven (Spec Kit/Spacekit-compatible) + Modular Monolith حقيقي microservice-ready**. قبل أي تنفيذ: زرع `specs/` من حزمة الوثائق هذه، وتفعيل بوابات CI (boundaries/secrets/offline)، وحسم بنود الفئتين 2 و3 في مواعيدها. ثم: تصميم كل مرحلة في محادثة مستقلة وفق `phase-roadmap.md`، والتنفيذ لاحقاً مرحلةً مرحلة بأي Coding Agent ملتزم بهذه الوثيقة. بعد خط الأساس المعماري (م21 — `v1.0-architecture-baseline`): حلقة Specify/Clarify **للمعمارية** لا تُفتح من جديد إلا عبر ADR؛ التوضيحات والتفاصيل غير المعمارية لا تعيد فتحها.

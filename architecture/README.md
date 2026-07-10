@@ -29,5 +29,6 @@
 - **Superseded (لا تُستخدم للتنفيذ):** `system-architecture-v1.svg` و`Component_Diagram.svg` القديمان (طبقة العرض فيهما سابقة لقرار Enterprise UI) — تُنقل إلى `superseded/`. المخططات المكمّلة (Agent/Deployment) صالحة كمرجع تاريخي وتُحدَّث عند الاستخراج.
 
 **قاعدة:** أي تعديل معماري = تحديث المصدر المعتمد + ADR عند اللزوم؛ الوثائق المستخرجة لا تتعارض مع الكتالوج/المنهجية (Authority Order).
+**خط الأساس (2026-07-10):** المعمارية مجمّدة عند الوسم `v1.0-architecture-baseline` (constitution م21) — أي تغيير معماري لاحق عبر ADR حصراً.
 
 - `PROVIDER_MODEL_SECRET_CONFIG_SPEC.md` — عقد المزوّد/النموذج/السر بين Config/Ops والـ Backend والواجهة (D9/الخيار A — v0.7).

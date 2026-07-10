@@ -1,6 +1,6 @@
 # agent-execution-model.md — نموذج تشغيل وكلاء التنفيذ (Coding Agents)
 
-> **Version:** 1.0 — Proposed (Post-merge Fix Batch) · **Date:** 2026-07-08 · **الموضع:** `methodology/agent-execution-model.md`
+> **Version:** 1.1 — (v1.0-architecture-baseline: +§9 مصفوفة القراءة · +§10 سلّم الجاهزية · +§11 قاعدتا الحراسة) · **Date:** 2026-07-10 (الأصل 2026-07-08) · **الموضع:** `methodology/agent-execution-model.md`
 > **Authority:** يعمل تحت سلسلة المرجعية (constitution م20): constitution ← Methodology ← Catalog ← Open-Decisions ← phase-roadmap ← تصاميم المراحل ← المواصفات التفصيلية. هذا الملف هو «النسخة المرجعية الموسّعة» لنموذج تشغيل الوكلاء التي تشير إليها المنهجية، ويُقرأ دائماً مع `methodology/PRE_IMPLEMENTATION_CONSOLIDATION_REVIEW.md` §7 و`coding-standards.md` و`testing-strategy.md`.
 
 ## §1 الغرض والنطاق
@@ -52,3 +52,27 @@
 
 ## §8 مخرجات الوكيل
 كل تسليم = التغييرات + تقرير فحص ذاتي (نقاء/حدود/نطاق/بوابة) + إدخال Handoff مقترح. **لا commits ولا push ولا وسوم ولا releases من أي وكيل** — كلها بيد SA حصراً.
+
+## §9 مصفوفة القراءة (Reading Matrix) — (v1.0-architecture-baseline)
+| المستوى | متى | ماذا يُقرأ |
+|---|---|---|
+| **Tier-0 — كل مهمة** | إلزامي قبل أي عمل | `constitution.md` · هذا الملف · `decisions/open-decisions.md` (كفهرس قرارات) · آخر إدخال في `handoff/handoff.md` · إصدار المواصفات الذي يشير إليه `platform/docs/SPEC_SOURCE.md` |
+| **لكل مرحلة** | عند العمل على مرحلة | `phases/phase-roadmap.md` · تصميم المرحلة المعنية · **أقسام الكتالوج التي يسمّيها التصميم فقط** |
+| **لكل مهمة** | عند التنفيذ | بطاقة المهمة + **الملفات التي تسمّيها حصراً** |
+
+قاعدتان مرافقتان: superseded/** محظور القراءة إلا بتكليف صريح · README = جلسة أولى/للبشر.
+
+## §10 سلّم الجاهزية (Readiness Ladder) — ست درجات
+| الدرجة | تعريف سطري |
+|---|---|
+| **Architecture-ready** | الحدود والعقود المتوقعة والتبعيات ومرحلة التفعيل موثقة — لا كود |
+| **Contract-ready** | العقود/الواجهات معلنة ومجمّدة الشكل (schemas/interfaces) دون تنفيذ فعلي |
+| **Provider-ready** | التجريد موجود وتنفيذٌ افتراضي أدنى يعمل خلفه (memory/fs/PG) |
+| **Implementation-ready** | تصميم المرحلة معتمد وبطاقات المهام جاهزة للبدء |
+| **Runtime-activated** | القدرة مفعّلة فعلاً في بيئة التشغيل بعلَمها وإعدادها |
+| **Production-scaled** | مفعّلة بإعدادات إنتاج مقاسة (أحجام/نسخ/موارد بقياس فعلي) |
+
+## §11 قاعدتا الحراسة (Guard Rules) — (v1.0-architecture-baseline)
+**1) قاعدة منع الحذف (Anti-deletion — م22):** Do not implement a future capability before its phase. Do not remove its architectural place merely because it is deferred. — لا تُبنى قدرة مستقبلية قبل مرحلتها، ولا يُحذف موطؤها المعماري (الحدود/العقود/التبعيات الموثقة) لمجرد تأجيلها.
+**2) قاعدة منع الهندسة الزائدة (Anti-overengineering):** لا يُبنى abstraction مبكر إلا بتحقق شرط واحد على الأقل: (أ) تستخدمه المرحلة الحالية فعلاً؛ أو (ب) أكثر من تنفيذ واحد **متوقع في تصاميم معتمدة**؛ أو (ج) التقنية يصعب استبدالها لاحقاً دون تجريد؛ أو (د) عقد عام يربط أكثر من واجهة. القدرات البعيدة تكتفي بـ: حدود موثقة · عقود متوقعة · تبعيات · مرحلة تفعيل · قرارات مؤجلة مسماة.
+**توضيح القيم التشغيلية:** أعداد النسخ (replicas) · أحجام النماذج · مدد الاحتفاظ النهائية · أحجام التخزين · حدود التزامن · تحجيم GPU للإنتاج — **قيم تشغيلية تُضبط بالقياس لكل نشر، لا قرارات معمارية مفتوحة** (فهرسها في `decisions/open-decisions.md`).

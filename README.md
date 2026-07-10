@@ -1,8 +1,10 @@
 # منصة تشغيل معرفي مؤسسي مغلق — Enterprise Knowledge Operations Platform (Air-Gapped)
 
 > **Document Title:** README — نقطة الدخول للحزمة الوثائقية
-> **Version:** 1.1 (D1–D9 مدمجة) · **Status:** Current / Accepted · **Date:** 2026-07-04
+> **Version:** 1.2 (v1.0-architecture-baseline: سطر الهوية + تحديث حالة المشروع) · **Status:** Current / Accepted · **Date:** 2026-07-10
 > **Purpose:** تعريف المشروع وتوجيه أي قارئ أو AI Coding Agent إلى ترتيب القراءة الصحيح.
+
+الهوية المعتمدة: Enterprise AI Platform with Progressive Implementation — المنصة هي المنتج؛ معماريةٌ كاملة موثقة من البداية، وتنفيذٌ وتفعيلٌ مرحليان. (لا يُستخدم مسمى Product-led Platform رسمياً.)
 
 ## ما هو المشروع
 **منصة تشغيل معرفي مؤسسي كاملة** (Enterprise AI / Local RAG / Local LM Platform) تعمل **داخل شبكة مغلقة (air-gapped)** في Docker، بنظام **metadata-driven**: شاشات ديناميكية، صلاحيات مؤسسية (RBAC+ABAC+ReBAC+تصنيف خماسي)، workflows باعتماد، مستندات/OCR/RAG، وسائط متعددة، تقارير طويلة، متجر تطبيقات مؤسسي، وتدقيق شامل. تستهدف 20,000–30,000 مستخدم مسجّل لكل مؤسسة، وتُطوَّر أولاً كـ Local Demo على جهاز واحد ثم تنتقل إلى الإنتاج **بتغيير configuration فقط**.

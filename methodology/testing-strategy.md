@@ -29,3 +29,4 @@
 | Logging/Error Contract | التزام JSON schema + Error Code Catalog + correlation IDs | tests + CI | كل خطأ يحمل error_code + request_id؛ لا أسرار في السجلات (فحص قناع) | Phase 0 |
 
 **قاعدة إدارة:** يوسَّع هذا الجدول عند تصميم كل مرحلة بحالات القبول التفصيلية لمهامها؛ ولا يُدمج أي feature قبل اجتياز الأنواع المنطبقة عليه (Quality Gates — Methodology §11).
+**قاعدة الاستخراج (v1.0-baseline):** اختبارات العقود (contract tests) **شرط مسبق إلزامي** لأي استخراج module إلى خدمة مستقلة — انظر ADR سياسة الحدود والاستخراج.

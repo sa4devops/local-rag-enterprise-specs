@@ -1,6 +1,6 @@
 # Constitution — القواعد غير القابلة للتفاوض
 
-> **Document Title:** constitution.md · **Version:** 1.0 · **Status:** Current / Accepted · **Date:** 2026-07-02
+> **Document Title:** constitution.md · **Version:** 1.1 (+م21 خط الأساس المعماري · +م22 القدرات المستقبلية — v1.0-architecture-baseline) · **Status:** Current / Accepted · **Date:** 2026-07-10 (الأصل 2026-07-02)
 > **Authority:** **المرتبة الأولى** — تحكم كل الوثائق والكود والوكلاء. أي تعارض يُحسم لصالح هذا الملف. تعديل أي مادة يتطلب قرار مالك المشروع + ADR.
 > **Purpose:** دستور المشروع الذي يلتزم به كل إنسان وكل AI Coding Agent.
 
@@ -26,3 +26,5 @@
 18. **معرّفات تقنية ASCII؛ العربية labels في الميتاداتا.**
 19. **قابلية إعادة البناء مغلقاً:** lockfiles لكل مديري الحزم + **digest pinning** لصور الحاويات + حزمة offline موقّتة/متحقَّقة، ومستخدم DB بأدنى صلاحية لكل قاعدة من التهيئة الأولى.
 20. **الوثائق تحكم.** ترتيب المرجعية: constitution → Methodology → Catalog → Open-Decisions → phase-roadmap → تصاميم المراحل → superseded. كل جلسة تنفيذ تنتهي بتحديث `handoff.md`. أي وثيقة/برومبت قديم يخالف = **Superseded**.
+21. خط الأساس المعماري (Architecture Baseline). المعمارية مجمّدة للتنفيذ اعتباراً من الإصدار الموسوم v1.0-architecture-baseline. التجميد لا يعني الاستحالة: أي تغيير معماري لاحق لا يمر إلا عبر ADR وفق decisions/adr/README.md؛ أما التوضيحات وتصحيح الأخطاء الكتابية وإصلاحات الاتساق والتفاصيل التنفيذية غير المعمارية فلا تعيد فتح المعمارية.
+22. القدرات المستقبلية التزامات معمارية. Future capabilities are architectural commitments. They shall not be implemented prematurely, and they shall not be removed merely because they are scheduled for later phases. لا تُبنى قدرة قبل مرحلتها ولا يُحذف موطؤها المعماري لأنها مؤجلة؛ سلّم الجاهزية وشروط الـabstraction المبكر في methodology/agent-execution-model.md.
