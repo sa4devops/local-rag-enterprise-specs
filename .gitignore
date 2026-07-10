@@ -1,0 +1,8 @@
+# Claude Code local state (machine-specific). Shared agent assets are re-included explicitly.
+.claude/*
+!.claude/settings.json
+!.claude/commands/
+!.claude/agents/
+!.claude/skills/
+!.claude/CLAUDE.md
+.claude/settings.local.json
