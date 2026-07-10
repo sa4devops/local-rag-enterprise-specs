@@ -37,7 +37,7 @@
 **أحكام العرض:** يلتزم حدود الإظهار التدريجي (≤3 أزرار ظاهرة والباقي خلف «⋯») · HIDDEN-SERVER يسري كما هو (غير المخوَّل لا يستقبل الزر) · `VISIBLE_DISABLED` يظهر بسببه المقتضب · شارات المخاطر/التصنيف تُعرض مصغّرةً عند مستوى ≥ medium · أفعال `surface=console` لا تُعرض بهذا المتغيّر (قاعدة §7 كما هي).
 
 ## 3) ترتيب التقييم (الخادم مرجع؛ الواجهة مرآة)
-visible_when → permission → disabled_when → validation(required_inputs) → **إعادة تحقق حية للسياق** (نسخة السجل/السياسة — م16) → confirmation → approval routing → execute(effect) → audit (سلسلة كاملة). أي محاولة استدعاء `backend_operation` مباشرة تخضع لنفس السلسلة — **لا مسار واجهة مميز**.
+visible_when → permission → disabled_when → validation(required_inputs) → **إعادة تحقق حية للسياق** (نسخة السجل/السياسة — م2 + م16) → confirmation → approval routing → execute(effect) → audit (سلسلة كاملة). أي محاولة استدعاء `backend_operation` مباشرة تخضع لنفس السلسلة — **لا مسار واجهة مميز**.
 
 ## 4) دلالات `risk_level` (أثر موحّد عبر النظام)
 | المستوى | التأكيد | الاعتماد الافتراضي | التدقيق | أمثلة |

@@ -1,6 +1,6 @@
 # تصنيف القرارات المفتوحة — Open Decisions Classification
 
-> **Document Title:** Open Decisions Classification · **Version:** 2.2 — Final (D1–D9 مدمجة؛ C1–C5 مُغلقة؛ +فهرس قرارات دفعة v0.8) · **Status:** Current / Accepted · **Date:** 2026-07-10
+> **Document Title:** Open Decisions Classification · **Version:** 2.3 — Final (D1–D9 مدمجة؛ C1–C5 مُغلقة؛ +فهرس v0.8؛ +قسم إغلاق خط الأساس v1.0) · **Status:** Current / Accepted · **Date:** 2026-07-10
 > **Supersedes:** v2.0 + قسم Open Decisions في الكتالوج (§13) والمنهجية (§19) — هذه الوثيقة هي **المرجع المُلزم الوحيد** للقرارات المفتوحة.
 > **Authority Order:** المرتبة **4**. · **Related:** license-review.md · phase-roadmap.md · adr/README.md · coding-standards.md
 > **Purpose:** تصنيف كل قرار إلى فئة توقيت واضحة حتى لا يوقف أي قرارٍ التصميمَ بلا داعٍ، ولا يدخل أي شيء التنفيذَ بلا حسم.
@@ -21,7 +21,7 @@
 | D2 | **Backend مؤكَّد** = Python + FastAPI + Pydantic + SQLAlchemy + Alembic + PostgreSQL + workers | ADR-0001/0003 |
 | D3 | **C5 محسوم:** uv + pnpm + lockfiles + pinned + reproducible + offline caches + install/verify scripts | coding-standards §7 |
 | D4 | **Cache/Queue/Lock:** ثلاث واجهات بافتراضي **memory/PostgreSQL**؛ Valkey **optional-ready** (ليس إلزامياً في P0/P1) | ADR-0018 |
-| D5 | **ObjectStorageProvider** بافتراضي **local filesystem**؛ المزوّد (MinIO/SeaweedFS/S3) يُحسم بمرحلة الملفات | ADR-0019 |
+| D5 | **ObjectStorageProvider** بافتراضي **local filesystem**؛ المزوّد (MinIO/SeaweedFS/S3) كان يُحسم بمرحلة الملفات — **حُسم افتراضي الإنتاج الموزَّع في v1.0-baseline: SeaweedFS؛ MinIO مشروط Legal** | ADR-0019 |
 | D6 | **Observability Baseline:** Audit-PG + JSON logs خارج PG + Log Viewer + Health + Error Catalog + IDs + /metrics اختياري؛ لا Grafana/Loki/Graylog الآن | ADR-0020 |
 | D7 | **GitHub الآن** + قناة نقل مغلقة موقّعة؛ Git داخلي (Gitea/GitLab) = **Backlog** | ADR-0022 |
 | D8 | **Reference-aware clean implementation** — سياسة مُغلقة مُلزمة (ليست قراراً مفتوحاً) | ADR-0021 + coding-standards §9 |
@@ -40,8 +40,8 @@
 | مراجعة تراخيص ستاك الكود المعتمد | 2 (لمرحلة 0) | قاعدة «لا dependency بلا صف» | لا | **تنفيذ Phase 0** | قبل أول كود | — | تعبئة/إقرار صفوف: React/Vite/TS/Tailwind/shadcn/FastAPI/Pydantic/SQLAlchemy/Alembic/uv/pnpm | **نعم (شكلية متوقعة)** | — |
 | **Git host (C4)** | **مُغلق (D7)** | التطوير online أولاً | لا | لا | مُغلق | GitHub / Gitea / GitLab | **GitHub الآن**؛ Git داخلي = **Backlog** (فقط عند نشوء تطوير داخل الشبكة)؛ قناة نقل كود موقّعة ضمن offline bundle | نعم (لأداة Git الداخلية إن فُعّلت) | — |
 | **معايير الأدوات (C5)** | **مُغلق (D3)** | تثبيت قبل أول كود | لا | لا | مُغلق | uv/poetry · pnpm/npm | **uv + pnpm**؛ الإصدارات تُثبَّت عند التنفيذ في coding-standards | لا | تُوثَّق كمعيار |
-| **Redis vs Valkey (C1)** | **مُغلق هيكلياً (D4)**؛ التفعيل = فئة 3 | لا حاجة فعلية في P0/P1 | لا | لا (يوقف فقط تفعيل الصورة) | عند أول حاجة (غالباً P5/P6 أو P8) | Redis (RSAL/SSPL) / **Valkey (BSD)** | الافتراضي **memory/PostgreSQL** عبر CacheProvider/QueueProvider/LockProvider؛ Valkey optional-ready مفضَّل على Redis | **نعم قبل تفعيل الصورة** | نعم — تبديل بالإعداد |
-| **Object Storage (C2): MinIO / SeaweedFS / S3** | **مؤجَّل لمرحلة الملفات (D5)**؛ التفعيل = فئة 3 (+4 للتوزيع) | التخزين ≠ OCR/استخراج؛ لا ملفات كبيرة قبل P5 | لا | لا (يوقف تفعيل الصورة فقط) | قبل compose مرحلة الملفات/الوسائط | MinIO (AGPL) / SeaweedFS (Apache-2) / S3-compatible آخر | الافتراضي **local filesystem** عبر ObjectStorageProvider؛ لا ربط بالكود باسم أداة | **نعم (MinIO = Legal)** | نعم |
+| **Redis vs Valkey (C1)** | **مُغلق نهائياً (D4 + D9c/ADR-0018 — v1.0-baseline)**؛ التفعيل = فئة 3 | لا حاجة فعلية في P0/P1 | لا | لا (يوقف فقط تفعيل الصورة) | مُغلق؛ التفعيل عند بلوغ محفزات ADR-0018 | Redis (RSAL/SSPL) / **Valkey (BSD)** | الافتراضي **memory/PostgreSQL** عبر CacheProvider/QueueProvider/LockProvider؛ **Valkey افتراضي بروفايل التوسع — مسألة Redis مقفلة لا تُطرح مجدداً** | **نعم قبل تفعيل الصورة** | نعم — تبديل بالإعداد |
+| **Object Storage (C2): MinIO / SeaweedFS / S3** | **مُغلق (D5 + D8/ADR-0019 — v1.0-baseline)**؛ التفعيل = فئة 3 (+4 للتوزيع) | التخزين ≠ OCR/استخراج؛ لا ملفات كبيرة قبل P5 | لا | لا (يوقف تفعيل الصورة فقط) | مُغلق؛ التفعيل قبل compose مرحلة الملفات | MinIO (AGPL) / SeaweedFS (Apache-2) / S3-compatible آخر | الافتراضي **local filesystem**؛ **الإنتاج الموزَّع: SeaweedFS افتراضاً؛ MinIO adapter مشروط باعتماد قانوني**؛ لا ربط بالكود باسم أداة | **نعم (MinIO = Legal)** | نعم |
 | **Monitoring stack (C3)** | **مُغلق (D6)** — baseline | enterprise-auditability بلا وزن مبكر | لا | لا | مُغلق؛ التوسعة P8 | baseline / Grafana+Loki / VictoriaMetrics | **الخط الأساسي**: Audit-PG + JSON logs + Log Viewer + Health + Error Catalog + IDs + /metrics اختياري؛ OTel adapter مستقبلاً | **نعم عند التوسعة (Grafana/Loki = Legal)** | نعم |
 | محرك OCR العربي | 5 (+2 لترخيص المحرك عند P5) | capability في الـ Registry | لا | صف مراجعة عند تنفيذ P5 | اختيار افتراضي بتصميم/تنفيذ P5 | Tesseract / **PaddleOCR** / docTR | قياس جودة عربي ثم الاختيار | نعم (شكلية Apache-2) | **نعم** — يبدَّل من الأدمن |
 | PDF tooling (PyMuPDF؟) | 2 (لمرحلة 5) | dependency كود عند تنفيذ media | لا | تنفيذ Phase 5 | قبل تنفيذ P5 | PyMuPDF (AGPL) / **pdfplumber+pypdf** / Tika | الافتراضي pdfplumber/pypdf + Tika؛ PyMuPDF بعد Legal فقط | **نعم (Legal لـ PyMuPDF)** | نعم — parser قابل للتبديل |
@@ -101,3 +101,26 @@
 | OD-WF-1 | phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md §4 | **مقفل** | الرفض النهائي والإرجاع للمعالجة خياران متمايزان في سطح القرار |
 | OD-WF-2 | phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md §4 | **مقفل** | الإرجاع/التوجيه للمكلَّف الحالي فقط (`workflow.return_route`) |
 | OD-ORG-1 | phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md §4 | **مقفل** | الشجرة التنظيمية للتوجيه/التكليف فقط — لا RLS مشتقاً منها في v1 |
+
+---
+
+## إغلاق خط الأساس المعماري v1.0-architecture-baseline (2026-07-10)
+
+### (أ) قرارات أُغلقت عند خط الأساس (المرجع المعياري: ملف الـ ADR المذكور)
+| القرار المُغلق | الخلاصة | ADR |
+|---|---|---|
+| افتراضي تخزين الكائنات | filesystem محلياً؛ **SeaweedFS افتراضي الإنتاج الموزَّع**؛ MinIO adapter مشروط باعتماد قانوني | ADR-0019 |
+| Cache/Queue/Lock | الآن memory/PostgreSQL (SKIP LOCKED + advisory locks)؛ **بروفايل التوسع Valkey — مسألة Redis مقفلة** + محفزات انتقال موثقة | ADR-0018 |
+| طوبولوجيا البحث | PG مصدر الحقيقة · Qdrant متجهي · OpenSearch نصي/هجين؛ pgvector/PG-FTS بروفايل low_resource اختياري فقط | ADR-0004 |
+| عقد الواجهة/الخادم | REST أساسي + OpenAPI عقد رسمي + SSE للبث؛ types مولّدة + غلاف fetch رفيع؛ WebSocket بشرط ADR | ADR-0025 |
+| موضع الواجهة | `/frontend` داخل مستودع المنصة (monorepo-lite)؛ الفصل لاحقاً عبر ADR | ADR-0017 |
+| سياسة تغليف الوحدات | حدود منطقية لا عدد نهائياً؛ packaging map أثر تنفيذي يتغيّر دون ADR؛ ملكية الجداول لكل وحدة دائماً؛ شروط الاستخراج الخمسة | ADR-0026 |
+| الهوية والتجميد | Enterprise AI Platform with Progressive Implementation + تجميد المعمارية عند الوسم (م21/م22) | ADR-0023 · ADR-0028 |
+
+### (ب) قيم تشغيلية لا قرارات معمارية
+تُضبط **بالقياس لكل نشر** ولا تُعامل قرارات معمارية مفتوحة ولا تدخل هذا السجل كبنود: أعداد النسخ (replicas) · أحجام النماذج · مدد الاحتفاظ النهائية · أحجام التخزين · حدود التزامن · تحجيم GPU للإنتاج. (المرجع: agent-execution-model §11 — توضيح القيم التشغيلية.)
+
+### (ج) قرار مسجَّل — فهرس مواصفات قابل للقراءة الآلية
+| OD | الموضوع | الفئة | الحالة |
+|---|---|---|---|
+| OD-IDX-1 | إنشاء manifest آلي للمواصفات (index.yaml) | — | **مرفوض الآن بقرار SA (2026-07-10)** — لا يُعاد فتحه إلا عند وجود مستهلك آلي فعلي (أداة/خط CI يقرأه)؛ حينها ADR/قرار جديد |

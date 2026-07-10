@@ -31,7 +31,7 @@
 | ADR-0013 | تجريد Object Storage (MinIO|بديل S3-compatible) | **Accepted (المبدأ)** | خُصِّص بـ ADR-0019: الافتراضي الآن filesystem؛ المزوّد يُحسم بمرحلة الملفات |
 | ADR-0014 | طبقة Observability قابلة للتبديل | **Accepted (المبدأ)** | Grafana/Loki رهن مراجعة؛ البدء بالأبسط في Local |
 | ADR-0015 | LLM Gateway بعقد OpenAI-compatible — البوابة الوحيدة للنماذج | **Accepted** | لا استدعاء نموذج خارجه |
-| ADR-0016 | مجموعة الـ Modules = 36 (35 + `chat`) بطبقات F→1→2→3→4 وقاعدة same-tier المعلنة | **Accepted** | مراجعة A5/A11 |
+| ADR-0016 | مجموعة الـ Modules = 36 (35 + `chat`) بطبقات F→1→2→3→4 وقاعدة same-tier المعلنة | **Accepted** | مراجعة A5/A11 · **يُقرأ جرداً وصفياً للكتالوج الحالي لا عدداً نهائياً (ADR-0026 — v1.0)** |
 | ADR-0017 | Frontend = React + Vite + TypeScript + Tailwind + shadcn-style (SPA مستقلة؛ لا Next.js ولا SvelteKit) | **Accepted** | قرار D1 (2026-07-04) · **ملف مزروع (v1.0):** [ADR-0017-frontend-stack-react-vite-typescript.md](ADR-0017-frontend-stack-react-vite-typescript.md) (+موضع `/frontend` مقفل) |
 | ADR-0018 | Cache/Queue/Lock Providers بافتراضي memory/PostgreSQL؛ Valkey optional-ready | **Accepted** | D4؛ يخصّص ADR-0012 · **ملف مزروع (v1.0):** [ADR-0018-cache-queue-lock-valkey-scale-profile.md](ADR-0018-cache-queue-lock-valkey-scale-profile.md) (D9c: Valkey افتراضي التوسع؛ Redis مقفل + محفزات الانتقال) |
 | ADR-0019 | ObjectStorageProvider بافتراضي local filesystem؛ حسم المزوّد بمرحلة الملفات | **Accepted** | D5؛ يخصّص ADR-0013 · **ملف مزروع (v1.0):** [ADR-0019-object-storage-seaweedfs-production-default.md](ADR-0019-object-storage-seaweedfs-production-default.md) (D8: SeaweedFS افتراضي الإنتاج؛ MinIO مشروط) |

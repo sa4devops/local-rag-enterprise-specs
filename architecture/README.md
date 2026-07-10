@@ -6,10 +6,10 @@
 ## أين تعيش المعمارية الآن (المصادر المعتمدة)
 المحتوى المعماري الكامل **موحَّد حالياً** في:
 1. `catalogs/Feature_Technical_Architecture_Catalog.md` (v2.1) — الطبقات، الخدمات، البيانات، الصلاحيات، الوكلاء، RAG/SQL/Media، الإعداد/البروفايلات، التكاملات، التدقيق/المراقبة، الأمن.
-2. `methodology/Spec_Driven_Modular_Monolith_Methodology.md` (v2.1) — الحدود، الـ Modules (36)، مصفوفة الاعتماد، النشر والنقل.
+2. `methodology/Spec_Driven_Modular_Monolith_Methodology.md` (v2.1) — الحدود، الـ Modules (36 حالياً — جرد وصفي لا عدد نهائياً، ADR-0026)، مصفوفة الاعتماد، النشر والنقل.
 3. **المخطط المعتمد بصرياً:** `architecture/diagrams/Full_Stack_Architecture.svg` (يوضع هنا عند الرفع) — كل الطبقات + Operations Plane + حالات core/optional/protected.
 
-**تحديث D1–D9 (2026-07-04):** المعمارية تشمل الآن صراحةً: **React+Vite SPA مستقلة** تستهلك OpenAPI/SDK · التجريدات **Cache/Queue/Lock** (افتراضي memory/PostgreSQL؛ Valkey optional-ready) · **ObjectStorageProvider** (افتراضي filesystem؛ MinIO|SeaweedFS لاحقاً) · **Observability Baseline** (Audit-PG + JSON logs + Log Viewer + Health + Error Catalog + IDs + /metrics اختياري؛ OTel adapter مستقبلاً) · نموذج **GitHub الآن → نقل مغلق موقّع** وGit داخلي كخيار مستقبلي · سياسة **Reference-aware clean implementation**. **المخططات SVG لم تُحدَّث بصرياً بعد** — `Full_Stack_Architecture.svg` يبقى المعتمد مفهومياً والنص أعلاه يحكم فروقه؛ تحديثها البصري مُدرج مع استخراج وثائق المعمارية لاحقاً (لن نرسم رسوماً شكلية لمجرد الإكمال).
+**تحديث D1–D9 (2026-07-04):** المعمارية تشمل الآن صراحةً: **React+Vite SPA مستقلة** تستهلك OpenAPI/SDK · التجريدات **Cache/Queue/Lock** (افتراضي memory/PostgreSQL؛ Valkey optional-ready) · **ObjectStorageProvider** (افتراضي filesystem؛ الإنتاج الموزَّع SeaweedFS افتراضاً وMinIO مشروط — ADR-0019) · **Observability Baseline** (Audit-PG + JSON logs + Log Viewer + Health + Error Catalog + IDs + /metrics اختياري؛ OTel adapter مستقبلاً) · نموذج **GitHub الآن → نقل مغلق موقّع** وGit داخلي كخيار مستقبلي · سياسة **Reference-aware clean implementation**. **المخططات SVG لم تُحدَّث بصرياً بعد** — `Full_Stack_Architecture.svg` يبقى المعتمد مفهومياً والنص أعلاه يحكم فروقه؛ تحديثها البصري مُدرج مع استخراج وثائق المعمارية لاحقاً (لن نرسم رسوماً شكلية لمجرد الإكمال).
 
 ## الوثائق الفرعية (تُستخرج لاحقاً — عند زرع specs، مهمة T-0.1.3)
 | الملف | مصدر الاستخراج | ملاحظة |

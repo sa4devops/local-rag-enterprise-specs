@@ -126,3 +126,5 @@
 |  |  |  |  |
 
 المراجِع: ____________ · التاريخ: ____________ · مرجع الجلسة/الفحص الآلي: ____________
+
+القرار: Accepted — تمثّل الموافقةَ المالكُ بنشر الإصدار الرسمي بتاريخ 2026-07-08: https://github.com/sa4devops/local-rag-enterprise-specs/releases/tag/v0.5-ui-interaction-visibility-refinement
