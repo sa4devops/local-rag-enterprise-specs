@@ -5,6 +5,7 @@
 > **Purpose:** تعريف المشروع وتوجيه أي قارئ أو AI Coding Agent إلى ترتيب القراءة الصحيح.
 
 الهوية المعتمدة: Enterprise AI Platform with Progressive Implementation — المنصة هي المنتج؛ معماريةٌ كاملة موثقة من البداية، وتنفيذٌ وتفعيلٌ مرحليان. (لا يُستخدم مسمى Product-led Platform رسمياً.)
+Local RAG Enterprise هي منصة تطبيقات مؤسسية، ليست تطبيق أعمال واحداً.
 
 ## ما هو المشروع
 **منصة تشغيل معرفي مؤسسي كاملة** (Enterprise AI / Local RAG / Local LM Platform) تعمل **داخل شبكة مغلقة (air-gapped)** في Docker، بنظام **metadata-driven**: شاشات ديناميكية، صلاحيات مؤسسية (RBAC+ABAC+ReBAC+تصنيف خماسي)، workflows باعتماد، مستندات/OCR/RAG، وسائط متعددة، تقارير طويلة، متجر تطبيقات مؤسسي، وتدقيق شامل. تستهدف 20,000–30,000 مستخدم مسجّل لكل مؤسسة، وتُطوَّر أولاً كـ Local Demo على جهاز واحد ثم تنتقل إلى الإنتاج **بتغيير configuration فقط**.
