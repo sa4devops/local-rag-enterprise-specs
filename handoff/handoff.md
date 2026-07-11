@@ -356,3 +356,17 @@ Important rules:
 - **next step:** **قراءة SA للتقرير ثم أمر «اعتمدت — نفّذ GATE M»** (أو أمر بتعديل قرار A1.1 قبله)
 - **do not touch:** الوسم `v1.0-architecture-baseline` · ‏superseded/** · ‏React baseline
 - **notes for next agent:** سجل المؤجلات صار Tier-0 — يُقرأ قبل أي عمل؛ لا يُنفَّذ GATE M دون أمر SA الحرفي
+
+## H-0014 — تنفيذ GATE M بأمر SA الصريح: دمج + وسم v1.1 + إصدار (2026-07-11)
+- **date:** 2026-07-11
+- **phase:** إغلاق المواصفات — بوابة M (بأمر SA الحرفي: «اعتمدت — نفّذ GATE M» بعد قراءة تقرير GATE A)
+- **task:** تحقق فعلي من GitHub → دمج المستودعين → وسم SPECS → حزمة → Release → تحقق شامل → ملحق الإصدار
+- **completed:** تحقق ما قبل الدمج من GitHub ذاته (HEAD الفعلي: ‏specs ‏79dc987 · platform ‏4b105e3 — اعتُمدت القيم الفعلية لا المكتوبة) · **دمج SPECS** ‏`16bf80f` و**دمج PLATFORM** ‏`7e74bd3` ‏(--no-ff، ‏commits التفصيلية محفوظة، صفر تعارضات، فحوص ما بعد الدمج ناجحة) · **الوسم** `v1.1-specifications-closeout` (كائن `be25247…` → ‏`16bf80f`) مدفوعاً · **الحزمة** 550,663 بايت / 104 ملفات مطابقة للوسم · **‏SHA-256:** ‏`129b6620ffa2fddf74912492d624e6439ad9a49a9b86031a7b3e1b404c605de6` (طُوبقت بإعادة التنزيل من GitHub) · **‏Release** منشور على الوسم بالأصل والملاحظات المقررة · تحقق M6 كاملاً (v1.0 بلا مساس · لا Release/Tag في PLATFORM · لا تشغيل) · **ملحق الإصدار** §12 في `SPECIFICATIONS_CLOSEOUT_HANDOFF.md`
+- **not completed (مقصود):** لا Phase 1 · لا تشغيل لأي خدمة (‏Open WebUI/Docker/SSO/مزامنة/Actions) · لا وسم/Release في PLATFORM
+- **files changed:** ‏SPECIFICATIONS_CLOSEOUT_HANDOFF.md ‏(+§12) وهذا الإدخال فقط (ما بعد الوسم — توثيق لا محتوى معياري)
+- **decisions:** تصديق SA على قرار A1.1 (م23) بإصدار أمر GATE M · نوع الإصدار release عادي اتباعاً لنمط v0.8 (لا Release لوسم v1.0 — الخيار موثق في §12)
+- **risks:** لا مخاطر مفتوحة جديدة؛ المرجعان النافذان الآن: المعمارية `v1.0-architecture-baseline` والمواصفات المغلقة `v1.1-specifications-closeout`
+- **tests:** حزمة تحقق M6 من GitHub ذاته (الدمج/الوسم/الأصل/البصمة/الروابط/سلامة v1.0)
+- **next step:** **لا عمل تنفيذي — انتظار قرار SA تفعيل Phase 1** (تصميم تفعيل ببطاقة مهمة؛ المدخل: تصميم v0.3 المستعاد + دلتا v0.8)
+- **do not touch:** الوسمان v1.0/v1.1 · ‏superseded/** · ‏React baseline · سجل المؤجلات إلا بقرار SA
+- **notes for next agent:** اقرأ وفق Tier-0 (ومنه سجل المؤجلات)؛ مرحلة المواصفات **مقفلة** — أي تغيير معماري عبر ADR (م21)
