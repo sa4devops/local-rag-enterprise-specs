@@ -55,6 +55,9 @@
 | ADR-0029 · ADR-0030 (Δ 2026-07-11) | `/decisions/adr/ADR-0029…-0030….md` | v1.0 — مبدأ العميل القابل للاستبدال (ترقية الدستور مشروطة باختبار الاستبدال) · Open WebUI واجهة محادثة مؤقتة (بوابات + خروج) — Accepted | ✅ | تفعيل الواجهة المؤقتة: اعتماد صف ترخيص الصورة أولاً |
 | PROJECT_EVOLUTION.md | `/PROJECT_EVOLUTION.md` | v1.0 — فهرس سردي يشير للمصادر الرسمية؛ ليس مصدر حقيقة ثانياً | ✅ | لا |
 | FLUTTER_ROLLBACK_AND_OPENWEBUI_BRIDGE_HANDOFF.md | `/FLUTTER_ROLLBACK_AND_OPENWEBUI_BRIDGE_HANDOFF.md` | v1.0 — تقرير الدفعة (جرد/نسخ أمان/تصنيفات الحالة الست) | ✅ | لا |
+| decisions/DEFERRED_IMPLEMENTATION.md | `/decisions/DEFERRED_IMPLEMENTATION.md` | **v1.0 — سجل المؤجلات الرسمي** (Tier-0؛ لا يُضاف إليه إلا بقرار SA) — دفعة إغلاق المواصفات | ✅ | لا |
+| constitution.md (Δ إغلاق) | `/constitution.md` | **v1.2** — +م23 العميل القابل للاستبدال (دُستر بقرار المراجعة A1.1؛ اختبار الاستبدال معيار قبول مؤجل) | ✅ | لا |
+| SPECIFICATIONS_CLOSEOUT_HANDOFF.md | `/SPECIFICATIONS_CLOSEOUT_HANDOFF.md` | v1.0 — تقرير إغلاق المواصفات (GATE A) — الدمج/الوسم بانتظار أمر SA ‏(GATE M) | ✅ | لا |
 
 
 **تُنشأ لاحقاً (ليست نقصاً):** ملفات المعمارية المستخرجة · ملفات ADR الفردية · handoff/archive · runbooks · prototypes/design-notes الناتجة من Google Stitch بعد مراجعتها.
