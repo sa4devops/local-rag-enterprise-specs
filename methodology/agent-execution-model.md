@@ -56,7 +56,7 @@
 ## §9 مصفوفة القراءة (Reading Matrix) — (v1.0-architecture-baseline)
 | المستوى | متى | ماذا يُقرأ |
 |---|---|---|
-| **Tier-0 — كل مهمة** | إلزامي قبل أي عمل | `constitution.md` · هذا الملف · `decisions/open-decisions.md` (كفهرس قرارات) · آخر إدخال في `handoff/handoff.md` · إصدار المواصفات الذي يشير إليه `platform/docs/SPEC_SOURCE.md` |
+| **Tier-0 — كل مهمة** | إلزامي قبل أي عمل | `constitution.md` · هذا الملف · `decisions/open-decisions.md` (كفهرس قرارات) · **`decisions/DEFERRED_IMPLEMENTATION.md` (سجل المؤجلات — لئلا يُنفَّذ مؤجَّل قبل أوانه، م22)** · آخر إدخال في `handoff/handoff.md` · إصدار المواصفات الذي يشير إليه `platform/docs/SPEC_SOURCE.md` |
 | **لكل مرحلة** | عند العمل على مرحلة | `phases/phase-roadmap.md` · تصميم المرحلة المعنية · **أقسام الكتالوج التي يسمّيها التصميم فقط** |
 | **لكل مهمة** | عند التنفيذ | بطاقة المهمة + **الملفات التي تسمّيها حصراً** |
 
