@@ -1,6 +1,6 @@
 # PACKAGE_CHECKLIST.md — Final GitHub Package Checklist
 
-> **Version:** 1.9 (… + Architecture Baseline Closure v1.0 + **إغلاق F-3 — استعادة حزمة v0.3**) · **Status:** Current · **Date:** 2026-07-10
+> **Version:** 1.10 (… + إغلاق F-3 + **دفعة تنحية Flutter وجسر Open WebUI المؤقت**) · **Status:** Current · **Date:** 2026-07-11
 >  **Purpose:** خريطة الحزمة النهائية: كل ملف، مساره، حالته، جاهزيته للرفع، وما يلزم قبل **التنفيذ** (لا قبل الرفع).
 
 | الملف | المسار داخل GitHub | الحالة | جاهز للرفع؟ | يحتاج قراراً قبل التنفيذ؟ |
@@ -52,6 +52,9 @@
 | ADR-0004 · ADR-0017 · ADR-0018 · ADR-0019 · ADR-0020 · ADR-0021 · ADR-0022 (ملفات مزروعة) | `/decisions/adr/ADR-00XX-*.md` | v1.0 — زرع الأرقام القائمة بملفات كاملة الحقول العشرة (مع تكميلات D8/D9c/D10/D11/D12/D13/D14 المعتمدة) | ✅ | لا |
 | ADR-0023 · ADR-0024 · ADR-0025 · ADR-0026 · ADR-0027 · ADR-0028 (جديدة) | `/decisions/adr/ADR-002X-*.md` | v1.0 — الهوية · ستاك الخادم · عقد REST+OpenAPI+SSE · التغليف والاستخراج · سجلات المزوّدات · سياسة التجميد — كلها Accepted بتاريخ 2026-07-10 | ✅ | لا |
 | superseded/phase-design-package-v0.3/ | `/superseded/phase-design-package-v0.3/` | أرشيف الأصل الكامل لحزمة v0.3 (12 ملفاً مجمّدة بايتاً-بايتاً + RESTORE_NOTE ببصمة ZIP) — إغلاق F-3؛ النسخ الحية للملفات العشرة في phases/ بلافتة حالة | ✅ | لا — أرشيف تاريخي |
+| ADR-0029 · ADR-0030 (Δ 2026-07-11) | `/decisions/adr/ADR-0029…-0030….md` | v1.0 — مبدأ العميل القابل للاستبدال (ترقية الدستور مشروطة باختبار الاستبدال) · Open WebUI واجهة محادثة مؤقتة (بوابات + خروج) — Accepted | ✅ | تفعيل الواجهة المؤقتة: اعتماد صف ترخيص الصورة أولاً |
+| PROJECT_EVOLUTION.md | `/PROJECT_EVOLUTION.md` | v1.0 — فهرس سردي يشير للمصادر الرسمية؛ ليس مصدر حقيقة ثانياً | ✅ | لا |
+| FLUTTER_ROLLBACK_AND_OPENWEBUI_BRIDGE_HANDOFF.md | `/FLUTTER_ROLLBACK_AND_OPENWEBUI_BRIDGE_HANDOFF.md` | v1.0 — تقرير الدفعة (جرد/نسخ أمان/تصنيفات الحالة الست) | ✅ | لا |
 
 
 **تُنشأ لاحقاً (ليست نقصاً):** ملفات المعمارية المستخرجة · ملفات ADR الفردية · handoff/archive · runbooks · prototypes/design-notes الناتجة من Google Stitch بعد مراجعتها.
