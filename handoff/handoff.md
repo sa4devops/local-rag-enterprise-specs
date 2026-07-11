@@ -1,7 +1,8 @@
 # handoff.md — سجل التسليم بين الجلسات والوكلاء
 
-> **Version:** 1.0 · **Status:** Current / Accepted · **Date:** 2026-07-02 · **Authority:** ينفّذ Methodology §14.
+> **Version:** 1.1 (Δ 2026-07-11: توضيح اتفاقية الأرشفة وترتيب القراءة — تحسين للآلية القائمة لا نظام موازٍ) · **Status:** Current / Accepted · **Date:** 2026-07-11 (الأصل 2026-07-02) · **Authority:** ينفّذ Methodology §14.
 > **القواعد:** لا تُغلق أي جلسة/مهمة/مرحلة دون تعبئة إدخال كامل هنا · يُؤرشف الإدخال السابق في `handoff/archive/` بتاريخه · الوكيل التالي **يقرأ هذا الملف قبل أي عمل** ويحترم قائمة «Do not touch» حرفياً · إن كانت المتطلبات غامضة: يسأل ولا يكتب.
+> **اتفاقية التشغيل (Δ 2026-07-11):** هذا الملف هو **السجل المتجدد الوحيد** (الإدخالات H-NNNN تتراكم فيه) · عند **إغلاق كل مرحلة تنفيذية** تُؤخذ لقطة مؤرشفة باسم `handoff/archive/PHASE_N_HANDOFF-YYYY-MM-DD.md` · **ترتيب القراءة:** آخر إدخال أولاً ثم الأقدم عند الحاجة فقط — ولا يُنشأ أي نظام handoff موازٍ.
 
 ## القالب (يُنسخ لكل إدخال)
 ```
@@ -326,3 +327,18 @@ Important rules:
 - **next step:** دفع المستودعين بيد SA ثم تصميم Phase 1 ببطاقة مهمة معتمدة — **مدخله الآن موجود**: `phases/designs/phase-1-governed-core-screen-builder.md` (v0.3) + `DELTA_V08_FR_WORKFLOW_ORG.md`
 - **do not touch:** `superseded/phase-design-package-v0.3/` (مجمّد بايتاً-بايتاً) · الوسم `v1.0-architecture-baseline` (لا يتحرك)
 - **notes for next agent:** عند تصميم Phase 1: ابدأ من تصميم v0.3 المستعاد + ادمج دلتا v0.8 نصياً + التزم لافتة الحالة (ما بعد v0.3 يعلو عند التعارض)
+
+## H-0012 — تنحية تجربة Flutter ‏(AQL) + جسر Open WebUI المؤقت (2026-07-11)
+- **date:** 2026-07-11
+- **phase:** ما بعد خط الأساس — دفعة نظافة واتجاه واجهة بينية (فرع `chore/remove-flutter-adopt-openwebui-bridge` في المستودعين)
+- **task:** جرد وإزالة كل أثر Flutter/AQL (محلياً ومن الفرعين) · تثبيت React خطاً قائماً دون إعادة فتح · ADR-0029/0030 · حزمة حوكمة الوثائق · ‏scaffold معزول لـ Open WebUI · مزامنة المؤشرات · التقرير
+- **goal:** صفر إشارة Flutter نشطة، وواجهة محادثة مؤقتة محكومة بمبدأ العميل القابل للاستبدال دون أي مساس بالقرارات المقفلة
+- **completed:** **جرد الفرعين: صفر إشارة Flutter/Dart/AQL** (شجرةً وتاريخاً — Not found؛ لذلك لا ADR سحبٍ لقرار لم يوجد، والتنحية موثقة هنا وفي التقرير) · **محلياً:** تجربة AQL ‏(`~/Desktop/flutter` — ‏remote ‏sa4devops/aql.git المحذوف مسبقاً بيد SA · آخر commit ‏4552bb1) أُرشفت كاملة (بما فيه تغييرات غير مرسلة) في `~/local-rag-removal-backup/aql-flutter-experiment-2026-07-11.tar.gz` ‏(sha256 ‏71fbc0366241fb73540325838368890a9bd9a03efeadcca34ddd1c11f7199f5d) ثم حُذف المسار؛ ‏SDK ‏Flutter/Dart ‏(Homebrew) وملفات الإعداد العالمية أُبقيت (لا إثبات حصرية — توصية مؤجلة) · **القرارات:** ‏ADR-0029 (العميل القابل للاستبدال؛ ترقية الدستور مشروطة باختبار الاستبدال) · ADR-0030 ‏(Open WebUI واجهة مؤقتة ضمن شرط م6 ببوابات وخروج) + فهرس الدفعة في open-decisions + صف ترخيص صورة الحاوية ‏(v0.6.5 مثبَّت · Needs Legal Review · digest إلزامي عند أول سحب) في السجل الوحيد · **الحوكمة:** سطر «منصة تطبيقات مؤسسية لا تطبيق أعمال واحداً» في README/vision فقط · قاعدة المستويين في adr/README · جدول تفصيل D8 وسلّم Platform→Products→Modules→Capabilities في coding-standards · اتفاقية handoff (لقطة PHASE_N + ترتيب قراءة) · PROJECT_EVOLUTION.md (فهرس سردي مشتق بالدليل — ليس مصدر حقيقة ثانياً) · **المنصة:** ‏scaffold معزول كامل `integrations/openwebui/` ‏(18 ملفاً · لا مجلدات فارغة · compose مثبَّت الإصدار بلا latest وبلا digest مختلق · سياسات القفل السبع · وثائق ARCHITECTURE/SECURITY_BOUNDARY/DATA_OWNERSHIP/CUSTOMIZATIONS/UPSTREAM_VERSION/DECOMMISSION_PLAN · خطط اختبار كمواصفات بلا Backend وهمي) · **الخارطة والمؤشرات:** دلتا «Open WebUI interim client» في roadmap بشروط خروج؛ ‏SPEC_SOURCE وREADME المنصة متزامنان أصلاً على المرجع القطعي `v1.0-architecture-baseline` ‏(commit ‏260780f — تحقق Phase 0)
+- **not completed (مقصود):** لا تثبيت تشغيلياً ولا ادعاء تكامل (scaffold فقط) · لا وسم إصدار جديد (توصية بالإبقاء لتعليمة SA) · لا دمج في main (الفرعان مدفوعان للمراجعة) · MODULE_BOUNDARIES.md مؤجَّل (المصفوفة القانونية قائمة في المنهجية §7/§8 — قاعدة مصدر الحقيقة الواحد؛ الإنفاذ الآلي معيار قبول لأول مرحلة كود) · حذف SDK مؤجَّل
+- **files changed:** التفصيل ملفاً-ملفاً في `FLUTTER_ROLLBACK_AND_OPENWEBUI_BRIDGE_HANDOFF.md`
+- **decisions:** ‏ADR-0029 · ADR-0030 (كلاهما Accepted ‏2026-07-11) — ‏React baseline لم يُمس
+- **risks:** بوابة الترخيص القانونية لصورة Open WebUI معلقة (لا تشغيل قبلها) · قيود branding في 0.6.6+ تمنع الترقية العمياء
+- **tests:** لا كود — خطط الاختبار الثلاث (استبدال/عزل/ترقية) كمواصفات مؤجلة مربوطة بمراحلها
+- **next step:** مراجعة SA للفرعين ودمجهما ثم قرار بوابة الترخيص؛ ويبقى مسار «تصميم تفعيل Phase 1» كما هو
+- **do not touch:** الوسم `v1.0-architecture-baseline` · ‏superseded/** · ‏React baseline ‏(D1/ADR-0017)
+- **notes for next agent:** اقرأ ADR-0029/0030 قبل أي عمل واجهات؛ الـ scaffold وثائقي — أي تشغيل يبدأ من بوابات README الخاصة به ببطاقة مهمة
