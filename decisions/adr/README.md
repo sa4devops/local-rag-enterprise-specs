@@ -27,7 +27,7 @@
 | ADR-0008 | فصل مستويات التحكم Admin / Super Admin / Operations | **Accepted** | capabilities للأدمن؛ lifecycle للعمليات؛ خدمات محميّة |
 | ADR-0009 | OKF كطبقة metadata/knowledge محلية — ليست مصدر حقيقة | **Accepted** | توليد الحزم محلياً فقط |
 | ADR-0010 | معمارية جاهزة للوسائط/Multimodal من البداية | **Accepted** | pipeline+Registry+Gateway؛ الثقيل بالإعداد حسب العتاد |
-| ADR-0011 | Local Auth أولاً مع IdP-Adapter (LDAP/AD/Keycloak/OIDC/SAML لاحقاً) | **Accepted** | الرقم الوظيفي/اسم المستخدم immutable |
+| ADR-0011 | Local Auth أولاً مع IdP-Adapter (LDAP/AD/Keycloak/OIDC/SAML لاحقاً) | **Accepted** | الرقم الوظيفي/اسم المستخدم immutable · **(Δ إغلاق 2026-07-11 — دعم معماري فقط):** المنصة تدعم منذ اليوم الأول نمطي Local Authentication وSSO؛ **الاختيار بينهما إعدادُ منصةٍ حصراً — العميل لا يختار ولا يقرر**؛ التنفيذ البرمجي مؤجل لمرحلته (سجل المؤجلات) |
 | ADR-0012 | تجريد Cache/Queue (Redis|Valkey عبر الإعداد) | **Accepted (المبدأ)** | خُصِّص بـ ADR-0018: الافتراضي الآن memory/PostgreSQL؛ Valkey optional-ready |
 | ADR-0013 | تجريد Object Storage (MinIO|بديل S3-compatible) | **Accepted (المبدأ)** | خُصِّص بـ ADR-0019: الافتراضي الآن filesystem؛ المزوّد يُحسم بمرحلة الملفات |
 | ADR-0014 | طبقة Observability قابلة للتبديل | **Accepted (المبدأ)** | Grafana/Loki رهن مراجعة؛ البدء بالأبسط في Local |
@@ -45,7 +45,7 @@
 | ADR-0026 | حدود منطقية لا عدد نهائياً · خريطة تغليف كأثر تنفيذي · إنفاذ متدرج · شروط الاستخراج الخمسة | **Accepted** | 2026-07-10 · [ADR-0026-module-boundaries-packaging-extraction.md](ADR-0026-module-boundaries-packaging-extraction.md) (D3 — لا يتجاوز ADR-0001) |
 | ADR-0027 | معمارية سجلات القدرات والمزوّدات: سلسلة Capability→…→Audit ووحدات registry داخل الـ Monolith | **Accepted** | 2026-07-10 · [ADR-0027-provider-capability-registry-architecture.md](ADR-0027-provider-capability-registry-architecture.md) (D7 — يجمع ويُحيل) |
 | ADR-0028 | سياسة خط الأساس المعماري المجمَّد v1.0-architecture-baseline (م21) | **Accepted** | 2026-07-10 · [ADR-0028-architecture-baseline-frozen.md](ADR-0028-architecture-baseline-frozen.md) (D2) |
-| ADR-0029 | مبدأ العميل القابل للاستبدال (ممنوع/مسموح في كل عميل؛ الخادم يعيد التحقق ويملك القرار؛ ترقية الدستور مشروطة باختبار الاستبدال) | **Accepted** | 2026-07-11 · [ADR-0029-replaceable-client-principle.md](ADR-0029-replaceable-client-principle.md) |
+| ADR-0029 | مبدأ العميل القابل للاستبدال (ممنوع/مسموح في كل عميل؛ الخادم يعيد التحقق ويملك القرار) | **Accepted (Amended)** | 2026-07-11 · [ADR-0029-replaceable-client-principle.md](ADR-0029-replaceable-client-principle.md) · **دُستر بالمادة م23 (قرار المراجعة A1.1)؛ اختبار الاستبدال معيار قبول مؤجل في سجل المؤجلات** |
 | ADR-0030 | ‏Open WebUI واجهة محادثة مؤقتة (حدود قطعية + بوابات تفعيل + شروط خروج؛ React خط الأساس بلا إعادة فتح؛ ضمن شرط م6) | **Accepted** | 2026-07-11 · [ADR-0030-openwebui-temporary-chat-interface.md](ADR-0030-openwebui-temporary-chat-interface.md) |
 
 **قرارات مستقبلية تتطلب ADR جديداً (أمثلة):** تفعيل Graph (AGE/Neo4j) · فصل أي module إلى microservice · اعتماد K8s/OpenShift · إدخال تكامل خارجي عبر proxy · تغيير التصنيف الخماسي · اعتماد WebSocket (شرط ADR-0025) · فصل مستودع الواجهة (شرط ADR-0017).

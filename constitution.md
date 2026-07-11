@@ -1,6 +1,6 @@
 # Constitution — القواعد غير القابلة للتفاوض
 
-> **Document Title:** constitution.md · **Version:** 1.1 (+م21 خط الأساس المعماري · +م22 القدرات المستقبلية — v1.0-architecture-baseline) · **Status:** Current / Accepted · **Date:** 2026-07-10 (الأصل 2026-07-02)
+> **Document Title:** constitution.md · **Version:** 1.2 (+م23 العميل القابل للاستبدال — دفعة إغلاق المواصفات، قرار المراجعة A1.1 بمبرر هندسي موثق في ADR-0029 وتقرير الإغلاق) · **Status:** Current / Accepted · **Date:** 2026-07-11 (الأصل 2026-07-02)
 > **Authority:** **المرتبة الأولى** — تحكم كل الوثائق والكود والوكلاء. أي تعارض يُحسم لصالح هذا الملف. تعديل أي مادة يتطلب قرار مالك المشروع + ADR.
 > **Purpose:** دستور المشروع الذي يلتزم به كل إنسان وكل AI Coding Agent.
 
@@ -28,3 +28,4 @@
 20. **الوثائق تحكم.** ترتيب المرجعية: constitution → Methodology → Catalog → Open-Decisions → phase-roadmap → تصاميم المراحل → superseded. كل جلسة تنفيذ تنتهي بتحديث `handoff.md`. أي وثيقة/برومبت قديم يخالف = **Superseded**.
 21. خط الأساس المعماري (Architecture Baseline). المعمارية مجمّدة للتنفيذ اعتباراً من الإصدار الموسوم v1.0-architecture-baseline. التجميد لا يعني الاستحالة: أي تغيير معماري لاحق لا يمر إلا عبر ADR وفق decisions/adr/README.md؛ أما التوضيحات وتصحيح الأخطاء الكتابية وإصلاحات الاتساق والتفاصيل التنفيذية غير المعمارية فلا تعيد فتح المعمارية.
 22. القدرات المستقبلية التزامات معمارية. Future capabilities are architectural commitments. They shall not be implemented prematurely, and they shall not be removed merely because they are scheduled for later phases. لا تُبنى قدرة قبل مرحلتها ولا يُحذف موطؤها المعماري لأنها مؤجلة؛ سلّم الجاهزية وشروط الـabstraction المبكر في methodology/agent-execution-model.md.
+23. **العميل القابل للاستبدال.** كل واجهة عميل قابلةٌ للاستبدال وتستهلك **العقود المعلنة حصراً**؛ لا يجوز أن تحوي أي واجهة: مصدر حقيقة، أو منطق صلاحيات حاسماً، أو قواعد عمل حاسمة، أو تنفيذ اعتمادات، أو ملكية سجلات أساسية، أو تدقيقاً نهائياً، أو وصولاً مباشراً لقاعدة البيانات؛ والـ Backend **يعيد التحقق دائماً ويملك القرار النهائي**. (المرجع: ADR-0029؛ اختبار الاستبدال معيار قبول مؤجل في `decisions/DEFERRED_IMPLEMENTATION.md`.)
