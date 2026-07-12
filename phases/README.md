@@ -1,12 +1,12 @@
 # phases/README.md — قواعد مجلد المراحل
 
-> **Version:** 1.0 · **Status:** Current / Accepted · **Date:** 2026-07-02
+> **Version:** 1.1 (Δ اتساق 2026-07-11: تحديث «الموجود الآن» و«الحالة الحالية» بعد استعادة v0.3 — لا معنى جديداً) · **Status:** Current / Accepted · **Date:** 2026-07-11 (الأصل 2026-07-02)
 > **Purpose:** تنظيم تصاميم المراحل وربطها بخريطة الطريق.
 
 ## المحتوى
 - **`phase-roadmap.md`** — المرجع المُلزم الوحيد لترتيب المراحل ونطاقها العام (Authority المرتبة 5).
 - **تصميم لكل مرحلة** بملف مستقل، يُنتج في **محادثة مستقلة** بمنهجية `Vision → Specify → Clarify → Plan → Tasks` (بلا كود)، ولا يُعتمد إلا بقرار مالك المشروع.
-- الموجود الآن: `phase-0-foundation-full-stack-skeleton.md` (**Phase 0 — v2.1 — Accepted for Design**). البقية (Phase 1 → Phase 8) تُنشأ لاحقاً تباعاً.
+- الموجود الآن: `phase-0-foundation-full-stack-skeleton.md` (**Phase 0 — v2.1 — Accepted for Design**) + **تصاميم Phase 1 → Phase 8 المستعادة من حزمة v0.3** في `designs/` بلافتة حالتها (مدخلات تصميم معتمدة تاريخياً — **لا تُنفَّذ مباشرة**) + دلتا `designs/DELTA_V08_FR_WORKFLOW_ORG.md`.
 
 ## قواعد التسمية
 `phase-N-short-name.md` بمعرّف ASCII (يجوز إبقاء العنوان العربي داخل الملف). المراحل تُذكر دائماً **بالرقم + الاسم** (قاعدة C8 المغلقة).
@@ -18,4 +18,4 @@
 4. كل مرحلة تُختتم بتحديث `handoff/handoff.md` + أرشفة، وتُسلَّم قائمة «ما لا يُلمس» للمرحلة التالية.
 
 ## الحالة الحالية
-Phase 0: تصميم معتمد — تنفيذ لاحقاً. **التالي:** تصميم Phase 1 — Governed Core + Screen Builder (محادثة مستقلة).
+Phase 0: تصميم معتمد — تنفيذ لاحقاً. **التالي:** **«تصميم تفعيل Phase 1 — Governed Core + Screen Builder»** (محادثة مستقلة ببطاقة مهمة معتمدة من SA)؛ مدخلاته الإلزامية: تصميم v0.3 المستعاد (بلافتة حالته) + دلتا `designs/DELTA_V08_FR_WORKFLOW_ORG.md` + قراءة Tier-0 والقرارات/ADRs الأحدث (ومنها `decisions/DEFERRED_IMPLEMENTATION.md`) — **لا إعادة تصميم من الصفر ولا تنفيذ مباشر من ملف v0.3**.
