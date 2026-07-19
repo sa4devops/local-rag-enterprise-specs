@@ -1,4 +1,5 @@
 # ADR-0017 — ستاك الواجهة: React + Vite + TypeScript + Tailwind + shadcn/ui-style
+> **Δ 2026-07-19 (دفعة G1 — ADR-0031):** اختيارُ الإطار للعميل الأساسي يخلُفه ADR-0031 (‏Next.js client-only عبر قناة Rocket المحكومة). **تبقى مبادئ هذا القرار نافذة وملزمة:** عميل SPA يستهلك عقود المنصة حصراً · لا منطق أعمال في الواجهة · FastAPI هي الخلفية (ADR-0025/0029) · وعميل React/Vite مصغر يبقى مرجع اختبار الاستبدال المؤجل (م23).
 
 > **ملاحظة زرع:** هذا الرقم قائم في السجل الكنسي منذ 2026-07-04 (قرار D1)؛ يُزرع ملفه هنا ضمن إغلاق خط الأساس v1.0 **مع تحديث تكميلي واحد**: حسم موضع الواجهة داخل مستودع المنصة (بتفويض من SA — 2026-07-10).
 
@@ -16,6 +17,6 @@
 
 **خطة الانتقال (Migration plan):** لا يوجد كود سابق؛ عند أي فصل مستقبلي للمستودع: ADR + نقل تاريخ git + تثبيت خط CI للعقود.
 
-**الحالة (Status):** Accepted
+**الحالة (Status):** Accepted — **Superseded-in-scope by ADR-0031** (نطاق الخلافة: اختيار الإطار للعميل الأساسي فقط)
 **التاريخ (Date):** 2026-07-10 (الأصل: قرار D1 بتاريخ 2026-07-04)
-**الوثائق المرتبطة (Related documents):** ../open-decisions.md (D1) · ../../methodology/coding-standards.md (§2/§7) · ../license-review.md (صفوف الستاك) · ../../phases/phase-0-foundation-full-stack-skeleton.md (FR-0.12 + إضافات v1.0) · ADR-0025-api-contract-rest-openapi-sse.md
+**الوثائق المرتبطة (Related documents):** ../open-decisions.md (D1) · ../../methodology/coding-standards.md (§2/§7) · ../license-review.md (صفوف الستاك) · ../../phases/phase-0-foundation-full-stack-skeleton.md (FR-0.12 + إضافات v1.0) · ADR-0025-api-contract-rest-openapi-sse.md · ADR-0031-primary-ui-client-nextjs-client-only-rocket.md (الخالف في النطاق)
