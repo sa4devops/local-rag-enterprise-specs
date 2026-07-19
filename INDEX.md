@@ -11,7 +11,7 @@
 | `(الجذر)` | `FLUTTER_ROLLBACK_AND_OPENWEBUI_BRIDGE_HANDOFF.md` | 1.0 | Current | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `(الجذر)` | `PACKAGE_CHECKLIST.md` | 1.11 — (Δ 2026-07-19 دفعة G1: +قسم أصول Governance Foundatio | Current | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `(الجذر)` | `PROJECT_EVOLUTION.md` | 1.0 | Current | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
-| `(الجذر)` | `README.md` | 1.2 (v1.0-architecture-baseline: سطر الهوية + تحديث حالة الم | Current / Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
+| `(الجذر)` | `README.md` | 1.3 — (Δ 2026-07-19 G1: +AUTHORITY قراءةً وإحالةَ سلطةٍ + ستاك ADR-0031) | Current / Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `(الجذر)` | `SPECIFICATIONS_CLOSEOUT_HANDOFF.md` | 1.0 | Current | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `architecture` | `architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md` | 1.0 — Proposed (v0.7) | Proposed (G1) | المعمارية — Specification Architect | مصمم المرحلة المعنية |
 | `architecture` | `architecture/README.md` | 1.3 (v1.0-baseline: +سطر التجميد عند الوسم + مواءمة ADR-0019 | Current / Accepted | المعمارية — Specification Architect | مصمم المرحلة المعنية |

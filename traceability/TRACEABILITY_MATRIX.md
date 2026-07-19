@@ -25,5 +25,7 @@
 | `INDEX.md` | فهرس بشري | ‏OD-IDX-1 + ‏EC-3 | كل قارئ | ضمن الدفعة |
 | إدخال handoff ‏H-G1 | سجل تسليم | م20 + منهجية §14 | الجلسة التالية | ضمن الدفعة |
 | تعديلا platform: ‏AGENTS.md · ‏docs/SPEC_SOURCE.md | مواءمة توثيق تنفيذ | ‏ADR-0031/0036 + قاعدة المستويين | وكلاء platform | ضمن دفعة platform |
+| Δ تصحيحات ما-قبل-الدفع (مراجعة SA): ‏README ‏v1.3 (قراءة/سلطة/ستاك) · صف README في INDEX · ‏SPEC_SOURCE (مرجع القراءة قبل/بعد الوسم) | تصحيح مراجعة | مراجعة SA لتقرير G1-A + ‏ADR-0031/0035 | القراء وكل الوكلاء | ضمن الدفعة |
+
 
 **Related:** `../decisions/adr/ADR-0035-contracts-layer-single-source.md` · `../INDEX.md` · `../methodology/agent-execution-model.md` (§16)
