@@ -1,6 +1,6 @@
 # تصنيف القرارات المفتوحة — Open Decisions Classification
 
-> **Document Title:** Open Decisions Classification · **Version:** 2.3 — Final (D1–D9 مدمجة؛ C1–C5 مُغلقة؛ +فهرس v0.8؛ +قسم إغلاق خط الأساس v1.0) · **Status:** Current / Accepted · **Date:** 2026-07-10
+> **Document Title:** Open Decisions Classification · **Version:** 2.4 — (Δ 2026-07-19: +فهرس دفعة G1 — Governance Foundation Baseline) (2.3: D1–D9 مدمجة؛ C1–C5 مُغلقة؛ +فهرس v0.8؛ +قسم إغلاق خط الأساس v1.0) · **Status:** Current / Accepted · **Date:** 2026-07-10
 > **Supersedes:** v2.0 + قسم Open Decisions في الكتالوج (§13) والمنهجية (§19) — هذه الوثيقة هي **المرجع المُلزم الوحيد** للقرارات المفتوحة.
 > **Authority Order:** المرتبة **4**. · **Related:** license-review.md · phase-roadmap.md · adr/README.md · coding-standards.md
 > **Purpose:** تصنيف كل قرار إلى فئة توقيت واضحة حتى لا يوقف أي قرارٍ التصميمَ بلا داعٍ، ولا يدخل أي شيء التنفيذَ بلا حسم.
@@ -133,3 +133,21 @@
 |---|---|---|---|
 | مبدأ العميل القابل للاستبدال | decisions/adr/ADR-0029-replaceable-client-principle.md | **مقفل — دُستر (م23، ‏2026-07-11)** | كل عميل يستهلك العقود فقط؛ لا حقيقة/صلاحيات/قواعد عمل/DB في أي عميل؛ الخادم يعيد التحقق ويملك القرار؛ اختبار الاستبدال معيار قبول مؤجل (سجل المؤجلات) |
 | ‏Open WebUI واجهة مؤقتة | decisions/adr/ADR-0030-openwebui-temporary-chat-interface.md | **مقفل** (التفعيل خلف بوابات؛ الخروج بخطة) | ‏interim حصراً ضمن شرط م6؛ React خط الأساس بلا إعادة فتح؛ لا اعتماد على جداول Open WebUI الداخلية |
+
+
+## فهرس قرارات دفعة G1 — Governance Foundation Baseline (Δ 2026-07-19)
+> قرارات المالك في G0 (أمر 2026-07-19) قُنّنت كالتالي — **لا إعادة ترقيم لأي قرار قائم، ولا تغيير في حالة أي OD معلق** (التسعة Clarify لمرحلة P1 وبنود Ops-config تبقى كما هي بمواطنها في `methodology/PHASE_EXECUTION_STANDARD.md §2`).
+
+| القرار | الحسم | التقنين |
+|---|---|---|
+| ‏Q1 عميل الواجهة | ‏Next.js client-only عبر Rocket بالحراس الأربعة | **ADR-0031** (‏ADR-0017 ‏Superseded-in-scope) |
+| ‏Q2 تخزين السجلات الديناميكية | هجين: نواة + JSONB + ترويج مقنن؛ ‏UUIDv7 (توليد app/DB) | **ADR-0032** |
+| ‏Q3 مستوى الأتمتة | ‏L1 لأول حزمتين ثم L2 افتراضي للمنخفض؛ مسارات محمية | **ADR-0033** |
+| ‏Q4 ظهور المستودعات | عامة مؤقتاً؛ خصخصة = بوابة G6 | **ADR-0036** |
+| ‏Q5 الهوية | ‏AQL Enterprise AI Platform — by AQLORA | ‏`knowledge/BUSINESS_GLOSSARY.md §1` |
+| ‏DR-1 الترخيص | إشعار **Proprietary — All Rights Reserved © 2026 AQLORA**؛ لا Open Source؛ مراجعة قانونية قبل الإطلاق (مؤجلات) | **ADR-0036 بند 2** |
+| ‏DR-2 أول حزمتين | ‏FP-0001 = ‏Retrofit ‏`admin.record_types` · ‏FP-0002 = بناء `admin.org` | **ADR-0033 بند 2** + عقود البذرة |
+| مهارات التطوير | ‏subset مثبت من Superpowers ‏v6.1.1@d884ae0 | **ADR-0034** |
+| طبقة العقود + المشتقات المولَّدة + ‏DGP | ‏contracts/ موطن التأليف؛ ‏BRD/FRD/… ‏GENERATED؛ المولد يُبنى في P2 | **ADR-0035** |
+| ‏OD-IDX-1 | **محترم كما هو**: ‏`INDEX.md` بشري القراءة هو مصدر الفهرسة الحاكم — لا index.yaml/manifest في هذه الدفعة | ‏ADR-0035 بند 7 |
+| ‏OD-P3-2 (canvas) | يبقى مؤجلاً كما هو؛ ‏canvas تجربة aql مؤشَّر **CC-WF-1** يُحسم ببوابته لا صمتاً | عقد `contracts/screens/admin.workflows.md §6` |
