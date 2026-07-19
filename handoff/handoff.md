@@ -374,3 +374,17 @@ Important rules:
 ## H-0015 — تصحيح اتساق توثيقي محدود (فئة توضيحات م21 — 2026-07-11)
 - ثلاث نقاط فحص: سطر Open WebUI في README (أ: FAIL → مواءمة مع شطري م6 + إحالة ADR-0030) · عبارة الخطوة التالية (ب: README ‏FAIL → «تصميم تفعيل Phase 1» بمدخلاته الإلزامية الثلاثة والتحذير المزدوج؛ ‏roadmap ‏PASS؛ ‏phases/README صياغته قديمة — رُصد ولم يُلمس خارج القائمة البيضاء) · دلالتا المرجعين في SPEC_SOURCE ‏(ج: FAIL → فقرة توضيح قصيرة، المرساة v1.0@260780f كما هي حرفياً).
 - القرار: ‏minimal documentation consistency patch completed — ‏commit واحد لكل مستودع على main مباشرة (لا مساس بأي وسم/ADR/دستور؛ ‏Phase 1 لم يبدأ).
+
+
+## Handoff H-0016
+- date: 2026-07-19
+- phase: ‏G1 — Governance Foundation Baseline (‏G1-A: تنفيذ بلا دمج)
+- task: تنفيذ البنود 1–21 من خطة تقرير v2.0 (‏sha256 ‏6ef5e106d9959ac44a628dec28fc723d42ca35ccaf98bcb4628c93959f999bfa) بأمر مالك صريح (‏G0 معتمد + قرارات Q1–Q5/DR-1/DR-2)
+- goal: إيداع Governance Foundation Baseline كاملاً على فرعي عمل جاهزين للمراجعة والدمج والوسم v1.2-governance-baseline
+- completed: ‏6 ملفات ADR ‏(0031–0036 ‏Proposed) · ‏Δ ‏ADR-0017/0030 · سجل adr v1.3 · ‏AUTHORITY.md · ‏INDEX.md (تغطية 100%) · طبقة contracts/ (معيار + هوية + قالب + 4 بذور Candidate + قاموس تعدادات) · ‏Capstone ‏UI_SCREEN_GOVERNANCE_STANDARD · ‏COMPONENT_STATES v1.1 ‏(+S16–S20) · ‏INVENTORY v1.4 ‏(+3 أعمدة/51 صفاً) · ‏agent-execution-model v2.0 ‏(+§§12–17) · ‏PHASE_EXECUTION_STANDARD · ‏ROCKET_OPERATING_MODEL · بذرتا knowledge/traceability · ‏open-decisions v2.4 · ‏+3 صفوف مؤجلات (مرآة Superpowers · بناء DGP · المراجعة القانونية) · ‏checklist v1.11 (تصويب v0.7.1 tag-only) · تعديلا platform ‏(AGENTS/SPEC_SOURCE)
+- not completed: الدمج · الوسم v1.2-governance-baseline · ترقية ADRs إلى Accepted · دفع الفروع وفتح PRs من بيئة التنفيذ (لا اعتمادات دفع — حِزم bundles وأوامر جاهزة في تقرير التنفيذ) — كلها **G1-B بيد SA** (‏EC-12 ‏Pending Owner)
+- files changed: انظر تقرير تنفيذ G1-A (قائمة كاملة ببصمات) + ‏PACKAGE_CHECKLIST §Δ G1
+- decisions: لا قرارات جديدة اتُّخذت — تقنين قرارات G0 فقط؛ **صفر Decision Requests** (لم يظهر تعارض حقيقي)؛ انحرافان موثقان: ‏Archetypes ثمانية (‏Renderer-template تحقق بعمود type القائم) · جدول الجرد A ‏51 صفاً لا 52
+- risks: بقاء الدفعة غير مدموجة يجمّد G2/G3؛ نص §8 القديم في أي نسخة متداولة قد يُقرأ بلا دلتا ADR-0033 — يعالجه الدمج
+- tests: فحوص EC-1→EC-11 ‏scripted ناجحة (الأدلة في تقرير التنفيذ)؛ ‏EC-12 ‏Pending Owner
+- next step: مراجعة SA لتقرير تنفيذ G1-A ثم الأمر: «اعتمدت G1-A — نفّذ G1-B والدمج والوسم»
