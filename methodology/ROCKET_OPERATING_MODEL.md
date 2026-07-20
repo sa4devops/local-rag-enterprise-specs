@@ -1,6 +1,6 @@
 # ROCKET_OPERATING_MODEL.md — نموذج تشغيل قناة Rocket
 
-> **Version:** 1.0 — Proposed (يُعتمد بتوقيع/دمج SA في بوابة G1) · **Date:** 2026-07-19 · **الموضع:** `methodology/ROCKET_OPERATING_MODEL.md`
+> **Version:** 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) · **Date:** 2026-07-19 · **الموضع:** `methodology/ROCKET_OPERATING_MODEL.md`
 > **Authority:** المرتبة 2 — ينفّذ ADR-0031/0033 وحدود `UI_SCREEN_GOVERNANCE_STANDARD §و` على قناة توليد الواجهة؛ **قابلية الادعاء:** بنود قدرات الأداة موسومة **[ادعاء أداة]** حتى تثبت بأدلة G2/V8 وأول FP — فتُرقّى إلى [حقيقة] بمرجع دليلها (‏claimed ≠ published تسري على الأدوات أيضاً).
 
 ## §1 نموذج القدرات B1–B7

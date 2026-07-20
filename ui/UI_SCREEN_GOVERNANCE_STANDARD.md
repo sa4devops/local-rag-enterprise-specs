@@ -1,6 +1,6 @@
 # UI_SCREEN_GOVERNANCE_STANDARD.md — معيار حوكمة الشاشات (Capstone)
 
-> **Version:** 1.0 — Proposed (يُعتمد بتوقيع/دمج SA في بوابة G1) · **Date:** 2026-07-19 · **الموضع:** `ui/UI_SCREEN_GOVERNANCE_STANDARD.md`
+> **Version:** 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) · **Date:** 2026-07-19 · **الموضع:** `ui/UI_SCREEN_GOVERNANCE_STANDARD.md`
 > **Authority:** قائد المرتبة 8 (`AUTHORITY.md`) — **طبقة ربط وإلزام رقيقة فوق المنظومة القائمة، لا تكرر محتواها** (‏EC-11)؛ عند أي تعارض داخل ui/ يُقرأ عبر جدول الإلزام أدناه ثم قواعد الحسم في `AUTHORITY.md §2`.
 > **Purpose:** تنفيذ متطلب حوكمة الشاشات (§18) بالربط والإلزام والاختبارية: من يُلزم بماذا، وأي نمط تُشتق منه معايير القبول، وأين حدود حرية أدوات التوليد (Rocket).
 

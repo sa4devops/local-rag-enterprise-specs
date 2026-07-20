@@ -20,6 +20,6 @@
 
 **خطة الانتقال (Migration plan):** ‏G2: المسح + ‏.env + إشعار `aql`؛ نافذة ما بعد G3: اختبار المستودع الخاص التجريبي؛ ‏G6: التحويل بالترتيب الانتقائي + قائمة ما-بعد-التحويل؛ قبل الإطلاق التجاري: المراجعة القانونية للإشعار.
 
-**الحالة (Status):** Proposed — يُقبل بتوقيع/دمج SA في بوابة G1
+**الحالة (Status):** Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline)
 **التاريخ (Date):** 2026-07-19
 **الوثائق المرتبطة (Related documents):** ../../constitution.md (‏D9/م19) · قرارا المالك Q4 وDR-1 (أمر G0/G1 ‏2026-07-19) · ../DEFERRED_IMPLEMENTATION.md (بند المراجعة القانونية) · ‏`platform/docs/SPEC_SOURCE.md` (التصحيح الملاصق) · خطة G2 ‏(V1–V8)

@@ -23,6 +23,6 @@
 
 **خطة الانتقال (Migration plan):** لا هجرة كود (لا كود منصة بعد)؛ مواءمة مسارات/تسميات `aql` مع الجرد الكنسي تُحسم في بوابة G4 ‏(FG-3) بوصفها Correction candidates مسجلة — لا حسم صامتاً قبلها.
 
-**الحالة (Status):** Proposed — يُقبل بتوقيع/دمج SA في بوابة G1 (بوابة الإغلاق مستوفاة ضمن الدفعة ذاتها)
+**الحالة (Status):** Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) (بوابة الإغلاق مستوفاة ضمن الدفعة ذاتها)
 **التاريخ (Date):** 2026-07-19
 **الوثائق المرتبطة (Related documents):** ../../constitution.md (م23) · ADR-0017-frontend-stack-react-vite-typescript.md (‏Superseded-in-scope) · ADR-0025 (سجل README — عقد REST+OpenAPI+SSE) · ADR-0029-replaceable-client-principle.md · ../DEFERRED_IMPLEMENTATION.md (بند اختبار الاستبدال) · ../../methodology/ROCKET_OPERATING_MODEL.md · ../../ui/UI_FIELD_NAMING.md §2 · `aql@eab9f99` (حالة التجربة المرجعية)
