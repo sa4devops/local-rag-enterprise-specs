@@ -401,3 +401,13 @@ Important rules:
 - risks: لا مخاطر جديدة؛ الوسوم لا تُحذف — أي تصحيح بعد الدفع بوسم لاحق ‏(ADR-0033-6)
 - tests: فحوص Preflight (القسم G من البرومبت) كاملة قبل أي كتابة: رؤوس D/E مطابقة حرفياً · غياب الوسم · سلالة ff · مقارنة رباعية لمحتوى الـ PRين ‏PASS · جرد عبارة البوابة = 11 ملفاً · ثم فحوص J بعد كل خطوة (بعد دمج هذه الترقية: صفر بقايا للعبارة)
 - next step: إتمام الوسم ودمج platform والمؤشر ثم الـRelease ضمن جلسة G1-B ذاتها — السجل الكامل بالتقرير النهائي
+
+## Handoff H-0018
+- date: 2026-07-20
+- phase: G1-C — Governance Docs Normalization (بعد تدقيق G1-B المستقل)
+- task/goal: إقفال ديون التدقيق (F1–F11) وتوثيق الإغلاق النهائي لـG1 وقراري المالك.
+- completed: **سجل إغلاق G1 النهائي**: M1 `dd098dff9bed7a1f267ec5552b0e3366e368883d` · M2 `a7bdcc3fa9d73b6d8bbd8543e36f94d573459ab2` · T_OBJECT `b7904c6660174dade01833d5f3036aaa4c6b5981` · T_TARGET = M2 · P1 `736b38ab54eee3b37e8c74221b7b4575128ed319` · P2 `007f57ef538f43b897181373f1f8a7462125cdc3` · Release: https://github.com/sa4devops/local-rag-enterprise-specs/releases/tag/v1.2-governance-baseline · **حكم التدقيق: ACCEPT WITH DOCUMENTATION DEBT** — تعديلات الدفعة (الملفات الستة): INDEX.md (تصويب صفوف ADR-0017/0031..0036 + إزالة انتساب (G1) الكاذب من 25 صفاً تاريخياً) · README.md v1.4 (حالة المشروع بعد إغلاق G1 + تمييز R1–R11 عن P0–P8) · PACKAGE_CHECKLIST.md v1.12 (تصويب خلية صف ADRs) · github-docs-structure.md v1.8 (+AUTHORITY.md +INDEX.md +contracts/ +knowledge/ +traceability/) · vision.md v1.1 (إحالة ترتيب السلطة إلى AUTHORITY.md) · handoff/handoff.md (هذا الإدخال H-0018)
+- decisions: **قرارا مالك (2026-07-20)**: (1) مسار المصالحة **R1–R11** (أوله R1 — Current-State Baseline and Authority Verification) تمييزاً عن P0–P8 وPhase 1 — Governed Core؛ (2) **لا ترقية للعقود**: Proposed/Candidate كما هي حتى بوابة FP المختصة (`contracts/NAMING_AND_CONTRACTS_STANDARD.md §2`).
+- not completed / next step: إنشاء الوسم التصحيحي `v1.2.1-governance-docs-normalization` على main بعد دمج هذا الـcommit، ثم micro-PR مؤشر القراءة في platform، ثم GitHub Release في specs حصراً — سجله النهائي في متن الـRelease وتقرير G1-C؛ وبعده: بانتظار أمر المالك الصريح لبدء R1.
+- risks: v1.2 محصَّن (ADR-0033-6).
+- tests: Preflight PASS + حراس H-كتلة-1.
