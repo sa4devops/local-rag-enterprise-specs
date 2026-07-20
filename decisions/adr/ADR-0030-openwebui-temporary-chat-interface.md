@@ -22,3 +22,7 @@
 **الحالة (Status):** Accepted
 **التاريخ (Date):** 2026-07-11
 **الوثائق المرتبطة (Related documents):** ../../constitution.md (م6/م7) · ADR-0002 (السجل الكنسي — يبقى نافذاً: ليست الواجهة النهائية) · ADR-0029-replaceable-client-principle.md · ADR-0017-frontend-stack-react-vite-typescript.md · ../license-review.md (صفا OpenWebUI) · ../../phases/phase-roadmap.md (دلتا المسار المؤقت) · `local-rag-enterprise-platform/integrations/openwebui/` (الـ scaffold ووثائقه الست)
+
+
+---
+**Δ 2026-07-19 (دفعة G1) — شروط تفعيل مقيِّدة مُلحقة (لا ADR جديد):** لا تفعيل تشغيلي لجسر Open WebUI قبل استيفاء الأربعة معاً: (1) حسم صف الترخيص المعلق في `../license-review.md` بقرار المالك؛ (2) تنفيذ قائمة فحص التشغيل متعدد المستخدمين (Scale/Identity/Sessions) الموثقة في وثائق الـ scaffold؛ (3) تثبيت digest الصورة عند أول سحب متحقق (لا latest)؛ (4) اجتياز REPLACEMENT_TEST_SPEC وISOLATION_TEST_SPEC القائمتين في `platform/integrations/openwebui/tests/`. يبقى الجسر خلفياً اختيارياً قابلاً للإزالة — لا واجهة منتَج ولا مصدر حقيقة. (المرجع: تقرير v2.0 §F — ADR-0030-Δ.)

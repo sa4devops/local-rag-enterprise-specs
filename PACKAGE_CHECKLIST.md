@@ -1,6 +1,6 @@
 # PACKAGE_CHECKLIST.md — Final GitHub Package Checklist
 
-> **Version:** 1.10 (… + إغلاق F-3 + **دفعة تنحية Flutter وجسر Open WebUI المؤقت**) · **Status:** Current · **Date:** 2026-07-11
+> **Version:** 1.11 — (Δ 2026-07-19 دفعة G1: +قسم أصول Governance Foundation Baseline + تصويب صف v0.7.1 إلى tag-only) (1.10: … + إغلاق F-3 + دفعة تنحية Flutter وجسر Open WebUI المؤقت) · **Status:** Current · **Date:** 2026-07-19
 >  **Purpose:** خريطة الحزمة النهائية: كل ملف، مساره، حالته، جاهزيته للرفع، وما يلزم قبل **التنفيذ** (لا قبل الرفع).
 
 | الملف | المسار داخل GitHub | الحالة | جاهز للرفع؟ | يحتاج قراراً قبل التنفيذ؟ |
@@ -8,7 +8,7 @@
 | README.md | `/README.md` | **v1.2** — سطر الهوية + حالة المشروع عند خط الأساس v1.0 | ✅ | لا |
 | vision.md | `/vision.md` | v1.0 + سطر الهوية المعتمدة (v1.0-baseline) | ✅ | لا |
 | constitution.md | `/constitution.md` | **v1.1** — +م21 (خط الأساس المعماري) +م22 (القدرات المستقبلية التزامات) — v1.0-baseline | ✅ | لا |
-| PACKAGE_CHECKLIST.md | `/PACKAGE_CHECKLIST.md` | **v1.8** — مضاف إليه v0.7.1 + دفعة v0.8 + إغلاق خط الأساس v1.0 | ✅ | لا |
+| PACKAGE_CHECKLIST.md | `/PACKAGE_CHECKLIST.md` | **v1.11** (كان v1.8) — مضاف إليه v0.7.1 + دفعة v0.8 + إغلاق خط الأساس v1.0 | ✅ | لا |
 | github-docs-structure.md | `/github-docs-structure.md` | **v1.7** — FIX-9 (v0.8) + ملفات ADR الفردية المزروعة (v1.0-baseline) | ✅ | لا |
 | Feature_Technical_Architecture_Catalog.md | `/catalogs/…` | **v2.1** — D1–D9 مدمجة (§2 + §3.1/3.3/3.8 + §5 + §15) | ✅ | لا |
 | Spec_Driven_Modular_Monolith_Methodology.md | `/methodology/…` | **v2.1** — عقود shared + §16/§17 + D8 | ✅ | لا |
@@ -44,7 +44,7 @@
 | **Δ v0.6 على ملفات سابقة** | 12 ملفاً (v0.4 ×7 + v0.5 ×5) | مُستبدلة بنسخها النهائية المعتمدة بعد v0.6 — تفاصيل التغييرات في `ui/UI_V06_DELTA_AMENDMENTS.md` | ✅ | لا |
 | architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md | `/architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md` | v0.7 — مواصفة المزوّد/النموذج/السر (Backend — الخيار A) | ✅ | لا |
 | methodology/PRE_IMPLEMENTATION_CONSOLIDATION_REVIEW.md | `/methodology/PRE_IMPLEMENTATION_CONSOLIDATION_REVIEW.md` | v0.7 — مراجعة التجميع قبل التنفيذ + خطة الدمج | ✅ | لا |
-| **Δ v0.7.1 Responsive UI** | 4 ملفات ui (ASSUMPTIONS A-UX-16 · DESIGN_SYSTEM · SCREEN_BEHAVIOR_CARDS · STITCH_REFINED_PROMPTS) | مدموجة في الريبو (commit c6dc18f) وصدر لها release v0.7.1-responsive-ui — **يوثَّق هنا لأول مرة (كان ناقصاً)** | ✅ | لا |
+| **Δ v0.7.1 Responsive UI** | 4 ملفات ui (ASSUMPTIONS A-UX-16 · DESIGN_SYSTEM · SCREEN_BEHAVIOR_CARDS · STITCH_REFINED_PROMPTS) | مدموجة في الريبو (commit c6dc18f) ولها **وسم tag ‏v0.7.1-responsive-ui فقط — لا Release منشور** (تصويب Δ ‏G1 بعد فحص صفحة Releases؛ كائنات Release تُحجز لخطوط الأساس) — **يوثَّق هنا لأول مرة (كان ناقصاً)** | ✅ | لا |
 | phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md | `/phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md` | **v1.0 — v0.8**: نصوص FR-3.11/FR-3.12/FR-1.Org-Ext المعتمدة + OD-WF-1/2 وOD-ORG-1 المقفلة — تُدمج في تصميمَي Phase 1/Phase 3 عند توفرهما | ✅ | لا |
 | **Δ v0.8 Conversational & Workflow** | 10 ملفات معدَّلة (ASSUMPTIONS A-UX-17 · AI_WORKSPACE §14 · ACTION_BUTTON §2.1 · ADMIN_CONSOLE OD-BLD-1+org · REFERENCE_POLICY · SCREEN_BEHAVIOR_CARDS · SCREEN_INVENTORY v1.3 · FIELD_NAMING · STITCH_PROMPTS G6/G8 · open-decisions) | تفاصيل التغييرات في `EXECUTION_REPORT.md` | ✅ | لا |
 | EXECUTION_REPORT.md | `/EXECUTION_REPORT.md` | v1.0 — تقرير تنفيذ دفعة v0.8 (جرد/تدقيق/إصلاحات/بصمات) | ✅ | لا |
@@ -63,3 +63,24 @@
 **تُنشأ لاحقاً (ليست نقصاً):** ملفات المعمارية المستخرجة · ملفات ADR الفردية · handoff/archive · runbooks · prototypes/design-notes الناتجة من Google Stitch بعد مراجعتها.
 
 **خلاصة الجاهزية:** لا قرار يمنع **الرفع**. قبل **التنفيذ**: إقرار صفوف ترخيص الستاك المعتمد فقط. **بوابة compose (فئة 3)** تنطبق حصراً عند **تفعيل** صورة اختيارية (Valkey / MinIO أو SeaweedFS / خادم مراقبة). قبل **مرحلة الوسائط**: OCR/PDF-tooling/ffmpeg/أوزان النماذج. قبل **الإنتاج/التوزيع**: فئة 4 كاملة.
+
+
+## Δ دفعة G1 — أصول Governance Foundation Baseline (2026-07-19)
+| الملف | المسار | الحالة | جاهز للرفع؟ | يحتاج قراراً قبل التنفيذ؟ |
+|---|---|---|---|---|
+| AUTHORITY.md | `/AUTHORITY.md` | **v1.0** — السلم الكنسي الموحد (13 مرتبة + خريطة الأرقام التاريخية) | ✅ | اعتماد SA في بوابة G1 |
+| INDEX.md | `/INDEX.md` | **v1.0** — فهرس بشري 100% تغطية (OD-IDX-1) | ✅ | لا |
+| ‏ADR-0031..0036 (6 ملفات) | `decisions/adr/` | **Proposed (G1)** — ‏Q1–Q5 + ‏DR-1/DR-2 + ‏DGP | ✅ | توقيع SA (يرقّيها Accepted) |
+| ‏adr/README.md | `decisions/adr/README.md` | **v1.3** — +6 صفوف + ‏Δ ‏0017/0030 | ✅ | لا |
+| open-decisions.md | `decisions/open-decisions.md` | **v2.4** — +فهرس دفعة G1 | ✅ | لا |
+| DEFERRED_IMPLEMENTATION.md | `decisions/DEFERRED_IMPLEMENTATION.md` | +3 صفوف (مرآة Superpowers · بناء DGP · المراجعة القانونية) | ✅ | لا |
+| contracts/ (6 ملفات) | `contracts/**` | معيار v1.0 + هوية + قالب + 4 بذور **Candidate** + قاموس تعدادات | ✅ | ترقية البذور Approved = بوابات FP |
+| UI_SCREEN_GOVERNANCE_STANDARD.md | `ui/` | **v1.0** — ‏Capstone (إلزام · ‏Archetypes · قبول · حدود Rocket · تغطية §18) | ✅ | اعتماد SA في G1 |
+| UI_COMPONENT_STATES.md | `ui/` | **v1.1** — +S16–S20 ومصفوفة الانطباق | ✅ | لا |
+| UI_SCREEN_INVENTORY.md | `ui/` | **v1.4** — +archetype/contract_status/contract_ref (51 صفاً) | ✅ | لا |
+| agent-execution-model.md | `methodology/` | **v2.0** — +§§12–17 + دلتا §8 | ✅ | لا |
+| PHASE_EXECUTION_STANDARD.md | `methodology/` | **v1.0** — القواعد الأربع + إغلاق P0–P8 | ✅ | اعتماد SA في G1 |
+| ROCKET_OPERATING_MODEL.md | `methodology/` | **v1.0** — ‏B1–B7 موسومة + قواعد القناة | ✅ | اعتماد SA في G1 |
+| BUSINESS_GLOSSARY.md | `knowledge/` | **v0.1 Seed** — الهوية الرسمية + 10 مصطلحات | ✅ | لا |
+| TRACEABILITY_MATRIX.md | `traceability/` | **v0.1 Seed** — صف لكل أصل G1 | ✅ | لا |
+| handoff.md (إدخال H جديد) | `handoff/` | إدخال دفعة G1 | ✅ | لا |

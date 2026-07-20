@@ -1,0 +1,24 @@
+# BUSINESS_GLOSSARY.md — معجم مصطلحات الأعمال (بذرة G1)
+
+> **Version:** 0.1 — Seed/Proposed · **Date:** 2026-07-19 · **الموضع:** `knowledge/BUSINESS_GLOSSARY.md`
+> **Authority:** طبقة System Knowledge — مصدر تأليف يقرؤه خط توليد الوثائق (‏ADR-0035 بند 5)؛ التعريف هنا هو الملزم في كل وثيقة مولَّدة وواجهة (عبر مفاتيح i18n) عند اعتماده.
+> **قاعدة النمو:** يُثرى مع كل Feature Package (بند write-back) — لا يُؤلَّف دفعة واحدة.
+
+## §1 الهوية الرسمية (Q5 — قرار مالك مقفل)
+**اسم المنتج الرسمي:** **AQL Enterprise AI Platform — by AQLORA** · «AQL» اسم المنتج/العميل · «AQLORA» الكيان المالك · صيغة الحقوق: **Proprietary — All Rights Reserved © 2026 AQLORA** (‏ADR-0036/DR-1).
+
+## §2 المصطلحات (بذرة)
+| المصطلح | التعريف الملزم | تمييز الالتباس | الموطن التقني |
+|---|---|---|---|
+| **Task (مهمة)** | بند عمل مسنَد لمستخدم/دور ضمن سجل أو workflow، له حالة وتكليف | ليست «Task Card» المنهجية (تلك للوكلاء — §6) وليست Run | ‏queue.tasks · ‏workflow steps |
+| **Schedule (جدولة)** | إطلاق مؤقت لعمل محكوم (فعل/خط) بتوقيت/تكرار معتمدين | ليست Workflow — الجدولة مشغِّل، وسير العمل منطق | (يقنَّن عقده بمرحلته) |
+| **Workflow (سير عمل)** | تعريف حالات/انتقالات/اعتمادات معتمد يعمل على السجلات (‏SoD في اعتماده) | ليس Automation عامة — الـ workflow معرَّف ومعتمد ومدقَّق | ‏admin.workflows · ‏P3 |
+| **Automation (أتمتة)** | تنفيذ آلي لخطوة/سلسلة ضمن عقود وأفعال معتمدة | ليست حرية للـ LLM — الفعل المحكوم هو الوحدة | سلسلة `action_id` |
+| **Connector (موصّل)** | تكامل معرَّف مع نظام خارجي بحالته الإدارية وصحته التشغيلية منفصلتين | ليس Extension داخلية | ‏admin.connectors · ‏P7 |
+| **Extension (امتداد)** | قدرة إضافية داخل حدود المنصة تُفعَّل ببوابة | ليست Connector خارجياً | سجل القدرات |
+| **Playbook** | تسلسل عمل موصوف قابل لإعادة الاستخدام ضمن الأفعال المعتمدة | ليس Workflow معتمَداً بذاته حتى يُقنَّن | (يقنَّن بمرحلته) |
+| **SLA** | التزام زمني/جودي مقاس على مهمة/خدمة بسياسة معتمدة | ليس «أولوية» عرضية | عقد SLA-Policy ‏(P3 — توثيق) |
+| **Run (تشغيل)** | تنفيذ فعلي واحد لعمل (استدعاء/خط) بسجله وحالته | ليس Task تكليفياً | ‏runs.list/detail |
+| **Record (سجل)** | كيان بيانات ديناميكي بهوية `identity.record` الرباعية | ليس Document ملفياً بالضرورة | ‏run.* · ‏ADR-0032 |
+
+**Related:** `../contracts/identity/RECORD_IDENTITY.md` · `../contracts/enums/ENUMS_DICTIONARY.md` · `../decisions/adr/ADR-0035-contracts-layer-single-source.md` · `../decisions/adr/ADR-0036-repo-visibility-public-temporary-private-gate.md`

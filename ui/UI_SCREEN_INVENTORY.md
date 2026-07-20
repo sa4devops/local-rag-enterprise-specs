@@ -1,65 +1,65 @@
 # UI_SCREEN_INVENTORY.md — جرد الشاشات الشامل
 
-> **Version:** 1.3 — (Δ v1.1: +admin.retrieval_tester من تصميم P5 · Δ v1.2: +runs.list/+runs.detail من UI_RUN_EXECUTION_MODEL v0.6 · Δ v1.3/v0.8: الإرجاع الموجَّه في queue.tasks/queue.approval_detail وفق FR-3.11/3.12 + admin.org مرنة العمق وفق FR-1.Org-Ext + وضعا عرض ws.main وفق OD-WS-4) · **Date:** 2026-07-10 (الأصل 2026-07-06) · **الموضع الهدف:** `ui/UI_SCREEN_INVENTORY.md`
+> **Version:** 1.4 — (Δ v1.4/G1 2026-07-19: +ثلاثة أعمدة للجدول A — `archetype` (الأنماط الثمانية وفق UI_SCREEN_GOVERNANCE_STANDARD §ب) · `contract_status` (None/Candidate/Approved) · `contract_ref` — بلا أي تغيير في الشاشات أو المسارات؛ 4 بذور Candidate) · (Δ v1.1: +admin.retrieval_tester من تصميم P5 · Δ v1.2: +runs.list/+runs.detail من UI_RUN_EXECUTION_MODEL v0.6 · Δ v1.3/v0.8: الإرجاع الموجَّه في queue.tasks/queue.approval_detail وفق FR-3.11/3.12 + admin.org مرنة العمق وفق FR-1.Org-Ext + وضعا عرض ws.main وفق OD-WS-4) · **Date:** 2026-07-10 (الأصل 2026-07-06) · **الموضع الهدف:** `ui/UI_SCREEN_INVENTORY.md`
 > **بنية الجرد:** الحقول الـ15 المطلوبة كاملة، مقسومة لجدولين مترابطين بـ `screen_id` حفاظاً على قابلية القراءة والصيانة: **A = التعريف والتموضع** (screen_id, name, route, phase, audience, type, visible_to_end_user, stitch_prompt_required, priority) · **B = الغرض والحوكمة** (screen_id, purpose, primary_data, main_actions, permissions, audit_events, notes).
 > **اصطلاحات:** type ∈ {auth, workspace, queue, renderer, business, admin-config, admin-security, admin-knowledge, admin-models, admin-integrations, admin-ops, ops-read} · stitch = رقم مجموعة G أو «قالب G13» أو «لا (حالة/تبويب)» · الأولوية = ترتيب التصميم في Stitch.
 > **قاعدة Dual-Surface في الجرد:** أي عملية سجلات تُذكر مرتين فقط: بطاقة في ws (P6+) وأزرار في الـ Renderer — **نفس action_id**؛ ولا توجد شاشة مخصصة لكل نوع سجل.
 
 ## الجدول A — التعريف والتموضع
 
-| screen_id | screen_name | route | phase | audience | type | end_user? | stitch | priority |
-|---|---|---|---|---|---|---|---|---|
-| auth.login | تسجيل الدخول | /login | 1 | الجميع | auth | ✔ | G2 | High |
-| auth.first_login | أول دخول/تغيير كلمة | /first-login | 1 | الجميع | auth | ✔ | G2 | High |
-| ws.main | AI Workspace | /workspace | 6 | مستخدم | workspace | ✔ | G3+G4 | High |
-| queue.tasks | مهامي | /me/tasks | 3 | مستخدم | queue | ✔ | G8 | High |
-| queue.approvals | اعتماداتي | /me/approvals | 3 | مستخدم | queue | ✔ | G8 | High |
-| queue.approval_detail | تفصيل بند اعتماد | /me/approvals/{id} | 3 | مستخدم مخوّل | queue | ✔ | G8 | High |
-| notif.center | مركز الإشعارات | /me/notifications | 3 | مستخدم | queue | ✔ | G8 | Med |
-| projects.main | المشاريع | /projects | 3 | مستخدم | business | ✔ | G8 | Med |
-| run.list | Renderer — قائمة كيان | /app/{entity} | 1→2 | مستخدم حسب الصلاحية | renderer | ✔ | قالب G13 | High |
-| run.form | Renderer — نموذج إنشاء/تعديل | /app/{entity}/new · /{id}/edit | 1→2 | مستخدم حسب الصلاحية | renderer | ✔ | قالب G13 | High |
-| run.detail | Renderer — تفاصيل سجل | /app/{entity}/{id} | 1→2 | مستخدم حسب الصلاحية | renderer | ✔ | قالب G13 | High |
-| profile.entity | Entity Profile | /entity/{key} | 2→4 | مستخدم مخوّل | business | ✔ | قالب G13 | Med |
-| reports.list | تقاريري | /me/reports | 6 | مستخدم | business | ✔ | G4 | Med |
-| reports.review | مراجعة تقرير (رسمي) | /reports/{id}/review | 6 | مراجع/معتمِد | business | ✔ | G4 | High |
-| store.catalog | متجر التطبيقات | /store | 7 | مستخدم | business | ✔ | G11 | Med |
-| store.connections | ارتباطاتي | /me/connections | 7 | مستخدم | business | ✔ | G11 | Med |
-| admin.dashboard | لوحة الأدمن | /admin | 1 | أدمن | admin-config | ✖ | G5 | High |
-| admin.users | المستخدمون | /admin/users | 1 | أدمن | admin-security | ✖ | G6 | High |
-| admin.user_detail | ملف مستخدم | /admin/users/{id} | 1 | أدمن | admin-security | ✖ | G6 | High |
-| admin.org | الهيكل التنظيمي | /admin/org | 1 | أدمن | admin-security | ✖ | G6 | High |
-| admin.roles | الأدوار | /admin/roles | 1 | أدمن | admin-security | ✖ | G6 | High |
-| admin.permissions | مصفوفة الصلاحيات | /admin/permissions | 1 | أدمن | admin-security | ✖ | G6 | High |
-| admin.policies | Policy Studio (ABAC/ReBAC/SoD) | /admin/policies | 4 | سوبر أدمن | admin-security | ✖ | G6 | High |
-| admin.classification | التصنيف والحساسية | /admin/classification | 4 | سوبر أدمن | admin-security | ✖ | G6 | Med |
-| admin.security_policies | سياسات الأمن | /admin/security | 4 | سوبر أدمن | admin-security | ✖ | G6 | Med |
-| admin.features | إدارة المزايا + Safe Mode | /admin/features | 4 | سوبر أدمن | admin-config | ✖ | G5 | Med |
-| admin.record_types | Screen/Record-Type Builder | /admin/metadata/screens | 1→2 | أدمن | admin-config | ✖ | G7 | High |
-| admin.fields | تعريف الحقول | (تبويب داخل الـ Builder) | 1→2 | أدمن | admin-config | ✖ | لا (تبويب ضمن G7) | High |
-| admin.actions | Action Registry | /admin/metadata/actions | 3 | أدمن | admin-config | ✖ | G7 | High |
-| admin.navigation | Navigation Registry | /admin/metadata/navigation | 1 | أدمن | admin-config | ✖ | G7 | Med |
-| admin.migrations | مراجعة/اعتماد الترحيلات | /admin/migrations | 1 | أدمن معتمِد | admin-config | ✖ | G7 | High |
-| admin.generation_docs | توثيق التوليد | /admin/metadata/screens/{id}/docs | 2 | أدمن | admin-config | ✖ | G7 | Med |
-| admin.workflows | تعريفات الـ Workflows | /admin/workflows | 3 | أدمن | admin-config | ✖ | G8 | High |
-| admin.workflow_detail | تفصيل Workflow ودورة حياته | /admin/workflows/{id} | 3 | أدمن + معتمِد | admin-config | ✖ | G8 | High |
-| admin.rag_sources | مصادر المعرفة | /admin/knowledge/sources | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | High |
-| admin.ingestion | مهام المعالجة/الفهرسة | /admin/knowledge/ingestion | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | High |
-| files.manager | إدارة الملفات | /admin/knowledge/files | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | Med |
-| admin.okf | حِزم OKF | /admin/knowledge/okf | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | Low |
-| admin.retrieval_tester | مختبر الاسترجاع (أدمن) | /admin/knowledge/tester | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | Med |
-| runs.list | تشغيلاتي | /me/runs | 6 (يمتد P7) | مستخدم (+مراقب بنطاق) | me-runs | ✖ | G14 | Med |
-| runs.detail | تفصيل تشغيل | /me/runs/{id} | 6 (يمتد P7) | مستخدم (+مراقب بنطاق) | me-runs | ✖ | G14 | High |
-| admin.capabilities | ربط القدرات بالنماذج | /admin/models/capabilities | 5 | سوبر أدمن | admin-models | ✖ | G10 | High |
-| admin.agents | نماذج الوكلاء (per-agent) | /admin/models/agents | 6 | سوبر أدمن | admin-models | ✖ | G10 | Med |
-| admin.connectors | الموصلات (تعريف/تفعيل/جمهور) | /admin/integrations/connectors | 7 | سوبر أدمن | admin-integrations | ✖ | G11 | Med |
-| admin.audit | عارض التدقيق | /admin/audit | 1 | أدمن مخوّل | admin-ops | ✖ | G12 | High |
-| admin.logs | عارض السجلات (بقناع) | /admin/logs | 1 | أدمن مخوّل | admin-ops | ✖ | G12 | Med |
-| admin.health | الصحة التفصيلية | /admin/health | 0→1 | أدمن/Ops | admin-ops | ✖ | G12 | Med |
-| admin.error_catalog | كتالوج الأخطاء | /admin/errors | 1 | أدمن | admin-ops | ✖ | G12 | Low |
-| admin.config_profiles | البروفايلات والأعلام (قراءة) | /admin/config | 1 | أدمن/Ops | admin-ops | ✖ | G12 | Low |
-| ops.status | سطح التشغيل (قراءة) | /ops | 8 | Ops | ops-read | ✖ | G12 | Med |
-| about.licenses | About / Attribution | /about | 8 | الجميع | ops-read | ✔ | G12 | Low |
+| screen_id | screen_name | route | phase | audience | type | end_user? | stitch | priority | archetype | contract_status | contract_ref |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| auth.login | تسجيل الدخول | /login | 1 | الجميع | auth | ✔ | G2 | High | Form | None | — |
+| auth.first_login | أول دخول/تغيير كلمة | /first-login | 1 | الجميع | auth | ✔ | G2 | High | Form | None | — |
+| ws.main | AI Workspace | /workspace | 6 | مستخدم | workspace | ✔ | G3+G4 | High | Conversational | None | — |
+| queue.tasks | مهامي | /me/tasks | 3 | مستخدم | queue | ✔ | G8 | High | List | None | — |
+| queue.approvals | اعتماداتي | /me/approvals | 3 | مستخدم | queue | ✔ | G8 | High | List | None | — |
+| queue.approval_detail | تفصيل بند اعتماد | /me/approvals/{id} | 3 | مستخدم مخوّل | queue | ✔ | G8 | High | Detail | None | — |
+| notif.center | مركز الإشعارات | /me/notifications | 3 | مستخدم | queue | ✔ | G8 | Med | List | None | — |
+| projects.main | المشاريع | /projects | 3 | مستخدم | business | ✔ | G8 | Med | List | None | — |
+| run.list | Renderer — قائمة كيان | /app/{entity} | 1→2 | مستخدم حسب الصلاحية | renderer | ✔ | قالب G13 | High | List | **Candidate** | [عقد](../contracts/screens/run.list.md) |
+| run.form | Renderer — نموذج إنشاء/تعديل | /app/{entity}/new · /{id}/edit | 1→2 | مستخدم حسب الصلاحية | renderer | ✔ | قالب G13 | High | Form | None | — |
+| run.detail | Renderer — تفاصيل سجل | /app/{entity}/{id} | 1→2 | مستخدم حسب الصلاحية | renderer | ✔ | قالب G13 | High | Detail | None | — |
+| profile.entity | Entity Profile | /entity/{key} | 2→4 | مستخدم مخوّل | business | ✔ | قالب G13 | Med | Detail | None | — |
+| reports.list | تقاريري | /me/reports | 6 | مستخدم | business | ✔ | G4 | Med | List | None | — |
+| reports.review | مراجعة تقرير (رسمي) | /reports/{id}/review | 6 | مراجع/معتمِد | business | ✔ | G4 | High | Detail | None | — |
+| store.catalog | متجر التطبيقات | /store | 7 | مستخدم | business | ✔ | G11 | Med | List | None | — |
+| store.connections | ارتباطاتي | /me/connections | 7 | مستخدم | business | ✔ | G11 | Med | List | None | — |
+| admin.dashboard | لوحة الأدمن | /admin | 1 | أدمن | admin-config | ✖ | G5 | High | Dashboard | None | — |
+| admin.users | المستخدمون | /admin/users | 1 | أدمن | admin-security | ✖ | G6 | High | List | None | — |
+| admin.user_detail | ملف مستخدم | /admin/users/{id} | 1 | أدمن | admin-security | ✖ | G6 | High | Detail | None | — |
+| admin.org | الهيكل التنظيمي | /admin/org | 1 | أدمن | admin-security | ✖ | G6 | High | Builder | None | — |
+| admin.roles | الأدوار | /admin/roles | 1 | أدمن | admin-security | ✖ | G6 | High | List | None | — |
+| admin.permissions | مصفوفة الصلاحيات | /admin/permissions | 1 | أدمن | admin-security | ✖ | G6 | High | Builder | None | — |
+| admin.policies | Policy Studio (ABAC/ReBAC/SoD) | /admin/policies | 4 | سوبر أدمن | admin-security | ✖ | G6 | High | Builder | None | — |
+| admin.classification | التصنيف والحساسية | /admin/classification | 4 | سوبر أدمن | admin-security | ✖ | G6 | Med | List | None | — |
+| admin.security_policies | سياسات الأمن | /admin/security | 4 | سوبر أدمن | admin-security | ✖ | G6 | Med | List | None | — |
+| admin.features | إدارة المزايا + Safe Mode | /admin/features | 4 | سوبر أدمن | admin-config | ✖ | G5 | Med | List | None | — |
+| admin.record_types | Screen/Record-Type Builder | /admin/metadata/screens | 1→2 | أدمن | admin-config | ✖ | G7 | High | Builder | **Candidate** | [عقد](../contracts/screens/admin.record_types.md) |
+| admin.fields | تعريف الحقول | (تبويب داخل الـ Builder) | 1→2 | أدمن | admin-config | ✖ | لا (تبويب ضمن G7) | High | Builder | None | — |
+| admin.actions | Action Registry | /admin/metadata/actions | 3 | أدمن | admin-config | ✖ | G7 | High | Builder | **Candidate** | [عقد](../contracts/screens/admin.actions.md) |
+| admin.navigation | Navigation Registry | /admin/metadata/navigation | 1 | أدمن | admin-config | ✖ | G7 | Med | Builder | None | — |
+| admin.migrations | مراجعة/اعتماد الترحيلات | /admin/migrations | 1 | أدمن معتمِد | admin-config | ✖ | G7 | High | List | None | — |
+| admin.generation_docs | توثيق التوليد | /admin/metadata/screens/{id}/docs | 2 | أدمن | admin-config | ✖ | G7 | Med | Detail | None | — |
+| admin.workflows | تعريفات الـ Workflows | /admin/workflows | 3 | أدمن | admin-config | ✖ | G8 | High | Builder | **Candidate** | [عقد](../contracts/screens/admin.workflows.md) |
+| admin.workflow_detail | تفصيل Workflow ودورة حياته | /admin/workflows/{id} | 3 | أدمن + معتمِد | admin-config | ✖ | G8 | High | Builder | None | — |
+| admin.rag_sources | مصادر المعرفة | /admin/knowledge/sources | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | High | List | None | — |
+| admin.ingestion | مهام المعالجة/الفهرسة | /admin/knowledge/ingestion | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | High | Monitor | None | — |
+| files.manager | إدارة الملفات | /admin/knowledge/files | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | Med | List | None | — |
+| admin.okf | حِزم OKF | /admin/knowledge/okf | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | Low | List | None | — |
+| admin.retrieval_tester | مختبر الاسترجاع (أدمن) | /admin/knowledge/tester | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | Med | Canvas | None | — |
+| runs.list | تشغيلاتي | /me/runs | 6 (يمتد P7) | مستخدم (+مراقب بنطاق) | me-runs | ✖ | G14 | Med | List | None | — |
+| runs.detail | تفصيل تشغيل | /me/runs/{id} | 6 (يمتد P7) | مستخدم (+مراقب بنطاق) | me-runs | ✖ | G14 | High | Monitor | None | — |
+| admin.capabilities | ربط القدرات بالنماذج | /admin/models/capabilities | 5 | سوبر أدمن | admin-models | ✖ | G10 | High | Builder | None | — |
+| admin.agents | نماذج الوكلاء (per-agent) | /admin/models/agents | 6 | سوبر أدمن | admin-models | ✖ | G10 | Med | Builder | None | — |
+| admin.connectors | الموصلات (تعريف/تفعيل/جمهور) | /admin/integrations/connectors | 7 | سوبر أدمن | admin-integrations | ✖ | G11 | Med | List | None | — |
+| admin.audit | عارض التدقيق | /admin/audit | 1 | أدمن مخوّل | admin-ops | ✖ | G12 | High | List | None | — |
+| admin.logs | عارض السجلات (بقناع) | /admin/logs | 1 | أدمن مخوّل | admin-ops | ✖ | G12 | Med | List | None | — |
+| admin.health | الصحة التفصيلية | /admin/health | 0→1 | أدمن/Ops | admin-ops | ✖ | G12 | Med | Dashboard | None | — |
+| admin.error_catalog | كتالوج الأخطاء | /admin/errors | 1 | أدمن | admin-ops | ✖ | G12 | Low | List | None | — |
+| admin.config_profiles | البروفايلات والأعلام (قراءة) | /admin/config | 1 | أدمن/Ops | admin-ops | ✖ | G12 | Low | List | None | — |
+| ops.status | سطح التشغيل (قراءة) | /ops | 8 | Ops | ops-read | ✖ | G12 | Med | Dashboard | None | — |
+| about.licenses | About / Attribution | /about | 8 | الجميع | ops-read | ✔ | G12 | Low | Detail | None | — |
 
 ## الجدول B — الغرض والحوكمة
 
