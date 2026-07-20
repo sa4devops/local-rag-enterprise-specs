@@ -1,12 +1,12 @@
 # INDEX.md — الفهرس البشري الحاكم لمستودع المواصفات
 
-> **Version:** 1.0 — Proposed (دفعة G1) · **Date:** 2026-07-19 · **الموضع:** `/INDEX.md`
+> **Version:** 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) · **Date:** 2026-07-19 · **الموضع:** `/INDEX.md`
 > **Authority:** مصدر الفهرسة الحاكم بقرار **OD-IDX-1** (‏SA ‏2026-07-10): فهرس **بشري القراءة يدوي الصيانة** — لا index.yaml ولا manifest آلياً ولا مصدر موازياً حتى وجود مستهلك آلي فعلي وقرار جديد (‏ADR-0035 بند 7). الفهرس **دليل مواضع وحالات، لا مصدر سلطة** (‏AUTHORITY.md §2-4).
 > **قاعدة الصيانة:** كل دفعة تضيف/ترقّي ملفاً تُحدّث صفه هنا في الدفعة ذاتها (بند write-back) · التغطية إلزامية 100% لكل ملفات ‏.md (‏EC-3).
 
 | المجلد | الملف | الإصدار | الحالة | المالك النطاقي | من يقرأ |
 |---|---|---|---|---|---|
-| `(الجذر)` | `AUTHORITY.md` | 1.0 — Proposed (يُعتمد بتوقيع/دمج SA في بوابة G1) | Proposed (G1) | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
+| `(الجذر)` | `AUTHORITY.md` | 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) | Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `(الجذر)` | `EXECUTION_REPORT.md` | 1.0 | Current | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `(الجذر)` | `FLUTTER_ROLLBACK_AND_OPENWEBUI_BRIDGE_HANDOFF.md` | 1.0 | Current | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `(الجذر)` | `PACKAGE_CHECKLIST.md` | 1.11 — (Δ 2026-07-19 دفعة G1: +قسم أصول Governance Foundatio | Current | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
@@ -45,7 +45,7 @@
 | `decisions/adr` | `decisions/adr/ADR-0032-dynamic-records-hybrid-storage-uuidv7.md` | — | Current | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions/adr` | `decisions/adr/ADR-0033-automation-levels-git-merge-policy.md` | — | Current | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions/adr` | `decisions/adr/ADR-0034-development-skills-superpowers-subset.md` | — | Current | طبقة القرارات — SA | كل وكيل عند مساس معماري |
-| `decisions/adr` | `decisions/adr/ADR-0035-contracts-layer-single-source.md` | — | Proposed (G1) | طبقة القرارات — SA | كل وكيل عند مساس معماري |
+| `decisions/adr` | `decisions/adr/ADR-0035-contracts-layer-single-source.md` | — | Accepted | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions/adr` | `decisions/adr/ADR-0036-repo-visibility-public-temporary-private-gate.md` | — | Current | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions/adr` | `decisions/adr/README.md` | 1.3 — (Δ 2026-07-19 دفعة G1: +صفوف ADR-0031..0036 ‏Proposed  | Current / Accepted | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions` | `decisions/license-review.md` | 1.2 (v1.0-architecture-baseline: صفوف SeaweedFS/MinIO/Valkey | Current / Accepted | طبقة القرارات — SA | ‏Tier-0 لكل وكيل |
@@ -53,9 +53,9 @@
 | `(الجذر)` | `github-docs-structure.md` | 1.7 (v1.0-baseline: ملفات ADR الفردية المزروعة تحت decisions | Current / Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `handoff` | `handoff/handoff.md` | 1.1 (Δ 2026-07-11: توضيح اتفاقية الأرشفة وترتيب القراءة — تح | Current / Accepted | التسليم — كل جلسة منفِّذة | الوكيل التالي قبل أي عمل |
 | `knowledge` | `knowledge/BUSINESS_GLOSSARY.md` | 0.1 — Seed/Proposed | Proposed (G1) | ‏System Knowledge — Specification Architect | المولد + المراجعات |
-| `methodology` | `methodology/PHASE_EXECUTION_STANDARD.md` | 1.0 — Proposed (يُعتمد بتوقيع/دمج SA في بوابة G1) | Proposed (G1) | المنهجية — Specification Architect | كل وكيل تنفيذ |
+| `methodology` | `methodology/PHASE_EXECUTION_STANDARD.md` | 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) | Accepted | المنهجية — Specification Architect | كل وكيل تنفيذ |
 | `methodology` | `methodology/PRE_IMPLEMENTATION_CONSOLIDATION_REVIEW.md` | 1.0 — Proposed (v0.7) | Proposed (G1) | المنهجية — Specification Architect | كل وكيل تنفيذ |
-| `methodology` | `methodology/ROCKET_OPERATING_MODEL.md` | 1.0 — Proposed (يُعتمد بتوقيع/دمج SA في بوابة G1) | Proposed (G1) | المنهجية — Specification Architect | كل وكيل تنفيذ |
+| `methodology` | `methodology/ROCKET_OPERATING_MODEL.md` | 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) | Accepted | المنهجية — Specification Architect | كل وكيل تنفيذ |
 | `methodology` | `methodology/Spec_Driven_Modular_Monolith_Methodology.md` | 2.1 — Final (A1–A11 + D1–D9 مدمجة) | Current / Accepted | المنهجية — Specification Architect | كل وكيل تنفيذ |
 | `methodology` | `methodology/agent-execution-model.md` | 2.0 — (Δ 2026-07-19 دفعة G1: +§§12–17 — الأدوار الأربعة | Current | المنهجية — Specification Architect | كل وكيل تنفيذ |
 | `methodology` | `methodology/coding-standards.md` | 1.2 — Final (D1–D9 مدمجة + §9 مُحدَّث وفق D12 في v1.0-archit | Current / Accepted | المنهجية — Specification Architect | كل وكيل تنفيذ |
@@ -114,7 +114,7 @@
 | `ui` | `ui/UI_RUN_EXECUTION_MODEL.md` | 1.0 — Proposed (v0.6) | Proposed (G1) | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_SCREEN_BEHAVIOR_CARDS.md` | 1.1 — (Δ v0.8: تحديث بطاقتي 5/7 بزر «إرجاع إلى…» وفق FR-3.11 | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_SCREEN_CARDS_BY_PHASE.md` | 1.0 — Proposed | Proposed (G1) | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
-| `ui` | `ui/UI_SCREEN_GOVERNANCE_STANDARD.md` | 1.0 — Proposed (يُعتمد بتوقيع/دمج SA في بوابة G1) | Proposed (G1) | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
+| `ui` | `ui/UI_SCREEN_GOVERNANCE_STANDARD.md` | 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) | Accepted | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_SCREEN_INVENTORY.md` | 1.4 — (Δ v1.4/G1 2026-07-19: +ثلاثة أعمدة للجدول A — `archet | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_SITEMAP.md` | 1.0 — Proposed | Proposed (G1) | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_STITCH_PROMPTS_BY_PHASE.md` | 1.1 — (Δ v0.8: تحديث G6 بشجرة org مرنة العمق وفق FR-1.Org-Ex | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |

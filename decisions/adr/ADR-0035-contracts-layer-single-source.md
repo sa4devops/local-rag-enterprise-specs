@@ -27,6 +27,6 @@
 
 **خطة الانتقال (Migration plan):** ‏G1: البنية والقالب والبذور؛ كل FP لاحقة: عقودها قبل تنفيذها؛ ‏P2: بناء FP-DOCGEN؛ كل Release بعده: إعادة توليد كاملة مبصومة.
 
-**الحالة (Status):** Proposed — يُقبل بتوقيع/دمج SA في بوابة G1
+**الحالة (Status):** Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline)
 **التاريخ (Date):** 2026-07-19
 **الوثائق المرتبطة (Related documents):** ../../ui/UI_FIELD_NAMING.md (§1–§3 — المصدر الكنسي للتسمية) · ../../ui/UI_SCREEN_INVENTORY.md · ../../contracts/NAMING_AND_CONTRACTS_STANDARD.md · ../open-decisions.md (‏OD-IDX-1) · ../DEFERRED_IMPLEMENTATION.md (بند DGP) · ADR-0025 (السجل) · أمر المالك G0/G1 ‏2026-07-19 (متطلب DGP)

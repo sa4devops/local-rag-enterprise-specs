@@ -22,6 +22,6 @@
 
 **خطة الانتقال (Migration plan):** ‏G1: هذا القرار + صف المؤجلات؛ ‏G2: صف الترخيص؛ ‏G3: المرآة + التثبيت + اختبارا القبول ثم أول استخدام في FP-0001.
 
-**الحالة (Status):** Proposed — يُقبل بتوقيع/دمج SA في بوابة G1
+**الحالة (Status):** Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline)
 **التاريخ (Date):** 2026-07-19
 **الوثائق المرتبطة (Related documents):** ../../constitution.md (م7) · ADR-0021-reference-aware-clean-implementation.md · ADR-0033-automation-levels-git-merge-policy.md · ../license-review.md · ../DEFERRED_IMPLEMENTATION.md (بند المرآة) · `obra/superpowers@d884ae0`

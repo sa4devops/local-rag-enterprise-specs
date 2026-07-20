@@ -21,6 +21,6 @@
 
 **خطة الانتقال (Migration plan):** لا بيانات قائمة للهجرة؛ أول migrations للأساس تمر بمسار مراجعة الـPR المسمى في م10؛ أي ترويج لاحق يمر بمساره المقنن أعلاه.
 
-**الحالة (Status):** Proposed — يُقبل بتوقيع/دمج SA في بوابة G1
+**الحالة (Status):** Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline)
 **التاريخ (Date):** 2026-07-19
 **الوثائق المرتبطة (Related documents):** ../../constitution.md (م10 · م17) · ADR-0003 (السجل — PostgreSQL/RLS/FLS) · ../open-decisions.md (‏OD-ORG-1 · ‏OD-BLD-1) · ../../contracts/identity/RECORD_IDENTITY.md · ../../phases/designs/phase-1-governed-core-screen-builder.md

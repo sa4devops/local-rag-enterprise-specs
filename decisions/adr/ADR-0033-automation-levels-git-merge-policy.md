@@ -21,6 +21,6 @@
 
 **خطة الانتقال (Migration plan):** ‏G1 (هذه الدفعة) أُنجزت بأمر مالك صريح بنمط L1-mechanics (فروع/commits/PRs بلا دمج)؛ ‏PR ‏#1 القائم في `aql` يُحسم في G2 وفق مصفوفة قرار معلنة لا صمتاً؛ ‏L2 يسري آلياً بشرطه في البند 2.
 
-**الحالة (Status):** Proposed — يُقبل بتوقيع/دمج SA في بوابة G1
+**الحالة (Status):** Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline)
 **التاريخ (Date):** 2026-07-19
 **الوثائق المرتبطة (Related documents):** ../../methodology/agent-execution-model.md (§8 + ‏v2.0 §14) · ADR-0034-development-skills-superpowers-subset.md · ../../methodology/ROCKET_OPERATING_MODEL.md · قرار المالك Q3 وDR-2 (أمر G0/G1 ‏2026-07-19)

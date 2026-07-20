@@ -1,6 +1,6 @@
 # PHASE_EXECUTION_STANDARD.md — معيار تنفيذ المراحل (صفحة تقنين)
 
-> **Version:** 1.0 — Proposed (يُعتمد بتوقيع/دمج SA في بوابة G1) · **Date:** 2026-07-19 · **الموضع:** `methodology/PHASE_EXECUTION_STANDARD.md`
+> **Version:** 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) · **Date:** 2026-07-19 · **الموضع:** `methodology/PHASE_EXECUTION_STANDARD.md`
 > **Authority:** المرتبة 2 (`AUTHORITY.md`) — **تقنين رقيق فوق أصل قوي، لا قالب موازٍ**: أعمدة `phases/PHASE_MASTER_PLAN.md §2` هي القالب، وتصاميم المراحل الثمانية قائمة وترث `§4 Common Phase Baseline`، وقاعدة «تصميم التفعيل عند التفعيل» نافذة برأس كل ملف.
 
 ## §1 القواعد الأربع الملزمة

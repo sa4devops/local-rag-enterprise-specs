@@ -5,7 +5,7 @@
 
 | الملف | المسار داخل GitHub | الحالة | جاهز للرفع؟ | يحتاج قراراً قبل التنفيذ؟ |
 |---|---|---|---|---|
-| README.md | `/README.md` | **v1.2** — سطر الهوية + حالة المشروع عند خط الأساس v1.0 | ✅ | لا |
+| README.md | `/README.md` | **v1.3** — سطر الهوية + حالة المشروع عند خط الأساس v1.0 | ✅ | لا |
 | vision.md | `/vision.md` | v1.0 + سطر الهوية المعتمدة (v1.0-baseline) | ✅ | لا |
 | constitution.md | `/constitution.md` | **v1.1** — +م21 (خط الأساس المعماري) +م22 (القدرات المستقبلية التزامات) — v1.0-baseline | ✅ | لا |
 | PACKAGE_CHECKLIST.md | `/PACKAGE_CHECKLIST.md` | **v1.11** (كان v1.8) — مضاف إليه v0.7.1 + دفعة v0.8 + إغلاق خط الأساس v1.0 | ✅ | لا |
@@ -68,19 +68,19 @@
 ## Δ دفعة G1 — أصول Governance Foundation Baseline (2026-07-19)
 | الملف | المسار | الحالة | جاهز للرفع؟ | يحتاج قراراً قبل التنفيذ؟ |
 |---|---|---|---|---|
-| AUTHORITY.md | `/AUTHORITY.md` | **v1.0** — السلم الكنسي الموحد (13 مرتبة + خريطة الأرقام التاريخية) | ✅ | اعتماد SA في بوابة G1 |
+| AUTHORITY.md | `/AUTHORITY.md` | **v1.0** — السلم الكنسي الموحد (13 مرتبة + خريطة الأرقام التاريخية) | ✅ | تم — G1-B 2026-07-20 |
 | INDEX.md | `/INDEX.md` | **v1.0** — فهرس بشري 100% تغطية (OD-IDX-1) | ✅ | لا |
-| ‏ADR-0031..0036 (6 ملفات) | `decisions/adr/` | **Proposed (G1)** — ‏Q1–Q5 + ‏DR-1/DR-2 + ‏DGP | ✅ | توقيع SA (يرقّيها Accepted) |
+| ‏ADR-0031..0036 (6 ملفات) | `decisions/adr/` | **Proposed (G1)** — ‏Q1–Q5 + ‏DR-1/DR-2 + ‏DGP | ✅ | تم — G1-B 2026-07-20 |
 | ‏adr/README.md | `decisions/adr/README.md` | **v1.3** — +6 صفوف + ‏Δ ‏0017/0030 | ✅ | لا |
 | open-decisions.md | `decisions/open-decisions.md` | **v2.4** — +فهرس دفعة G1 | ✅ | لا |
 | DEFERRED_IMPLEMENTATION.md | `decisions/DEFERRED_IMPLEMENTATION.md` | +3 صفوف (مرآة Superpowers · بناء DGP · المراجعة القانونية) | ✅ | لا |
 | contracts/ (6 ملفات) | `contracts/**` | معيار v1.0 + هوية + قالب + 4 بذور **Candidate** + قاموس تعدادات | ✅ | ترقية البذور Approved = بوابات FP |
-| UI_SCREEN_GOVERNANCE_STANDARD.md | `ui/` | **v1.0** — ‏Capstone (إلزام · ‏Archetypes · قبول · حدود Rocket · تغطية §18) | ✅ | اعتماد SA في G1 |
+| UI_SCREEN_GOVERNANCE_STANDARD.md | `ui/` | **v1.0** — ‏Capstone (إلزام · ‏Archetypes · قبول · حدود Rocket · تغطية §18) | ✅ | تم — G1-B 2026-07-20 |
 | UI_COMPONENT_STATES.md | `ui/` | **v1.1** — +S16–S20 ومصفوفة الانطباق | ✅ | لا |
 | UI_SCREEN_INVENTORY.md | `ui/` | **v1.4** — +archetype/contract_status/contract_ref (51 صفاً) | ✅ | لا |
 | agent-execution-model.md | `methodology/` | **v2.0** — +§§12–17 + دلتا §8 | ✅ | لا |
-| PHASE_EXECUTION_STANDARD.md | `methodology/` | **v1.0** — القواعد الأربع + إغلاق P0–P8 | ✅ | اعتماد SA في G1 |
-| ROCKET_OPERATING_MODEL.md | `methodology/` | **v1.0** — ‏B1–B7 موسومة + قواعد القناة | ✅ | اعتماد SA في G1 |
+| PHASE_EXECUTION_STANDARD.md | `methodology/` | **v1.0** — القواعد الأربع + إغلاق P0–P8 | ✅ | تم — G1-B 2026-07-20 |
+| ROCKET_OPERATING_MODEL.md | `methodology/` | **v1.0** — ‏B1–B7 موسومة + قواعد القناة | ✅ | تم — G1-B 2026-07-20 |
 | BUSINESS_GLOSSARY.md | `knowledge/` | **v0.1 Seed** — الهوية الرسمية + 10 مصطلحات | ✅ | لا |
 | TRACEABILITY_MATRIX.md | `traceability/` | **v0.1 Seed** — صف لكل أصل G1 | ✅ | لا |
 | handoff.md (إدخال H جديد) | `handoff/` | إدخال دفعة G1 | ✅ | لا |

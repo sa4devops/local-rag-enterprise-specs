@@ -388,3 +388,16 @@ Important rules:
 - risks: بقاء الدفعة غير مدموجة يجمّد G2/G3؛ نص §8 القديم في أي نسخة متداولة قد يُقرأ بلا دلتا ADR-0033 — يعالجه الدمج
 - tests: فحوص EC-1→EC-11 ‏scripted ناجحة (الأدلة في تقرير التنفيذ)؛ ‏EC-12 ‏Pending Owner
 - next step: مراجعة SA لتقرير تنفيذ G1-A ثم الأمر: «اعتمدت G1-A — نفّذ G1-B والدمج والوسم»
+
+## Handoff H-0017
+- date: 2026-07-20
+- phase: ‏G1 — Governance Foundation Baseline (‏G1-B: الدمج والترقية — جلسة GitHub موثقة بحساب SA)
+- task: تنفيذ G1-B وفق برومبت v3 المعتمد بأمر المالك الصريح («اعتمدت G1-A — نفّذ G1-B والدمج والوسم»): دمج specs PR ‏#2 ثم ترقية حالات الاعتماد بهذا الـ commit
+- goal: إغلاق بوابة G1 بدمج/توقيع SA وترقية أصول الدفعة من Proposed إلى Accepted تمهيداً للوسم v1.2-governance-baseline
+- completed: دمج specs PR ‏#2 بإستراتيجية merge commit — ‏M1 = ‏`dd098dff9bed7a1f267ec5552b0e3366e368883d` (الأبوان `3b4c525`/`20711fe`) · ترقية الملفات الأحد عشر الحاملة لعبارة البوابة إلى «Accepted — G1-B 2026-07-20 ‏(merge M1 · ‏tag v1.2-governance-baseline)» (‏6×ADR-0031..0036 · ‏AUTHORITY · ‏Capstone · ‏PHASE_EXECUTION_STANDARD · ‏ROCKET_OPERATING_MODEL · ‏INDEX) · سجل adr ‏v1.4 (الخلايا الست Accepted) · صفوف INDEX المعنية Accepted (بذور العقود Candidate والبذرتان Seed كما هي) · خلايا Δ G1 في PACKAGE_CHECKLIST «تم — G1-B 2026-07-20» + تصويب صف README القديم من v1.2 إلى v1.3 (البند المؤجل المعلن من تقرير G1-A ‏§6-ب) · هذا الإدخال
+- not completed (يُنفَّذ تالياً ضمن الجلسة ذاتها بالترتيب الملزم): الوسم v1.2-governance-baseline على main بعد دمج هذه الترقية · دمج platform PR ‏#1 · ‏micro-PR مؤشر القراءة في platform · إنشاء GitHub Release في specs حصراً
+- files changed: 14 ملفاً حصراً في commit واحد: ‏6×`decisions/adr/ADR-0031..0036` · ‏`AUTHORITY.md` · ‏`ui/UI_SCREEN_GOVERNANCE_STANDARD.md` · ‏`methodology/PHASE_EXECUTION_STANDARD.md` · ‏`methodology/ROCKET_OPERATING_MODEL.md` · ‏`INDEX.md` · ‏`decisions/adr/README.md` · ‏`PACKAGE_CHECKLIST.md` · ‏`handoff/handoff.md`
+- decisions: لا قرارات جديدة — تنفيذ اعتماد المالك لبوابة G1 ‏(EC-12: الدمج + الوسم + التوقيع)؛ اختيار merge commit لكل عمليات دمج هذه البوابة قرار مالك صريح باعتماد برومبت G1-B v3 ‏(§I — يُمنع squash/rebase؛ استنتاج تشغيلي لحماية سلسلة الأدلة، لا نص حوكمي قائم سابقاً)
+- risks: لا مخاطر جديدة؛ الوسوم لا تُحذف — أي تصحيح بعد الدفع بوسم لاحق ‏(ADR-0033-6)
+- tests: فحوص Preflight (القسم G من البرومبت) كاملة قبل أي كتابة: رؤوس D/E مطابقة حرفياً · غياب الوسم · سلالة ff · مقارنة رباعية لمحتوى الـ PRين ‏PASS · جرد عبارة البوابة = 11 ملفاً · ثم فحوص J بعد كل خطوة (بعد دمج هذه الترقية: صفر بقايا للعبارة)
+- next step: إتمام الوسم ودمج platform والمؤشر ثم الـRelease ضمن جلسة G1-B ذاتها — السجل الكامل بالتقرير النهائي
