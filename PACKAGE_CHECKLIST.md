@@ -1,6 +1,6 @@
 # PACKAGE_CHECKLIST.md — Final GitHub Package Checklist
 
-> **Version:** 1.11 — (Δ 2026-07-19 دفعة G1: +قسم أصول Governance Foundation Baseline + تصويب صف v0.7.1 إلى tag-only) (1.10: … + إغلاق F-3 + دفعة تنحية Flutter وجسر Open WebUI المؤقت) · **Status:** Current · **Date:** 2026-07-19
+> **Version:** 1.12 — (Δ 2026-07-20 G1-C: تطبيع توثيقي بعد تدقيق G1-B [ACCEPT WITH DOCUMENTATION DEBT] — تصويب خلية صف ADRs) — (Δ 2026-07-19 دفعة G1: +قسم أصول Governance Foundation Baseline + تصويب صف v0.7.1 إلى tag-only) (1.10: … + إغلاق F-3 + دفعة تنحية Flutter وجسر Open WebUI المؤقت) · **Status:** Current · **Date:** 2026-07-19
 >  **Purpose:** خريطة الحزمة النهائية: كل ملف، مساره، حالته، جاهزيته للرفع، وما يلزم قبل **التنفيذ** (لا قبل الرفع).
 
 | الملف | المسار داخل GitHub | الحالة | جاهز للرفع؟ | يحتاج قراراً قبل التنفيذ؟ |
@@ -70,7 +70,7 @@
 |---|---|---|---|---|
 | AUTHORITY.md | `/AUTHORITY.md` | **v1.0** — السلم الكنسي الموحد (13 مرتبة + خريطة الأرقام التاريخية) | ✅ | تم — G1-B 2026-07-20 |
 | INDEX.md | `/INDEX.md` | **v1.0** — فهرس بشري 100% تغطية (OD-IDX-1) | ✅ | لا |
-| ‏ADR-0031..0036 (6 ملفات) | `decisions/adr/` | **Proposed (G1)** — ‏Q1–Q5 + ‏DR-1/DR-2 + ‏DGP | ✅ | تم — G1-B 2026-07-20 |
+| ‏ADR-0031..0036 (6 ملفات) | `decisions/adr/` | **Accepted (G1-B 2026-07-20)** — ‏Q1–Q5 + ‏DR-1/DR-2 + ‏DGP | ✅ | تم — G1-B 2026-07-20 |
 | ‏adr/README.md | `decisions/adr/README.md` | **v1.3** — +6 صفوف + ‏Δ ‏0017/0030 | ✅ | لا |
 | open-decisions.md | `decisions/open-decisions.md` | **v2.4** — +فهرس دفعة G1 | ✅ | لا |
 | DEFERRED_IMPLEMENTATION.md | `decisions/DEFERRED_IMPLEMENTATION.md` | +3 صفوف (مرآة Superpowers · بناء DGP · المراجعة القانونية) | ✅ | لا |

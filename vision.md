@@ -1,7 +1,7 @@
 # Vision — رؤية المشروع
 
-> **Document Title:** vision.md · **Version:** 1.0 · **Status:** Current / Accepted · **Date:** 2026-07-02
-> **Authority:** يقع مع constitution.md في قمة السياق؛ عند التعارض تحكم constitution.md ثم Methodology.
+> **Document Title:** vision.md · **Version:** 1.1 (Δ 2026-07-20 G1-C: إحالة ترتيب السلطة إلى AUTHORITY.md) · **Status:** Current / Accepted · **Date:** 2026-07-02
+> **Authority:** يقع في قمة السياق مع constitution.md؛ **ترتيب السلطة عند أي تعارض يحكمه حصراً `AUTHORITY.md`** (السلم الكنسي الموحد — لا يُكرَّر هنا).
 > **Purpose:** تعريف المشكلة والمستخدمين وحدود النجاح على مستوى المشروع كاملاً (رؤى المراحل تُشتق منه).
 
 الهوية المعتمدة: Enterprise AI Platform with Progressive Implementation — المنصة هي المنتج؛ معماريةٌ كاملة موثقة من البداية، وتنفيذٌ وتفعيلٌ مرحليان. (لا يُستخدم مسمى Product-led Platform رسمياً.)
