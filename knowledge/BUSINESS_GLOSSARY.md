@@ -20,5 +20,7 @@
 | **SLA** | التزام زمني/جودي مقاس على مهمة/خدمة بسياسة معتمدة | ليس «أولوية» عرضية | عقد SLA-Policy ‏(P3 — توثيق) |
 | **Run (تشغيل)** | تنفيذ فعلي واحد لعمل (استدعاء/خط) بسجله وحالته | ليس Task تكليفياً | ‏runs.list/detail |
 | **Record (سجل)** | كيان بيانات ديناميكي بهوية `identity.record` الرباعية | ليس Document ملفياً بالضرورة | ‏run.* · ‏ADR-0032 |
+| **owning_org_unit_id** | الوحدة التنظيمية المالكة للمورد — الاسم القانوني الوحيد في الوثائق الحية | ليس حقلاً تنظيمياً عابراً — هو المرجع القانوني الوحيد للملكية | ‏ADR-0037 · عقود الشاشات |
+| **الإدارة المنطاقة / Scoped Administration** | منح إداري صريح محدود بالتقاطع الرباعي (دور × نطاق × شاشة × قدرة) | ليست أدمن نظام كاملاً — منح مقيَّد بالنطاق بإنفاذ خادمي | ‏ADR-0037 |
 
 **Related:** `../contracts/identity/RECORD_IDENTITY.md` · `../contracts/enums/ENUMS_DICTIONARY.md` · `../decisions/adr/ADR-0035-contracts-layer-single-source.md` · `../decisions/adr/ADR-0036-repo-visibility-public-temporary-private-gate.md`

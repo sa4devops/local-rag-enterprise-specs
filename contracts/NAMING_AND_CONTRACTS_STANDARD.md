@@ -29,4 +29,8 @@ relates: ADR-0035 · ui/UI_FIELD_NAMING.md · AUTHORITY.md (المرتبة 5)
 ## §4 المشتقات والإقفال
 قاعدة GENERATED وwrite-back وخط توليد الوثائق: **المرجع الوحيد ADR-0035 (البنود 4–6)** — لا تُكرَّر هنا. عقود هذه الطبقة نفسها **مصادر تأليف** يقرؤها المولد ولا يكتب فيها.
 
+## §5 قرارات المالك (R1)
+- **قرار مالك (R1، 2026-07-21):** عقود v1 **مدمجة داخل عقود الشاشات** مع فهرس موحد للأنواع؛ لا تُفكك لملفات مستقلة إلا عند حاجة فعلية في حزمة تطوير.
+- **قيد تسمية قانوني (R1):** الوحدة المالكة = `owning_org_unit_id` حصراً في الوثائق الحية؛ وتعداد وراثة النطاق = `scope_inheritance` ‏(ADR-0037).
+
 **Related:** `../ui/UI_FIELD_NAMING.md` · `../decisions/adr/ADR-0035-contracts-layer-single-source.md` · `../AUTHORITY.md` · `identity/RECORD_IDENTITY.md` · `screens/SCREEN_CONTRACT_TEMPLATE.md` · `enums/ENUMS_DICTIONARY.md`

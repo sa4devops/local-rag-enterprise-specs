@@ -17,15 +17,15 @@
 | `architecture` | `architecture/README.md` | 1.3 (v1.0-baseline: +سطر التجميد عند الوسم + مواءمة ADR-0019 | Current / Accepted | المعمارية — Specification Architect | مصمم المرحلة المعنية |
 | `catalogs` | `catalogs/Feature_Technical_Architecture_Catalog.md` | 2.1 — Final (A1–A11 + قرارات ما قبل التنفيذ D1–D9 مدمجة) | Current / Accepted | المعمارية — Specification Architect | حسب تسمية تصميم المرحلة |
 | `(الجذر)` | `constitution.md` | 1.2 (+م23 العميل القابل للاستبدال — دفعة إغلاق المواصفات، قر | Current / Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
-| `contracts` | `contracts/NAMING_AND_CONTRACTS_STANDARD.md` | — | Proposed (G1) | العقود — Specification Architect | كل منفذ وكل بوابة |
-| `contracts/enums` | `contracts/enums/ENUMS_DICTIONARY.md` | — | Proposed (G1) | العقود — Specification Architect | كل منفذ واجهة |
+| `contracts` | `contracts/NAMING_AND_CONTRACTS_STANDARD.md` | — | Proposed (G1) · Δ R1-B: +قرارا المالك | العقود — Specification Architect | كل منفذ وكل بوابة |
+| `contracts/enums` | `contracts/enums/ENUMS_DICTIONARY.md` | — | Proposed (G1) · Δ R1-B: +scope_inheritance | العقود — Specification Architect | كل منفذ واجهة |
 | `contracts/identity` | `contracts/identity/RECORD_IDENTITY.md` | — | Proposed (G1) | العقود — Specification Architect | كل منفذ |
 | `contracts/screens` | `contracts/screens/SCREEN_CONTRACT_TEMPLATE.md` | — | Proposed (G1) | العقود — Specification Architect | منفذ الشاشة وبوابتها |
 | `contracts/screens` | `contracts/screens/admin.actions.md` | — | Candidate | العقود — Specification Architect | منفذ الشاشة وبوابتها |
 | `contracts/screens` | `contracts/screens/admin.record_types.md` | — | Candidate | العقود — Specification Architect | منفذ الشاشة وبوابتها |
 | `contracts/screens` | `contracts/screens/admin.workflows.md` | — | Candidate | العقود — Specification Architect | منفذ الشاشة وبوابتها |
 | `contracts/screens` | `contracts/screens/run.list.md` | — | Candidate | العقود — Specification Architect | منفذ الشاشة وبوابتها |
-| `decisions` | `decisions/DEFERRED_IMPLEMENTATION.md` | 1.0 | Current | طبقة القرارات — SA | ‏Tier-0 لكل وكيل |
+| `decisions` | `decisions/DEFERRED_IMPLEMENTATION.md` | 1.0 | Current · Δ R1-B: +4 مؤجلات (R8/R9/R10) | طبقة القرارات — SA | ‏Tier-0 لكل وكيل |
 | `decisions/adr` | `decisions/adr/ADR-0004-search-architecture-postgres-qdrant-opensearch.md` | — | Current | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions/adr` | `decisions/adr/ADR-0017-frontend-stack-react-vite-typescript.md` | — | Accepted — Superseded-in-scope (ADR-0031) | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions/adr` | `decisions/adr/ADR-0018-cache-queue-lock-valkey-scale-profile.md` | — | Current | طبقة القرارات — SA | كل وكيل عند مساس معماري |
@@ -47,13 +47,16 @@
 | `decisions/adr` | `decisions/adr/ADR-0034-development-skills-superpowers-subset.md` | — | Accepted — G1-B 2026-07-20 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions/adr` | `decisions/adr/ADR-0035-contracts-layer-single-source.md` | — | Accepted — G1-B 2026-07-20 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions/adr` | `decisions/adr/ADR-0036-repo-visibility-public-temporary-private-gate.md` | — | Accepted — G1-B 2026-07-20 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
-| `decisions/adr` | `decisions/adr/README.md` | 1.3 — (Δ 2026-07-19 دفعة G1: +صفوف ADR-0031..0036 ‏Proposed  | Current / Accepted | طبقة القرارات — SA | كل وكيل عند مساس معماري |
+| `decisions/adr` | `decisions/adr/ADR-0037-scoped-administration-model.md` | 1.0 — Proposed | Proposed — بوابة R1-B | طبقة القرارات — SA | كل وكيل عند مساس معماري |
+| `decisions/adr` | `decisions/adr/README.md` | 1.5 — (Δ 2026-07-21 R1-B: +صف ADR-0037) (Δ 2026-07-19 دفعة G1: +صفوف ADR-0031..0036 ‏Proposed  | Current / Accepted · Δ R1-B: +ADR-0037 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions` | `decisions/license-review.md` | 1.2 (v1.0-architecture-baseline: صفوف SeaweedFS/MinIO/Valkey | Current / Accepted | طبقة القرارات — SA | ‏Tier-0 لكل وكيل |
-| `decisions` | `decisions/open-decisions.md` | 2.4 — (Δ 2026-07-19: +فهرس دفعة G1 — Governance Foundation B | Current / Accepted | طبقة القرارات — SA | ‏Tier-0 لكل وكيل |
+| `decisions` | `decisions/open-decisions.md` | 2.4 — (Δ 2026-07-19: +فهرس دفعة G1 — Governance Foundation B | Current / Accepted · Δ R1-B: +OD-ADM-1 · ملاحظة OD-ORG-1 | طبقة القرارات — SA | ‏Tier-0 لكل وكيل |
 | `(الجذر)` | `github-docs-structure.md` | 1.7 (v1.0-baseline: ملفات ADR الفردية المزروعة تحت decisions | Current / Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `handoff` | `handoff/handoff.md` | 1.1 (Δ 2026-07-11: توضيح اتفاقية الأرشفة وترتيب القراءة — تح | Current / Accepted | التسليم — كل جلسة منفِّذة | الوكيل التالي قبل أي عمل |
-| `knowledge` | `knowledge/BUSINESS_GLOSSARY.md` | 0.1 — Seed/Proposed | Proposed (G1) | ‏System Knowledge — Specification Architect | المولد + المراجعات |
-| `methodology` | `methodology/PHASE_EXECUTION_STANDARD.md` | 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) | Accepted | المنهجية — Specification Architect | كل وكيل تنفيذ |
+| `knowledge` | `knowledge/BUSINESS_GLOSSARY.md` | 0.1 — Seed/Proposed | Proposed (G1) · Δ R1-B: +owning_org_unit_id/الإدارة المنطاقة | ‏System Knowledge — Specification Architect | المولد + المراجعات |
+| `methodology` | `methodology/AI_DEV_CONTROL_PLANE.md` | 1.0 — Proposed | Proposed — بوابة R1-B | المنهجية — Specification Architect | كل وكيل تنفيذ |
+| `methodology` | `methodology/PHASE_EXECUTION_STANDARD.md` | 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) | Accepted · Δ R1-B: P3 owning_org_unit_id · P4 Scoped-Admin · Foundation Gate | المنهجية — Specification Architect | كل وكيل تنفيذ |
+| `methodology` | `methodology/RECONCILIATION_ROADMAP.md` | 1.0 — Proposed | Proposed — بوابة R1-B | المنهجية — Specification Architect | كل وكيل تنفيذ |
 | `methodology` | `methodology/PRE_IMPLEMENTATION_CONSOLIDATION_REVIEW.md` | 1.0 — Proposed (v0.7) | Proposed (v0.7) | المنهجية — Specification Architect | كل وكيل تنفيذ |
 | `methodology` | `methodology/ROCKET_OPERATING_MODEL.md` | 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) | Accepted | المنهجية — Specification Architect | كل وكيل تنفيذ |
 | `methodology` | `methodology/Spec_Driven_Modular_Monolith_Methodology.md` | 2.1 — Final (A1–A11 + D1–D9 مدمجة) | Current / Accepted | المنهجية — Specification Architect | كل وكيل تنفيذ |
@@ -125,6 +128,6 @@
 | `ui` | `ui/UI_VISIBILITY_RULES.md` | 1.0 — Proposed (v0.5) | Proposed (v0.5) | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `(الجذر)` | `vision.md` | 1.0 | Current / Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 
-**الإجمالي:** 118 ملفاً + هذا الفهرس (تغطية 100%).
+**الإجمالي:** 121 ملفاً + هذا الفهرس (تغطية 100%).
 
 **Related:** `AUTHORITY.md` · `decisions/open-decisions.md` (‏OD-IDX-1) · `PACKAGE_CHECKLIST.md`

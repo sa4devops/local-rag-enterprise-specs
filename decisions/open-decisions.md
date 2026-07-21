@@ -100,7 +100,7 @@
 | OD-BLD-1 | ui/UI_ADMIN_CONSOLE_MODEL.md §4-C | **مقفل** | أوضاع الباني الثلاثة (تقليدي/محادثي/مدمج) فوق خط draft→migration→checks→approval→apply بلا تغيير؛ الـ LLM يكتب metadata فقط |
 | OD-WF-1 | phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md §4 | **مقفل** | الرفض النهائي والإرجاع للمعالجة خياران متمايزان في سطح القرار |
 | OD-WF-2 | phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md §4 | **مقفل** | الإرجاع/التوجيه للمكلَّف الحالي فقط (`workflow.return_route`) |
-| OD-ORG-1 | phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md §4 | **مقفل** | الشجرة التنظيمية للتوجيه/التكليف فقط — لا RLS مشتقاً منها في v1 |
+| OD-ORG-1 | phases/designs/DELTA_V08_FR_WORKFLOW_ORG.md §4 | **مقفل** | الشجرة التنظيمية للتوجيه/التكليف فقط — لا RLS مشتقاً منها في v1 · **ملاحظة حدّية (R1):** القفل يمنع الاشتقاق التلقائي؛ المنح الإداري المنطاق الصريح يحكمه ADR-0037 — القفل قائم. |
 
 ---
 
@@ -150,4 +150,10 @@
 | مهارات التطوير | ‏subset مثبت من Superpowers ‏v6.1.1@d884ae0 | **ADR-0034** |
 | طبقة العقود + المشتقات المولَّدة + ‏DGP | ‏contracts/ موطن التأليف؛ ‏BRD/FRD/… ‏GENERATED؛ المولد يُبنى في P2 | **ADR-0035** |
 | ‏OD-IDX-1 | **محترم كما هو**: ‏`INDEX.md` بشري القراءة هو مصدر الفهرسة الحاكم — لا index.yaml/manifest في هذه الدفعة | ‏ADR-0035 بند 7 |
+
+## فهرس قرار دفعة R1 — Requirements Reconciliation (Δ 2026-07-21)
+> المصدر المعياري نصاً في `decisions/adr/ADR-0037-scoped-administration-model.md`؛ هذا فهرس تصنيفي فقط (قاعدة عدم التكرار).
+| OD | الملف الحاضن | الحالة | خلاصة سطرية |
+|---|---|---|---|
+| OD-ADM-1 | decisions/adr/ADR-0037-scoped-administration-model.md | **محسوم — ADR-0037 (R1)** | نموذج الإدارة المنطاقة: منح صريح؛ تقاطع رباعي؛ وراثة SELF_ONLY افتراضاً |
 | ‏OD-P3-2 (canvas) | يبقى مؤجلاً كما هو؛ ‏canvas تجربة aql مؤشَّر **CC-WF-1** يُحسم ببوابته لا صمتاً | عقد `contracts/screens/admin.workflows.md §6` |
