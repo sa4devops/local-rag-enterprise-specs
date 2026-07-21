@@ -88,8 +88,8 @@
 ### Δ دفعة R1-B — Requirements Reconciliation Codification (2026-07-21)
 | الملف | المسار | الحالة | جاهز للرفع؟ | يحتاج قراراً قبل التنفيذ؟ |
 |---|---|---|---|---|
-| ADR-0037-scoped-administration-model.md | `decisions/adr/` | **v1.0 — Proposed** — نموذج الإدارة المنطاقة (تقاطع رباعي · منح صريح · scope_inheritance · owning_org_unit_id · إنفاذ خادمي) | ✅ | اعتماد/توقيع SA في **بوابة R1-B** |
-| AI_DEV_CONTROL_PLANE.md | `methodology/` | **v1.0 — Proposed** — قدرة Control Plane (المبادئ العشرة؛ trial لاحق R8) | ✅ | اعتماد/توقيع SA في **بوابة R1-B** |
-| RECONCILIATION_ROADMAP.md | `methodology/` | **v1.0 — Proposed** — خارطة R1–R11 الرسمية (منفصلة عن P0–P8) | ✅ | اعتماد/توقيع SA في **بوابة R1-B** |
+| ADR-0037-scoped-administration-model.md | `decisions/adr/` | **v1.0 — Proposed** — نموذج الإدارة المنطاقة (تقاطع رباعي · منح صريح · scope_inheritance · owning_org_unit_id · إنفاذ خادمي) | ✅ | تم — R1-B 2026-07-21 (effective upon promotion merge) |
+| AI_DEV_CONTROL_PLANE.md | `methodology/` | **v1.0 — Proposed** — قدرة Control Plane (المبادئ العشرة؛ trial لاحق R8) | ✅ | تم — R1-B 2026-07-21 (effective upon promotion merge) |
+| RECONCILIATION_ROADMAP.md | `methodology/` | **v1.0 — Proposed** — خارطة R1–R11 الرسمية (منفصلة عن P0–P8) | ✅ | تم — R1-B 2026-07-21 (effective upon promotion merge) |
 
 **المسارات الـ12 المعدَّلة (دفعة R1-B):** `contracts/screens/admin.workflows.md` · `contracts/NAMING_AND_CONTRACTS_STANDARD.md` · `contracts/enums/ENUMS_DICTIONARY.md` · `knowledge/BUSINESS_GLOSSARY.md` · `decisions/open-decisions.md` · `decisions/DEFERRED_IMPLEMENTATION.md` · `decisions/adr/README.md` · `methodology/PHASE_EXECUTION_STANDARD.md` · `INDEX.md` · `PACKAGE_CHECKLIST.md` · `traceability/TRACEABILITY_MATRIX.md` · `handoff/handoff.md` (H-0019).

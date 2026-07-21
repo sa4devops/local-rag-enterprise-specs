@@ -1,5 +1,5 @@
 # AI Development Control Plane — قدرة حاكمة (موجز تأسيسي)
-> **Version:** 1.0 — Proposed (يُعتمد بتوقيع/دمج SA في بوابة R1-B) · **Date:** 2026-07-21 · **الموضع:** `methodology/AI_DEV_CONTROL_PLANE.md`
+> **Version:** 1.0 — Accepted — R1-B 2026-07-21 (authorized by main merge 6d50a4c41f0fcf76e5db41206f5f5e1eac4869d4; effective upon promotion merge) · **Date:** 2026-07-21 · **الموضع:** `methodology/AI_DEV_CONTROL_PLANE.md`
 > **Authority:** وثيقة قدرة منهجية؛ لا تعدّل ADR-0033 بل تُصالِح معه؛ التنفيذ التجريبي لاحق بقرار مالك (سجل المؤجلات).
 
 ## 1. الغرض
