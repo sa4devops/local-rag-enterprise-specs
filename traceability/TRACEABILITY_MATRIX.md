@@ -26,6 +26,10 @@
 | إدخال handoff ‏H-G1 | سجل تسليم | م20 + منهجية §14 | الجلسة التالية | ضمن الدفعة |
 | تعديلا platform: ‏AGENTS.md · ‏docs/SPEC_SOURCE.md | مواءمة توثيق تنفيذ | ‏ADR-0031/0036 + قاعدة المستويين | وكلاء platform | ضمن دفعة platform |
 | Δ تصحيحات ما-قبل-الدفع (مراجعة SA): ‏README ‏v1.3 (قراءة/سلطة/ستاك) · صف README في INDEX · ‏SPEC_SOURCE (مرجع القراءة قبل/بعد الوسم) | تصحيح مراجعة | مراجعة SA لتقرير G1-A + ‏ADR-0031/0035 | القراء وكل الوكلاء | ضمن الدفعة |
+| `decisions/adr/ADR-0037-scoped-administration-model.md` | قرار معماري | قرارات مالك R1 (2026-07-21) — المرجع تقرير v1.1 | العقود · ‏P4 · الواجهة | Proposed — R1-B |
+| `methodology/AI_DEV_CONTROL_PLANE.md` | قدرة منهجية | قرار مالك R1 + ‏ADR-0033 (مصالحة) | الأتمتة اللاحقة · الوكلاء | Proposed — R1-B |
+| `methodology/RECONCILIATION_ROADMAP.md` | خارطة مسار | قرار مالك R1 (2026-07-21) | مسار R2–R11 · المالك | Proposed — R1-B |
+| دفعة R1-B (تقنين المصالحة — 15 مساراً) | دفعة تقنين | قرارات مالك R1 (2026-07-21) — المرجع تقرير v1.1 | المستودع المنشور · المؤشر الحاكم | ضمن الدفعة |
 
 
 **Related:** `../decisions/adr/ADR-0035-contracts-layer-single-source.md` · `../INDEX.md` · `../methodology/agent-execution-model.md` (§16)

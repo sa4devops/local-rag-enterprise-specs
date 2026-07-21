@@ -17,13 +17,23 @@
 | **P0** الأساس التقني | صفوف ترخيص الستاك (فئة 2) + كون Baseline الحوكمة (G1) معتمداً | لا شاشات مستخدم |
 | **P1** ‏Governed Core + Builder | **F-3-Residual:** دمج ما يمس P1 من `DELTA_V08` (‏FR-1.Org-Ext) في تصميم التفعيل ووسم الجزء المدمج Superseded · التقيد بـ**ADR-0032** في نموذج البيانات (+حسم موضع توليد UUIDv7) · حسم Clarify التسعة: ‏OD-IX-1..3 · ‏OD-VZ-1..3 · ‏OD-PD-1..3 · عقود شاشات P1 ‏Approved (‏auth.* · ‏run.* · ‏admin.record_types …) · ‏OD-BLD-1 مقفل ✅ | أثقل قائمة — محددة بالكامل |
 | **P2** سجلات متقدمة + Entity Profile | عقود شاشاتها + امتداد enums/الحقول من P1 · **بوابة FP-DOCGEN** (بناء خط توليد الوثائق — ‏ADR-0035 بند 5) تقع في نافذة هذه المرحلة | لا OD معلق خاص بها بالسجل |
-| **P3** ‏Workflows/Approvals/Actions | ‏F-3-Residual: دمج FR-3.11/3.12 · تثبيت بقية كتالوج الأفعال (‏OD-NM-1) · تصميم حقول Workflow owning-unit (‏owning_unit_id · using_units[] · step_assignee_scope) كعقد · عقدا SLA-Policy/Templates (توثيق) · ‏OD-WF-1/2 وOD-ORG-1 مقفلة ✅ · ‏OD-TPL-1/AB-4 **يبقيان مؤجلين** ولا يدخلان إلا بقرار مالك صريح · حسم انحراف canvas (‏CC-WF-1 — عقد `admin.workflows`) ببوابة G4 أو هنا | — |
-| **P4** الصلاحيات المتقدمة | سياسة إعادة حساب الموروث ضمن Permission Contract | ‏OD-ORG-1 يحصّن ضد org→RLS |
+| **P3** ‏Workflows/Approvals/Actions | ‏F-3-Residual: دمج FR-3.11/3.12 · تثبيت بقية كتالوج الأفعال (‏OD-NM-1) · تصميم حقول Workflow owning-unit (‏owning_org_unit_id · using_units[] · step_assignee_scope) كعقد · عقدا SLA-Policy/Templates (توثيق) · ‏OD-WF-1/2 وOD-ORG-1 مقفلة ✅ · ‏OD-TPL-1/AB-4 **يبقيان مؤجلين** ولا يدخلان إلا بقرار مالك صريح · حسم انحراف canvas (‏CC-WF-1 — عقد `admin.workflows`) ببوابة G4 أو هنا | — |
+| **P4** الصلاحيات المتقدمة | سياسة إعادة حساب الموروث ضمن Permission Contract + ‏Scoped-Admin وفق ADR-0037 (منح صريح؛ وراثة SELF_ONLY افتراضاً بتسجيل تدقيقي) | ‏OD-ORG-1 يحصّن ضد org→RLS |
 | **P5** ملفات/RAG/OCR | ‏OD-PSC-1 و‏OD-PSC-2 (مخزن الأسرار الأول + حساسية endpoint_ref) · ضبط OD-MX-4 وOD-PSC-3 قيماً افتراضية بالتصميم (‏Ops-config) · عقد File-Portability (توثيق) | — |
 | **P6** ‏Workspace/Agents/Reports | ‏OD-MX-1 (التوصية: مخفي) · ‏OD-RUN-1/2/3 · ‏OD-WS-4 مقفل ✅ · **بوابات ADR-0030-Δ الأربع قبل أي تفعيل OWUI** · ‏Event-Contract skeleton (توثيق) | — |
 | **P7** التكاملات + Store | ‏Connector Contract (فصل admin_status/op_health) + معمارية Store الموقعة (توثيق) | — |
 | **P8** الإنتاجية/Offline | تفصيل بنية الحزمة · ‏restore drill شرط بوابة · **قرار ADR-0036 (الخصخصة) منفَّذاً قبل أي بيانات حقيقية** · اكتمال توليد الوثائق الكامل (‏DGP) | ‏G6 تسبقها إلزاماً |
 
 **الضمان:** مع (Baseline + تصميم تفعيل + الجدول أعلاه + بروتوكول §15) كل قرار إما **مقفل قبل البطاقات** أو **مرفوع DR** — لا مسار ثالث؛ وحرية المنفذ محصورة نصاً في §13.
+
+## بوابة الأساس (Foundation Gate) — إجراء FP-0001
+1. **verify:** فحص aql الفعلي — ‏build · ‏type-check · ‏lint · ‏deps · فحص الروابط.
+2. **correct:** تصحيحات محدودة موثقة (بلا توسيع نطاق).
+3. **جرد Adopt/Correct/Reject:** لكل ‏Token و‏Component و‏Pattern قرار صريح (تبنٍّ/تصحيح/رفض).
+4. **استخراج Design System** قابل لإعادة الاستخدام من المتبنّى.
+5. **اختبارات متعددة الأنماط:** شاشات مختلفة + ‏RTL/LTR + ‏Light/Dark + وصولية.
+6. **تجميد Core UI Foundation** باعتماد SA.
+
+**لا يُعلن Core قبل اجتياز البوابة كاملة.**
 
 **Related:** `../phases/PHASE_MASTER_PLAN.md` (§2/§4) · `../decisions/open-decisions.md` · `agent-execution-model.md` (§§12–17) · `../contracts/screens/SCREEN_CONTRACT_TEMPLATE.md` · `../decisions/adr/ADR-0035-contracts-layer-single-source.md`
