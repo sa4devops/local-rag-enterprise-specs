@@ -1,6 +1,6 @@
 # ADR-0038 — حدّ الإدارة الشاملة (System-Wide Administration Boundary)
 
-**الحالة (Status):** Proposed — يُقبل بتوقيع/دمج SA في بوابة R1-C
+**الحالة (Status):** Accepted — R1-C 2026-07-22 (authorized by main merge 8d14d36a53ebbaab2e443b34bcbb5da4c13d9e16; effective upon promotion merge)
 **التاريخ:** 2026-07-22 · **المقرِّر:** SA (المالك) · **السياق التنظيمي:** R1 — توضيح حدّ ADR-0037
 **يُوضّح ويُكمّل:** ADR-0037 (نموذج الإدارة المنطاقة)
 

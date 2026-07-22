@@ -30,7 +30,7 @@
 | `methodology/AI_DEV_CONTROL_PLANE.md` | قدرة منهجية | قرار مالك R1 + ‏ADR-0033 (مصالحة) | الأتمتة اللاحقة · الوكلاء | Proposed — R1-B |
 | `methodology/RECONCILIATION_ROADMAP.md` | خارطة مسار | قرار مالك R1 (2026-07-21) | مسار R2–R11 · المالك | Proposed — R1-B |
 | دفعة R1-B (تقنين المصالحة — 15 مساراً) | دفعة تقنين | قرارات مالك R1 (2026-07-21) — المرجع تقرير v1.1 | المستودع المنشور · المؤشر الحاكم | ضمن الدفعة |
-| `decisions/adr/ADR-0038-system-wide-administration-boundary.md` | قرار معماري | قرار المالك 2026-07-22 — حدّ الإدارة الشاملة | العقود · ‏P4 · شاشات الإدارة | Proposed — يُقبل بتوقيع/دمج SA في بوابة R1-C |
+| `decisions/adr/ADR-0038-system-wide-administration-boundary.md` | قرار معماري | قرار المالك 2026-07-22 — حدّ الإدارة الشاملة | العقود · ‏P4 · شاشات الإدارة | Accepted — R1-C 2026-07-22 (authorized by main merge 8d14d36a53ebbaab2e443b34bcbb5da4c13d9e16; effective upon promotion merge) |
 | دفعة R1-C (حدّ الإدارة الشاملة — 10 مسارات) | دفعة توثيقية | قرار المالك 2026-07-22 — توضيح حدّ ADR-0037 | المستودع المنشور · المؤشر الحاكم | ضمن الدفعة |
 
 
