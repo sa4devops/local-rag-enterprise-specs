@@ -1,6 +1,6 @@
 # decisions/adr/README.md — استراتيجية وسجل قرارات المعمارية (ADRs)
 
-> **Version:** 1.5 — (Δ 2026-07-21 R1-B: +صف ADR-0037) (Δ 2026-07-20 G1-B: ترقية صفوف ADR-0031..0036 إلى Accepted — دمج بوابة G1 ‏merge dd098df + وسم v1.2-governance-baseline) (Δ 2026-07-19 دفعة G1: +صفوف ADR-0031..0036 ‏Proposed + تعديل نطاق ADR-0017 + إلحاق شروط تفعيل ADR-0030) (v1.0-architecture-baseline: سياسة D15 كاملة + زرع الملفات الفردية + ADR-0023..0028) · **Status:** Current / Accepted · **Date:** 2026-07-10 (الأصل 2026-07-04)
+> **Version:** 1.6 — (+ADR-0038 — R1-C · Δ 2026-07-22) (Δ 2026-07-21 R1-B: +صف ADR-0037) (Δ 2026-07-20 G1-B: ترقية صفوف ADR-0031..0036 إلى Accepted — دمج بوابة G1 ‏merge dd098df + وسم v1.2-governance-baseline) (Δ 2026-07-19 دفعة G1: +صفوف ADR-0031..0036 ‏Proposed + تعديل نطاق ADR-0017 + إلحاق شروط تفعيل ADR-0030) (v1.0-architecture-baseline: سياسة D15 كاملة + زرع الملفات الفردية + ADR-0023..0028) · **Status:** Current / Accepted · **Date:** 2026-07-10 (الأصل 2026-07-04)
 > **Authority:** هذا الملف هو **السجل الكنسي** لترقيم الـ ADRs وحالاتها. الترقيم الوارد في Methodology v1.0 (القديم) **Superseded**.
 > **Purpose:** كل قرار معماري مهم يُوثَّق كـ ADR قبل تنفيذه؛ كسر أي قاعدة boundaries أو تغيير معماري بلا ADR **ممنوع** (constitution م8/م20/م21، Methodology §13).
 
@@ -54,5 +54,6 @@
 | ADR-0035 | طبقة العقود والمصدر الواحد: contracts/ موطن التأليف · التسمية بمرجعية UI_FIELD_NAMING · الجرد سجل الشاشات/المسارات الكنسي · مشتقات GENERATED + ‏Documentation Generation Pipeline (البناء مؤجل لP2) · احترام OD-IDX-1 | **Accepted** — 2026-07-20 | 2026-07-19 · [ADR-0035-contracts-layer-single-source.md](ADR-0035-contracts-layer-single-source.md) |
 | ADR-0036 | ظهور المستودعات: عامة مؤقتاً بإشعار **«Proprietary — All Rights Reserved © 2026 AQLORA»** (لا Open Source؛ العلنية ≠ ترخيص) · مسح أسرار G2 · التحويل Private بوابة ما-قبل-الإنتاج G6 | **Accepted** — 2026-07-20 | 2026-07-19 · [ADR-0036-repo-visibility-public-temporary-private-gate.md](ADR-0036-repo-visibility-public-temporary-private-gate.md) |
 | ADR-0037 | نموذج الإدارة المنطاقة: تقاطع رباعي · منح صريح (OD-ORG-1 قائم) · scope_inheritance (SELF_ONLY افتراضاً، مسجَّل تدقيقياً) · owning_org_unit_id · إنفاذ خادمي | **Accepted — R1-B 2026-07-21 (authorized by main merge 6d50a4c41f0fcf76e5db41206f5f5e1eac4869d4; effective upon promotion merge)** | 2026-07-21 · [ADR-0037-scoped-administration-model.md](ADR-0037-scoped-administration-model.md) · R1-B |
+| ADR-0038 | حدّ الإدارة الشاملة (System-Wide Administration Boundary) | Proposed — يُقبل بتوقيع/دمج SA في بوابة R1-C | 2026-07-22 · [ADR-0038-system-wide-administration-boundary.md](ADR-0038-system-wide-administration-boundary.md) · R1-C |
 
 **قرارات مستقبلية تتطلب ADR جديداً (أمثلة):** تفعيل Graph (AGE/Neo4j) · فصل أي module إلى microservice · اعتماد K8s/OpenShift · إدخال تكامل خارجي عبر proxy · تغيير التصنيف الخماسي · اعتماد WebSocket (شرط ADR-0025) · فصل مستودع الواجهة (شرط ADR-0017).
