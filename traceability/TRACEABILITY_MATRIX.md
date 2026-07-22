@@ -1,6 +1,6 @@
 # TRACEABILITY_MATRIX.md — مصفوفة التتبع (بذرة G1)
 
-> **Version:** 0.1 — Seed/Proposed · **Date:** 2026-07-19 · **الموضع:** `traceability/TRACEABILITY_MATRIX.md`
+> **Version:** 0.1 — Seed/Proposed · (Δ R1-C 2026-07-22: +ADR-0038 + دفعة R1-C) · **Date:** 2026-07-19 · **الموضع:** `traceability/TRACEABILITY_MATRIX.md`
 > **Authority:** طبقة System Knowledge — كل أصل حاكم جديد/مرقّى له صف: (الأصل · نوعه · القرار الأم · من يستهلكه · حالته). مصدر تأليف لخط توليد الوثائق؛ يُحدَّث بقاعدة write-back (‏EC-10).
 
 | الأصل | النوع | القرار/الأمر الأم | المستهلك الأول | الحالة |
@@ -30,6 +30,8 @@
 | `methodology/AI_DEV_CONTROL_PLANE.md` | قدرة منهجية | قرار مالك R1 + ‏ADR-0033 (مصالحة) | الأتمتة اللاحقة · الوكلاء | Proposed — R1-B |
 | `methodology/RECONCILIATION_ROADMAP.md` | خارطة مسار | قرار مالك R1 (2026-07-21) | مسار R2–R11 · المالك | Proposed — R1-B |
 | دفعة R1-B (تقنين المصالحة — 15 مساراً) | دفعة تقنين | قرارات مالك R1 (2026-07-21) — المرجع تقرير v1.1 | المستودع المنشور · المؤشر الحاكم | ضمن الدفعة |
+| `decisions/adr/ADR-0038-system-wide-administration-boundary.md` | قرار معماري | قرار المالك 2026-07-22 — حدّ الإدارة الشاملة | العقود · ‏P4 · شاشات الإدارة | Proposed — يُقبل بتوقيع/دمج SA في بوابة R1-C |
+| دفعة R1-C (حدّ الإدارة الشاملة — 10 مسارات) | دفعة توثيقية | قرار المالك 2026-07-22 — توضيح حدّ ADR-0037 | المستودع المنشور · المؤشر الحاكم | ضمن الدفعة |
 
 
 **Related:** `../decisions/adr/ADR-0035-contracts-layer-single-source.md` · `../INDEX.md` · `../methodology/agent-execution-model.md` (§16)

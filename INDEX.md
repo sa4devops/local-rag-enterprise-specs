@@ -1,6 +1,6 @@
 # INDEX.md — الفهرس البشري الحاكم لمستودع المواصفات
 
-> **Version:** 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) · (Δ 2026-07-20 G1-C: تطبيع صفوف الحالة بعد تدقيق G1-B — تصويب صفوف ADR-0017/0031..0036 + إزالة انتساب (G1) الكاذب من 25 صفاً تاريخياً) · **Date:** 2026-07-19 · **الموضع:** `/INDEX.md`
+> **Version:** 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) · (Δ 2026-07-20 G1-C: تطبيع صفوف الحالة بعد تدقيق G1-B — تصويب صفوف ADR-0017/0031..0036 + إزالة انتساب (G1) الكاذب من 25 صفاً تاريخياً) · (Δ 2026-07-22 R1-C: +صف ADR-0038 + تحديث الإجمالي) · **Date:** 2026-07-19 · **الموضع:** `/INDEX.md`
 > **Authority:** مصدر الفهرسة الحاكم بقرار **OD-IDX-1** (‏SA ‏2026-07-10): فهرس **بشري القراءة يدوي الصيانة** — لا index.yaml ولا manifest آلياً ولا مصدر موازياً حتى وجود مستهلك آلي فعلي وقرار جديد (‏ADR-0035 بند 7). الفهرس **دليل مواضع وحالات، لا مصدر سلطة** (‏AUTHORITY.md §2-4).
 > **قاعدة الصيانة:** كل دفعة تضيف/ترقّي ملفاً تُحدّث صفه هنا في الدفعة ذاتها (بند write-back) · التغطية إلزامية 100% لكل ملفات ‏.md (‏EC-3).
 
@@ -9,7 +9,7 @@
 | `(الجذر)` | `AUTHORITY.md` | 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) | Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `(الجذر)` | `EXECUTION_REPORT.md` | 1.0 | Current | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `(الجذر)` | `FLUTTER_ROLLBACK_AND_OPENWEBUI_BRIDGE_HANDOFF.md` | 1.0 | Current | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
-| `(الجذر)` | `PACKAGE_CHECKLIST.md` | 1.11 — (Δ 2026-07-19 دفعة G1: +قسم أصول Governance Foundatio | Current | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
+| `(الجذر)` | `PACKAGE_CHECKLIST.md` | 1.11 — (Δ 2026-07-19 دفعة G1: +قسم أصول Governance Foundatio | Current · Δ R1-C: +قسم دفعة R1-C | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `(الجذر)` | `PROJECT_EVOLUTION.md` | 1.0 | Current | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `(الجذر)` | `README.md` | 1.3 — (Δ 2026-07-19 G1: +AUTHORITY قراءةً وإحالةَ سلطةٍ + ستاك ADR-0031) | Current / Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `(الجذر)` | `SPECIFICATIONS_CLOSEOUT_HANDOFF.md` | 1.0 | Current | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
@@ -18,7 +18,7 @@
 | `catalogs` | `catalogs/Feature_Technical_Architecture_Catalog.md` | 2.1 — Final (A1–A11 + قرارات ما قبل التنفيذ D1–D9 مدمجة) | Current / Accepted | المعمارية — Specification Architect | حسب تسمية تصميم المرحلة |
 | `(الجذر)` | `constitution.md` | 1.2 (+م23 العميل القابل للاستبدال — دفعة إغلاق المواصفات، قر | Current / Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `contracts` | `contracts/NAMING_AND_CONTRACTS_STANDARD.md` | — | Proposed (G1) · Δ R1-B: +قرارا المالك | العقود — Specification Architect | كل منفذ وكل بوابة |
-| `contracts/enums` | `contracts/enums/ENUMS_DICTIONARY.md` | — | Proposed (G1) · Δ R1-B: +scope_inheritance | العقود — Specification Architect | كل منفذ واجهة |
+| `contracts/enums` | `contracts/enums/ENUMS_DICTIONARY.md` | — | Proposed (G1) · Δ R1-B: +scope_inheritance · Δ R1-C: حدّ الدور الشامل (ADR-0038) | العقود — Specification Architect | كل منفذ واجهة |
 | `contracts/identity` | `contracts/identity/RECORD_IDENTITY.md` | — | Proposed (G1) | العقود — Specification Architect | كل منفذ |
 | `contracts/screens` | `contracts/screens/SCREEN_CONTRACT_TEMPLATE.md` | — | Proposed (G1) | العقود — Specification Architect | منفذ الشاشة وبوابتها |
 | `contracts/screens` | `contracts/screens/admin.actions.md` | — | Candidate | العقود — Specification Architect | منفذ الشاشة وبوابتها |
@@ -47,13 +47,14 @@
 | `decisions/adr` | `decisions/adr/ADR-0034-development-skills-superpowers-subset.md` | — | Accepted — G1-B 2026-07-20 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions/adr` | `decisions/adr/ADR-0035-contracts-layer-single-source.md` | — | Accepted — G1-B 2026-07-20 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions/adr` | `decisions/adr/ADR-0036-repo-visibility-public-temporary-private-gate.md` | — | Accepted — G1-B 2026-07-20 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
-| `decisions/adr` | `decisions/adr/ADR-0037-scoped-administration-model.md` | 1.0 — Proposed | Accepted — R1-B 2026-07-21 (authorized by main merge 6d50a4c41f0fcf76e5db41206f5f5e1eac4869d4; effective upon promotion merge) | طبقة القرارات — SA | كل وكيل عند مساس معماري |
-| `decisions/adr` | `decisions/adr/README.md` | 1.5 — (Δ 2026-07-21 R1-B: +صف ADR-0037) (Δ 2026-07-19 دفعة G1: +صفوف ADR-0031..0036 ‏Proposed  | Current / Accepted · Δ R1-B: +ADR-0037 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
+| `decisions/adr` | `decisions/adr/ADR-0037-scoped-administration-model.md` | 1.0 — Proposed | Accepted — R1-B 2026-07-21 (authorized by main merge 6d50a4c41f0fcf76e5db41206f5f5e1eac4869d4; effective upon promotion merge) · Δ R1-C: مُوضَّح بـADR-0038 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
+| `decisions/adr` | `decisions/adr/ADR-0038-system-wide-administration-boundary.md` | 1.0 — Proposed | Proposed — يُقبل بتوقيع/دمج SA في بوابة R1-C | طبقة القرارات — SA | كل وكيل عند مساس معماري |
+| `decisions/adr` | `decisions/adr/README.md` | 1.6 — (+ADR-0038 — R1-C) (Δ 2026-07-21 R1-B: +صف ADR-0037) (Δ 2026-07-19 دفعة G1: +صفوف ADR-0031..0036 ‏Proposed  | Current / Accepted · Δ R1-C: +ADR-0038 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions` | `decisions/license-review.md` | 1.2 (v1.0-architecture-baseline: صفوف SeaweedFS/MinIO/Valkey | Current / Accepted | طبقة القرارات — SA | ‏Tier-0 لكل وكيل |
 | `decisions` | `decisions/open-decisions.md` | 2.4 — (Δ 2026-07-19: +فهرس دفعة G1 — Governance Foundation B | Current / Accepted · Δ R1-B: +OD-ADM-1 · ملاحظة OD-ORG-1 | طبقة القرارات — SA | ‏Tier-0 لكل وكيل |
 | `(الجذر)` | `github-docs-structure.md` | 1.7 (v1.0-baseline: ملفات ADR الفردية المزروعة تحت decisions | Current / Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 | `handoff` | `handoff/handoff.md` | 1.1 (Δ 2026-07-11: توضيح اتفاقية الأرشفة وترتيب القراءة — تح | Current / Accepted | التسليم — كل جلسة منفِّذة | الوكيل التالي قبل أي عمل |
-| `knowledge` | `knowledge/BUSINESS_GLOSSARY.md` | 0.1 — Seed/Proposed | Proposed (G1) · Δ R1-B: +owning_org_unit_id/الإدارة المنطاقة | ‏System Knowledge — Specification Architect | المولد + المراجعات |
+| `knowledge` | `knowledge/BUSINESS_GLOSSARY.md` | 0.1 — Seed/Proposed | Proposed (G1) · Δ R1-B: +owning_org_unit_id/الإدارة المنطاقة · Δ R1-C: +الإدارة الشاملة | ‏System Knowledge — Specification Architect | المولد + المراجعات |
 | `methodology` | `methodology/AI_DEV_CONTROL_PLANE.md` | 1.0 — Proposed | Accepted — R1-B 2026-07-21 (authorized by main merge 6d50a4c41f0fcf76e5db41206f5f5e1eac4869d4; effective upon promotion merge) | المنهجية — Specification Architect | كل وكيل تنفيذ |
 | `methodology` | `methodology/PHASE_EXECUTION_STANDARD.md` | 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) | Accepted · Δ R1-B: P3 owning_org_unit_id · P4 Scoped-Admin · Foundation Gate | المنهجية — Specification Architect | كل وكيل تنفيذ |
 | `methodology` | `methodology/RECONCILIATION_ROADMAP.md` | 1.0 — Proposed | Accepted — R1-B 2026-07-21 (authorized by main merge 6d50a4c41f0fcf76e5db41206f5f5e1eac4869d4; effective upon promotion merge) | المنهجية — Specification Architect | كل وكيل تنفيذ |
@@ -101,7 +102,7 @@
 | `superseded/phase-design-package-v0.3/phases/designs` | `superseded/phase-design-package-v0.3/phases/designs/phase-8-monitoring-offline-production.md` | 1.0 — Proposed (Accepted باعتماد v0.3) | Superseded | تاريخي — لا مالك نشط | محظور إلا بتكليف صريح |
 | `superseded` | `superseded/pre-design-analysis-v1.md` | — | Superseded | تاريخي — لا مالك نشط | محظور إلا بتكليف صريح |
 | `superseded` | `superseded/system-design-v1.md` | — | Superseded | تاريخي — لا مالك نشط | محظور إلا بتكليف صريح |
-| `traceability` | `traceability/TRACEABILITY_MATRIX.md` | 0.1 — Seed/Proposed | Proposed (G1) | ‏System Knowledge — Specification Architect | المراجعات + المولد |
+| `traceability` | `traceability/TRACEABILITY_MATRIX.md` | 0.1 — Seed/Proposed | Proposed (G1) · Δ R1-C: +ADR-0038 | ‏System Knowledge — Specification Architect | المراجعات + المولد |
 | `ui` | `ui/UI_ACTION_BUTTON_MODEL.md` | 1.1 — (Δ v0.8: +§2.1 متغيّر العرض «inline message action» —  | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_ADMIN_CONSOLE_MODEL.md` | 1.1 — (Δ v0.8: +OD-BLD-1 أوضاع الباني الثلاثة — مقفل بقرار S | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_AI_WORKSPACE_MODEL.md` | 1.1 — (Δ v0.8: +§14 وضعا العرض محادثة/بطاقات — OD-WS-4 مقفل  | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
@@ -128,6 +129,6 @@
 | `ui` | `ui/UI_VISIBILITY_RULES.md` | 1.0 — Proposed (v0.5) | Proposed (v0.5) | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `(الجذر)` | `vision.md` | 1.0 | Current / Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 
-**الإجمالي:** 121 ملفاً + هذا الفهرس (تغطية 100%).
+**الإجمالي:** 122 ملفاً + هذا الفهرس (تغطية 100%).
 
 **Related:** `AUTHORITY.md` · `decisions/open-decisions.md` (‏OD-IDX-1) · `PACKAGE_CHECKLIST.md`

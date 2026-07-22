@@ -1,6 +1,6 @@
 # BUSINESS_GLOSSARY.md — معجم مصطلحات الأعمال (بذرة G1)
 
-> **Version:** 0.1 — Seed/Proposed · **Date:** 2026-07-19 · **الموضع:** `knowledge/BUSINESS_GLOSSARY.md`
+> **Version:** 0.1 — Seed/Proposed · (Δ R1-C 2026-07-22: +الإدارة الشاملة — ADR-0038) · **Date:** 2026-07-19 · **الموضع:** `knowledge/BUSINESS_GLOSSARY.md`
 > **Authority:** طبقة System Knowledge — مصدر تأليف يقرؤه خط توليد الوثائق (‏ADR-0035 بند 5)؛ التعريف هنا هو الملزم في كل وثيقة مولَّدة وواجهة (عبر مفاتيح i18n) عند اعتماده.
 > **قاعدة النمو:** يُثرى مع كل Feature Package (بند write-back) — لا يُؤلَّف دفعة واحدة.
 
@@ -22,5 +22,6 @@
 | **Record (سجل)** | كيان بيانات ديناميكي بهوية `identity.record` الرباعية | ليس Document ملفياً بالضرورة | ‏run.* · ‏ADR-0032 |
 | **owning_org_unit_id** | الوحدة التنظيمية المالكة للمورد — الاسم القانوني الوحيد في الوثائق الحية | ليس حقلاً تنظيمياً عابراً — هو المرجع القانوني الوحيد للملكية | ‏ADR-0037 · عقود الشاشات |
 | **الإدارة المنطاقة / Scoped Administration** | منح إداري صريح محدود بالتقاطع الرباعي (دور × نطاق × شاشة × قدرة) | ليست أدمن نظام كاملاً — منح مقيَّد بالنطاق بإنفاذ خادمي | ‏ADR-0037 |
+| **الإدارة الشاملة (System-Wide Administrator)** | دور إداري مستقل يغطي كل الوحدات التنظيمية، يُمنح بقرار استثنائي صريح مسجَّل بالتدقيق، ولا يُمثَّل بقيمة في `scope_inheritance`، ولا يمنح تلقائياً قراءة البيانات (ADR-0038) | ليس منحاً منطاقاً ولا قيمة في التعداد — دور مستقل خارج نموذج النطاقات؛ لا تصعيد ضمني من تراكم المنح | ‏ADR-0038 |
 
 **Related:** `../contracts/identity/RECORD_IDENTITY.md` · `../contracts/enums/ENUMS_DICTIONARY.md` · `../decisions/adr/ADR-0035-contracts-layer-single-source.md` · `../decisions/adr/ADR-0036-repo-visibility-public-temporary-private-gate.md`

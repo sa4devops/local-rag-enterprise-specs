@@ -1,6 +1,6 @@
 # PACKAGE_CHECKLIST.md — Final GitHub Package Checklist
 
-> **Version:** 1.13 — (Δ 2026-07-21 R1-B: +قسم دفعة R1-B — 3 أصول جديدة + 12 مساراً معدَّلاً) — (Δ 2026-07-20 G1-C: تطبيع توثيقي بعد تدقيق G1-B [ACCEPT WITH DOCUMENTATION DEBT] — تصويب خلية صف ADRs) — (Δ 2026-07-19 دفعة G1: +قسم أصول Governance Foundation Baseline + تصويب صف v0.7.1 إلى tag-only) (1.10: … + إغلاق F-3 + دفعة تنحية Flutter وجسر Open WebUI المؤقت) · **Status:** Current · **Date:** 2026-07-19
+> **Version:** 1.14 — (Δ 2026-07-22 R1-C: +قسم دفعة R1-C — ADR-0038 + 9 مسارات معدَّلة) — (Δ 2026-07-21 R1-B: +قسم دفعة R1-B — 3 أصول جديدة + 12 مساراً معدَّلاً) — (Δ 2026-07-20 G1-C: تطبيع توثيقي بعد تدقيق G1-B [ACCEPT WITH DOCUMENTATION DEBT] — تصويب خلية صف ADRs) — (Δ 2026-07-19 دفعة G1: +قسم أصول Governance Foundation Baseline + تصويب صف v0.7.1 إلى tag-only) (1.10: … + إغلاق F-3 + دفعة تنحية Flutter وجسر Open WebUI المؤقت) · **Status:** Current · **Date:** 2026-07-19
 >  **Purpose:** خريطة الحزمة النهائية: كل ملف، مساره، حالته، جاهزيته للرفع، وما يلزم قبل **التنفيذ** (لا قبل الرفع).
 
 | الملف | المسار داخل GitHub | الحالة | جاهز للرفع؟ | يحتاج قراراً قبل التنفيذ؟ |
@@ -93,3 +93,10 @@
 | RECONCILIATION_ROADMAP.md | `methodology/` | **v1.0 — Proposed** — خارطة R1–R11 الرسمية (منفصلة عن P0–P8) | ✅ | تم — R1-B 2026-07-21 (effective upon promotion merge) |
 
 **المسارات الـ12 المعدَّلة (دفعة R1-B):** `contracts/screens/admin.workflows.md` · `contracts/NAMING_AND_CONTRACTS_STANDARD.md` · `contracts/enums/ENUMS_DICTIONARY.md` · `knowledge/BUSINESS_GLOSSARY.md` · `decisions/open-decisions.md` · `decisions/DEFERRED_IMPLEMENTATION.md` · `decisions/adr/README.md` · `methodology/PHASE_EXECUTION_STANDARD.md` · `INDEX.md` · `PACKAGE_CHECKLIST.md` · `traceability/TRACEABILITY_MATRIX.md` · `handoff/handoff.md` (H-0019).
+
+### Δ دفعة R1-C — System-Wide Administration Boundary (2026-07-22)
+| الملف | المسار | الحالة | جاهز للرفع؟ | يحتاج قراراً قبل التنفيذ؟ |
+|---|---|---|---|---|
+| ADR-0038-system-wide-administration-boundary.md | `decisions/adr/` | **v1.0 — Proposed** — حدّ الإدارة الشاملة (الدور الشامل مستقل · لا قيمة تعداد · لا تصعيد ضمني · الإدارية ≠ قراءة البيانات · إنفاذ خادمي) | ✅ | Proposed — يُقبل بتوقيع/دمج SA في بوابة R1-C |
+
+**المسارات التسعة المعدَّلة (دفعة R1-C):** `INDEX.md` · `PACKAGE_CHECKLIST.md` · `contracts/enums/ENUMS_DICTIONARY.md` · `contracts/screens/admin.workflows.md` · `decisions/adr/ADR-0037-scoped-administration-model.md` · `decisions/adr/README.md` · `knowledge/BUSINESS_GLOSSARY.md` · `traceability/TRACEABILITY_MATRIX.md` · `handoff/handoff.md`.

@@ -2,6 +2,7 @@
 **الحالة (Status):** Accepted — R1-B 2026-07-21 (authorized by main merge 6d50a4c41f0fcf76e5db41206f5f5e1eac4869d4; effective upon promotion merge)
 > Proposed — main merge authorizes promotion only; acceptance becomes effective only upon the separate promotion-PR merge.
 **التاريخ:** 2026-07-21 · **المقرِّر:** SA (المالك) · **السياق التنظيمي:** R1 — Requirements Reconciliation
+**مُوضَّح بـ:** ADR-0038 (حدّ الإدارة الشاملة — الدور الشامل خارج نموذج النطاقات)
 
 ## 1. السياق
 تقرير R1 ‏v1.1 أثبت أن «الأدمن المحدود» موجود جزئياً كعناصر متفرقة (RLS/FLS بالمحرك · الإنفاذ الخادمي D2/ADR-0025/ADR-0029 · حقول ملكية P3 · SoD بعقد admin.workflows · سطر P4 · قفل OD-ORG-1) دون تأصيل موحد. متطلب المالك: منح أدمن صلاحية محدودة بوحدة تنظيمية وشاشات وقدرات محددة، لا أدمن نظام كاملاً.
