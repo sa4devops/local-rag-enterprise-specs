@@ -48,7 +48,7 @@
 | `decisions/adr` | `decisions/adr/ADR-0035-contracts-layer-single-source.md` | — | Accepted — G1-B 2026-07-20 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions/adr` | `decisions/adr/ADR-0036-repo-visibility-public-temporary-private-gate.md` | — | Accepted — G1-B 2026-07-20 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions/adr` | `decisions/adr/ADR-0037-scoped-administration-model.md` | 1.0 — Proposed | Accepted — R1-B 2026-07-21 (authorized by main merge 6d50a4c41f0fcf76e5db41206f5f5e1eac4869d4; effective upon promotion merge) · Δ R1-C: مُوضَّح بـADR-0038 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
-| `decisions/adr` | `decisions/adr/ADR-0038-system-wide-administration-boundary.md` | 1.0 — Proposed | Proposed — يُقبل بتوقيع/دمج SA في بوابة R1-C | طبقة القرارات — SA | كل وكيل عند مساس معماري |
+| `decisions/adr` | `decisions/adr/ADR-0038-system-wide-administration-boundary.md` | 1.0 — Proposed | Accepted — R1-C 2026-07-22 (authorized by main merge 8d14d36a53ebbaab2e443b34bcbb5da4c13d9e16; effective upon promotion merge) | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions/adr` | `decisions/adr/README.md` | 1.6 — (+ADR-0038 — R1-C) (Δ 2026-07-21 R1-B: +صف ADR-0037) (Δ 2026-07-19 دفعة G1: +صفوف ADR-0031..0036 ‏Proposed  | Current / Accepted · Δ R1-C: +ADR-0038 | طبقة القرارات — SA | كل وكيل عند مساس معماري |
 | `decisions` | `decisions/license-review.md` | 1.2 (v1.0-architecture-baseline: صفوف SeaweedFS/MinIO/Valkey | Current / Accepted | طبقة القرارات — SA | ‏Tier-0 لكل وكيل |
 | `decisions` | `decisions/open-decisions.md` | 2.4 — (Δ 2026-07-19: +فهرس دفعة G1 — Governance Foundation B | Current / Accepted · Δ R1-B: +OD-ADM-1 · ملاحظة OD-ORG-1 | طبقة القرارات — SA | ‏Tier-0 لكل وكيل |

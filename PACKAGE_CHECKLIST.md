@@ -97,6 +97,6 @@
 ### Δ دفعة R1-C — System-Wide Administration Boundary (2026-07-22)
 | الملف | المسار | الحالة | جاهز للرفع؟ | يحتاج قراراً قبل التنفيذ؟ |
 |---|---|---|---|---|
-| ADR-0038-system-wide-administration-boundary.md | `decisions/adr/` | **v1.0 — Proposed** — حدّ الإدارة الشاملة (الدور الشامل مستقل · لا قيمة تعداد · لا تصعيد ضمني · الإدارية ≠ قراءة البيانات · إنفاذ خادمي) | ✅ | Proposed — يُقبل بتوقيع/دمج SA في بوابة R1-C |
+| ADR-0038-system-wide-administration-boundary.md | `decisions/adr/` | **v1.0 — Proposed** — حدّ الإدارة الشاملة (الدور الشامل مستقل · لا قيمة تعداد · لا تصعيد ضمني · الإدارية ≠ قراءة البيانات · إنفاذ خادمي) | ✅ | Accepted — R1-C 2026-07-22 (authorized by main merge 8d14d36a53ebbaab2e443b34bcbb5da4c13d9e16; effective upon promotion merge) |
 
 **المسارات التسعة المعدَّلة (دفعة R1-C):** `INDEX.md` · `PACKAGE_CHECKLIST.md` · `contracts/enums/ENUMS_DICTIONARY.md` · `contracts/screens/admin.workflows.md` · `decisions/adr/ADR-0037-scoped-administration-model.md` · `decisions/adr/README.md` · `knowledge/BUSINESS_GLOSSARY.md` · `traceability/TRACEABILITY_MATRIX.md` · `handoff/handoff.md`.
