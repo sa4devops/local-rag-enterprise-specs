@@ -4,7 +4,7 @@
 > **الموضع:** `traceability/rar-reconciliation/RAW-EXTRACTION-REGISTER.md` · **المدخل:** `references/analysis-inputs/rar-2026-07/RAR-00X-*.md` (أقسام §11/§12/§14 حصراً).
 
 ## قاعدة العدّ (مطبّقة على كل بند)
-كل **عنصر قائمة منفصل** (نقطة `-` أو بند مرقّم `N.`) داخل §11/§12/§14 يُعدّ **بنداً خاماً مستقلاً واحداً**. تُستثنى (سياق لا بنود): جُمل التمهيد («على المراجعة معالجة:»…) · جُمل توجيه المراجعة («على Claude تقرير…») · كتل الكود/المخططات (lifecycle diagram · chain block). أُعيد اشتقاق العدد بهذه القاعدة وطابق المرجع 257 لكل قسم ولكل ملف (التفصيل في §C من تقرير B1). **حالة pipeline** لكل بند: `EXTRACTED` (يُحمل إلى التطبيع في `NORMALIZATION-REGISTER.md`).
+كل **عنصر قائمة منفصل** (نقطة `-` أو بند مرقّم `N.`) داخل §11/§12/§14 يُعدّ **بنداً خاماً مستقلاً واحداً**. تُستثنى (سياق لا بنود): جُمل التمهيد (مثل «على المراجعة معالجة:») · جُمل توجيه المراجعة (مثل «على Claude تقرير هل هذه Workflow عادية أم Capability») · كتل الكود/المخططات (lifecycle diagram · chain block). أُعيد اشتقاق العدد بهذه القاعدة وطابق المرجع 257 لكل قسم ولكل ملف (التفصيل في §C من تقرير B1). **حالة pipeline** لكل بند: `EXTRACTED` (يُحمل إلى التطبيع في `NORMALIZATION-AND-ATOMIC-MAP.md`).
 
 ---
 
@@ -166,44 +166,167 @@
 | RAW-RAR003-S14-012 | :384 | Accessible canvas alternatives |
 | RAW-RAR003-S14-013 | :385 | Touch target policy المعقولة |
 
-## RAR-004 — Governed Extension Store  (37: §11=17 · §12=11 · §14=9) — [ممثلوها يؤجَّلون إلى B2]
+> **[تصحيح 2026-07-25]** أُفرِدت بنود RAR-004..007 الـ132 إلى سجلات بندية مستقلة (معرف فريد · سطر مصدر خاص · نص). حُذفت صفوف النطاق ونقاط الحذف من المعرّفات الحاكمة. سجلات RAR-001..003 (أعلاه) لم تُمس.
+
+## RAR-004 — Governed Extension Store  (37: §11=17 · §12=11 · §14=9) — [ممثلوها يؤجَّلون إلى B2 ما لم تنقلهم قاعدة أدنى RAR]
 ### §11 — Upgrade/Rollback/Compatibility
 | RAW-ID | سطر | النص الخام |
 |---|---|---|
-| RAW-RAR004-S11-001..017 | :271–:287 | Version policy · Platform/API/spec compatibility · Database migrations · Maintenance windows · Backup before upgrade · Dependency conflicts · Downgrade restrictions · Configuration migration · Data ownership at uninstall · Rollback evidence · Orphaned workflows/actions · Impact preview before disable/remove · Pinning · LTS channels · End-of-support · Partial failure · Compatibility tests |
+| RAW-RAR004-S11-001 | :271 | Version policy |
+| RAW-RAR004-S11-002 | :272 | Platform/API/spec compatibility |
+| RAW-RAR004-S11-003 | :273 | Database migrations |
+| RAW-RAR004-S11-004 | :274 | Maintenance windows |
+| RAW-RAR004-S11-005 | :275 | Backup before upgrade |
+| RAW-RAR004-S11-006 | :276 | Dependency conflicts |
+| RAW-RAR004-S11-007 | :277 | Downgrade restrictions |
+| RAW-RAR004-S11-008 | :278 | Configuration migration |
+| RAW-RAR004-S11-009 | :279 | Data ownership at uninstall |
+| RAW-RAR004-S11-010 | :280 | Rollback evidence |
+| RAW-RAR004-S11-011 | :281 | Orphaned workflows/actions |
+| RAW-RAR004-S11-012 | :282 | Impact preview before disable/remove |
+| RAW-RAR004-S11-013 | :283 | Pinning |
+| RAW-RAR004-S11-014 | :284 | LTS channels |
+| RAW-RAR004-S11-015 | :285 | End-of-support |
+| RAW-RAR004-S11-016 | :286 | Partial failure |
+| RAW-RAR004-S11-017 | :287 | Compatibility tests |
 ### §12 — Impact Analysis
-| RAW-RAR004-S12-001..011 | :297–:307 | Workflows · Agents · Actions · Schedules · Connectors · Screens · Reports · Data ingestion jobs · Permissions · Stored configuration · Active runs |
+| RAW-RAR004-S12-001 | :297 | Workflows |
+| RAW-RAR004-S12-002 | :298 | Agents |
+| RAW-RAR004-S12-003 | :299 | Actions |
+| RAW-RAR004-S12-004 | :300 | Schedules |
+| RAW-RAR004-S12-005 | :301 | Connectors |
+| RAW-RAR004-S12-006 | :302 | Screens |
+| RAW-RAR004-S12-007 | :303 | Reports |
+| RAW-RAR004-S12-008 | :304 | Data ingestion jobs |
+| RAW-RAR004-S12-009 | :305 | Permissions |
+| RAW-RAR004-S12-010 | :306 | Stored configuration |
+| RAW-RAR004-S12-011 | :307 | Active runs |
 ### §14 — Code Execution Boundaries
-| RAW-RAR004-S14-001..009 | :332–:340 | هل يعمل داخل Process؟ · داخل Container مستقل؟ · كخدمة خارجية داخل LAN؟ · كConfiguration فقط؟ · ما Network/File/System access؟ · ما Resource limits؟ · كيف تسجل Calls؟ · كيف تمنع package من تجاوز صلاحياتها؟ · كيف يختلف حسب Package Type؟ |
+| RAW-RAR004-S14-001 | :332 | هل يعمل داخل Process؟ |
+| RAW-RAR004-S14-002 | :333 | داخل Container مستقل؟ |
+| RAW-RAR004-S14-003 | :334 | كخدمة خارجية داخل LAN؟ |
+| RAW-RAR004-S14-004 | :335 | كConfiguration فقط؟ |
+| RAW-RAR004-S14-005 | :336 | ما Network/File/System access؟ |
+| RAW-RAR004-S14-006 | :337 | ما Resource limits؟ |
+| RAW-RAR004-S14-007 | :338 | كيف تسجل Calls؟ |
+| RAW-RAR004-S14-008 | :339 | كيف تمنع package من تجاوز صلاحياتها؟ |
+| RAW-RAR004-S14-009 | :340 | كيف يختلف ذلك حسب Package Type؟ |
 
-## RAR-005 — Workflow Decision Model  (38: §11=14 · §12=17 · §14=7) — [ممثلوها يؤجَّلون إلى B2]
+## RAR-005 — Workflow Decision Model  (38: §11=14 · §12=17 · §14=7) — [ممثلوها يؤجَّلون إلى B2 ما لم تنقلهم قاعدة أدنى RAR]
 ### §11 — Delegation/Acting on Behalf Of
-| RAW-RAR005-S11-001..009 | :269–:277 | تفويض مؤقت خلال إجازة · تفويض لمهمة محددة · تفويض لنوع Workflow · تفويض لدور · No further delegation · Delegation requiring approval · Expiration · Revocation · Conflict of interest exclusion |
-| RAW-RAR005-S11-010..014 | :281–:285 | Reassignment · Delegation · Proxy decision · Acting role · Queue claim (تعريفات مفرّقة) |
+| RAW-ID | سطر | النص الخام |
+|---|---|---|
+| RAW-RAR005-S11-001 | :269 | تفويض مؤقت خلال إجازة |
+| RAW-RAR005-S11-002 | :270 | تفويض لمهمة محددة |
+| RAW-RAR005-S11-003 | :271 | تفويض لنوع Workflow |
+| RAW-RAR005-S11-004 | :272 | تفويض لدور |
+| RAW-RAR005-S11-005 | :273 | No further delegation |
+| RAW-RAR005-S11-006 | :274 | Delegation requiring approval |
+| RAW-RAR005-S11-007 | :275 | Expiration |
+| RAW-RAR005-S11-008 | :276 | Revocation |
+| RAW-RAR005-S11-009 | :277 | Conflict of interest exclusion |
+| RAW-RAR005-S11-010 | :281 | Reassignment: نقل المسؤولية |
+| RAW-RAR005-S11-011 | :282 | Delegation: منح صلاحية مؤقتة |
+| RAW-RAR005-S11-012 | :283 | Proxy decision: قرار بالنيابة |
+| RAW-RAR005-S11-013 | :284 | Acting role: تولي دور رسمي مؤقتاً |
+| RAW-RAR005-S11-014 | :285 | Queue claim: استلام عنصر من قائمة |
 ### §12 — Escalation/SLA
-| RAW-RAR005-S12-001..009 | :295–:303 | Reminder · Notify manager · Add alternate assignee · Reassign · Mark overdue · Trigger path · Pause (Dependency) · Escalate priority · Open incident/task |
-| RAW-RAR005-S12-010..017 | :307–:314 | Business calendar · Timezone · Pause/resume · Holidays · Dependency waiting · Retry limits · Who can change SLA · Audit of manual override |
+| RAW-RAR005-S12-001 | :295 | Reminder |
+| RAW-RAR005-S12-002 | :296 | Notify manager |
+| RAW-RAR005-S12-003 | :297 | Add alternate assignee |
+| RAW-RAR005-S12-004 | :298 | Reassign |
+| RAW-RAR005-S12-005 | :299 | Mark overdue |
+| RAW-RAR005-S12-006 | :300 | Trigger path |
+| RAW-RAR005-S12-007 | :301 | Pause بسبب Dependency |
+| RAW-RAR005-S12-008 | :302 | Escalate priority |
+| RAW-RAR005-S12-009 | :303 | Open incident/task |
+| RAW-RAR005-S12-010 | :307 | Business calendar |
+| RAW-RAR005-S12-011 | :308 | Timezone |
+| RAW-RAR005-S12-012 | :309 | Pause/resume |
+| RAW-RAR005-S12-013 | :310 | Holidays |
+| RAW-RAR005-S12-014 | :311 | Dependency waiting |
+| RAW-RAR005-S12-015 | :312 | Retry limits |
+| RAW-RAR005-S12-016 | :313 | Who can change SLA |
+| RAW-RAR005-S12-017 | :314 | Audit of manual override |
 ### §14 — Override/إعادة الفتح
-| RAW-RAR005-S14-001..007 | :339–:345 | منع كامل في MVP · Reopen بصلاحية عالية وسبب إلزامي · New Step Run بدلاً من تعديل القديم · Reversal Event يحفظ القرار السابق · Compensation للأفعال المنفذة · إشعار الأطراف · أثر على الخطوات اللاحقة |
+| RAW-RAR005-S14-001 | :339 | منع كامل في MVP |
+| RAW-RAR005-S14-002 | :340 | Reopen بصلاحية عالية وسبب إلزامي |
+| RAW-RAR005-S14-003 | :341 | New Step Run بدلاً من تعديل القديم |
+| RAW-RAR005-S14-004 | :342 | Reversal Event يحفظ القرار السابق |
+| RAW-RAR005-S14-005 | :343 | Compensation للأفعال المنفذة |
+| RAW-RAR005-S14-006 | :344 | إشعار الأطراف |
+| RAW-RAR005-S14-007 | :345 | أثر على الخطوات اللاحقة |
 
-## RAR-006 — Real-time AI Readiness  (27: §11=8 · §12=8 · §14=11) — [ممثلوها يؤجَّلون إلى B2]
+## RAR-006 — Real-time AI Readiness  (27: §11=8 · §12=8 · §14=11) — [ممثلوها يؤجَّلون إلى B2 ما لم تنقلهم قاعدة أدنى RAR]
 ### §11 — Human in the Loop
-| RAW-RAR006-S11-001..008 | :262–:269 | View only · Acknowledge · Accept/Reject recommendation · Edit before action · Approval workflow · Two-person rule · Auto-action within safe threshold · Rollback/compensation |
+| RAW-ID | سطر | النص الخام |
+|---|---|---|
+| RAW-RAR006-S11-001 | :262 | View only |
+| RAW-RAR006-S11-002 | :263 | Acknowledge |
+| RAW-RAR006-S11-003 | :264 | Accept/Reject recommendation |
+| RAW-RAR006-S11-004 | :265 | Edit before action |
+| RAW-RAR006-S11-005 | :266 | Approval workflow |
+| RAW-RAR006-S11-006 | :267 | Two-person rule |
+| RAW-RAR006-S11-007 | :268 | Auto-action within safe threshold |
+| RAW-RAR006-S11-008 | :269 | Rollback/compensation |
 ### §12 — مصادر Ingestion المحتملة
-| RAW-RAR006-S12-001..008 | :277–:284 | Connector polling · Webhook داخل الشبكة · File drops · Manual event · Internal domain events · Message bus لاحقاً · Database CDC لاحقاً · Device/IoT gateway لاحقاً |
+| RAW-RAR006-S12-001 | :277 | Connector polling |
+| RAW-RAR006-S12-002 | :278 | Webhook داخل الشبكة |
+| RAW-RAR006-S12-003 | :279 | File drops |
+| RAW-RAR006-S12-004 | :280 | Manual event |
+| RAW-RAR006-S12-005 | :281 | Internal domain events |
+| RAW-RAR006-S12-006 | :282 | Message bus لاحقاً |
+| RAW-RAR006-S12-007 | :283 | Database CDC لاحقاً |
+| RAW-RAR006-S12-008 | :284 | Device/IoT gateway لاحقاً |
 ### §14 — Ordering/Replay
-| RAW-RAR006-S14-001..004 | :312–:315 | [Ordering] هل الترتيب per source أم per subject؟ · Out-of-order Event؟ · Sequence Number؟ · كيف تعرض Live View بيانات متأخرة؟ |
-| RAW-RAR006-S14-005..011 | :319–:325 | [Replay] لماذا يعاد؟ · من يملك الصلاحية؟ · النطاق الزمني؟ · منع Side Effects المكررة؟ · هل AI Inference يعاد؟ · تمييز Replay عن Live؟ · تسجيل Audit؟ |
+| RAW-RAR006-S14-001 | :312 | [Ordering] هل الترتيب per source أم per subject؟ |
+| RAW-RAR006-S14-002 | :313 | [Ordering] ماذا يحدث عند Out-of-order Event؟ |
+| RAW-RAR006-S14-003 | :314 | [Ordering] هل يوجد Sequence Number؟ |
+| RAW-RAR006-S14-004 | :315 | [Ordering] كيف تعرض Live View بيانات متأخرة؟ |
+| RAW-RAR006-S14-005 | :319 | [Replay] لماذا يعاد التشغيل؟ |
+| RAW-RAR006-S14-006 | :320 | [Replay] من يملك الصلاحية؟ |
+| RAW-RAR006-S14-007 | :321 | [Replay] ما النطاق الزمني؟ |
+| RAW-RAR006-S14-008 | :322 | [Replay] كيف تمنع Side Effects المكررة؟ |
+| RAW-RAR006-S14-009 | :323 | [Replay] هل AI Inference يعاد؟ |
+| RAW-RAR006-S14-010 | :324 | [Replay] كيف تميز Replay عن Live Processing؟ |
+| RAW-RAR006-S14-011 | :325 | [Replay] كيف تسجل Audit؟ |
 
-## RAR-007 — Strategic Capability Backlog  (30: §11=2 · §12=14 · §14=14) — [ممثلوها يؤجَّلون إلى B2]
+## RAR-007 — Strategic Capability Backlog  (30: §11=2 · §12=14 · §14=14) — [ممثلوها يؤجَّلون إلى B2 ما لم تنقلهم قاعدة أدنى RAR]
 ### §11 — الفرق بين Future Capability وDeferred Implementation
+| RAW-ID | سطر | النص الخام |
+|---|---|---|
 | RAW-RAR007-S11-001 | :302 | Future Capability: اتجاه منتج معتمد أو مرشح قد لا يكون تنفيذه مقرراً |
 | RAW-RAR007-S11-002 | :303 | Deferred Implementation: تنفيذ قدرة/جزء معتمد مؤجل بترتيب/اعتماديات |
 ### §12 — مكان السجل داخل المستودع (فحص 9 · قرار 5)
-| RAW-RAR007-S12-001..009 | :313–:321 | فحص: DEFERRED_IMPLEMENTATION.md · open-decisions.md · adr/ · phases//roadmap/ · knowledge/ · traceability/ · INDEX.md · AUTHORITY.md · أي Capability Catalogue |
-| RAW-RAR007-S12-010..014 | :325–:329 | قرار: توسيع Deferred Register · إنشاء Strategic Registry مستقل · Idea Inbox خارج Tier-0 · Structured Source مع Markdown مولد · دمج بعض السجلات |
+| RAW-RAR007-S12-001 | :313 | فحص: `decisions/DEFERRED_IMPLEMENTATION.md` |
+| RAW-RAR007-S12-002 | :314 | فحص: `decisions/open-decisions.md` |
+| RAW-RAR007-S12-003 | :315 | فحص: `decisions/adr/` |
+| RAW-RAR007-S12-004 | :316 | فحص: `phases/` أو `roadmap/` |
+| RAW-RAR007-S12-005 | :317 | فحص: `knowledge/` |
+| RAW-RAR007-S12-006 | :318 | فحص: `traceability/` |
+| RAW-RAR007-S12-007 | :319 | فحص: `INDEX.md` |
+| RAW-RAR007-S12-008 | :320 | فحص: `AUTHORITY.md` |
+| RAW-RAR007-S12-009 | :321 | فحص: أي Capability Catalogue قائم |
+| RAW-RAR007-S12-010 | :325 | قرار: توسيع Deferred Register |
+| RAW-RAR007-S12-011 | :326 | قرار: إنشاء Strategic Registry مستقل |
+| RAW-RAR007-S12-012 | :327 | قرار: Idea Inbox خارج Tier-0 |
+| RAW-RAR007-S12-013 | :328 | قرار: استخدام Structured Source مع Markdown مولد |
+| RAW-RAR007-S12-014 | :329 | قرار: دمج بعض السجلات |
 ### §14 — العلاقة مع توليد وثائق المشروع
-| RAW-RAR007-S14-001..014 | :371–:384 | BRD · FRD · SRS · SDS/Architecture Description · Data Dictionary · Screen Catalogue · Workflow Catalogue · Permission Matrix · API Documentation · User Guide · Admin Guide · Operations Guide · Test Plan · Release Documentation |
+| RAW-RAR007-S14-001 | :371 | BRD |
+| RAW-RAR007-S14-002 | :372 | FRD |
+| RAW-RAR007-S14-003 | :373 | SRS |
+| RAW-RAR007-S14-004 | :374 | SDS / Architecture Description |
+| RAW-RAR007-S14-005 | :375 | Data Dictionary |
+| RAW-RAR007-S14-006 | :376 | Screen Catalogue |
+| RAW-RAR007-S14-007 | :377 | Workflow Catalogue |
+| RAW-RAR007-S14-008 | :378 | Permission Matrix |
+| RAW-RAR007-S14-009 | :379 | API Documentation |
+| RAW-RAR007-S14-010 | :380 | User Guide |
+| RAW-RAR007-S14-011 | :381 | Admin Guide |
+| RAW-RAR007-S14-012 | :382 | Operations Guide |
+| RAW-RAR007-S14-013 | :383 | Test Plan |
+| RAW-RAR007-S14-014 | :384 | Release Documentation |
 
 ---
 **الإجمالي الخام المُعاد اشتقاقه = 257** (46+33+46+37+38+27+30) — مطابق للمرجع غير الحاكم. حالة الكل `EXTRACTED`. لا بند يتيم في هذه المرحلة (كلٌّ يُحمل إلى التطبيع). المصائر (INDEPENDENT/SPLIT/MERGED/OUT_OF_SCOPE) في `CANONICAL-ITEM-UNIVERSE.md`.
