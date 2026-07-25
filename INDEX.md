@@ -1,6 +1,6 @@
 # INDEX.md — الفهرس البشري الحاكم لمستودع المواصفات
 
-> **Version:** 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) · (Δ 2026-07-20 G1-C: تطبيع صفوف الحالة بعد تدقيق G1-B — تصويب صفوف ADR-0017/0031..0036 + إزالة انتساب (G1) الكاذب من 25 صفاً تاريخياً) · (Δ 2026-07-22 R1-C: +صف ADR-0038 + تحديث الإجمالي) · **Date:** 2026-07-19 · **الموضع:** `/INDEX.md`
+> **Version:** 1.0 — Accepted — G1-B 2026-07-20 (merge dd098dff9bed7a1f267ec5552b0e3366e368883d · tag v1.2-governance-baseline) · (Δ 2026-07-20 G1-C: تطبيع صفوف الحالة بعد تدقيق G1-B — تصويب صفوف ADR-0017/0031..0036 + إزالة انتساب (G1) الكاذب من 25 صفاً تاريخياً) · (Δ 2026-07-22 R1-C: +صف ADR-0038 + تحديث الإجمالي) · (Δ 2026-07-25 P3: +9 صفوف تغطية لأرشيف RAR غير الحاكم `references/analysis-inputs/rar-2026-07/` — بتجاوز مالك محدود ومؤرَّخ لـEC-3؛ الإجمالي 131 + الفهرس) · **Date:** 2026-07-19 · **الموضع:** `/INDEX.md`
 > **Authority:** مصدر الفهرسة الحاكم بقرار **OD-IDX-1** (‏SA ‏2026-07-10): فهرس **بشري القراءة يدوي الصيانة** — لا index.yaml ولا manifest آلياً ولا مصدر موازياً حتى وجود مستهلك آلي فعلي وقرار جديد (‏ADR-0035 بند 7). الفهرس **دليل مواضع وحالات، لا مصدر سلطة** (‏AUTHORITY.md §2-4).
 > **قاعدة الصيانة:** كل دفعة تضيف/ترقّي ملفاً تُحدّث صفه هنا في الدفعة ذاتها (بند write-back) · التغطية إلزامية 100% لكل ملفات ‏.md (‏EC-3).
 
@@ -79,6 +79,15 @@
 | `phases` | `phases/phase-0-foundation-full-stack-skeleton.md` | 2.1 — Final (A3/A8 + D1–D9 مدمجة؛ C1–C5 وC8 مُغلقة) | Current / **Accepted for Design** (التنف | المراحل — Specification Architect | عند العمل على مرحلة |
 | `phases` | `phases/phase-roadmap.md` | 1.1 (D1–D9 مدمجة) | Current / Accepted | المراحل — Specification Architect | عند العمل على مرحلة |
 | `references` | `references/OSS_REFERENCE_CATALOG.md` | — | Current | المراجع — Specification Architect | بتكليف صريح |
+| `references/analysis-inputs/rar-2026-07` | `references/analysis-inputs/rar-2026-07/README.md` | — | Historical analysis input — Non-governing | SA (المالك) — أرشيف تحليلي غير حاكم | مادة تاريخية · خارج authority ladder وأي Reading Set · لا تُزوَّد لوكلاء التنفيذ |
+| `references/analysis-inputs/rar-2026-07` | `references/analysis-inputs/rar-2026-07/MANIFEST.md` | — | Package archival manifest (ترويسة المجلد) — Non-governing | SA (المالك) — أرشيف تحليلي غير حاكم | بيان أرشفة فقط · ليس فهرساً ولا بديلاً عن INDEX.md (OD-IDX-1) |
+| `references/analysis-inputs/rar-2026-07` | `references/analysis-inputs/rar-2026-07/RAR-001-Conversational-Tasks-Automation.md` | — | Historical analysis input — Non-governing | SA (المالك) — أرشيف تحليلي غير حاكم | مادة تاريخية · خارج authority ladder وأي Reading Set · لا تُزوَّد لوكلاء التنفيذ |
+| `references/analysis-inputs/rar-2026-07` | `references/analysis-inputs/rar-2026-07/RAR-002-Declarative-Agent-Builder.md` | — | Historical analysis input — Non-governing | SA (المالك) — أرشيف تحليلي غير حاكم | مادة تاريخية · خارج authority ladder وأي Reading Set · لا تُزوَّد لوكلاء التنفيذ |
+| `references/analysis-inputs/rar-2026-07` | `references/analysis-inputs/rar-2026-07/RAR-003-UI-Foundation-Rocket.md` | — | Historical analysis input — Non-governing | SA (المالك) — أرشيف تحليلي غير حاكم | مادة تاريخية · خارج authority ladder وأي Reading Set · لا تُزوَّد لوكلاء التنفيذ |
+| `references/analysis-inputs/rar-2026-07` | `references/analysis-inputs/rar-2026-07/RAR-004-Governed-Extension-Store.md` | — | Historical analysis input — Non-governing | SA (المالك) — أرشيف تحليلي غير حاكم | مادة تاريخية · خارج authority ladder وأي Reading Set · لا تُزوَّد لوكلاء التنفيذ |
+| `references/analysis-inputs/rar-2026-07` | `references/analysis-inputs/rar-2026-07/RAR-005-Workflow-Decision-Model.md` | — | Historical analysis input — Non-governing | SA (المالك) — أرشيف تحليلي غير حاكم | مادة تاريخية · خارج authority ladder وأي Reading Set · لا تُزوَّد لوكلاء التنفيذ |
+| `references/analysis-inputs/rar-2026-07` | `references/analysis-inputs/rar-2026-07/RAR-006-Realtime-AI-Readiness.md` | — | Historical analysis input — Non-governing | SA (المالك) — أرشيف تحليلي غير حاكم | مادة تاريخية · خارج authority ladder وأي Reading Set · لا تُزوَّد لوكلاء التنفيذ |
+| `references/analysis-inputs/rar-2026-07` | `references/analysis-inputs/rar-2026-07/RAR-007-Strategic-Capability-Backlog.md` | — | Historical analysis input — Non-governing | SA (المالك) — أرشيف تحليلي غير حاكم | مادة تاريخية · خارج authority ladder وأي Reading Set · لا تُزوَّد لوكلاء التنفيذ |
 | `superseded` | `superseded/Feature_Technical_Architecture_Catalog-v1.md` | — | Superseded | تاريخي — لا مالك نشط | محظور إلا بتكليف صريح |
 | `superseded` | `superseded/Phase-0-Prompt.md` | — | Superseded | تاريخي — لا مالك نشط | محظور إلا بتكليف صريح |
 | `superseded` | `superseded/Phase-1-Prompt.md` | — | Superseded | تاريخي — لا مالك نشط | محظور إلا بتكليف صريح |
@@ -129,6 +138,6 @@
 | `ui` | `ui/UI_VISIBILITY_RULES.md` | 1.0 — Proposed (v0.5) | Proposed (v0.5) | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `(الجذر)` | `vision.md` | 1.0 | Current / Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 
-**الإجمالي:** 122 ملفاً + هذا الفهرس (تغطية 100%).
+**الإجمالي:** 131 ملفاً + هذا الفهرس (تغطية 100%). — (Δ 2026-07-25 P3: +9 صفوف لأرشيف RAR غير الحاكم `references/analysis-inputs/rar-2026-07/`، بتجاوز مالك محدود لـEC-3؛ 122 → 131.)
 
 **Related:** `AUTHORITY.md` · `decisions/open-decisions.md` (‏OD-IDX-1) · `PACKAGE_CHECKLIST.md`
