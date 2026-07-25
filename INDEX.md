@@ -112,6 +112,10 @@
 | `superseded` | `superseded/pre-design-analysis-v1.md` | — | Superseded | تاريخي — لا مالك نشط | محظور إلا بتكليف صريح |
 | `superseded` | `superseded/system-design-v1.md` | — | Superseded | تاريخي — لا مالك نشط | محظور إلا بتكليف صريح |
 | `traceability` | `traceability/TRACEABILITY_MATRIX.md` | 0.1 — Seed/Proposed | Proposed (G1) · Δ R1-C: +ADR-0038 | ‏System Knowledge — Specification Architect | المراجعات + المولد |
+| `traceability/rar-reconciliation` | `traceability/rar-reconciliation/RAW-EXTRACTION-REGISTER.md` | — | B1 traceability output — Non-governing | System Knowledge — Specification Architect | مخرج مصالحة تحليلي · غير حاكم · خارج authority ladder وReading Sets |
+| `traceability/rar-reconciliation` | `traceability/rar-reconciliation/NORMALIZATION-AND-ATOMIC-MAP.md` | — | B1 traceability output — Non-governing | System Knowledge — Specification Architect | مخرج مصالحة تحليلي · غير حاكم · خارج authority ladder وReading Sets |
+| `traceability/rar-reconciliation` | `traceability/rar-reconciliation/SEMANTIC-MERGE-MAP.md` | — | B1 traceability output — Non-governing | System Knowledge — Specification Architect | مخرج مصالحة تحليلي · غير حاكم · خارج authority ladder وReading Sets |
+| `traceability/rar-reconciliation` | `traceability/rar-reconciliation/CANONICAL-ITEM-UNIVERSE.md` | — | B1 traceability output — Non-governing | System Knowledge — Specification Architect | مخرج مصالحة تحليلي · غير حاكم · خارج authority ladder وReading Sets |
 | `ui` | `ui/UI_ACTION_BUTTON_MODEL.md` | 1.1 — (Δ v0.8: +§2.1 متغيّر العرض «inline message action» —  | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_ADMIN_CONSOLE_MODEL.md` | 1.1 — (Δ v0.8: +OD-BLD-1 أوضاع الباني الثلاثة — مقفل بقرار S | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_AI_WORKSPACE_MODEL.md` | 1.1 — (Δ v0.8: +§14 وضعا العرض محادثة/بطاقات — OD-WS-4 مقفل  | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
@@ -138,6 +142,6 @@
 | `ui` | `ui/UI_VISIBILITY_RULES.md` | 1.0 — Proposed (v0.5) | Proposed (v0.5) | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `(الجذر)` | `vision.md` | 1.0 | Current / Accepted | SA (المالك) / Specification Architect | الجميع (جلسة أولى/بشر) |
 
-**الإجمالي:** 131 ملفاً + هذا الفهرس (تغطية 100%). — (Δ 2026-07-25 P3: +9 صفوف لأرشيف RAR غير الحاكم `references/analysis-inputs/rar-2026-07/`، بتجاوز مالك محدود لـEC-3؛ 122 → 131.)
+**الإجمالي:** 135 ملفاً + هذا الفهرس (تغطية 100%). — (Δ 2026-07-25 P3: +9 صفوف لأرشيف RAR غير الحاكم `references/analysis-inputs/rar-2026-07/`، بتجاوز مالك محدود لـEC-3؛ 122 → 131.) — (Δ 2026-07-25 P3/B1 Commit 1: +4 صفوف لمخرجات المصالحة `traceability/rar-reconciliation/` غير الحاكمة؛ 131 → 135.)
 
 **Related:** `AUTHORITY.md` · `decisions/open-decisions.md` (‏OD-IDX-1) · `PACKAGE_CHECKLIST.md`
