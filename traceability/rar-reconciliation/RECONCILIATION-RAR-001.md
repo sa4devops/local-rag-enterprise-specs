@@ -43,24 +43,26 @@
 | **[36]** UI states (parsing/needs_input/preview_ready/approval_required/failed) | RAR-001:256 | عائلة حالات المكوّنات + حالات البطاقة | `contracts/screens/admin.workflows.md:22` | مقنَّن | الأصل |
 | **[37]** Acceptance tests (منع تجاوز الصلاحيات/كشف البيانات) | RAR-001:257 | مبدأ م2 + استراتيجية الاختبار | `methodology/testing-strategy.md:1` · `constitution.md:10` | مقنَّن | الأصل |
 | **[38]** Fallback عند عدم توفر LLM (G03 يضم +:298) | RAR-001:258 | م11: fallback معرَّف + validation لا تفشل مفتوحة | `constitution.md:19` | مقنَّن | الأصل |
-| **[39]** Task مورد مستقل أم تجسيد Workflow؟ | RAR-001:286 | سؤال معماري غير محسوم | `references/analysis-inputs/rar-2026-07/RAR-001-Conversational-Tasks-Automation.md:286` | تعارض يحتاج قراراً | الأصل/SA (R3) |
-| **[40]** الحد بين Schedule وAutomation Trigger؟ | RAR-001:287 | غير محسوم | `references/analysis-inputs/rar-2026-07/RAR-001-Conversational-Tasks-Automation.md:287` | تعارض يحتاج قراراً | R3/SA |
-| **[41]** أين تخزن صياغة المستخدم الأصلية؟ | RAR-001:288 | غير محسوم | `references/analysis-inputs/rar-2026-07/RAR-001-Conversational-Tasks-Automation.md:288` | تعارض يحتاج قراراً | R3/SA |
-| **[42]** تخزين خطة LLM الوسيطة؟ | RAR-001:289 | غير محسوم (سؤال تخزين) | `references/analysis-inputs/rar-2026-07/RAR-001-Conversational-Tasks-Automation.md:289` | تعارض يحتاج قراراً | R3/SA |
+| **[39]** Task مورد مستقل أم تجسيد Workflow؟ | RAR-001:286 | لا حسم حاكم لعلاقة Task↔Workflow | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-012` | دلتا حقيقية | R3 |
+| **[40]** الحد بين Schedule وAutomation Trigger؟ | RAR-001:287 | لا حسم حاكم (النوعان غير مقنَّنين) | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-013` | دلتا حقيقية | R3 |
+| **[41]** أين تخزن صياغة المستخدم الأصلية؟ | RAR-001:288 | لا حسم حاكم لآلية التخزين | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-014` | دلتا حقيقية | R3 |
+| **[42]** تخزين خطة LLM الوسيطة؟ | RAR-001:289 | لا حسم حاكم لآلية التخزين | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-015` | دلتا حقيقية | R3 |
 | **[43]** منع اعتبار خطة LLM حقيقة | RAR-001:289 | م1: الـLLM ليس مصدر حقيقة | `constitution.md:9` | مقنَّن | الأصل |
-| **[44]** نموذج التحقق Deterministic؟ | RAR-001:290 | غير محسوم | `references/analysis-inputs/rar-2026-07/RAR-001-Conversational-Tasks-Automation.md:290` | تعارض يحتاج قراراً | R3/SA |
-| **[45]** ربط Preview بنسخة العقود المتحقَّق عليها؟ | RAR-001:291 | غير محسوم | `references/analysis-inputs/rar-2026-07/RAR-001-Conversational-Tasks-Automation.md:291` | تعارض يحتاج قراراً | R3/SA |
-| **[46]** هل كل تعديل ينتج Version جديداً؟ | RAR-001:292 | ADR-0032 يعرّف التخزين؛ سياسة versioning-per-edit غير محسومة | `references/analysis-inputs/rar-2026-07/RAR-001-Conversational-Tasks-Automation.md:292` | تعارض يحتاج قراراً | R3/SA |
+| **[44]** نموذج التحقق Deterministic؟ | RAR-001:290 | لا حسم حاكم | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-016` | دلتا حقيقية | R3 |
+| **[45]** ربط Preview بنسخة العقود المتحقَّق عليها؟ | RAR-001:291 | لا حسم حاكم (معاينة بلا ربط نسخة) | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-017` | دلتا حقيقية | R3 |
+| **[46]** هل كل تعديل ينتج Version جديداً؟ | RAR-001:292 | ADR-0032 يعرّف التخزين؛ سياسة versioning-per-edit غير مقنَّنة | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-018` | دلتا حقيقية | R3 |
 | **[47]** ما الذي يُنشر دون Admin؟ | RAR-001:293 | م14 + OD-BLD-1 (لا builder للمستخدم النهائي) | `constitution.md:22` · `decisions/open-decisions.md:100` | مقنَّن | الأصل |
 | **[48]** Cross-Org Assignment؟ | RAR-001:294 | نموذج الإدارة المنطاقة (ADR-0037)؛ تفصيل التعيين العابر لاحق | `decisions/adr/ADR-0037-scoped-administration-model.md:7` | مؤجَّل بصف قائم | R4/R5 |
-| **[49]** هل نحتاج Dry Run؟ | RAR-001:295 | غير محسوم | `references/analysis-inputs/rar-2026-07/RAR-001-Conversational-Tasks-Automation.md:295` | تعارض يحتاج قراراً | R3/SA |
+| **[49]** هل نحتاج Dry Run؟ | RAR-001:295 | لا حسم حاكم لـDry-Run الأتمتة (المطابقة الوحيدة offline-install) | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-019` | دلتا حقيقية | R3 |
 | **[50]** الحد الأدنى المطلوب الآن إذا كان التنفيذ مؤجلاً؟ | RAR-001:296 | سلّم الجاهزية السداسي (Architecture-ready) | `methodology/agent-execution-model.md:65` | مقنَّن | الأصل |
 | **[51]** ADR أم Contracts فقط؟ | RAR-001:297 | سياسة D15 (متى يلزم ADR) | `decisions/adr/README.md:9` | مقنَّن | الأصل |
 | **[52]** منع Prompt Injection من مستند/سجل (G01 يضم +RAR-002:414) | RAR-001:299 | م1 + validation fail-closed (P6)؛ لا عقد حقن مخصَّص بعد | `constitution.md:9` · `phases/PHASE_MASTER_PLAN.md:38` | مؤجَّل بصف قائم | P6 |
-| **[53]** تمثيل «عندما يكتمل الجميع» قابلاً للاختبار؟ | RAR-001:300 | غير محسوم (دلالة join) | `references/analysis-inputs/rar-2026-07/RAR-001-Conversational-Tasks-Automation.md:300` | تعارض يحتاج قراراً | R5/SA |
+| **[53]** تمثيل «عندما يكتمل الجميع» قابلاً للاختبار؟ | RAR-001:300 | لا حسم حاكم لدلالة join | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-020` | دلتا حقيقية | R5 |
 
-## توزيع التصنيفات (53)
-**مقنَّن = 30** · **مؤجَّل بصف قائم = 3** ([07]·[48]·[52]) · **دلتا حقيقية = 11** ([09],[10],[11],[17],[19],[20],[24],[25],[26],[27],[35]) · **تعارض يحتاج قراراً = 9** ([39],[40],[41],[42],[44],[45],[46],[49],[53]) · **مصطنع أو بلا أساس = 0**. المجموع = 53 ✓ (= canonical universe housing لـRAR-001).
+## توزيع التصنيفات (53) — [مُحدَّث بعد تصحيح أدلة §14]
+**مقنَّن = 30** · **مؤجَّل بصف قائم = 3** ([07]·[48]·[52]) · **دلتا حقيقية = 20** ([09],[10],[11],[17],[19],[20],[24],[25],[26],[27],[35],[39],[40],[41],[42],[44],[45],[46],[49],[53]) · **تعارض يحتاج قراراً = 0** · **مصطنع أو بلا أساس = 0**. المجموع = 53 ✓ (= canonical universe housing لـRAR-001).
+> **تغيّر التوزيع نتيجة الدليل لا هدفاً عددياً:** الصفوف التسعة السابقة «تعارض يحتاج قراراً» ([39],[40],[41],[42],[44],[45],[46],[49],[53]) أعيد تقييمها بالدليل الحاكم: **لا تعارض سلطوي فعلي** (لا سلطتان حاكمتان متعارضتان)، بل أسئلة تصميم في نطاق غير مقنَّن أُثبت غيابه الحاكم (مراسي `absence-b1-rar001-012..020`) ⇒ **دلتا حقيقية** (§14-د) لا «تعارض يحتاج قراراً» (§14-هـ يتطلب تعارض سلطات/تفسيرات). ⇒ تعارض 9 → 0 · دلتا 11 → 20.
+> **قاعدة §4 (تصحيح):** العمود الرابع لا يستشهد بأي ملف تحت `references/analysis-inputs/**` (مادة غير حاكمة، عمود المصدر فقط) — دليل حاكم أو مرساة غياب أو سلطتان متعارضتان حصراً.
 
 ## CANDIDATE BLOCKING (RAR-001)
 **لا مرشح حجب في RAR-001.** الدلتا الحقيقية توجَّه إلى R3/R5/R10 والتعارضات إلى R3/R5/SA؛ **لا بند يمس G2 · R6 · FP-0001 · GATE-DEFINITION** بما يشكّل حجباً. (B1 لا يحسب §13b النهائي؛ candidate ≠ final — §13b تبقى `PENDING`.)
