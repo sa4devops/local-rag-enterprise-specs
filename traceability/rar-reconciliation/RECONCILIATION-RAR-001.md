@@ -5,8 +5,8 @@
 
 | البند (canonical) | المصدر | الحالة عند HEAD | الدليل | التصنيف | الوجهة |
 |---|---|---|---|---|---|
-| **[01]** Business Glossary للمصطلحات الأربعة موجود | RAR-001:220 | معجم أعمال يعرّف Task/Schedule/Workflow/Automation | `knowledge/BUSINESS_GLOSSARY.md:13` | مقنَّن | الأصل (Glossary) |
-| **[02]** أساس Workflow | RAR-001:221 | عقد شاشة workflows (Candidate) | `contracts/screens/admin.workflows.md:19` | مقنَّن | الأصل |
+| **[01]** Business Glossary للمصطلحات الأربعة موجود | RAR-001:220 | معجم أعمال **بذرة** يعرّف Task/Schedule/Workflow/Automation؛ **الادعاء وجودُ معجم أوليّ لا نفاذُ تعريفاته** — وحالة الملف `Proposed (G1)` مُفصَح عنها، ويتبنّى `knowledge/**` مصدرَ تأليفٍ قانونياً **قرارٌ نافذ** | `decisions/adr/ADR-0035-contracts-layer-single-source.md:13` · `knowledge/BUSINESS_GLOSSARY.md:13` | مقنَّن | الأصل (Glossary) |
+| **[02]** أساس Workflow | RAR-001:221 | أساس الـWorkflow مقنَّن في **الجرد الكنسي للشاشات** (تعريفات · أفعال `wf.define/validate/submit` · صلاحية · أحداث `WORKFLOW_DEFINED/VALIDATED` · «التفعيل يتطلب معتمِداً غير المعرِّف»)؛ وعقد الشاشة `Candidate` سياقٌ لا سند | `ui/UI_SCREEN_INVENTORY.md:100` | مقنَّن | الأصل |
 | **[03]** أساس Action | RAR-001:221 | كتالوج أفعال مغلق + نموذج أزرار | `ui/UI_ACTION_BUTTON_MODEL.md:18` | مقنَّن | الأصل |
 | **[04]** أساس Permission | RAR-001:221 | م2 default-deny + Permission Registry | `constitution.md:10` | مقنَّن | الأصل |
 | **[05]** أساس Audit | RAR-001:221 | م3 Audit append-only | `constitution.md:11` | مقنَّن | الأصل |
@@ -14,18 +14,18 @@
 | **[07]** تنفيذ Conversational Automation في مرحلة لاحقة | RAR-001:223 | مُرحَّل (P6 chat + P3 workflow) | `phases/PHASE_MASTER_PLAN.md:38` | مؤجَّل بصف قائم | P6/P3 |
 | **[08]** توصية تجهيز العقود الآن | RAR-001:224 | الحد الأدنى من العقود يُنشأ الآن + 4 بذور | `decisions/adr/ADR-0035-contracts-layer-single-source.md:26` | مقنَّن | الأصل |
 | **[09]** Contracts للأنواع الأربعة | RAR-001:228 | جزئي: task.create + admin.workflows؛ Schedule/Automation غائبة | `ui/UI_ACTION_BUTTON_MODEL.md:67` · `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-001` | دلتا حقيقية | R3 |
-| **[10]** Lifecycles رسمية | RAR-001:229 | workflow lifecycle فقط؛ الأنواع الأخرى غائبة | `contracts/screens/admin.workflows.md:22` · `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-002` | دلتا حقيقية | R3 |
+| **[10]** Lifecycles رسمية | RAR-001:229 | دورةُ حياة الـworkflow وحدها مقنَّنة في الجرد الكنسي؛ وأنواع Task/Schedule/Automation بلا دورة حياة رسمية (عقد الشاشة `Candidate` — سياقٌ لا سند) | `ui/UI_SCREEN_INVENTORY.md:100` · `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-002` | دلتا حقيقية | R3 |
 | **[11]** API Operation Contracts | RAR-001:230 | نمط REST/OpenAPI معرَّف؛ لا عقود عمليات للأنواع | `decisions/adr/ADR-0025-api-contract-rest-openapi-sse.md:7` · `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-003` | دلتا حقيقية | R3 |
-| **[12]** Screen/Route Contracts لنقاط الدخول | RAR-001:231 | عقود شاشات (workflows) + مساحة عمل محادثة | `contracts/screens/admin.workflows.md:19` | مقنَّن | الأصل |
+| **[12]** Screen/Route Contracts لنقاط الدخول | RAR-001:231 | **سجل المسارات كنسيٌّ نافذ** بقرار ADR-0035 بند 3 ونقاطُ الدخول مسجَّلة فيه؛ أما **عقود** الشاشات فبذورٌ `Candidate` (مُفصَح عنها — لا تُثبت وحدها) | `decisions/adr/ADR-0035-contracts-layer-single-source.md:10` · `ui/UI_SCREEN_INVENTORY.md:44` | مقنَّن | الأصل |
 | **[13]** Permission Verbs واضحة | RAR-001:232 | نمط `{resource}.{scope}.{operation}` + Registry | `ui/UI_FIELD_NAMING.md:13` | مقنَّن | الأصل |
-| **[14]** Traceability إلى Phase واختبارات | RAR-001:233 | مصفوفة تتبّع بذور → FP → مراحل | `traceability/TRACEABILITY_MATRIX.md:14` | مقنَّن | الأصل |
+| **[14]** Traceability إلى Phase واختبارات | RAR-001:233 | **سجل التتبّع موضعٌ حاكم إلزامي** في تعريف Done لكل بطاقة (write-back)، ويتبنّاه ADR-0035 مصدرَ تأليفٍ قانونياً؛ والمصفوفة نفسها بذرة `Proposed (G1)` — مُفصَح عنها | `methodology/agent-execution-model.md:103` · `decisions/adr/ADR-0035-contracts-layer-single-source.md:13` · `traceability/TRACEABILITY_MATRIX.md:14` | مقنَّن | الأصل |
 | **[15]** Deferred Entries | RAR-001:234 | سجل المؤجلات الرسمي | `decisions/DEFERRED_IMPLEMENTATION.md:4` | مقنَّن | الأصل |
 | **[16]** تعارضات تسمية بين الوثائق | RAR-001:235 | مصدر تسمية كنسي واحد؛ تعارض G-namespace مساره P4 | `ui/UI_FIELD_NAMING.md:10` | مقنَّن | الأصل (P4 للتعارض) |
 | **[17]** نموذج موارد موحد أو فصل واضح | RAR-001:241 | غير مقنَّن | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-004` | دلتا حقيقية | R3 |
-| **[18]** Draft/Preview/Confirm semantics | RAR-001:242 | حالات + بطاقة معاينة/تأكيد | `contracts/enums/ENUMS_DICTIONARY.md:16` · `ui/UI_INTERACTION_MODEL.md:52` | مقنَّن | الأصل |
+| **[18]** Draft/Preview/Confirm semantics | RAR-001:242 | مقنَّن نصاً: بطاقة معاينة الفعل **داخل thread** تسمح بالتحرير المتكرر (`card.action_preview`)، وخط الحالات `PROPOSED → CLARIFYING → CONFIRMED`؛ و`UI_INTERACTION_MODEL` **ملزم-معياري** بنص معيار حوكمة الشاشات | `ui/UI_SCREEN_GOVERNANCE_STANDARD.md:10` · `ui/UI_INTERACTION_MODEL.md:52` · `ui/UI_AI_WORKSPACE_MODEL.md:27` | مقنَّن | الأصل |
 | **[19]** Intent Interpretation Contract | RAR-001:243 | غير مقنَّن | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-005` | دلتا حقيقية | R3 |
 | **[20]** Resolution Contract للأشخاص/السجلات/الوحدات | RAR-001:244 | غير مقنَّن | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-006` | دلتا حقيقية | R3 |
-| **[21]** Ambiguity handling | RAR-001:245 | استيضاح حقلاً-حقلاً في بطاقة الحوار | `ui/UI_INTERACTION_MODEL.md:73` | مقنَّن | الأصل |
+| **[21]** Ambiguity handling | RAR-001:245 | مقنَّن نصاً: حالة `CLARIFYING` تُنتج **أسئلة موجهة حقلاً حقلاً** من `required_inputs` — «لا أسئلة عامة»؛ و`UI_INTERACTION_MODEL` **ملزم-معياري** بنص معيار حوكمة الشاشات | `ui/UI_SCREEN_GOVERNANCE_STANDARD.md:10` · `ui/UI_INTERACTION_MODEL.md:73` · `ui/UI_AI_WORKSPACE_MODEL.md:28` | مقنَّن | الأصل |
 | **[22]** Permission evaluation في كل مرحلة | RAR-001:246 | م2 default-deny قبل كل استرجاع/فعل | `constitution.md:10` | مقنَّن | الأصل |
 | **[23]** Approval thresholds | RAR-001:247 | confirmation none/simple/typed/dual مشتق من الخطورة | `ui/UI_ACTION_BUTTON_MODEL.md:18` | مقنَّن | الأصل |
 | **[24]** Recurrence | RAR-001:248 | غير مقنَّن | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-007` | دلتا حقيقية | R5 |
@@ -33,14 +33,14 @@
 | **[26]** Business Calendar | RAR-001:248 | غير مقنَّن | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-009` | دلتا حقيقية | R5 |
 | **[27]** Event Trigger abstraction | RAR-001:249 | غير مقنَّن | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-010` | دلتا حقيقية | R10 |
 | **[28]** Idempotency وإعادة المحاولة | RAR-001:250 | تنفيذ idempotent بمفتاح + run.retry | `ui/UI_ACTION_BUTTON_MODEL.md:21` | مقنَّن | الأصل |
-| **[29]** Versioning | RAR-001:251 | عمود «نسخة» + ADR-0032 | `contracts/screens/admin.workflows.md:19` | مقنَّن | الأصل |
-| **[30]** التعديل (Edit) | RAR-001:251 | شريط دورة حياة التعريف | `contracts/screens/admin.workflows.md:19` | مقنَّن | الأصل |
-| **[31]** الإلغاء (Cancel) | RAR-001:251 | حالات archived/rejected | `contracts/enums/ENUMS_DICTIONARY.md:16` | مقنَّن | الأصل |
+| **[29]** Versioning | RAR-001:251 | مقنَّن في الجرد الكنسي: `screen_definitions+versions` بفعل `screen.define/version` وحدث `SCREEN_DEFINED/VERSIONED`، وشريط دورة حياة التعريف `Draft→Validated→Approved→Active→RolledBack` | `ui/UI_SCREEN_INVENTORY.md:94` · `ui/UI_COMPONENT_STATES.md:203` | مقنَّن | الأصل |
+| **[30]** التعديل (Edit) | RAR-001:251 | مقنَّن في **كتالوج حالات المكوّنات** (ملزم-معياري): «بطاقة تعريف: نوع/فعل/workflow/سياسة» بشريط دورة الحياة وتبويب diff، وتفعيلٌ محجوب قبل الاعتماد بسبب صريح | `ui/UI_COMPONENT_STATES.md:200` · `:203` · `:210` | مقنَّن | الأصل |
+| **[31]** الإلغاء (Cancel) | RAR-001:251 | مسار السحب مقنَّن حالةً وحدثاً: دورة الحياة تنتهي بـ`RolledBack` وسلسلة التعريف تُظهر `ROLLED_BACK` للمخوَّل. *(حالتا `archived/rejected` في قاموس التعدادات `Candidate` — سياقٌ لا سند، وهو نفسه يوجب فحصها في FP-0001.)* | `ui/UI_COMPONENT_STATES.md:203` · `:217` | مقنَّن | الأصل |
 | **[32]** Run history وExecution Evidence | RAR-001:252 | runs.list/runs.detail + OD-RUN-1..3 | `decisions/open-decisions.md:85` | مقنَّن | الأصل |
-| **[33]** Notifications | RAR-001:253 | مركز إشعارات (G8) + WORKFLOW_ITEM_RETURNED | `ui/UI_STITCH_PROMPTS_BY_PHASE.md:50` | مقنَّن | الأصل |
-| **[34]** ربط Work Queue وInbox | RAR-001:254 | My Tasks + approvals inbox (G8) | `ui/UI_STITCH_PROMPTS_BY_PHASE.md:48` | مقنَّن | الأصل |
+| **[33]** Notifications | RAR-001:253 | مقنَّن في الجرد الكنسي: شاشة `notif.center` بمسار `/me/notifications` وبوابة G8؛ وحدث `WORKFLOW_ITEM_RETURNED` مقنَّن بحقوله في المصدر الكنسي للتسمية | `ui/UI_SCREEN_INVENTORY.md:18` · `ui/UI_FIELD_NAMING.md:34` | مقنَّن | الأصل |
+| **[34]** ربط Work Queue وInbox | RAR-001:254 | مقنَّن في الجرد الكنسي: `queue.tasks` (إنجاز المهام) و`queue.approval_detail` (قرار رسمي + thread) بأفعالهما وصلاحياتهما وأحداثهما | `ui/UI_SCREEN_INVENTORY.md:71` · `:73` | مقنَّن | الأصل |
 | **[35]** Audit Event Catalogue (موحّد) | RAR-001:255 | audit_event لكل عقد؛ لا كتالوج موحّد | `ui/UI_FIELD_NAMING.md:23` · `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-011` | دلتا حقيقية | R3 |
-| **[36]** UI states (parsing/needs_input/preview_ready/approval_required/failed) | RAR-001:256 | عائلة حالات المكوّنات + حالات البطاقة | `contracts/screens/admin.workflows.md:22` | مقنَّن | الأصل |
+| **[36]** UI states (parsing/needs_input/preview_ready/approval_required/failed) | RAR-001:256 | مقنَّن في **كتالوج حالات المكوّنات** (ملزم-معياري): بطاقة الفعل بحالاتها (default/loading/error/permission-denied…)، وخط حالات مساحة العمل `PROPOSED → CLARIFYING → CONFIRMED → PENDING_APPROVAL` | `ui/UI_COMPONENT_STATES.md:11` · `ui/UI_AI_WORKSPACE_MODEL.md:27` · `:32` | مقنَّن | الأصل |
 | **[37]** Acceptance tests (منع تجاوز الصلاحيات/كشف البيانات) | RAR-001:257 | مبدأ م2 + استراتيجية الاختبار | `methodology/testing-strategy.md:1` · `constitution.md:10` | مقنَّن | الأصل |
 | **[38]** Fallback عند عدم توفر LLM (G03 يضم +:298) | RAR-001:258 | م11: fallback معرَّف + validation لا تفشل مفتوحة | `constitution.md:19` | مقنَّن | الأصل |
 | **[39]** Task مورد مستقل أم تجسيد Workflow؟ | RAR-001:286 | لا حسم حاكم لعلاقة Task↔Workflow | `ABSENCE-EVIDENCE-B1-RAR001.md#absence-b1-rar001-012` | تعارض يحتاج قراراً | SA (R3 pending decision) |

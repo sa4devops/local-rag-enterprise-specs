@@ -23,12 +23,12 @@
 > مصدرٌ حالته `Proposed`/`Candidate` في `INDEX.md` **لا يُثبت وحده نفاذ التزام**، ولم يُستعمل وحده لتصنيف `مقنَّن` في أي ادعاء معياري هنا. المصادر غير النافذة التي وردت، وحكم أهليتها:
 > | المصدر | الحالة (`INDEX.md`) | كيف استُعمل |
 > |---|---|---|
-> | `ui/UI_RUN_EXECUTION_MODEL.md` | `Proposed (v0.6)` (`:142`) | **مقروناً** بـ`ui/UI_SCREEN_GOVERNANCE_STANDARD.md:10` (`Accepted` — `INDEX.md:145`) الذي يصنّفه **ملزم-معيارياً** نصاً؛ فالناسخ النافذ هو المستشهَد به معه في `[34]` و`[38]` |
-> | `knowledge/BUSINESS_GLOSSARY.md` | `Proposed (G1)` (`:57`) | **سياقاً فقط** (تعريف SLA — `:20`) داخل ملف الغياب؛ **لم يُستشهد به في العمود الرابع لأي صف** |
-> | `contracts/screens/admin.workflows.md` | `Candidate` (`:26`) — ورتبة العقود تشترط **Approved** (`AUTHORITY.md:14`) | **لم يُستشهد به إطلاقاً**؛ ذُكر في القيود المؤجَّلة فقط |
-> | `phases/designs/**` | `Accepted (v0.3)` (`:67` · `:73` · `:74`) | **نافذة** — استُشهد بها مباشرة |
-> | `ui/UI_ACTION_BUTTON_MODEL` · `UI_ADMIN_CONSOLE_MODEL` · `UI_FIELD_NAMING` · `UI_SCREEN_BEHAVIOR_CARDS` | `Current` (`:130` · `:131` · `:135` · `:143`) وكلها **ملزم-معياري** (`ui/UI_SCREEN_GOVERNANCE_STANDARD.md:10`) | **نافذة** — استُشهد بها مباشرة |
-> **ملاحظة:** لم يُستشهد بأي من `ui/UI_STITCH_*` — فهما **تاريخي-informative** ونصُّ التصنيف: «لا تُقرأ كمتطلبات» (`ui/UI_SCREEN_GOVERNANCE_STANDARD.md:14`). وأرقام أسطر `INDEX.md` أعلاه مأخوذة من `INDEX.md` **بعد** صفَّي هذه الدفعة.
+> | `ui/UI_RUN_EXECUTION_MODEL.md` | `Proposed (v0.6)` (INDEX.md → row for `ui/UI_RUN_EXECUTION_MODEL.md` → status `Proposed (v0.6)`) | **مقروناً** بـ`ui/UI_SCREEN_GOVERNANCE_STANDARD.md:10` (`Accepted` — INDEX.md → row for `ui/UI_SCREEN_GOVERNANCE_STANDARD.md` → status `Accepted`) الذي يصنّفه **ملزم-معيارياً** نصاً؛ فالناسخ النافذ هو المستشهَد به معه في `[34]` و`[38]` |
+> | `knowledge/BUSINESS_GLOSSARY.md` | INDEX.md → row for `knowledge/BUSINESS_GLOSSARY.md` → status `Proposed (G1)` | **سياقاً فقط** (تعريف SLA — `:20`) داخل ملف الغياب؛ **لم يُستشهد به في العمود الرابع لأي صف** |
+> | `contracts/screens/admin.workflows.md` | INDEX.md → row for `contracts/screens/admin.workflows.md` → status `Candidate` — ورتبة العقود تشترط **Approved** (`AUTHORITY.md:14`) | **لم يُستشهد به إطلاقاً**؛ ذُكر في القيود المؤجَّلة فقط |
+> | `phases/designs/**` | INDEX.md → rows for `phases/designs/**` → status `Accepted (v0.3)` | **نافذة** — استُشهد بها مباشرة |
+> | `ui/UI_ACTION_BUTTON_MODEL` · `UI_ADMIN_CONSOLE_MODEL` · `UI_FIELD_NAMING` · `UI_SCREEN_BEHAVIOR_CARDS` | INDEX.md → rows for these four → status `Current` — وكلها **ملزم-معياري** (`ui/UI_SCREEN_GOVERNANCE_STANDARD.md:10`) | **نافذة** — استُشهد بها مباشرة |
+> **ملاحظة:** لم يُستشهد بأي من `ui/UI_STITCH_*` — فهما **تاريخي-informative** ونصُّ التصنيف: «لا تُقرأ كمتطلبات» (`ui/UI_SCREEN_GOVERNANCE_STANDARD.md:14`). وحالاتُ المصادر أعلاه بالصيغة الهوياتية — **بلا أرقام أسطر من `INDEX.md`** (صُحِّحت في B2-FINAL-A لأن أرقام الفهرس تنزاح مع كل دفعة).
 
 | البند (canonical) | المصدر | الحالة عند HEAD | الدليل | التصنيف | الوجهة |
 |---|---|---|---|---|---|
@@ -114,7 +114,7 @@
 > **لا صف واحد** حمل `تعارض يحتاج قراراً`، فلا قرارَ مطلوباً ولا بدائل ولا محفّزاً يُذكر — ولا وجهة `SA (Rn pending decision)` استُعملت.
 
 ## ملاحظات تدقيق (لا تُبنى عليها تصنيفات)
-1. **`contracts/screens/admin.workflows.md`** (`Candidate` — `INDEX.md:26`) يحمل في §5 معياراً خاصاً: «التفعيل مع instances جارية يُظهر خيار **grandfathering**»، وفي §6 انحرافاً مسجَّلاً `CC-WF-1` (canvas). لو كان **Approved** لدعم `[38]` مباشرةً؛ لكنه دون رتبة النفاذ (`AUTHORITY.md:14`) فلم يُستشهد به. **يُرفع للتدقيق.**
+1. **`contracts/screens/admin.workflows.md`** (`Candidate` — INDEX.md → row for `contracts/screens/admin.workflows.md` → status `Candidate`) يحمل في §5 معياراً خاصاً: «التفعيل مع instances جارية يُظهر خيار **grandfathering**»، وفي §6 انحرافاً مسجَّلاً `CC-WF-1` (canvas). لو كان **Approved** لدعم `[38]` مباشرةً؛ لكنه دون رتبة النفاذ (`AUTHORITY.md:14`) فلم يُستشهد به. **يُرفع للتدقيق.**
 2. **`knowledge/BUSINESS_GLOSSARY.md:20`** يعرّف SLA ويحيله إلى «عقد SLA-Policy (P3 — توثيق)» — تأكيدٌ مستقل لملكية R5/P3، لكنه `Proposed (G1)` فلم يُستشهد به في العمود الرابع.
 3. **`ui/UI_ACTION_BUTTON_MODEL.md:89`** يمنح `approval.escalate` عقداً كاملاً بينما لا يوجد أي نص يعرّف «المصفوفة» التي يرفع البند داخلها (OD-P3-1 توصيةٌ ببوابة Clarify). سُجّل ولم يُبنَ عليه تصنيف — أثره محصور في `[22]`.
 

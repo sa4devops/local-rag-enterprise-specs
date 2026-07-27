@@ -10,7 +10,7 @@
 >
 > **ممنوع** وصف مطابقة بأنها «الوحيدة» ما لم يُرجع الأمر الموثَّق ذلك العدد بالضبط.
 
-> **أهلية المصادر (قاعدة نافذة — حالة `INDEX.md` تحكم):** لم يُستشهد أدناه بمصدرٍ حالته `Proposed`/`Candidate` لإثبات نفاذ التزام. المصادر `Proposed` التي وردت ذُكرت **سياقاً أو مطابقةً قريبة** مع الإفصاح عن حالتها: `knowledge/BUSINESS_GLOSSARY.md` = `Proposed (G1)` (`INDEX.md:57`) · `contracts/screens/admin.workflows.md` = `Candidate` (`INDEX.md:26` — ورتبة العقود تشترط **Approved**، `AUTHORITY.md:14`) · `ui/UI_RUN_EXECUTION_MODEL.md` = `Proposed (v0.6)` (`INDEX.md:142`) — ويُستشهد به **مقروناً** بـ`ui/UI_SCREEN_GOVERNANCE_STANDARD.md:10` (`Accepted`) الذي يصنّفه **ملزم-معيارياً** نصاً، فالناسخ النافذ هو المستشهَد به.
+> **أهلية المصادر (قاعدة نافذة — حالة `INDEX.md` تحكم):** لم يُستشهد أدناه بمصدرٍ حالته `Proposed`/`Candidate` لإثبات نفاذ التزام. المصادر `Proposed` التي وردت ذُكرت **سياقاً أو مطابقةً قريبة** مع الإفصاح عن حالتها: `knowledge/BUSINESS_GLOSSARY.md` = `Proposed (G1)` (INDEX.md → row for `knowledge/BUSINESS_GLOSSARY.md` → status `Proposed (G1)`) · `contracts/screens/admin.workflows.md` = `Candidate` (INDEX.md → row for `contracts/screens/admin.workflows.md` → status `Candidate` — ورتبة العقود تشترط **Approved**، `AUTHORITY.md:14`) · `ui/UI_RUN_EXECUTION_MODEL.md` = `Proposed (v0.6)` (INDEX.md → row for `ui/UI_RUN_EXECUTION_MODEL.md` → status `Proposed (v0.6)`) — ويُستشهد به **مقروناً** بـ`ui/UI_SCREEN_GOVERNANCE_STANDARD.md:10` (`Accepted`) الذي يصنّفه **ملزم-معيارياً** نصاً، فالناسخ النافذ هو المستشهَد به.
 > **أرقام أسطر `INDEX.md` أدناه وفي `RECONCILIATION-RAR-005.md` مأخوذة من `INDEX.md` بعد صفَّي هذه الدفعة** (أي كما ستقرأ عند HEAD الجديد) — لا قبلها.
 
 ---

@@ -2,7 +2,7 @@
 
 > **مخرج traceability/تحليلي غير حاكم** — لا سلطة موازية. حزمة أدلة غياب **قابلة لإعادة التنفيذ** لبنود RAR-002 المصنَّفة «دلتا حقيقية». كل حالة بمرساة HTML صريحة بأحرف صغيرة. **HEAD المنفَّذ عليه البحث:** `c00a3243d0eb331a20fa0a26327bff6adc146b47` · **تاريخ البحث:** 2026-07-26.
 > **نطاق مشترك مستثنى من «الحاكم»:** `references/analysis-inputs/**` (مدخل غير حاكم خارج authority ladder) · `traceability/rar-reconciliation/**` (مخرجات B1 نفسها — لا تُثبت ذاتها) · `superseded/**` (تاريخي منسوخ). **الأمر القياسي:** `grep -rInE "<terms>" . --include='*.md' | grep -viE 'references/analysis-inputs/|traceability/rar-reconciliation/|superseded/'`. النتيجة الصفرية تعني: لا مصدر حاكم نافذ يقنِّن البند عند HEAD أعلاه. غياب العثور **ليس إثباتاً وجودياً**؛ يُقرأ ضمن نطاق البحث المذكور فقط، ويثبت غياب **المصطلح المبحوث** — لذلك يرافق كل حالة قسم «مطابقات قريبة فُحصت واستُبعدت» حين وُجدت مطابقات.
-> **أهلية الدليل:** حالة الملف في `INDEX.md` تحكم أهليته. `architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md` حالته **`Proposed (v0.7)`** (`INDEX.md:16`) ⇒ **غير نافذ** لإثبات سياسة، ويُذكر عند وروده كمطابقة قريبة مستبعَدة لا كدليل.
+> **أهلية الدليل:** حالة الملف في `INDEX.md` تحكم أهليته. `architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md` حالته **`Proposed (v0.7)`** (INDEX.md → row for `architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md` → status `Proposed (v0.7)`) ⇒ **غير نافذ** لإثبات سياسة، ويُذكر عند وروده كمطابقة قريبة مستبعَدة لا كدليل.
 > **ممنوع** وصف مطابقة بأنها «الوحيدة» ما لم يُرجع الأمر الموثَّق ذلك العدد بالضبط.
 
 ---
@@ -61,7 +61,7 @@
 - **مطابقات قريبة فُحصت واستُبعدت:**
   - `ui/UI_RUN_EXECUTION_MODEL.md:58` — **قريبة:** «Safe Mode ⇒ تشغيلات غير A10 تتجمد بحالة معلّلة؛ model_down ⇒ خطوات الوكلاء تتوقف». **مستبعَدة:** حالة **التشغيل/الخطوة** استجابةً لتعطّل النموذج. **لا تثبت البند:** لا تسم الوكيل بحالة `Degraded` ولا تعرّف تعافيه.
   - `ui/UI_AI_WORKSPACE_MODEL.md:18` · `:55` — **قريبة:** `banner.degraded` وأوضاع التدهور. **مستبعَدة:** لافتات سطح المحادثة. **لا تثبت البند:** عرضٌ لا حالة كيان.
-  - `architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md:36` — **قريبة:** `health_state … degraded`. **مستبعَدة مرتين:** موضوعها **المزوّد**، وحالة الملف **`Proposed (v0.7)`** (`INDEX.md:16`) ⇒ غير نافذ لإثبات سياسة. **لا تثبت البند.**
+  - `architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md:36` — **قريبة:** `health_state … degraded`. **مستبعَدة مرتين:** موضوعها **المزوّد**، وحالة الملف **`Proposed (v0.7)`** (INDEX.md → row for `architecture/PROVIDER_MODEL_SECRET_CONFIG_SPEC.md` → status `Proposed (v0.7)`) ⇒ غير نافذ لإثبات سياسة. **لا تثبت البند.**
 
 <a id="absence-b1-rar002-006"></a>
 ### ABSENCE-B1-RAR002-006

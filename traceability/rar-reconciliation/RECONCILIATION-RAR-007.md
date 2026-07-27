@@ -29,19 +29,19 @@
 
 | المصدر | الحالة | حكم الأهلية والاستعمال |
 |---|---|---|
-| `constitution.md` | ``INDEX.md → row for `constitution.md` → status `Current / Accepted``` | **نافذ — المرتبة 1** (`AUTHORITY.md:10`) — دليلٌ مباشر في `[01]` `[02]` `[12]` `[30]` |
+| `constitution.md` | INDEX.md → row for `constitution.md` → status `Current / Accepted` | **نافذ — المرتبة 1** (`AUTHORITY.md:10`) — دليلٌ مباشر في `[01]` `[02]` `[12]` `[30]` |
 | `methodology/agent-execution-model.md` · `methodology/testing-strategy.md` · `methodology/Spec_Driven_Modular_Monolith_Methodology.md` | ``… → status `Current` / `Current / Accepted``` | **نافذة — المرتبة 2** (`AUTHORITY.md:11`) — دليلٌ مباشر في `[01]` `[02]` `[03]` `[12]` `[28]` `[29]` |
-| `catalogs/Feature_Technical_Architecture_Catalog.md` | ``INDEX.md → row for `catalogs/Feature_Technical_Architecture_Catalog.md` → status `Current / Accepted``` | **نافذ — المرتبة 3** (`AUTHORITY.md:12`) — دليلٌ مباشر في `[11]` `[20]` |
+| `catalogs/Feature_Technical_Architecture_Catalog.md` | INDEX.md → row for `catalogs/Feature_Technical_Architecture_Catalog.md` → status `Current / Accepted` | **نافذ — المرتبة 3** (`AUTHORITY.md:12`) — دليلٌ مباشر في `[11]` `[20]` |
 | `decisions/open-decisions.md` · `decisions/DEFERRED_IMPLEMENTATION.md` · `decisions/adr/**` | ``… → status `Current / Accepted` / `Current`؛ ADR-0025/0027/0033/0035 → `Accepted``` | **نافذة — المرتبة 4** (`AUTHORITY.md:13`) — العمود الرابع الأغلب |
-| `phases/phase-roadmap.md` | ``INDEX.md → row for `phases/phase-roadmap.md` → status `Current / Accepted``` | **نافذ — المرتبة 6** (`AUTHORITY.md:15`) — دليلٌ مباشر في `[06]` |
+| `phases/phase-roadmap.md` | INDEX.md → row for `phases/phase-roadmap.md` → status `Current / Accepted` | **نافذ — المرتبة 6** (`AUTHORITY.md:15`) — دليلٌ مباشر في `[06]` |
 | `phases/designs/phase-8-monitoring-offline-production.md` · `phases/phase-0-foundation-full-stack-skeleton.md` | ``… → status `Accepted (v0.3)` / `Current / Accepted``` | **نافذة — المرتبتان 7 و6** — دليلٌ مساند في `[28]` `[29]` |
-| `architecture/README.md` | ``INDEX.md → row for `architecture/README.md` → status `Current / Accepted``` | **نافذ** — دليلٌ مباشر في `[20]` |
+| `architecture/README.md` | INDEX.md → row for `architecture/README.md` → status `Current / Accepted` | **نافذ** — دليلٌ مباشر في `[20]` |
 | `handoff/handoff.md` · `SPECIFICATIONS_CLOSEOUT_HANDOFF.md` | ``… → status `Current / Accepted` / `Current``` | **نافذان — المرتبة 9** (`AUTHORITY.md:18`) — دليلٌ مباشر في `[30]` |
-| `phases/BACKLOG_DEFERRED_SCOPE.md` | ``INDEX.md → row for `phases/BACKLOG_DEFERRED_SCOPE.md` → status `Accepted (v0.3)``` | **نافذ بحدّ ذاته مقيَّد** («مرجع تاريخي معتمد … لا تُستخدم للتنفيذ المباشر» — `phases/BACKLOG_DEFERRED_SCOPE.md:3`) ⇒ استُعمل **سياقاً ومطابقةً قريبة** في `[12]` `[16]`؛ **لم يُستعمل وحده لإثبات أي `مقنَّن`** |
-| `knowledge/BUSINESS_GLOSSARY.md` | ``INDEX.md → row for `knowledge/BUSINESS_GLOSSARY.md` → status `Proposed (G1)``` | **غير نافذ وحده** — استُعمل **مطابقةً قريبة** فقط (`absence-b2-rar007-006`)؛ **لم يدخل العمود الرابع لأي صف**. *(وهو المصدر ذاته موضوع القيد المؤجَّل `SOURCE-ELIGIBILITY REVIEW REQUIRED` على الصف `[01]` في `RECONCILIATION-RAR-001.md` — لم يُمَسّ ولم تُفترَض نتيجته.)* |
-| `traceability/TRACEABILITY_MATRIX.md` | ``INDEX.md → row for `traceability/TRACEABILITY_MATRIX.md` → status `Proposed (G1)``` | **غير نافذ وحده** — وجودُ المسار أُثبت بمصدر نافذ يتبنّاه صراحةً (`decisions/adr/ADR-0035-contracts-layer-single-source.md:13`) لا بالوثيقة نفسها؛ **لم يدخل العمود الرابع** |
-| `contracts/enums/ENUMS_DICTIONARY.md` | ``INDEX.md → row for `contracts/enums/ENUMS_DICTIONARY.md` → status `Proposed (G1)``` | **غير نافذ وحده** — مطابقة قريبة فقط في `[21]`؛ **لم يدخل العمود الرابع** |
-| `ui/UI_PROVIDER_MODEL_MANAGEMENT.md` | ``INDEX.md → row for `ui/UI_PROVIDER_MODEL_MANAGEMENT.md` → status `Proposed (v0.6)``` | **غير نافذ وحده** — مطابقة قريبة فقط في `[11]`؛ **لم يدخل العمود الرابع** |
+| `phases/BACKLOG_DEFERRED_SCOPE.md` | INDEX.md → row for `phases/BACKLOG_DEFERRED_SCOPE.md` → status `Accepted (v0.3)` | **نافذ بحدّ ذاته مقيَّد** («مرجع تاريخي معتمد … لا تُستخدم للتنفيذ المباشر» — `phases/BACKLOG_DEFERRED_SCOPE.md:3`) ⇒ استُعمل **سياقاً ومطابقةً قريبة** في `[12]` `[16]`؛ **لم يُستعمل وحده لإثبات أي `مقنَّن`** |
+| `knowledge/BUSINESS_GLOSSARY.md` | INDEX.md → row for `knowledge/BUSINESS_GLOSSARY.md` → status `Proposed (G1)` | **غير نافذ وحده** — استُعمل **مطابقةً قريبة** فقط (`absence-b2-rar007-006`)؛ **لم يدخل العمود الرابع لأي صف**. *(وهو المصدر ذاته موضوع القيد المؤجَّل `SOURCE-ELIGIBILITY REVIEW REQUIRED` على الصف `[01]` في `RECONCILIATION-RAR-001.md` — لم يُمَسّ ولم تُفترَض نتيجته.)* |
+| `traceability/TRACEABILITY_MATRIX.md` | INDEX.md → row for `traceability/TRACEABILITY_MATRIX.md` → status `Proposed (G1)` | **غير نافذ وحده** — وجودُ المسار أُثبت بمصدر نافذ يتبنّاه صراحةً (`decisions/adr/ADR-0035-contracts-layer-single-source.md:13`) لا بالوثيقة نفسها؛ **لم يدخل العمود الرابع** |
+| `contracts/enums/ENUMS_DICTIONARY.md` | INDEX.md → row for `contracts/enums/ENUMS_DICTIONARY.md` → status `Proposed (G1)` | **غير نافذ وحده** — مطابقة قريبة فقط في `[21]`؛ **لم يدخل العمود الرابع** |
+| `ui/UI_PROVIDER_MODEL_MANAGEMENT.md` | INDEX.md → row for `ui/UI_PROVIDER_MODEL_MANAGEMENT.md` → status `Proposed (v0.6)` | **غير نافذ وحده** — مطابقة قريبة فقط في `[11]`؛ **لم يدخل العمود الرابع** |
 | `ui/UI_STITCH_PROMPTS_BY_PHASE.md` | **تاريخي-informative** (`ui/UI_SCREEN_GOVERNANCE_STANDARD.md:14` — «لا تُقرأ كمتطلبات») | **غير مؤهَّل** — **لم يُستشهد به**، واستُبعدت مطابقته (`Permission Matrix`) من كل حكم |
 
 | البند (canonical) | المصدر | الحالة عند HEAD | الدليل | التصنيف | الوجهة |
