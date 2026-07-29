@@ -93,5 +93,7 @@ Baseline migrations لجداول files/jobs/bindings · لا DDL على فهار
 ## 23. Definition of Done
 Baseline المشترك + AC 1–8 خضراء + توثيق Registry/Pipeline + خطة إعادة فهرسة موثّقة + handoff بقائمة "لا يُلمس" (عقود Gateway-min وفلترة الاسترجاع) لوكيل P6.
 
+- **إغلاق هذه المرحلة يخضع لـPhase Exit Review المركزي** — `../../methodology/PHASE_EXECUTION_STANDARD.md` §3: لا إعلان إغلاق مع بقاء عنصر غير مصنَّف أو `BLOCKING REMAINDER`، وكل عنصر غير منفَّذ يُسجَّل `GOVERNED TRANSFER` كاملاً في وعائه الحاكم.
+
 ## 24. Coding Agent Prompt
 > القالب الموحّد §6 مع: **PHASE=5 · DESIGN=phases/designs/phase-5-files-rag-ocr-media.md · RELEASE=v0.3-phase-design-package** — لا تشغيل لأي نموذج/أداة قبل صف ترخيصه؛ التزم بأقسام 3/14/19/22.
