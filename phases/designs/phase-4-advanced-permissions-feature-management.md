@@ -92,5 +92,7 @@ Baseline migrations لجداول السياسات · عمود التصنيف ع�
 ## 23. Definition of Done
 Baseline المشترك + AC 1–9 خضراء + توثيق Policy Studio/Feature Mgmt + handoff بقائمة "لا يُلمس" (PermissionAPI ومصفوفاته وA10) لوكيل P5.
 
+- **إغلاق هذه المرحلة يخضع لـPhase Exit Review المركزي** — `../../methodology/PHASE_EXECUTION_STANDARD.md` §3: لا إعلان إغلاق مع بقاء عنصر غير مصنَّف أو `BLOCKING REMAINDER`، وكل عنصر غير منفَّذ يُسجَّل `GOVERNED TRANSFER` كاملاً في وعائه الحاكم.
+
 ## 24. Coding Agent Prompt
 > القالب الموحّد §6 مع: **PHASE=4 · DESIGN=phases/designs/phase-4-advanced-permissions-feature-management.md · RELEASE=v0.3-phase-design-package** — التزم بأقسام 6/14/22؛ ممنوع أي محرك سياسات ثانٍ خارج PermissionAPI.

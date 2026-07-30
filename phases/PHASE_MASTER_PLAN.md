@@ -53,6 +53,8 @@
 - **DoD مشترك:** Quality Gates (Methodology §11) + تحديث الوثائق + handoff كامل + لا dependency خارج license-review + بطاقات المهام كلها مقفلة.
 - **Coding Agent Prompt المشترك:** قالب موحّد في AGENT_EXECUTION_MODEL.md §6 — كل تصميم يذكر **سطر التخصيص فقط**.
 
+- **Phase Exit Review مشترك:** إغلاق أي مرحلة يخضع للقاعدة المركزية في `../methodology/PHASE_EXECUTION_STANDARD.md` §3 (‏Scope Completion · Decision Closure · Remainder Census بتصنيف ثلاثي و`UNCLASSIFIED = 0` · Traceability · Repository State · Git/Release State · Next-phase Readiness) — لا قائمة مراجعة موازية في هذه الوثيقة ولا في التصاميم.
+
 ## 5) Dependency &amp; Ordering Rationale (لماذا هذا الترتيب حصراً)
 - **لماذا لا RAG قبل P5؟** الاسترجاع المصفّى يفترض RLS/FLS (P2) وسياسات كاملة (P4)؛ فهرسة قبل ذلك = بناء قناة تسريب ثم ترقيعها.
 - **لماذا Workflows في P3 لا P1؟** الاعتماد (SoD) يحتاج org/roles/permission-spine ناضجة من P1 وسجلات P2 ليعمل على شيء حقيقي.

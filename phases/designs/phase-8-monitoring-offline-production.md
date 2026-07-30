@@ -91,5 +91,7 @@ BACKUP_SCHEDULE/RETENTION · METRICS_ENABLED=true(prod) · ALERT_* · MAINTENANC
 ## 23. Definition of Done
 Baseline المشترك + AC 1–8 خضراء + كل runbooks معتمدة + **Handoff نهائي للتشغيل** (وثيقة تسليم Ops) — وبهذا يكتمل مسار التنفيذ الأول للمنصة.
 
+- **إغلاق هذه المرحلة يخضع لـPhase Exit Review المركزي** — `../../methodology/PHASE_EXECUTION_STANDARD.md` §3: لا إعلان إغلاق مع بقاء عنصر غير مصنَّف أو `BLOCKING REMAINDER`، وكل عنصر غير منفَّذ يُسجَّل `GOVERNED TRANSFER` كاملاً في وعائه الحاكم.
+
 ## 24. Coding Agent Prompt
 > القالب الموحّد §6 مع: **PHASE=8 · DESIGN=phases/designs/phase-8-monitoring-offline-production.md · RELEASE=v0.3-phase-design-package** — لا صورة مراقبة قبل صفها؛ الإثبات بالتمارين لا بالوثائق؛ التزم بأقسام 3/14/19/22.

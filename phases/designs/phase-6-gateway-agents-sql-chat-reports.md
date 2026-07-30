@@ -91,5 +91,7 @@ Baseline migrations لجداول المرحلة · **allow-list views تُولَ
 ## 23. Definition of Done
 Baseline المشترك + AC 1–8 خضراء + توثيق Chat/SQL/Reports + حزمة اختبارات أمان SQL ضمن CI + handoff بقائمة "لا يُلمس" (Gateway وValidation وallow-list) لوكيل P7.
 
+- **إغلاق هذه المرحلة يخضع لـPhase Exit Review المركزي** — `../../methodology/PHASE_EXECUTION_STANDARD.md` §3: لا إعلان إغلاق مع بقاء عنصر غير مصنَّف أو `BLOCKING REMAINDER`، وكل عنصر غير منفَّذ يُسجَّل `GOVERNED TRANSFER` كاملاً في وعائه الحاكم.
+
 ## 24. Coding Agent Prompt
 > القالب الموحّد §6 مع: **PHASE=6 · DESIGN=phases/designs/phase-6-gateway-agents-sql-chat-reports.md · RELEASE=v0.3-phase-design-package** — قاعدة حاكمة: **مصدر أو رفض**؛ التزم بأقسام 6/14/19/22.
