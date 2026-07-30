@@ -4,6 +4,11 @@
 > **قاعدة قاطعة:** وجود عنصر في هذه الوثيقة **وحدها لا يُعدّ `GOVERNED TRANSFER`**؛ كل عنصر منقول مسجَّل في وعائه الحاكم، والعمود «الوعاء الحاكم» يذكر الموضع النافذ.
 > **HEAD المنفَّذ عليه الجرد:** `f6ec1f33ed98fe02229e5614e7707a5c8d93c557` · **`origin/main`:** `52fbde1f027f0ffcd3e9376e7f3fdc1216068515` · **التاريخ:** 2026-07-30 · **خط الأساس المجمَّد:** `188ad379d04b07ca9e1b4eeee38dc68ecca29914`.
 > **النطاق:** جرد وتصنيف وتسجيل فقط. **§18 لم تُطبَّق** · الدلتا السبعة **لم تُعالَج** · `OD-P3-2` **لم يُغلق** · **P3 لم تُغلق** · لا merge/tag/release · لا بدء R3/R4/P4/R10.
+>
+> ## Δ 2026-07-30 — **§18 نُفِّذت** (تحديث هذه الوثيقة بأمر SA «‏P3 — §18 GOVERNED NARROW-FREEZE EXECUTION»)
+> **`origin/main` = `7611ed9531660f5f4762f3e6a60f05cdf0f419b4`** بعد دمج **PR #10** ⇒ `PHASE_EXECUTION_STANDARD.md` **§3 نافذة على `main`** ⇒ **`P3-CI-15` استُوفي**. صدر أمر §18 المستقل ونُفِّذ بقرار مالك **`ACTUAL NARROW FREEZE`** ⇒ **`FP-0001 = BLOCKED`** · حالة الأثر **`ACTIVE`** · الوعاء الحاكم `decisions/open-decisions.md` → **`OD-FP-0001-FREEZE`** · السجل التفصيلي غير الحاكم: **`SECTION-18-BLOCKING-EFFECT.md`** · `handoff/handoff.md` → **H-0023**.
+> **أثر ذلك على الجرد:** `P3-CI-01` و`P3-CI-03` ⇒ **`COMPLETE`** · `P3-CI-02` ⇒ **`GOVERNED TRANSFER`** · **`P3-CI-26` جديد** (رفع أثر §18) ⇒ **`GOVERNED TRANSFER`**. المعادلة بعد التحديث: **`26 = 11 + 15 + 0`** · **`UNCLASSIFIED = 0`**. تغطية EC-3: **156 → 157**.
+> **حدود هذا التحديث:** **لم تُعالَج الدلتا السبعة** · **لم تُكتب المعايير** · لم يُعدَّل `FP-0001` ولا `Gate Criteria` · لم يُعَد `FINAL-B` ولا §13b · الجدول **260** والتوزيع **`116/80/46/18/0`** بلا تغيير · `OD-GOV-3` لم يُنفَّذ · **لم تبدأ R3** · **P3 لم تُغلق** · لا merge/tag/release. **و`BLOCKING REMAINDER = 0` ليس إعلانَ إغلاق** — الإغلاق **قرار مالك مستقل لم يُتخذ**.
 
 ## 1) القاعدة المطبَّقة
 
@@ -17,21 +22,26 @@ No phase closure with an unclassified remainder.
 
 ## 2) التصنيف الثلاثي ومعادلة التوازن
 
-| الحالة | العدد |
-|---|---:|
-| `COMPLETE` | **9** |
-| `GOVERNED TRANSFER` | **13** |
-| `BLOCKING REMAINDER` | **3** |
-| **Total discovered remainder** | **25** |
-| `UNCLASSIFIED` | **0** |
+| الحالة | العدد (قبل §18) | **العدد (بعد §18 · Δ 2026-07-30)** |
+|---|---:|---:|
+| `COMPLETE` | 9 | **11** |
+| `GOVERNED TRANSFER` | 13 | **15** |
+| `BLOCKING REMAINDER` | 3 | **0** |
+| **Total discovered remainder** | 25 | **26** |
+| `UNCLASSIFIED` | 0 | **0** |
 
 ```text
 Total discovered remainder = COMPLETE + GOVERNED TRANSFER + BLOCKING REMAINDER
-25 = 9 + 13 + 3
+قبل §18:  25 = 9  + 13 + 3
+بعد  §18:  26 = 11 + 15 + 0
 UNCLASSIFIED = 0
 ```
 
-## 3) `BLOCKING REMAINDER` — ما يمنع إغلاق P3 (3)
+> **مصدر الفرق (‏25 → 26):** لم يُحذف عنصر ولم يُدمج. `P3-CI-01` و`P3-CI-03` انتقلا إلى `COMPLETE`، و`P3-CI-02` إلى `GOVERNED TRANSFER`؛ وأُضيف **عنصر واحد جديد اكتُشف بتنفيذ §18** هو **`P3-CI-26`** (‏التزام **رفع** أثر §18 لاحقاً) — سُجِّل `GOVERNED TRANSFER` حتى لا يعيش في الذاكرة (`No memory-only obligation`).
+
+## 3) `BLOCKING REMAINDER` — لقطة **ما قبل §18** (‏3) ⇒ **بعد §18: صفر**
+
+> **Δ 2026-07-30:** الجدول أدناه **يبقى كما كُتب** (صحيحٌ في تاريخه · لا إعادة كتابة)، وحالته النافذة الآن مبيَّنة في **«حسم الثلاثة»** تحته مباشرة.
 
 | ID | العنصر | المصدر | يخص P3؟ | يمنع الإغلاق؟ | لماذا لا وجهة حاكمة الآن | شرط الإغلاق | الدليل |
 |---|---|---|---|---|---|---|---|
@@ -39,9 +49,21 @@ UNCLASSIFIED = 0
 | **P3-CI-02** | **الدلتا السبعة الحاجبة** — `RAR-003 [38] [40] [42] [43] [44] [46] [48]` (سبعة معايير إتاحة معلَنة بلا صيغة مقنَّنة قابلة للاختبار) | `FINAL-B-13B-DETERMINATION.md:84`..`:90` · `:198` | **نعم** | **نعم** | وجهتها التقنينية المسجَّلة **R3** ثابتة ولم تتغيَّر، لكن **الوعاء الحاكم لأثر الحجب** يحدده §18؛ ولم تُفعَّل R3 أصلاً (`RECONCILIATION_ROADMAP.md:5`) | §18 تُسجّل أثر الحجب ⇒ ثم **أمر تفعيل R3** يُقنِّن السبعة في `ui/UI_DESIGN_SYSTEM.md` §9 بصيغة قابلة للاختبار | `methodology/PHASE_EXECUTION_STANDARD.md:34` · `:37` · `ui/UI_SCREEN_GOVERNANCE_STANDARD.md:68` · `ui/UI_DESIGN_SYSTEM.md:111` · مراسي `absence-b1-rar003-008..014` |
 | **P3-CI-03** | **تسجيل النطاق المتأثِّر بـ`FP-0001`** — الحزمة تسمّيه `P12`، ولا ملف ولا مرحلة بهذا الرقم في المستودع (`phases/designs/**` ينتهي عند `phase-8`) | `OWNER-DECISION-PACKAGE.md:323` | **نعم** | **نعم** | تحديد المسارات المتأثرة وتجميدها أو عدمه = **صميم خريطة §18**؛ ولا يجوز اختراع وعاء لمرحلة غير موجودة | §18 تحدّد النطاق المتأثر بمسمّياته الحاكمة (بوابة الأساس/‏FP-0001) لا بترقيم الحزمة | `methodology/PHASE_EXECUTION_STANDARD.md:29`..`:37` (بوابة الأساس هي الوعاء الحاكم لـFP-0001) |
 
+### حسم الثلاثة بعد تنفيذ §18 (‏Δ 2026-07-30)
+
+| ID | الحالة النافذة | ما استوفاه | الوعاء الحاكم | ما لم يحدث |
+|---|---|---|---|---|
+| **P3-CI-01** | **`COMPLETE`** | صدر **أمر §18 المستقل** ونُفِّذ: سُجِّل **Blocking Effect** (`FP-0001 = BLOCKED` · `FAIL-CLOSED` · `ACTUAL NARROW FREEZE` · `ACTIVE` · 2026-07-30) وسُجِّلت **الدلتا السبعة** وثبت **النطاق المتأثِّر** وسُجِّلت **شروط الرفع السبعة** — والأربعة مجتمعة شرطُ اكتماله | `decisions/open-decisions.md` → **`OD-FP-0001-FREEZE`** · `handoff/handoff.md` → **H-0023** | **لم تُعالَج** الدلتا · **لم تُكتب** المعايير · لم يُعدَّل `FP-0001` ولا `Gate Criteria` |
+| **P3-CI-02** | **`GOVERNED TRANSFER`** | الدلتا السبعة مسجَّلة حاكمياً بـ**وجهة** (`ui/UI_DESIGN_SYSTEM.md` §9) و**مالك** (‏R3 بأمر تفعيل) و**شرط تفعيل** و**اختبار مطلوب** و**دليل إغلاق** و**أثر بقاء** — حقول §3.4 مستوفاة | `decisions/open-decisions.md` (جدول الدلتا السبعة) + `decisions/DEFERRED_IMPLEMENTATION.md` (صف التقنين) + `methodology/RECONCILIATION_ROADMAP.md` v1.3 | **R3 لم تُفعَّل** · التقنين **لم يبدأ** · تصنيف الصفوف في الجدول التاريخي **`دلتا حقيقية`** بلا تغيير |
+| **P3-CI-03** | **`COMPLETE`** | النطاق المتأثِّر مثبَت ومسجَّل حاكمياً بمسمّياته الحاكمة: «بوابة `FP-0001` نفسها وكل قبول أو إعلان جاهزية أو اعتماد لاحق يشترط اجتيازها» — **بلا `P12`** وبلا اختراع مرحلة، ولا قائمة اعتمادات صريحة في النص الحاكم عند HEAD | `decisions/open-decisions.md` → `OD-FP-0001-FREEZE` (حقل «النطاق المتأثِّر») | لم تُنشأ P9–P12 · لم يُنقل نصٌّ من `phase.md` |
+
+**⇒ `BLOCKING REMAINDER = 0`.** وهذا **ليس** إعلان إغلاق P3: الإغلاق **قرار مالك مستقل لم يُتخذ**، و`P3-CI-13` (‏merge/tag/release) يبقى **حاجباً لأي إعلان اكتمال**، و`OD-FP-0001-FREEZE` يبقى **`ACTIVE`**، و`OD-GOV-1..3` **مفتوحة**.
+
 > **تنبيه ترقيم (فرقٌ مسجَّل لا يُحسم هنا):** ترقيم `P4–P12` في مواد الحزمة والمرفق الخارجي `phase.md` **ليس** ترقيم `phases/designs/phase-4..8` في المستودع. المستودع يحكم (‏`AUTHORITY.md` المرتبتان 6 و7). **لم يُنقل نص من `phase.md` إلى أي وثيقة حاكمة.**
 
-## 4) `GOVERNED TRANSFER` — 13 عنصراً (كلٌّ مسجَّل في وعاء حاكم)
+## 4) `GOVERNED TRANSFER` — 13 عنصراً ⇒ **15 بعد §18** (كلٌّ مسجَّل في وعاء حاكم)
+
+> **Δ 2026-07-30:** الـ13 أدناه بلا تغيير، **+ `P3-CI-26`** المضاف في آخر الجدول، **+ `P3-CI-02`** الذي انتقل من `BLOCKING REMAINDER` وحالتُه النافذة في **«حسم الثلاثة»** (‏§3 أعلاه) = **15**.
 
 الحقول الثلاثة عشر الإلزامية (‏`PHASE_EXECUTION_STANDARD.md` §3.4) مستوفاة لكل صف: Stable ID · Source · Description · Classification · Governing destination · Owning phase/batch · Owner · Reason not executed now · Activation prerequisite · Blocking effect · Required evidence · Closure condition · Traceback.
 
@@ -61,7 +83,11 @@ UNCLASSIFIED = 0
 | **P3-CI-15** | **Dependency صريح** — لا يُعلَن إغلاق P3 قبل **دمج** PR القاعدة العامة (‏`docs/phase-exit-review-standard` — `PHASE_EXECUTION_STANDARD.md` §3)، لأن القاعدة المركزية هي معيار الخروج نفسه ولا تنفذ قبل الدمج (المرتبة 2) | هذه الدفعة (الشقان A و‏B) | `handoff/handoff.md` → **H-0022** + `methodology/RECONCILIATION_ROADMAP.md` (قيد Δ) | P3 | Owner (‏SA) | الدمج قرار مالك؛ ولا merge في هذه الدفعة | دمج PR الشق العام في `main` | **حاجب لإعلان إغلاق P3** (بالإضافة إلى §18) | دمج القاعدة + اجتياز §3 عليها | `PHASE_EXECUTION_STANDARD.md` §3 (على فرع الشق العام) · `AUTHORITY.md:11` |
 | **P3-CI-16** | **متبقّي جولات P1 و P2 الحوكميّتين** يعيش **حصراً في تقارير محلية غير متعقبة** (`P arch/P1/out/**` · `P arch/P2/out/**`) — ومنها `P2 — OWNER_DECISION_PACKAGE` الذي **ينتظر قرار مالك بشأن مساحة الأسماء** ولم يُسجَّل في أي وعاء حاكم | P1 · P2 (خارج P3) | `handoff/handoff.md` → **H-0022** (تسجيل وجود المتبقّي وانعدام تعقّبه) | دفعة مخوَّلة مستقلة تطبّق `PHASE_EXECUTION_STANDARD.md` §3 على P1 و P2 | Owner (‏SA) | **لا يخص P3** ولا تملكه هذه الدفعة؛ وجرده الكامل عملٌ مستقل | أمر SA بدفعة Phase Exit Review لـP1/P2 | **غير حاجب لإغلاق P3** | جرد وتصنيف كامل لمتبقّي P1/P2 بالتصنيف الثلاثي | `P arch/P1/out/P1/REPORT.md:112` · `P arch/P2/out/P2/OWNER_DECISION_PACKAGE.md:1`..`:10` (غير متعقبَين) |
 
-## 5) `COMPLETE` — 9 عناصر (اكتملت داخل P3 بدليل)
+| **P3-CI-26** *(جديد · Δ 2026-07-30)* | **رفع أثر §18** — `OD-FP-0001-FREEZE` يبقى **`ACTIVE`**، ورفعه التزامٌ قائم بشروط سبعة مسجَّلة (تقنين المعايير قابلةً للاختبار · إدخالها في Reading Sets · فحوص بوابة `FP-0001` · أدلة قابلة للتدقيق · تحديث الحالة إلى `LIFTED` · ربط الرفع بالأدلة والـcommit والاختبارات · تحديث هذا الجرد) | P3/§18 (اكتُشف بتنفيذ §18) | `decisions/open-decisions.md` → **`OD-FP-0001-FREEZE`** («شروط الرفع») + `handoff/handoff.md` → **H-0023** | **R3** ثم قرار مالك بالرفع | Owner (‏SA) وحده | الرفع **محظور نصاً** في أمر §18؛ ولا يُرفع صمتاً ولا بانقضاء وقت ولا بغير دليل حاكم | **أمر تفعيل R3** (ويسبقه أو يرافقه حسم `OD-GOV-3`) | **يُبقي `FP-0001` `BLOCKED`** — ويمنع أي قبول أو إعلان جاهزية يشترط اجتيازها؛ **غير حاجب لإغلاق نطاق P3** | استيفاء الشروط السبعة ⇒ الحالة **`LIFTED`** بدليل | `SECTION-18-BLOCKING-EFFECT.md` §5 · `FINAL-B-13B-DETERMINATION.md:198`..`:202` |
+
+## 5) `COMPLETE` — 9 عناصر ⇒ **11 بعد §18** (اكتملت داخل P3 بدليل)
+
+> **Δ 2026-07-30:** التسعة أدناه بلا تغيير، **+ `P3-CI-01` و`P3-CI-03`** اللذان انتقلا من `BLOCKING REMAINDER` وحالتُهما النافذة في **«حسم الثلاثة»** (‏§3 أعلاه) = **11**. وتغطية EC-3 لهذه الدفعة: `INDEX.md` **155 → 156 ملفاً + الفهرس** ⇒ **EC-3 = 157/157 · صفر غير مغطى** (توسعةٌ لـ`P3-CI-25` لا نقضٌ له).
 
 | ID | العنصر | الدليل | ملاحظة |
 |---|---|---|---|
@@ -87,8 +113,10 @@ UNCLASSIFIED = 0
 
 ## 7) ما لم تفعله هذه الدفعة
 
+> **Δ 2026-07-30 — ما لم تفعله دفعة §18 (تُضاف ولا تنسخ):** **لم تُعالَج الدلتا السبعة** · **لم تُكتب المعايير السبعة** · لم يُعدَّل `FP-0001` ولا `Gate Criteria` · لم يُعَد `FINAL-B` ولا §13b ولا فُتح الجدول المجمَّد ولا تغيّر التوزيع · **لم تُصلَح Reading Sets ولم يُنفَّذ `OD-GOV-3`** · **لم تبدأ R3** ولا R4 ولا P4 ولا R10 · لم تُنشأ P9–P12 · `OD-P3-2` لم يُغلق · `AUTHORITY.md` لم تُمسّ · `superseded/**` لم يُلمس · لا ADR · **P3 لم تُغلق** · لا merge ولا tag ولا release · **لم يُدخَل `main` إلى فرع PR #9** ولا merge commit ولا rebase ولا force-push. **ولم يُرفع التجميد.**
+
 **§18 لم تُطبَّق** · الدلتا السبعة **لم تُعالَج** · `FP-0001` لم يُعدَّل · **Gate Criteria لم تُعدَّل** · `OD-P3-2` **لم يُغلق** · لا قرار `tenant`/`org_unit` · `AUTHORITY.md` **لم يُعدَّل** · لا ADR جديد ولا ADR متعدد القرارات · `superseded/**` لم يُلمس · لم تُنشأ ملفات P9–P12 · **لم تبدأ** R3 ولا R4 ولا P4 ولا P5 ولا R10 · **P3 لم تُغلق** · لا merge ولا tag ولا release · لا فرع ولا PR جديد في هذا الشق.
 
 ---
 
-**Related:** `FINAL-B-13B-DETERMINATION.md` · `FINAL-RECONCILIATION-TABLE.md` · `OWNER-DECISION-PACKAGE.md` · `B1-CHECKPOINT-REPORT.md` · `RECONCILIATION-RAR-001.md`..`007.md` · `ABSENCE-EVIDENCE-B1-RAR001..003.md` · `ABSENCE-EVIDENCE-B2-RAR004..007.md` · `methodology/PHASE_EXECUTION_STANDARD.md` (§3) · `methodology/RECONCILIATION_ROADMAP.md` · `decisions/open-decisions.md` · `decisions/DEFERRED_IMPLEMENTATION.md` · `handoff/handoff.md` (‏H-0022)
+**Related:** `FINAL-B-13B-DETERMINATION.md` · `FINAL-RECONCILIATION-TABLE.md` · `OWNER-DECISION-PACKAGE.md` · `B1-CHECKPOINT-REPORT.md` · `RECONCILIATION-RAR-001.md`..`007.md` · `ABSENCE-EVIDENCE-B1-RAR001..003.md` · `ABSENCE-EVIDENCE-B2-RAR004..007.md` · `methodology/PHASE_EXECUTION_STANDARD.md` (§3) · `methodology/RECONCILIATION_ROADMAP.md` · `decisions/open-decisions.md` (‏`OD-FP-0001-FREEZE`) · `decisions/DEFERRED_IMPLEMENTATION.md` · `handoff/handoff.md` (‏H-0022 · **H-0023**) · **`SECTION-18-BLOCKING-EFFECT.md`**
