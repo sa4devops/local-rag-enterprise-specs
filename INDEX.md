@@ -20,7 +20,7 @@
 | `contracts` | `contracts/NAMING_AND_CONTRACTS_STANDARD.md` | — | Proposed (G1) · Δ R1-B: +قرارا المالك | العقود — Specification Architect | كل منفذ وكل بوابة |
 | `contracts/enums` | `contracts/enums/ENUMS_DICTIONARY.md` | — | Proposed (G1) · Δ R1-B: +scope_inheritance · Δ R1-C: حدّ الدور الشامل (ADR-0038) | العقود — Specification Architect | كل منفذ واجهة |
 | `contracts/identity` | `contracts/identity/RECORD_IDENTITY.md` | — | Proposed (G1) | العقود — Specification Architect | كل منفذ |
-| `contracts/screens` | `contracts/screens/SCREEN_CONTRACT_TEMPLATE.md` | — | Proposed (G1) | العقود — Specification Architect | منفذ الشاشة وبوابتها |
+| `contracts/screens` | `contracts/screens/SCREEN_CONTRACT_TEMPLATE.md` | 1.1 — (Δ 2026-08-02 R3: §3 `surfaces[]` مغلق التعداد + §3.2 حقول السطح + §3.3 القواعد الملزمة) | Proposed (G1) · Δ R3: نقل حاكم لـ`OD-R3-UI-2` و`OD-R3-UI-3` | العقود — Specification Architect | منفذ الشاشة وبوابتها |
 | `contracts/screens` | `contracts/screens/admin.actions.md` | — | Candidate | العقود — Specification Architect | منفذ الشاشة وبوابتها |
 | `contracts/screens` | `contracts/screens/admin.record_types.md` | — | Candidate | العقود — Specification Architect | منفذ الشاشة وبوابتها |
 | `contracts/screens` | `contracts/screens/admin.workflows.md` | — | Candidate | العقود — Specification Architect | منفذ الشاشة وبوابتها |
@@ -142,9 +142,9 @@
 | `ui` | `ui/UI_ACTION_BUTTON_MODEL.md` | 1.1 — (Δ v0.8: +§2.1 متغيّر العرض «inline message action» —  | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_ADMIN_CONSOLE_MODEL.md` | 1.1 — (Δ v0.8: +OD-BLD-1 أوضاع الباني الثلاثة — مقفل بقرار S | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_AI_WORKSPACE_MODEL.md` | 1.1 — (Δ v0.8: +§14 وضعا العرض محادثة/بطاقات — OD-WS-4 مقفل  | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
-| `ui` | `ui/UI_COMPONENT_STATES.md` | 1.1 — (Δ 2026-07-19 دفعة G1: +القسم S16–S20 «حالات البيانات/ | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
+| `ui` | `ui/UI_COMPONENT_STATES.md` | 1.2 — (Δ 2026-08-02 R3: +تفكيك حالة التعطيل — أنماط `S8` الإلزامية الأربعة) (1.1: Δ 2026-07-19 دفعة G1: +القسم S16–S20) | Current · Δ R3: نقل حاكم لـ`OD-R3-UI-1` — لا `S8` بلا نمط · `S7`/`S9`/`S10` بلا تغيير | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_DESIGN_SYSTEM.md` | 1.0 — Proposed | Proposed | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
-| `ui` | `ui/UI_FIELD_NAMING.md` | 1.1 — (Δ v0.8: +سلسلة «الإرجاع الموجَّه» في §3 — WORKFLOW_IT | Current | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
+| `ui` | `ui/UI_FIELD_NAMING.md` | 1.2 — (Δ 2026-08-02 R3: +الاسم الدلالي المحكوم مقابل النص الظاهر) (1.1: Δ v0.8: +سلسلة «الإرجاع الموجَّه» في §3) | Current · Δ R3: نقل حاكم لمبدأ `OD-R3-UI-3` — الأنواع الثمانية بلا مساس | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_GATE_REVIEW_CHECKLIST.md` | 1.0 — Proposed | Proposed | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_INTERACTION_MODEL.md` | 1.0 — Proposed (v0.5) | Proposed (v0.5) | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
 | `ui` | `ui/UI_PROGRESSIVE_DISCLOSURE.md` | 1.0 — Proposed (v0.5) | Proposed (v0.5) | حِزم UI/UX — Specification Architect | ‏Rocket/منفذ الواجهة + بوابات UI |
