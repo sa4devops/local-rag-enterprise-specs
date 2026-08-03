@@ -891,6 +891,8 @@ Merge Result = SUCCESS
 - next step: **قرار مالك في هذا الـPR** (دمج أو رفض). و**دمجُه لا يجوز بوكيل التنفيذ نفسه** الذي كتب هذه الدفعة (‏`agent-execution-model` §18.2-1 · `OD-GOV-MERGE-1` §(ج) صفّ Execution Agent) ⇒ يلزمه **مراجعة مستقلة** و**أمر مالك يثبّت الرأس** و**وكيل دمج مستقل**. **ولا شيء بعد ذلك مأذون به في هذه الجولة.**
 - do not touch: constitution.md · AUTHORITY.md · **`ui/**` بكاملها** ومنها **`UI_DESIGN_SYSTEM.md` §9** · **`contracts/**`** · **`traceability/**`** · **`decisions/adr/**` بكاملها** ومنها **`ADR-0033`** · **`methodology/**` بكاملها** ومنها **`agent-execution-model.md`** · phases/** · catalogs/** · superseded/** · **شروط التجميد و`FP-0001` و`R4`** · **أي معيار Accessibility** · **أي نص من نصوص PR #14 المدموجة** · **`H-0016`..`H-0033`** · **`R3-ACT-01`** · **أي وسم أو إصدار** · **‏GitHub Issue #11** · خط الأساس المجمَّد `188ad37` · **ملفات UI-4 وUI-5**.
 
+> **⚠ حكمٌ لاحق على الدلتا التالية — يُقرأ قبلها ولا يُحذف منها شيء:** النموذج الوارد أدناه (`MERGE_AUDIT_RECORD_ONLY` · `TRANSITIONAL SELF-CLOSING CASE`) **`SUPERSEDED — NEVER IN FORCE`** — بقي على **فرع PR #16 وحده**، **ولم يُدمج إلى `main` قط**، **ولم يصبح سياسة نافذة** ولا لحظةً واحدة، و**استُبدل قبل النفاذ** بالنموذج المبسَّط في **ADR-0033 بند 12** (‏Δ 2026-08-04 أدناه). **يُقرأ ما يلي تاريخاً لا قاعدةً نافذة.**
+
 **‏Δ 2026-08-03 — إغلاق تعاقب تسجيل أثر الدمج (‏ضمن `H-0034` — لا مدخل جديد):**
 > **السند:** «‏OWNER CORRECTION ORDER — PR #16 Merge-Audit Recursion Closure» (2026-08-03). **نفس الفرع `docs/pr14-merge-audit-record` ونفس الـPR #16** · **commit جديد فوق الرأس `0a2c434c…`** · **بلا `amend` ولا `rebase` ولا `force-push`** · **بلا فرع أو PR جديد** · **بلا دمج**.
 > **لا يُعاد كتابة تاريخ هذا المدخل:** كل ما سُجِّل أعلاه **صحيحٌ كما وقع** — وهذا **إلحاقُ دلتا** يوضّح ما استجدّ بأمر المالك، **ولا يُعدَّل به سطرٌ سابق**.
@@ -910,3 +912,68 @@ Merge Result = SUCCESS
 - ملفات هذه الدلتا: **ستة** — `decisions/adr/ADR-0033-automation-levels-git-merge-policy.md` (‏**+البند 15** · الحالة ⇒ **التعديل الثاني**) · `methodology/agent-execution-model.md` (‏**v2.1 ⇒ v2.2** · **+§18.2-8**) · `decisions/adr/README.md` (‏**v1.7 ⇒ v1.8** — صفّ ADR-0033 وحده) · `decisions/open-decisions.md` (‏**v3.5 ⇒ v3.6** · **+§(ل)** بخمسة أقسام فرعية — **والأقسام (أ)..(ك) لم تُمسّ**) · `handoff/handoff.md` (هذه الدلتا) · `INDEX.md` (**صفوف قائمة محدَّثة — بلا صفّ جديد**).
 - ما لم يتغيّر: **`ui/**` ومنها §9** · **`contracts/**`** · **`traceability/**`** · **`AUTHORITY.md`** · **`constitution.md`** · **بقية `decisions/adr/**` وبقية `methodology/**`** · **التجميد `ACTIVE`** · **`FP-0001` `BLOCKED`** · **`R4` غير مفعَّلة** · **`R3` لم تُغلق** · **لا معيار `PASS`** · **لا ADR جديد ولا OD جديد** · **لا ملف جديد ولا محذوف** · **16 وسماً · لا وسم ولا إصدار** · **EC-3 = 159/159**.
 - next step: **بلا تغيير عن أعلاه** — **مراجعة مستقلة** + **أمر مالك يثبّت الرأس الجديد** + **وكيل دمج مستقل**. **ولا يجوز لوكيل التنفيذ الذي كتب هذه الدفعة دمجُها** (‏§18.2-1). **ولم يبدأ أي Workstream لاحق.**
+
+**‏Δ 2026-08-04 — تبسيط إتمام أثر الدمج (‏ضمن `H-0034` — لا مدخل جديد):**
+> **السند:** «‏OWNER EXECUTION ORDER — PR #16 Final Merge Governance Simplification» (2026-08-04). **نفس الفرع `docs/pr14-merge-audit-record` ونفس الـPR #16** · **commit جديد فوق الرأس `0497250a…`** · **بلا `amend` ولا `rebase` ولا `force-push`** · **بلا فرع أو PR جديد** · **بلا دمج**.
+> **لا يُعاد كتابة تاريخ هذا المدخل:** كلُّ ما سُجِّل أعلاه — **بما فيه دلتا 2026-08-03** — **يبقى كما كُتب**، وهذا إلحاقُ دلتا يوضّح ما استجدّ.
+
+**‏(1) حكمُ نموذج إغلاق الحلقة السابق:**
+
+```text
+MERGE_AUDIT_RECORD_ONLY:
+SUPERSEDED — NEVER IN FORCE
+```
+
+| الحقيقة | الحكم |
+|---|---|
+| ظهر على **فرع PR #16 وحده** (‏commit `0497250a…`) | **لم يُدمج إلى `main` قط** |
+| **لم يصبح سياسة نافذة** ولا لحظةً واحدة | **`SUPERSEDED — NEVER IN FORCE`** |
+| استُبدل **قبل النفاذ** بالنموذج المبسَّط | **ADR-0033 بند 12 المُعاد صياغته** |
+
+**حُذف من المسودة قبل الدمج:** البند 15 المقترح · فئةُ دفعات التوثيق · الوصف الانتقالي ذاتي الإغلاق · **الاعتماد على GitHub PR body/timeline حاملاً دائماً للأثر** · **اشتراطُ PR توثيقي بعد الدمج**. **وكلُّ ورودٍ متبقٍّ لهذا الاسم محصورٌ في `H-0034` بوصفه تاريخاً موسوماً `SUPERSEDED — NEVER IN FORCE` — ولا يُقرأ قاعدةً نافذة في أي وعاء.** ‏**ودلتا 2026-08-03 أعلاه تُقرأ بهذا الحكم.**
+
+**‏(2) القرار المعماري النافذ:** المعلومات **الحاكمة** تُسجَّل **قبل الدمج** في `decisions/open-decisions.md` و`handoff/handoff.md` · و**الوقائع التقنية** (الرأس المدموج · `Merge SHA` · الأبوان · التاريخ · الشجرة) **لا تُكرَّر** لأن **Git يملكها** — و**الرأس النهائي المدموج هو الأب الثاني للـMerge Commit** (`git show -s --format='%P' <MERGE_SHA>`) · و**واقعة التنفيذ** تُثبَت بـ**رسالة Merge Commit** بوصفها **إيصالَ تنفيذٍ لا وعاءَ سلطة**. ⇒ **لا تحديثَ مستودعياً بعد الدمج · لا PR لاحق · `PR #17` غير مطلوب.**
+
+**‏(3) السجل الحاكم السابق للدمج — PR #16:**
+
+```text
+Authorization Principal      = Owner
+Owner Order Reference        = OWNER EXECUTION ORDER — PR #16 Final Merge Governance Simplification
+Owner Order Date             = 2026-08-04
+PR                           = #16
+Permitted Scope              = decisions/adr/ADR-0033-automation-levels-git-merge-policy.md
+                               decisions/adr/README.md
+                               methodology/agent-execution-model.md
+                               decisions/open-decisions.md
+                               handoff/handoff.md
+                               INDEX.md
+                               PR #16 title and description
+Required Review Actor        = Independent Review Session (did not author or modify this PR)
+Required Review Result       = APPROVE
+Authorized Execution Actor   = Owner-Authorized Independent Merge Agent
+                               (third session: not the author, not the reviewer)
+Expected Technical Credential = GitHub token for account sa4devops used by the agent environment
+Credential Statement         = The technical account sa4devops is NOT evidence of manual Owner execution
+Merge Method                 = merge commit
+Pending Merge SHA            = assigned automatically by Git
+```
+
+**‏(4) نصّ رسالة Merge Commit المتوقَّع — مثبَّتٌ حرفياً:**
+
+```text
+Merge PR #16 — GOV — Record PR #14 Merge Provenance and Simplify Merge Audit Completion
+
+Governance record: OD-GOV-MERGE-1 · H-0034
+Executed by Owner-Authorized Independent Merge Agent.
+Technical account sa4devops is not evidence of manual Owner execution.
+```
+
+**قواعد المطابقة:** توحيدُ نهايات الأسطر إلى **`LF`** · حذفُ **المسافات الطرفية** من كل سطر · حذفُ **الأسطر الفارغة الزائدة** في البداية والنهاية. **ولا يُسمح باختلاف الكلمات ولا ترتيب الأسطر** ⇒ **الاختلاف بعد التطبيع = `MERGE RECEIPT MISMATCH` ⇒ لا دمج.** **ولا يُضاف `Authorized head` إلى الرسالة.**
+
+**‏(5) استثناء دورة التصحيح على بند 11:** تغيُّرُ الرأس الناتجُ **حصراً** عن معالجة ملاحظات مراجعةٍ مستقلة **داخل نطاق الأمر نفسه وبلا ملفات أو موضوعات جديدة** ⇒ **لا أمر مالك جديداً**، بشرط **مراجعة مستقلة كاملة للرأس الجديد** و**عدم دمج رأسٍ لم يحصل هو نفسه على `APPROVE`**. **وبند 11 نافذ بكامل أثره فيما عدا ذلك.**
+
+**‏(6) الاكتفاء الذاتي:** **لا اعتماد حاكم على GitHub ولا أي خدمة خارجية** — أدواتُ عملٍ أثناء التطوير فقط. **ووحدة التاريخ الحاكم المحمولة هي المستودع الكامل متضمناً `.git`**: شجرةُ الملفات تكفي **لقراءة الحالة الحالية**، وإعادةُ بناء **تاريخ الدمج والوقائع التقنية** **تلزمها `.git`**. **والنسخة المسلَّمة على الفلاش يجب أن تحتوي مستودعات المشروع كاملةً مع تاريخها** · **والنسخُ والتنصيبُ لا يتطلبان تعديل ملفات ولا إضافة بيانات حوكمة** · **أحجام تقريبية مقيسة من المالك 2026-08-04:** الشجرة **≈ 3.3 MB** · المستودع الكامل **≈ 7.2 MB** · الفرق **≈ 4 MB** · **ولا مبرر لإسقاط `.git`**. **ولا Bundle ولا Script ولا دليل تنصيب في هذه الجولة.**
+
+- ملفات هذه الدلتا: **ستة** — `decisions/adr/ADR-0033-automation-levels-git-merge-policy.md` (**حذف البند 15 المقترح** · **بند 11** +استثناء دورة التصحيح · **بند 12** مُعاد صياغته · **بند 10-(ز)** موائم · **+حدود المراجع المستقل** · **+الاكتفاء الذاتي**) · `methodology/agent-execution-model.md` (**§18.2-8** مُستبدَل · **+§18.2-9** و**§18.2-10** · تشديد صفّ Review Agent في §18.1) · `decisions/adr/README.md` · `decisions/open-decisions.md` (**§(ل) مُستبدَل بالكامل** — والأقسام (أ)..(ك) لم تُمسّ) · `handoff/handoff.md` (هذه الدلتا) · `INDEX.md` (**صفوف قائمة — بلا صفّ جديد**). **وعنوان ووصف PR #16 حُدِّثا.**
+- ما لم يتغيّر: **`ui/**` ومنها §9** · **`contracts/**`** · **`traceability/**`** · **`AUTHORITY.md`** · **`constitution.md`** · **بقية `decisions/adr/**` وبقية `methodology/**`** · **شروط بند 10 السبعة** · **التجميد `ACTIVE`** · **`FP-0001` `BLOCKED`** · **`R4` غير مفعَّلة** · **`R3` لم تُغلق** · **لا معيار `PASS`** · **لا ADR جديد ولا OD جديد** · **لا ملف جديد ولا محذوف** · **16 وسماً · لا وسم ولا إصدار** · **EC-3 = 159/159**.
+- next step: **مراجعة مستقلة** على الرأس الجديد (جلسة لم تشارك في التنفيذ) ⇒ **`APPROVE`** ⇒ **Merge Agent مستقل** (جلسة ثالثة ليست المؤلف ولا المراجع) يطابق نصّ الإيصال **قبل** التنفيذ ثم يدمج. **ولا يجوز لوكيل التنفيذ الذي كتب هذه الدفعة مراجعتُها ولا دمجُها.** **ولم يبدأ أي Workstream لاحق.**
