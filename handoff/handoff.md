@@ -845,3 +845,48 @@ Important rules:
 **أثر سلطوي مسجَّل:** وكيلُ المراجعة الذي نفّذ التصحيح **صار كاتبَ محتوى** (‏§18.1 صفّ Review Agent · §18.2-1) ⇒ **فقَدَ أهليةَ مراجعة هذه الدفعة ولا يدمجها**. **المطلوب قبل أي دمج: مراجعة مستقلة جديدة + أمر مالك جديد يثبّت الرأس النهائي.**
 
 **بلا تغيير:** التجميد **`ACTIVE`** · `FP-0001` **`BLOCKED`** · شروط الرفع **بلا تعديل ولا إعادة عدّ** · `R3` لم تُغلق · **`R4` غير مفعَّلة** · جرد `P3` **`28 = 13 + 15 + 0`** · **16 وسماً** · **PR #14 لم يُمسّ** ورأسه **`52d88d0e…`** · **ستة ملفات فقط** · **لا ملف جديد ولا محذوف**.
+
+## Handoff H-0034
+> **‏GOV — PR #14 Merge Execution Provenance (‏Post-Merge Audit Record).** جولةُ **توثيقٍ بعد الدمج فقط** على **فرع جديد من `origin/main` مباشرةً**. **ليست** جولة `R3` ولا إتاحة ولا تعديل §9 ولا `UI-4`/`UI-5` ولا عقود ولا تعديل سياسة دمج ولا رفع تجميد ولا مراجعة/إعادة فتح لـPR #14. **يُقرأ بعد `H-0033` ولا يعيد كتابته ولا يحذفه.**
+> **‏`H-0031` و`H-0032` و`H-0033` لم تُمسّ ولم تُعدَّل** — وهذا المدخل **الرقم التسلسلي التالي الفعلي** بعد تحقُّقٍ من السجل لا بافتراض.
+- date: 2026-08-03
+- phase: **GOV — Merge Audit Record** — فرع `docs/pr14-merge-audit-record` من `origin/main` مباشرةً · **PR مستقل غير مدموج**
+- task/goal: استكمال **أثر دمج PR #14** الواجب بموجب **`ADR-0033` بند 12** ونموذج **Owner-Authorized Independent Merge Agent**: تسجيل **الأبعاد الأربعة** و`Merge SHA` وخط الأساس الجديد وهوية المراجعة المستقلة ونطاقها، **والنصّ صراحةً على أن الحساب التقني ليس دليلَ تنفيذٍ يدويٍّ من المالك**. **توثيق فقط — لا سياسة جديدة ولا ADR جديد ولا OD جديد.**
+- base SHA: **`origin/main` = `d2c93d2c16b03d406a6b6fe70c0b0771687c9ff5`** · **عدد الوسوم = 16** · **PR #14 = `MERGED`**.
+
+**‏Owner Order — 2026-08-03 (تسجيل إلزامي):** «‏OWNER MERGE ORDER — PR #14» (أمر الدمج) · ثم «‏OWNER ORDER — Complete PR #14 Merge Audit Record» (أمر هذا التوثيق).
+
+**واقعة الدمج — تسجيل حرفي:**
+
+```text
+PR = #14  ("R3 — Codify Accessibility Requirements in UI Design System §9")
+Authorization Principal = Owner
+Execution Actor = Owner-Authorized Independent Merge Agent
+Technical Credential = GitHub token for account sa4devops used by the agent environment
+Review Actor = Independent Engineering Review Session
+Review Date = 2026-08-03
+Reviewed Head SHA = 0020dfb6de7f383b3468518691a7b29da0cf7f1e
+Review Result = APPROVE / NO BLOCKING FINDINGS
+Review Artifact Identifier = Not persisted outside the review conversation
+Authorized Head SHA = 0020dfb6de7f383b3468518691a7b29da0cf7f1e
+Base SHA Before Merge = 0c199d76f732357ac948fe6c6e50171e9250a04c
+Merge SHA = d2c93d2c16b03d406a6b6fe70c0b0771687c9ff5
+New Governing Baseline = origin/main @ d2c93d2c16b03d406a6b6fe70c0b0771687c9ff5
+Merge Method = merge commit
+Merge Result = SUCCESS
+```
+
+**نصٌّ قاطع — الحساب التقني:** الدمج **نُفِّذ بواسطة Merge Agent مفوَّض**، **لا يدوياً بواسطة المالك**. و**ظهور `sa4devops` في GitHub** (‏`mergedBy`) هو **هوية بيانات الاعتماد التقنية** لبيئة الوكيل — **وليس دليلاً على أن المالك ضغط زرّ الدمج بنفسه**، ويُمنع قراءتُه كذلك.
+
+**استقلال وكيل الدمج:** جلسة **مستقلة** · **لم يكتب محتوى PR #14** · **لم يحلّ تعارضاته** · **لم يدفع أي commit إلى فرعه** · **لم يعدّل رأسه** · قرأ المستودع والـPR **مباشرةً** · **ولم يمنح الموافقة لنفسه** (التفويض من المالك).
+
+**تغيّر الرأس عن المسجَّل في `OD-GOV-MERGE-1` §(ح):** كان الرأس المتوقَّع `52d88d0e…`؛ ودمجُ PR #15 نقل PR #14 إلى `DIRTY` كما تنبّأ §(ح)-3، فجرت **جولة حلّ تعارض منفصلة** أنتجت merge commit أبواه `52d88d0e…` و`0c199d76…` ⇒ الرأس صار **`0020dfb6…`** و**بطَل الـSHA القديم** (بند 11)، **فصدر أمر مالك جديد يثبّت الرأس الجديد**. **ولم يُدمج أي رأس غير مثبَّت** · **ولم يُستعمل الاستثناء الانتقالي §(هـ)** (محصور بـPR #15 ومنقضٍ).
+
+- completed: `decisions/open-decisions.md` (‏**v3.4 ⇒ v3.5** — +**«(ك) سجل أثر تنفيذ الدمج — PR #14»** داخل `OD-GOV-MERGE-1` بستة أقسام فرعية: الأبعاد الأربعة · نصّ الحساب التقني · استيفاء استقلال الوكيل · هوية المراجعة ونطاقها ونقص التتبّع · أثر تغيّر الرأس · ما لم يتغيّر — **والأقسام (أ)..(ي) لم تُمسّ**) · `handoff/handoff.md` (**+`H-0034`** — هذا المدخل) · `INDEX.md` (**صفّان محدَّثان فقط** — `decisions/open-decisions.md` و`handoff/handoff.md` — **بلا ملف جديد ⇒ بلا صفّ جديد**).
+- not completed: **`ui/**` لم تُمسّ** — ومنها **`UI_DESIGN_SYSTEM.md` §9** · **`decisions/adr/**` لم تُمسّ** ومنها **`ADR-0033`** · **`methodology/**` لم تُمسّ** ومنها **`agent-execution-model.md`** · **`contracts/**` و`traceability/**` و`AUTHORITY.md` و`constitution.md` و`phases/**` و`catalogs/**` و`superseded/**` لم تُمسّ** · **لا ADR جديد ولا OD جديد** · **لا تعديل لسياسة الدمج ولا لشروطها السبعة** · **لا معالجة ولا اختبارات ولا معيار `PASS`** · **لم يُرفع التجميد** · **لم يُفكّ حجب `FP-0001`** · **لم تُفعَّل `R4`** · **`R3` لم تُغلق** · **`UI-4` و`UI-5` لم يُنشآ** · **لا وسم ولا إصدار** · **لم يُعَد فتح PR #14 ولم يُراجَع ولم يُعدَّل** · **لم يبدأ أي Workstream لاحق**.
+- files changed: **ثلاثة** — `decisions/open-decisions.md` · `handoff/handoff.md` · `INDEX.md`. **ولم يُنشأ ملف جديد** ⇒ **لا صفّ جديد في `INDEX.md`** · الإجمالي **158 + الفهرس** بلا تغيير · **EC-3 = 159/159 بلا تغيير**.
+- decisions: **لا قرار جديد.** هذا **استكمالُ أثرٍ إلزامي** لقرارٍ قائم (`OD-GOV-MERGE-1`) بموجب **ADR-0033 بند 12** و**§(د)-7** — **ولا OD جديد ولا ADR جديد ولا حالة `OD` قائم غُيّرت ولا قرار أُعيد ترقيمه**.
+- risks: (1) **قراءة هذا السجل ترقيةً لحالة `ui/UI_DESIGN_SYSTEM.md`** — مُعالَج بالنصّ: الحالة تبقى **`Proposed`**، والدمج **نشر §9 داخلها ولم يرقِّها**، والترقية **قرار مالك مستقل**. (2) **قراءة الدمج إعلانَ `PASS` للإتاحة** — مُعالَج: **لا معيار أُعلن `PASS`**، والتقنين **إنشاءُ قاعدةٍ قابلة للقياس لا قياسٌ**. (3) **قراءة `sa4devops` دليلَ تنفيذٍ يدويٍّ من المالك** — مُعالَج بنصّ قاطع في وعاءين (‏`OD-GOV-MERGE-1` §(ك-2) وهذا المدخل). (4) **قراءة الدمج رفعاً للتجميد** — مُعالَج: **التجميد `ACTIVE`** و**`FP-0001` `BLOCKED`** وشروط الرفع **بلا مساس**؛ وتقنين §9 **يستوفي الشرط (1) وحده من سبعة تراكمية ولا يرفع شيئاً**. (5) **نقص تتبّع المراجعة المستقلة** — **مسجَّل صراحةً** (‏`Review Artifact Identifier = Not persisted outside the review conversation`) **ولم يُخترع له معرّف**؛ ومعالجتُه قرارٌ مالكٍ مستقل. (6) **قراءة هذه الجولة إذناً ببدء الجولة التالية** — مُعالَج: **لا Workstream بدأ**.
+- tests: `origin/main` = **`d2c93d2c…`** (مطابق للأساس · **لا commit أحدث**) · merge commit **أبواه `0c199d76…` و`0020dfb6…`** · **PR #14 = `MERGED`** · **ثلاثة ملفات معدَّلة فقط** · **commit واحد بأبٍ واحد** و`git rev-list --merges origin/main..HEAD` = **0** · `git diff --check` **نظيف** · **`ui/**` و`decisions/adr/**` و`methodology/**` و`contracts/**` و`traceability/**` و`AUTHORITY.md` و`constitution.md` byte-identical مع `origin/main`** · **سجل `OD-FP-0001-FREEZE` وشروطه byte-identical** · **`Merge SHA` و`Head SHA` وخط الأساس الجديد حاضرة حرفياً في `open-decisions.md` و`handoff.md`** · **الأبعاد الأربعة مسجَّلة في الوعاءين** · **EC-3 = 159/159** · **16 وسماً · لا وسم ولا إصدار**.
+- next step: **قرار مالك في هذا الـPR** (دمج أو رفض). و**دمجُه لا يجوز بوكيل التنفيذ نفسه** الذي كتب هذه الدفعة (‏`agent-execution-model` §18.2-1 · `OD-GOV-MERGE-1` §(ج) صفّ Execution Agent) ⇒ يلزمه **مراجعة مستقلة** و**أمر مالك يثبّت الرأس** و**وكيل دمج مستقل**. **ولا شيء بعد ذلك مأذون به في هذه الجولة.**
+- do not touch: constitution.md · AUTHORITY.md · **`ui/**` بكاملها** ومنها **`UI_DESIGN_SYSTEM.md` §9** · **`contracts/**`** · **`traceability/**`** · **`decisions/adr/**` بكاملها** ومنها **`ADR-0033`** · **`methodology/**` بكاملها** ومنها **`agent-execution-model.md`** · phases/** · catalogs/** · superseded/** · **شروط التجميد و`FP-0001` و`R4`** · **أي معيار Accessibility** · **أي نص من نصوص PR #14 المدموجة** · **`H-0016`..`H-0033`** · **`R3-ACT-01`** · **أي وسم أو إصدار** · **‏GitHub Issue #11** · خط الأساس المجمَّد `188ad37` · **ملفات UI-4 وUI-5**.
