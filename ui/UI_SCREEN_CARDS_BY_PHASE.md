@@ -1,6 +1,6 @@
 # UI_SCREEN_CARDS_BY_PHASE.md — بطاقات الشاشات حسب المراحل
 
-> **Version:** 1.0 — Proposed · **Date:** 2026-07-06 · **الموضع الهدف:** `ui/UI_SCREEN_CARDS_BY_PHASE.md` · +runs (Δ ما-بعد الدمج 2026-07-08)
+> **Version:** 1.1 — Proposed · (Δ 2026-08-05 R3 — `OD-R3-WF-ALLOC-1`: شقّ صفّ Phase 3 المجمِّع صفّين مستقلّين بتوزيع الأفعال والصلاحيتين بحسب القرار — **توزيعٌ محض بلا حذف ولا إضافة** · **الحالة تبقى `Proposed`** · **ولا يُقرأ هذا الشقّ تفعيلاً لـ Phase 3 ولا إذناً ببدء تنفيذها** — التنفيذ يبقى ببطاقات مهام عند تفعيل كل مرحلة كما في «الغرض» أدناه) · **Date:** 2026-07-06 · **الموضع الهدف:** `ui/UI_SCREEN_CARDS_BY_PHASE.md` · +runs (Δ ما-بعد الدمج 2026-07-08)
 > **المراجع الحاكمة:** PHASE_MASTER_PLAN + designs/phase-1..8 (الترتيب **ثابت لا يُمس**) · UI_SCREEN_INVENTORY (المعرّفات) · نماذج الدفعة الثانية.
 > **الغرض:** بطاقة موجزة لكل شاشة (جديدة New / مطوَّرة Enh) في مرحلتها، بربط الأفعال والصلاحيات وأحداث التدقيق — **مدخلات مباشرة لدفعة الـ Stitch prompts**. لا تنفيذ الآن؛ التنفيذ ببطاقات مهام عند تفعيل كل مرحلة.
 
@@ -52,7 +52,8 @@
 | queue.tasks · notif.center · projects.main | New | مهامي/الإشعارات(+threads)/المشاريع | task.* · thread.post · project.* | tasks.view_own · projects.* | TASK_* · PROJECT_CHANGED | G8 |
 | queue.approvals + queue.approval_detail | New | الصندوق + سطح القرار الرسمي | workflow.approve/reject/return | approvals.decide (SoD) | APPROVAL_DECIDED · THREAD_POSTED | G8 |
 | **admin.actions** | New | **Action Registry** (عقد الفعل كاملاً) | action.define/edit · action.simulate_visibility | admin.actions.manage | ACTION_* | G7 |
-| admin.workflows + workflow_detail | New | التعريف + دورة الحياة التسعينية + الاعتماد | wf.define/validate/submit/approve/activate/rollback | admin.workflows.manage · wf.approve | WORKFLOW_* | G8 |
+| admin.workflows | New | القائمة والتحقق والتقديم | wf.define/validate/submit | admin.workflows.manage | WORKFLOW_* | G8 |
+| admin.workflow_detail | New | التفصيل + دورة الحياة التسعينية + الاعتماد | wf.approve/activate/rollback | wf.approve (SoD) | WORKFLOW_* | G8 |
 | run.detail | Enh | **أزرار الـ Registry تظهر على السطح الحتمي** | حسب العقود | حسب العقد | INSTANCE_TRANSITIONED | G13 |
 
 **ملاحظة توفيقية موثَّقة:** تصميم P3 أشار لإعداد الأزرار «داخل الـ Builder»؛ حزمة الواجهة تُفرد `admin.actions` مستقلةً مع نقطة دخول من الـ Builder — يُثبَّت في Clarify تفعيل P3 (لا أثر معمارياً: نفس الـ Registry).

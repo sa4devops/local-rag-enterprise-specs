@@ -1,6 +1,6 @@
 # UI_ADMIN_CONSOLE_MODEL.md — نموذج وحدة الإدارة (Control Plane)
 
-> **Version:** 1.1 — (Δ v0.8: +OD-BLD-1 أوضاع الباني الثلاثة — مقفل بقرار SA 2026-07-10 · +تحديث admin.org وفق FR-1.Org-Ext) · **Date:** 2026-07-10 (الأصل 2026-07-06) · **الموضع الهدف:** `ui/UI_ADMIN_CONSOLE_MODEL.md`
+> **Version:** 1.2 — (Δ 2026-08-05 R3 — `OD-R3-WF-ALLOC-1`: شقّ السطر المجمِّع في §4-D بندين — `admin.workflows` بأفعال `wf.define/validate/submit` وصلاحية `admin.workflows.manage` · `admin.workflow_detail` بأفعال `wf.approve/activate/rollback` وصلاحية `wf.approve` (SoD). **توزيعٌ محض:** لا عنصر حُذف ولا عنصر أُضيف — دورة الحياة التسعينية وتبويب مصفوفة الاعتماد و`WORKFLOW_*` و`G8` بلا مساس · **الصلاحيتان لا تُجمعان ولا تُخترع ثالثة** · **`OD-P3-1` يبقى مفتوحاً بلا مصفوفة مثبَّتة**) (1.1: Δ v0.8: +OD-BLD-1 أوضاع الباني الثلاثة — مقفل بقرار SA 2026-07-10 · +تحديث admin.org وفق FR-1.Org-Ext) · **Date:** 2026-07-10 (الأصل 2026-07-06) · **الموضع الهدف:** `ui/UI_ADMIN_CONSOLE_MODEL.md`
 > **المراجع الحاكمة:** ADR-0008/D9 (حدود الإدارة) · تصاميم P1–P8 (شاشات كل مرحلة) · UI_SCREEN_INVENTORY (معرّفات الشاشات) · UI_ACTION_BUTTON_MODEL (§7: أفعال الإعداد surface=console).
 > **التموضع:** الـ Console هو **مستوى التحكم** (metadata · actions · workflows · permissions · providers/models · RAG sources · audit/ops) — **ليس** واجهة تشغيل يومية للمستخدم العادي؛ العمل اليومي في Workspace/Renderer/Work Queue.
 
@@ -51,7 +51,8 @@ Sidebar بمجموعات §4 · Topbar: بحث إداري موحّد (يقفز �
 > **(Δ v0.8) OD-BLD-1 — أوضاع الباني الثلاثة (مقفل بقرار SA 2026-07-10):** لباني الشاشات/الأنواع (`admin.record_types`) **ثلاثة أوضاع تأليف** يتنقّل بينها الأدمن: **تقليدي** (النموذج المُهيكل القائم) · **محادثي** (وصف بالحوار يولّد اقتراح تعريف) · **مدمج** (حوار + نموذج جنباً إلى جنب مع مزامنة فورية). **القاعدة القطعية:** الأوضاع الثلاثة **أساليب تأليف للمسودة فقط** فوق **الخط المحكوم القائم بلا أي تغيير**: `draft → migration proposal → checks → approval (SoD) → apply`؛ **الـ LLM يكتب metadata فقط** (تعريفات شاشات/حقول/تحققات) — **لا يكتب DDL ولا يلمس قاعدة البيانات** (القرار المقفل «لا DDL من LLM»)، وكل مخرَج محادثي يحمل شارة «مُولَّد» ويظهر diff مُهيكلاً قبل أي اعتماد. الوضع المحادثي للباني **سطح أدمن** ضمن الـ Console — لا يغيّر قاعدة «لا builder للمستخدم النهائي».
 
 ### D) Workflow Configuration — G8-admin
-admin.workflows / admin.workflow_detail: تعريف الحالات/الانتقالات/المكلَّفين + **دورة الحياة التسعينية** بنمط §3.2 + تبويب مصفوفة الاعتماد (OD-P3-1) · الأفعال: wf.define/validate/submit/approve/activate/rollback (SoD) · الصلاحيات admin.workflows.manage / wf.approve · Audit: WORKFLOW_* · Stitch: G8.
+admin.workflows: القائمة وحوكمة التعريفات + التحقق والتقديم · الأفعال: wf.define/validate/submit · الصلاحية admin.workflows.manage · Audit: WORKFLOW_* · Stitch: G8.
+admin.workflow_detail: تعريف الحالات/الانتقالات/المكلَّفين + **دورة الحياة التسعينية** بنمط §3.2 + تبويب مصفوفة الاعتماد (OD-P3-1) · الأفعال: wf.approve/activate/rollback (SoD) · الصلاحية wf.approve (SoD) · Audit: WORKFLOW_* · Stitch: G8.
 
 ### E) Knowledge &amp; RAG — G9
 admin.rag_sources (النطاقات=وسوم الصلاحية للفهرسة) · admin.ingestion (خطوات/إعادة محاولة/error_code) · files.manager (إعادة تصنيف/حذف محكوم) · admin.okf (حِزم موسومة «ليست مصدر حقيقة») — الصلاحية admin.knowledge/files.manage · Audit: SOURCE_/INGESTION_/FILE_/OKF_* · Stitch G9 (ingestion monitor مستقل، البقية مجمّعة).
