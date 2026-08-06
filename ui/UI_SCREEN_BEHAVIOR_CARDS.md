@@ -1,9 +1,9 @@
 # UI_SCREEN_BEHAVIOR_CARDS.md — بطاقات سلوك الشاشات
 
-> **Version:** 1.1 — (Δ v0.8: تحديث بطاقتي 5/7 بزر «إرجاع إلى…» وفق FR-3.11/3.12 + بطاقة 24 `admin.org` + ضبط قاعدة الهوية على A-UX-17) · **Date:** 2026-07-10 (الأصل 2026-07-07) · **الموضع الهدف:** `ui/UI_SCREEN_BEHAVIOR_CARDS.md`
+> **Version:** 1.2 — (Δ 2026-08-05 R3 — `OD-R3-WF-ALLOC-1`: +**بطاقة 25 `admin.workflow_detail`** بالطقم العشري نفسه، **ومعرّفات أسطحها السبعة معلَنة داخل نقاطها** — **استثناء محصور ببطاقة 25 وحدها**: لا يغيّر قالب البطاقات، ولا يُنشئ قاعدة عامة، ولا يلزم البطاقات السابقة ولا اللاحقة · **ومواءمة بطاقة 13** بعد تخصيص الأفعال والأسطح: `wf.approve`/`wf.activate`/`wf.rollback` وأسطحُها المنقولة لم تعد معلَنةً فيها. **لا حقل حادي عشر · لا تغيير لأسماء النقاط العشر · لا سطح `canvas` (`OD-P3-2` مفتوح) · لا سياسة instances عند rollback (`OD-P3-3` مفتوح)**) (1.1: Δ v0.8: تحديث بطاقتي 5/7 بزر «إرجاع إلى…» وفق FR-3.11/3.12 + بطاقة 24 `admin.org` + ضبط قاعدة الهوية على A-UX-17) · **Date:** 2026-07-10 (الأصل 2026-07-07) · **الموضع الهدف:** `ui/UI_SCREEN_BEHAVIOR_CARDS.md`
 > **مبنيّ فوق:** UI_SCREEN_INVENTORY (v0.4، v1.3) · UI_INTERACTION_MODEL · UI_VISIBILITY_RULES · UI_PROGRESSIVE_DISCLOSURE · UI_COMPONENT_STATES (v0.5).
 > **الغرض:** لكل شاشة رئيسية بطاقة قصيرة تُحوِّل قواعد v0.5 إلى **قرارات تصميم تشغيلية** — تُلصق مباشرة داخل prompt الشاشة في Stitch.
-> **قواعد قراءة:** كل بطاقة تحوي 9 حقول ثابتة. الشاشات المذكورة هي الأولوية (24 شاشة بعد Δ v0.8)؛ البقية تُستكمل عند الحاجة بنفس القالب.
+> **قواعد قراءة:** كل بطاقة تحوي 9 حقول ثابتة. الشاشات المذكورة هي الأولوية (25 شاشة بعد Δ 2026-08-05 R3)؛ البقية تُستكمل عند الحاجة بنفس القالب.
 
 ---
 
@@ -205,14 +205,14 @@ If a screen contains dense enterprise data, the responsive design must preserve 
 ## 13) `admin.workflows` — تعريفات الـ Workflows
 - **افتراضياً يظهر:** قائمة الـ workflows (اسم · كيان · حالة · نسخة) + زر «تعريف جديد».
 - **مطويّ:** التعريف التفصيلي صفحة `admin.workflow_detail`.
-- **حسب الصلاحية:** الشاشة لـ `admin.workflows.manage`؛ الاعتماد لـ `wf.approve` (SoD).
-- **drawer:** «Validation report» (دورات، حالات ميتة) ⇒ drawer end · «diff نُسخ» ⇒ drawer end.
-- **modal:** «اعتماد» ⇒ modal typed · «تفعيل» ⇒ modal typed للـ instances الجارية (grandfathering).
+- **حسب الصلاحية:** الشاشة لـ `admin.workflows.manage`.
+- **drawer:** «Validation report» (دورات، حالات ميتة) ⇒ drawer end.
+- **modal:** لا سطح حاجب تُعلنه هذه البطاقة.
 - **page:** فتح workflow ⇒ `admin.workflow_detail` (جدول حالات/انتقالات + مصفوفة اعتماد).
 - **متى إلى Renderer:** N/A مباشرةً؛ الـ workflow يعمل على سجلات Renderer.
-- **يجب أن يراه Stitch:** جدول workflows وهمية + تفصيل واحد بجدول حالات/انتقالات مُهيكل (بلا رسم canvas في v1) + شريط دورة حياة + tab «مصفوفة الاعتماد».
+- **يجب أن يراه Stitch:** جدول workflows وهمية.
 - **يجب ألا يراه Stitch:** canvas مرئي معقد بـ nodes وwires (مؤجَّل — OD-P3-2) · شعار BPM تجاري.
-- **الحالات المطلوبة:** default · loading · empty · error (دورة مكتشفة) · disabled (تفعيل قبل اعتماد) · confirmation · approval · success · failed · audit-visible.
+- **الحالات المطلوبة:** default · loading · empty · error (دورة مكتشفة) · success · failed · audit-visible.
 
 ---
 
@@ -367,6 +367,20 @@ If a screen contains dense enterprise data, the responsive design must preserve 
 - **يجب أن يراه Stitch:** شجرة بثلاثة مستويات (إدارة/قسم/شعبة بأسماء وهمية) · لوحة تفاصيل بوحدة محددة وعضوية على مستوى وسيط · modal نقل بأثر التوريث · حالة SoD/قاعدة مرفوضة (نقل يخلق حلقة).
 - **يجب ألا يراه Stitch:** org chart تسويقي بصور أشخاص · أي إيحاء بأن الشجرة تقيّد رؤية السجلات (**OD-ORG-1: توجيه/تكليف فقط — لا RLS في v1**) · بيانات جهة حقيقية.
 - **الحالات المطلوبة:** default · loading · empty (شجرة بلا وحدات — إرشاد البدء) · error · permission-denied · confirmation (نقل/أرشفة) · success · failed · audit-visible.
+
+---
+
+## 25) `admin.workflow_detail` — تفصيل Workflow ودورة حياته — (Δ 2026-08-05 R3 · `OD-R3-WF-ALLOC-1`)
+- **افتراضياً يظهر:** `page_workflow_detail` (**جديد**) — رأس التعريف (هوية · نسخة · حالة) + شريط دورة الحياة التسعينية (Draft ⇐ Validation ⇐ Permission-check ⇐ Risk-check ⇐ Approval ⇐ Activation ⇐ Versioning ⇐ Rollback ⇐ Audit — FR-3.2) + جدول مهيكل للحالات/الانتقالات/المكلَّفين + تبويب واحد نشط.
+- **مطويّ:** التبويبات غير النشطة — ومنها تبويب «مصفوفة الاعتماد» **محتوىً بلا قيم افتراضية** (‏`OD-P3-1` مفتوح — لا تُثبَّت مصفوفة هنا).
+- **حسب الصلاحية:** الشاشة لـ `wf.approve` (SoD) — **المعرِّف لا يعتمد**؛ وضوابط غير المخوَّل `HIDDEN-SERVER`.
+- **drawer:** `drawer_version_diff` (**منقول** — مرتبط بنسخة تعريف محدَّدة) ⇒ drawer end · `drawer_workflow_detail_audit_chain` (**جديد — استيفاء مستقل لـ S15**) بأحداث `WORKFLOW_APPROVED/ACTIVATED/ROLLED_BACK` ⇒ drawer end للمخوّل.
+- **modal:** `dialog_workflow_approval` (**منقول**) ⇒ modal typed بفصل مهام (SoD) · `dialog_workflow_activation` (**منقول**) ⇒ modal typed يعرض خيار grandfathering للـ instances الجارية نصاً · `dialog_workflow_rollback` (**جديد**) ⇒ تأكيد صريح للرجوع إلى نسخة سابقة معتمدة محدَّدة بالاسم · `dialog_workflow_detail_version_conflict` (**جديد — استيفاء مستقل**) عند فشل `version-check`.
+- **page:** `page_workflow_detail` (**جديد**) — `/admin/workflows/{id}` بـ Deep-Link عام · والرجوع الملاحي إلى `admin.workflows`.
+- **متى إلى Renderer:** N/A مباشرةً؛ الـ workflow يعمل على سجلات Renderer.
+- **يجب أن يراه Stitch:** تفصيل واحد بجدول حالات/انتقالات مُهيكل + شريط دورة حياة + tab «مصفوفة الاعتماد» + حوارا الاعتماد والتفعيل + حوار الرجوع إلى نسخة سابقة + drawer الـ diff.
+- **يجب ألا يراه Stitch:** canvas مرئي معقد بـ nodes وwires (مؤجَّل — OD-P3-2) · شعار BPM تجاري · أي سياسة معلَنة للـ instances الجارية عند الرجوع إلى نسخة سابقة (OD-P3-3 مفتوح — لا يُملأ فراغه هنا).
+- **الحالات المطلوبة:** default · loading · error · disabled (تفعيل قبل اعتماد) · confirmation (اعتماد typed · تفعيل typed · الرجوع إلى نسخة سابقة تأكيد صريح غير موسوم النمط) · approval (بانتظار معتمِد مختلف — SoD) · success · failed · audit-visible.
 
 ---
 
