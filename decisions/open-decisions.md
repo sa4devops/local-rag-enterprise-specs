@@ -1468,6 +1468,7 @@ Pending Merge SHA             = assigned automatically by Git
 
 ```text
 Merge PR #19 — R3 — DD-WF-ALLOC Determination · Behavior Card 25 · Contract Ripple Alignment
+
 Governance record: OD-R3-WF-ALLOC-1 · H-0037
 Executed by Owner-Authorized Independent Merge Agent.
 Technical account sa4devops is not evidence of manual Owner execution.
