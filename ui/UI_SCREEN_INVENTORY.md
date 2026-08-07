@@ -42,7 +42,7 @@
 | admin.migrations | مراجعة/اعتماد الترحيلات | /admin/migrations | 1 | أدمن معتمِد | admin-config | ✖ | G7 | High | List | None | — |
 | admin.generation_docs | توثيق التوليد | /admin/metadata/screens/{id}/docs | 2 | أدمن | admin-config | ✖ | G7 | Med | Detail | None | — |
 | admin.workflows | تعريفات الـ Workflows | /admin/workflows | 3 | أدمن | admin-config | ✖ | G8 | High | Builder | **Candidate** | [عقد](../contracts/screens/admin.workflows.md) |
-| admin.workflow_detail | تفصيل Workflow ودورة حياته | /admin/workflows/{id} | 3 | أدمن + معتمِد | admin-config | ✖ | G8 | High | Builder | None | — |
+| admin.workflow_detail | تفصيل Workflow ودورة حياته | /admin/workflows/{id} | 3 | أدمن + معتمِد | admin-config | ✖ | G8 | High | Builder | **Candidate** | [عقد](../contracts/screens/admin.workflow_detail.md) |
 | admin.rag_sources | مصادر المعرفة | /admin/knowledge/sources | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | High | List | None | — |
 | admin.ingestion | مهام المعالجة/الفهرسة | /admin/knowledge/ingestion | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | High | Monitor | None | — |
 | files.manager | إدارة الملفات | /admin/knowledge/files | 5 | أدمن معرفة | admin-knowledge | ✖ | G9 | Med | List | None | — |
