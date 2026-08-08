@@ -2,10 +2,11 @@
 
 ```contract
 id: screens.template
-version: 1.1
+version: 1.2
 status: Proposed
 owner: Specification Architect (SA-delegated)
 since: 2026-07-19 (G1)
+delta: 2026-08-08 (R3 — OD-R3-SCOPE-2) — مواءمة «دورة الاعتماد» مع NAMING_AND_CONTRACTS_STANDARD §2: المسار «توقيع SA أو بوابة FP معتمدة» + دلالة Approved توثيقية — بلا تغيير بنيوي في الأقسام الثمانية ولا في §3
 delta: 2026-08-02 (R3) — §3 surfaces[] + §3.2 surface fields + §3.3 binding rules
 relates: contracts.standard · ui/UI_SCREEN_GOVERNANCE_STANDARD.md · ui/UI_SCREEN_INVENTORY.md · ui/UI_SCREEN_BEHAVIOR_CARDS.md · ui/UI_FIELD_NAMING.md · ui/UI_COMPONENT_STATES.md
 ```
@@ -22,7 +23,7 @@ relates: contracts.standard · ui/UI_SCREEN_GOVERNANCE_STANDARD.md · ui/UI_SCRE
 7. **§7 التبعيات** — العقود/التعدادات/الهوية التي تستهلكها الشاشة.
 8. **§8 الاختبارات** — ما يُثبت به القبول (بنود قابلة للأتمتة ما أمكن؛ لقطتا RTL ‏Light/Dark ضمن الحد الأدنى).
 
-**دورة الاعتماد:** البذرة تُودَع **Candidate**؛ ترقيتها Approved عبر بوابة FP الخاصة بشاشتها (‏retrofit أو بناء) بتوقيع SA — عندها تكتسب المرتبة 5 (‏AUTHORITY).
+**دورة الاعتماد (‏Δ 2026-08-08 · R3 — مواءمة على حسم `OD-R3-SCOPE-2`):** البذرة تُودَع **Candidate** — وهي تعيينٌ ضمن `Proposed`: عقدٌ قيد المراجعة أو يحمل تبعيات حاكمة مسمّاة؛ ترقيتها **Approved** بمسار `contracts/NAMING_AND_CONTRACTS_STANDARD.md` §2 المحسوم: **بتوقيع SA أو ببوابة FP معتمدة** (‏`SA SIGNATURE OR APPROVED FP GATE`) — عندها تكتسب المرتبة 5 (‏AUTHORITY). و**دلالة `Approved` توثيقية**: التبعيات التوثيقية اللازمة محسومة والمواصفة جاهزة للتنفيذ — **ولا تُثبت وجودَ تنفيذٍ ولا نجاحَ اختبارٍ تشغيلي**؛ وأدلة المطابقة التشغيلية ملكُ بوابة التنفيذ/FP المعنية.
 
 ---
 ## §3 السلوك الملزم — بنية `surfaces[]` (‏Δ 2026-08-02 · R3 — نقل حاكم لـ`OD-R3-UI-2` و`OD-R3-UI-3`)
