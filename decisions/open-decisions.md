@@ -1861,4 +1861,64 @@ DOES_NOT_SATISFY_ADR-0033 §10(c)
 8. **لا معيار `R3-A11Y-01`..`07` أُعلن `PASS`** · **لا اختبار بُني ولا نُفِّذ** · **لا معالجة تشغيلية**.
 9. **لا وسم ولا إصدار ولا دمج** · **لا rebase ولا amend ولا force-push ولا squash**.
 
+### (ل) السجل الحاكم السابق للدمج — PR #22 (‏`ADR-0033` بند 10-(ز) وبند 12 · `methodology/agent-execution-model.md` §18.2-8)
+
+> **زمن الاستكمال:** أُضيف هذا القسم في **الـcommit الثاني المخطَّط** من الدفعة نفسها (‏`PLANNED_FINAL_PR_COMMIT_COUNT=2`) **بعد التقاط رقم الـPR الفعلي من GitHub** — فرقم الـPR **لا يُعرف قبل إنشائه**. **والـcommit الثاني ليس «تصحيحاً».** **بلا `amend` ولا `rebase` ولا `force-push` ولا `squash` ولا PR ثانٍ.**
+
+```text
+Authorization Principal       = Owner (SA)
+Owner Order Reference         = OWNER EXECUTION ORDER v3 — R3 Scope and Closure
+                                Definition Alignment
+Owner Order Date              = 2026-08-08
+Repository                    = sa4devops/local-rag-enterprise-specs
+PR                            = #22
+Target Branch                 = main
+Base SHA                      = 195407d3db09b68f41c91291224446902834f179
+Predecessor Merge             = PR #21
+Permitted Scope               = methodology/RECONCILIATION_ROADMAP.md
+                                decisions/DEFERRED_IMPLEMENTATION.md
+                                decisions/open-decisions.md
+                                contracts/NAMING_AND_CONTRACTS_STANDARD.md
+                                contracts/screens/SCREEN_CONTRACT_TEMPLATE.md
+                                ui/UI_SCREEN_GOVERNANCE_STANDARD.md
+                                ui/UI_SCREEN_BEHAVIOR_CARDS.md
+                                handoff/handoff.md
+                                INDEX.md
+Required Review Actor         = Independent reviewer/session that did not author this
+                                batch and did not push commits to this branch
+Required Review Result        = APPROVE on the final head
+Authorized Execution Actor    = Owner-Authorized Independent Merge Agent
+                                (separate session: not author and not reviewer)
+Expected Technical Credential = GitHub token for account sa4devops used by the agent environment
+Credential Statement          = The technical account sa4devops is NOT evidence of manual Owner execution
+Merge Method                  = merge commit
+Pending Merge SHA             = assigned automatically by Git
+```
+
+**نصّ رسالة Merge Commit المتوقَّع — مثبَّتٌ حرفياً:**
+
+```text
+Merge PR #22 — R3 — Scope and Closure Definition Alignment
+
+Governance record: OD-R3-SCOPE-2 · H-0040
+Executed by Owner-Authorized Independent Merge Agent.
+Technical account sa4devops is not evidence of manual Owner execution.
+```
+
+**قواعد المطابقة:** تُقارن بعد **توحيد نهايات الأسطر إلى `LF`** · **حذف المسافات الطرفية من كل سطر** · **حذف الأسطر الفارغة الزائدة في البداية والنهاية**. **ولا يُسمح باختلاف الكلمات ولا ترتيب الأسطر.** ‏**واختلافٌ بعد التطبيع ⇒ `MERGE RECEIPT MISMATCH` ⇒ لا دمج.**
+
+**ولا يُضاف `Authorized head` إلى الرسالة** — **الرأس النهائي المدموج هو الأب الثاني للـMerge Commit**، يُستخرج بـ`git show -s --format='%P' <MERGE_SHA>` (‏بند 12-(ج)). **ولا تُكرَّر في هذا الوعاء وقائعُ يملكها Git** (`Merge SHA` · الأبوان · التاريخ · الشجرة الناتجة). **ولا يُثبَّت الرأس النهائي داخل ملفٍّ في الدفعة** — `ADR-0033` بند 11 يجعله **من مخرَج المراجعة المستقلة ومن الأب الثاني للـMerge Commit**.
+
+**تفويض الدمج — غير ممنوح بهذا الأمر:** أمرُ التنفيذ هذا **ليس تفويض دمج**. **وتفويضُ الدمج يصدر لاحقاً بأمر مالك مستقل يثبّت `PR number` و`expected final head SHA`** (‏`ADR-0033` بند 10-(أ) وبند 11).
+
+**مراجعة هذه الدفعة — تسجيل حالة:** جلسةُ التنفيذ أجرت **`Structured self-review`** فقط:
+
+```text
+SELF_REVIEW_ONLY
+NOT_INDEPENDENT_REVIEW
+DOES_NOT_SATISFY_ADR-0033 §10(c)
+```
+
+**ووكيلُ التنفيذ الذي كتب هذه الدفعة لا يراجعها ولا يدمجها** (`agent-execution-model` §18.2-1 · `OD-GOV-MERGE-1` §(د)-3).
+
 **قيد عام على هذا القسم:** لا يُعيد ترقيم أي قرار قائم · لا يغيّر حالة أي `OD` آخر عدا المنصوص حسمُه هنا (‏`OD-GOV-2` · `OD-R3-CONTRACTS-1` §(ب) · حالة `R3-ACT-01` §(هـ) · الأثر المستقبلي لاستثناء `OD-R3-SCOPE-1`) · لا يُنشئ ADR · لا يُعدّل `AUTHORITY.md` ولا `constitution.md` ولا `decisions/adr/**` ولا `traceability/**` ولا أي عقد شاشة قائم · لا يمسّ أي مخرج مجمَّد · لا يُنشئ طبقة سلطة جديدة · ولا يمنح أي وثيقة غير حاكمة سلطةً.
